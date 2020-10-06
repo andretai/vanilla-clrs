@@ -1,0 +1,15 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.nav-top-links {
+  @apply px-6 py-4;
+}
+
+.nav-side-links {
+  @apply px-6 py-2 block;
+}
+
+.nav-side-links:hover {
+  @apply transform duration-200 bg-gray-700 cursor-pointer;
+}
