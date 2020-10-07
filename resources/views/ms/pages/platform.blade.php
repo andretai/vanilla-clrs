@@ -6,7 +6,7 @@
       <p class="font-semibold">Platforms</p>
       <div class="flex items-center">
         <p class="mr-6">5 records</p>
-        <a href="{{route('ms-add', ['item_type' => 'course'])}}">
+        <a href="{{route('ms-add', ['item_type' => 'platform'])}}">
           <button class="px-3 py-2 rounded-sm bg-green-500 text-white">New Platform</button>
         </a>
       </div>

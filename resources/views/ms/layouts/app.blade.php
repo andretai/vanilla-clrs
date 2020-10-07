@@ -51,7 +51,7 @@
           @guest
             <a class="py-4" href="{{ route('login') }}">{{ __('Login') }}</a>
             @if (Route::has('register'))
-              <a href="{{ route('register') }}">{{ __('Register') }}</a>
+              <a class="py-4" href="{{ route('register') }}">{{ __('Register') }}</a>
             @endif
           @else
             <a class="py-4" href="#">{{ Auth::user()->name }}</a>
@@ -101,7 +101,7 @@
           <p>Hello, Administrator !</p>
         </div>
       </div>
-      <div class="col-span-5">
+      <div class="col-span-5 overflow-auto overflow-y-scroll">
         @yield('content')
       </div>
     </main>
