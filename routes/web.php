@@ -43,3 +43,5 @@ Route::get('/ms/remove', [MsController::class, 'remove'])->name('ms-remove')->mi
 Route::post('/ms/courses/store', [CoursesController::class, 'store'])->name('courses.store')->middleware(IsAdmin::class);
 Route::post('/ms/courses/update', [CoursesController::class, 'update'])->name('courses.update')->middleware(IsAdmin::class);
 Route::get('/ms/courses/delete', [CoursesController::class, 'delete'])->name('courses.delete')->middleware(IsAdmin::class);
+
+Route::get('/ms/courses/seed', [MsController::class, 'seed'])->name('courses.seed');

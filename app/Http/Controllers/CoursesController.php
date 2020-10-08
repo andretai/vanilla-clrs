@@ -11,10 +11,11 @@ class CoursesController extends Controller
     public function store(Request $request) {
         $request->validate([
             'title' => 'required',
-            'description' => 'required',
+            'description' => '',
             'image' => '',
             'url' => 'required',
             'price' => 'required',
+            'category' => 'required',
             'platform' => 'required'
         ]);
         
@@ -24,6 +25,7 @@ class CoursesController extends Controller
         $course->image = $request->image;
         $course->url = $request->url;
         $course->price = $request->price;
+        $course->category = $request->category;
         $course->platform = $request->platform;
         $course->save();
 
@@ -78,7 +80,8 @@ class CoursesController extends Controller
         array_push($item_fields, (object) array('name' => 'description', 'type' => 'text'));
         array_push($item_fields, (object) array('name' => 'image', 'type' => 'text'));
         array_push($item_fields, (object) array('name' => 'url', 'type' => 'text'));
-        array_push($item_fields, (object) array('name' => 'price', 'type' => 'number'));
+        array_push($item_fields, (object) array('name' => 'price', 'type' => 'text'));
+        array_push($item_fields, (object) array('name' => 'category', 'type' => 'text'));
         array_push($item_fields, (object) array('name' => 'platform', 'type' => 'text'));
         return $item_fields;
     }
@@ -89,7 +92,8 @@ class CoursesController extends Controller
         array_push($item_values, (object) array('name' => 'description', 'type' => 'text', 'value' => $item->description));
         array_push($item_values, (object) array('name' => 'image', 'type' => 'text', 'value' => $item->image));
         array_push($item_values, (object) array('name' => 'url', 'type' => 'text', 'value' => $item->url));
-        array_push($item_values, (object) array('name' => 'price', 'type' => 'number', 'value' => $item->price));
+        array_push($item_values, (object) array('name' => 'price', 'type' => 'text', 'value' => $item->price));
+        array_push($item_values, (object) array('name' => 'category', 'type' => 'text', 'value' => $item->category));
         array_push($item_values, (object) array('name' => 'platform', 'type' => 'text', 'value' => $item->platform));
         return $item_values;
     }

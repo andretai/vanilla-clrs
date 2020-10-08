@@ -27,7 +27,7 @@
         @foreach ($courses as $course)
           <tr class="bg-gray-100 border border-gray-300 rounded-lg shadow-md">
             <td class="py-3 text-center"><input type="checkbox" name="" id=""></td>
-            <td>{{$course->image}}</td>
+            <td><img src="{{ $course->image }}" alt=""></td>
             <td>{{$course->title}}</td>
             <td><a href="{{ route('ms-edit', ['item_type' => 'course', 'id' => $course->id]) }}">EDIT</a></td>
           </tr>

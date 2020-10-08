@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Course;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class MsController extends Controller
 {
@@ -62,6 +63,30 @@ class MsController extends Controller
             'item_type' => $item_type,
             'item_id' => $item_id
         ]);
+    }
+
+    public function seed() {
+        $files = Storage::disk('s3')->files('/udemy');
+        $decoded_files = [];
+        foreach ($files as $file) {
+            array_push($decoded_files, json_decode(Storage::disk('s3')->get($file)));
+        }
+        foreach($decoded_files as $decoded_file) {
+            foreach($decoded_file->courses as $course) {
+                $request = new Request();
+                $request->replace([
+                    'title' => $course->title,
+                    'description' => $course->headline,
+                    'image' => $course->image_480x270,
+                    'url' => $course->url,
+                    'price' => $course->price,
+                    'category' => $decoded_file->category,
+                    'platform' => 'udemy'
+                ]);
+                app('App\Http\Controllers\CoursesController')->store($request);
+            }
+        }
+        return dd(Course::all());
     }
 
     public function indexCourse() {
