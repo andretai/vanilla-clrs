@@ -14,7 +14,7 @@
           <a class="px-3 py-2 rounded-sm bg-red-500 text-white" href="{{ route('ms-remove', ['item_type' => $item_type, 'id' => $item_id]) }}">Delete</a>
         </div>
       </div>
-      <div class="w-2/3 mx-auto my-6">
+      <div class="w-2/3 mx-auto mt-6 mb-24">
         @foreach ($item_fields as $item_field)
           <div class="flex justify-between text-sm">
             <label class="capitalize" for="{{ $item_field->name }}">{{ $item_field->name }}</label>
@@ -32,6 +32,9 @@
               class="my-3 p-2 w-full block border border-gray-300 rounded-sm font-semibold"
             @endif
           >
+          @if ($item_field->name === 'image')
+            <img class="w-1/2 mb-6 shadow-md" src={{ $item_field->value }} alt="">
+          @endif
         @endforeach  
       </div>   
     </form>

@@ -3,6 +3,7 @@
 use App\Http\Controllers\CoursesController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MsController;
+use App\Http\Controllers\StatsController;
 use App\Http\Middleware\IsAdmin;
 use Illuminate\Support\Facades\Route;
 
@@ -28,7 +29,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 // Management System
 
 Route::get('/ms', [MsController::class, 'index'])->name('ms-home')->middleware(IsAdmin::class);
-Route::get('/ms/statistics', function() { return view('ms.pages.stat'); })->name('ms-stats')->middleware(IsAdmin::class);
+Route::get('/ms/statistics', [StatsController::class, 'index'])->name('ms-stats')->middleware(IsAdmin::class);
 Route::get('/ms/settings', function() { return view('ms.pages.setting'); })->name('ms-sets')->middleware(IsAdmin::class);
 
 Route::get('/ms/courses', [MsController::class, 'indexCourse'])->name('ms-course')->middleware(IsAdmin::class);
