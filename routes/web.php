@@ -6,7 +6,10 @@ use App\Http\Controllers\MsController;
 use App\Http\Controllers\StatsController;
 use App\Http\Middleware\IsAdmin;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\UfavouriteController;
+use App\Http\Controllers\UcourseController;
+use App\Http\Controllers\UpromotionController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -46,3 +49,8 @@ Route::post('/ms/courses/update', [CoursesController::class, 'update'])->name('c
 Route::get('/ms/courses/delete', [CoursesController::class, 'delete'])->name('courses.delete')->middleware(IsAdmin::class);
 
 Route::get('/ms/courses/seed', [MsController::class, 'seed'])->name('courses.seed');
+
+//user
+Route::get('/course', [UcourseController::class, 'index'])->middleware('auth');
+Route::get('/favourite', [UfavouriteController::class, 'index'])->middleware('auth');
+Route::get('/promotion', [UpromotionController::class, 'index'])->middleware('auth');

@@ -2,6 +2,6 @@
 
 @section('content')
 <div >
-    Hi
+    Promotion
 </div>
 @endsection
