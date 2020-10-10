@@ -32,9 +32,9 @@
         </div>
     </div>
     @endforeach
-    <div class="d-flex justify-content-center pt-2">
+
+</div>
+<div class="d-flex justify-content-center pt-2">
     {{ $courses->appends(request()->query())->links() }}
 </div>
-</div>
-
 @endsection
