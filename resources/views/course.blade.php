@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="m-10 flex flex-wrap ">
+<div class=" flex flex-wrap ">
     @foreach( $courses as $course)
     <div class="mt-6 px-2 w-1/5">
         <div class="bg-white border rounded-lg overflow-hidden hover:shadow-xl">
