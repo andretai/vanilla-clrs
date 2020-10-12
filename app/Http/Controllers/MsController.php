@@ -83,7 +83,7 @@ class MsController extends Controller
                     'category' => $decoded_file->category,
                     'platform' => 'udemy'
                 ]);
-                app('App\Http\Controllers\CoursesController')->store($request);
+                app('App\Http\Controllers\CoursesController')->store($request   );
             }
         }
         return dd(Course::all());

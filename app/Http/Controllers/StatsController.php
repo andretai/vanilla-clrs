@@ -9,7 +9,8 @@ class StatsController extends Controller
 {
     public function index() {
         return view('ms.pages.stat', [
-            'ratings' => Rating::all()
+            'ratings' => Rating::all(),
+            'alphacourseId' => 0
         ]);
     }
 }

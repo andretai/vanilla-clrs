@@ -2,12 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Recommend\AssocAlsoRated;
 use App\Models\Course;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class CoursesController extends Controller
 {
+    public function getRec() {
+        # getRecommendations($idOfAlphaCourse, $numberOfRecommendationResults)
+        return dd(app('\App\Http\Controllers\Recommend\AssocAlsoRated')->getRecommendations(0, 5));
+    }
+
     public function store(Request $request) {
         $request->validate([
             'title' => 'required',

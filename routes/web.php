@@ -3,6 +3,7 @@
 use App\Http\Controllers\CoursesController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MsController;
+use App\Http\Controllers\Recommend\AssocAlsoRated;
 use App\Http\Controllers\StatsController;
 use App\Http\Middleware\IsAdmin;
 use Illuminate\Support\Facades\Route;
@@ -49,6 +50,7 @@ Route::post('/ms/courses/update', [CoursesController::class, 'update'])->name('c
 Route::get('/ms/courses/delete', [CoursesController::class, 'delete'])->name('courses.delete')->middleware(IsAdmin::class);
 
 Route::get('/ms/courses/seed', [MsController::class, 'seed'])->name('courses.seed');
+Route::get('/ms/courses/test', [CoursesController::class, 'getRec']);
 
 //user
 Route::get('/course', [UcourseController::class, 'index'])->middleware('auth');

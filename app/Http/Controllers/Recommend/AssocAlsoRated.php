@@ -1,32 +1,17 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Controllers\Recommend;
 
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Livewire\Component;
 
-class AssociateCourses extends Component
+
+class AssocAlsoRated extends Controller
 {
-    public $alphaCourse;
-    public $resultCount = 5;
 
-    public function render()
-    {
-        if(sizeof($this->getRatedCourses()) > 0) {
-            return view('livewire.ms.associate-courses', [
-                // 'courses' => $this->getRatedCourses(),
-                // 'selectedCourse' => $this->getRatedCourses()[$this->alphaCourse],
-                // 'userratings' => sizeof($this->getAlphaCourseUserIds()),
-                // 'alsorated' => array_values(array_unique($this->getAlsoRated())),
-                'assoc' => $this->calcAssoc()
-            ]);
-        } else {
-            return view('livewire.ms.associate-courses', [
-                'courses' => [],
-                'assoc' => []
-            ]);
-        }
-        
+    public function getRecommendations($alphaCourse, $resultCount) {
+        return $this->calcAssoc($alphaCourse, $resultCount);
     }
 
     /**
@@ -58,9 +43,9 @@ class AssociateCourses extends Component
      * return users' user ids who have rated the alpha course
      * @return all alpha course user_id from ratings table
      */
-    public function getAlphaCourseUserIds() {
-        $alphaCourse = $this->getRatedCourses()[$this->alphaCourse]->id;
-        $alphaCourseRatings = DB::table('ratings')->where('course_id', $alphaCourse)->get()->toArray();
+    public function getAlphaCourseUserIds($alphaCourse) {
+        $alphaCourseId = $this->getRatedCourses()[$alphaCourse]->id;
+        $alphaCourseRatings = DB::table('ratings')->where('course_id', $alphaCourseId)->get()->toArray();
         $alphaCourseUserIds = [];
         foreach($alphaCourseRatings as $alphaCourseRating) {
             array_push($alphaCourseUserIds, $alphaCourseRating->user_id);
@@ -73,8 +58,8 @@ class AssociateCourses extends Component
      * return ratings that does not belong to the alpha course
      * @return all non-alpha rated courses' ratings from ratings table
      */
-    public function getNonAlphaCourses() {
-        $alphaCourseId = $this->getRatedCourses()[$this->alphaCourse]->id;
+    public function getNonAlphaCourses($alphaCourse) {
+        $alphaCourseId = $this->getRatedCourses()[$alphaCourse]->id;
         $nonAlphaRatings = DB::table('ratings')
                         ->where('course_id', '!=', $alphaCourseId)
                         ->get();
@@ -86,9 +71,9 @@ class AssociateCourses extends Component
      * return other courses' course ids that were rated by users who have rated the alpha course
      * @return all non-alpha course_id by alpha course user_id
      */
-    public function otherCourseUserIds() {
-        $alphaCourseUserIds = $this->getAlphaCourseUserIds();
-        $nonAlphaRatings = $this->getNonAlphaCourses();
+    public function otherCourseUserIds($alphaCourse) {
+        $alphaCourseUserIds = $this->getAlphaCourseUserIds($alphaCourse);
+        $nonAlphaRatings = $this->getNonAlphaCourses($alphaCourse);
         $result = [];
         foreach($alphaCourseUserIds as $userId) {
             foreach($nonAlphaRatings as $rating) {
@@ -100,8 +85,8 @@ class AssociateCourses extends Component
         return $result;
     }
 
-    public function getAlsoRated() {
-        $courseIds = $this->otherCourseUserIds();
+    public function getAlsoRated($alphaCourse) {
+        $courseIds = $this->otherCourseUserIds($alphaCourse);
         $courseTitles = [];
         foreach($courseIds as $courseId) {
             $courseTitle = DB::table('courses')->where('id', $courseId)->first();
@@ -110,7 +95,7 @@ class AssociateCourses extends Component
         return $courseTitles;
     }
 
-    public function calcAssoc() {
+    public function calcAssoc($alphaCourse, $resultCount) {
         # How to Calculate Association
         # Assoc = (Y + X) / Y
         # where 
@@ -118,11 +103,11 @@ class AssociateCourses extends Component
         #       X = user count of users who've rated alpha course and a specific non-alpha course
 
         # Get all non-alpha courses rated by alpha course user
-        $arr = $this->getAlsoRated();
+        $arr = $this->getAlsoRated($alphaCourse);
         # Get distinct non-alpha courses rated by alpha course user
         $unique_arr = array_values(array_unique($arr));
         # Get value of Y (refer to calc)
-        $alphaScores = sizeof($this->getAlphaCourseUserIds());
+        $alphaScores = sizeof($this->getAlphaCourseUserIds($alphaCourse));
     
         $otherScores = [];
         # Get array of values for X (refer to calc)
@@ -139,7 +124,6 @@ class AssociateCourses extends Component
             $result[$courseTitle] = $assoc;
         }
         arsort($result);
-        return array_slice($result, 0, $this->resultCount);
+        return array_slice($result, 0, $resultCount);
     }
-
 }
