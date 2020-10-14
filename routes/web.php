@@ -4,6 +4,7 @@ use App\Http\Controllers\CoursesController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MsController;
 use App\Http\Controllers\Recommend\AssocAlsoRated;
+use App\Http\Controllers\SetsController;
 use App\Http\Controllers\StatsController;
 use App\Http\Middleware\IsAdmin;
 use Illuminate\Support\Facades\Route;
@@ -34,7 +35,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('/ms', [MsController::class, 'index'])->name('ms-home')->middleware(IsAdmin::class);
 Route::get('/ms/statistics', [StatsController::class, 'index'])->name('ms-stats')->middleware(IsAdmin::class);
-Route::get('/ms/settings', function() { return view('ms.pages.setting'); })->name('ms-sets')->middleware(IsAdmin::class);
+Route::get('/ms/settings', [SetsController::class, 'index'])->name('ms-sets')->middleware(IsAdmin::class);
 
 Route::get('/ms/courses', [MsController::class, 'indexCourse'])->name('ms-course')->middleware(IsAdmin::class);
 Route::get('/ms/platforms', function() { return view('ms.pages.platform'); })->name('ms-platform')->middleware(IsAdmin::class);
