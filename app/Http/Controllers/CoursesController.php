@@ -11,7 +11,7 @@ class CoursesController extends Controller
 {
     public function getRec() {
         # getRecommendations($idOfAlphaCourse, $numberOfRecommendationResults)
-        return dd(app('\App\Http\Controllers\Recommend\AssocAlsoRated')->getRecommendations(0, 5));
+        return dd(app('\App\Http\Controllers\Recommend\CalcAssoc')->getRecommendations(2, 5, 'favorites'));
     }
 
     public function store(Request $request) {

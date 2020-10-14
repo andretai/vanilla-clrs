@@ -63,7 +63,7 @@ class VectorUsers extends Component
         #       X3 = Total number of favorites by non-alpha user
 
         $alphaFavs = $this->getAlphaUserFavoritedCourseIds();
-        $nonAlphaUsers = $this->getNonAlphaUsers();
+        $nonAlphaUsers = $this->getNonAlphaUsersIds();
         $vector_scores = [];
         # Iterate through non-alpha users to calculate each vector score with alpha user
         foreach($nonAlphaUsers as $nonAlphaUser) {
@@ -89,6 +89,15 @@ class VectorUsers extends Component
             $vector_scores[$nonAlphaUser] = $vector_score;
         }
         arsort($vector_scores);
-        return array('user_id' => array_key_first($vector_scores), 'vector_score' => reset($vector_scores));
+        $result = [];
+        # Because the array vector_scores is an associative array (does not have keys)
+        # We will need to create an array of keys from the associative array so that we can loop through it
+        $keys = array_keys($vector_scores);
+        for ($i=0; $i < 5 ; $i++) { 
+            # Because we have they key, we can use it to get elements from the vector_scores' associative array
+            $array = array('user_id' => $keys[$i], 'vector_score' => $vector_scores[$keys[$i]]);
+            array_push($result, $array);
+        }
+        return $result;
     }
 }

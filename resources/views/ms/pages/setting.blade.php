@@ -4,8 +4,11 @@
   <div>
     <p>Settings</p>
     <a href="{{ route('courses.seed') }}">Seed</a>
-    @livewire('associate-courses', ['alphaCourse' => $alphacourseId])
-    <hr class="my-6">
-    @livewire('ms.vector-users')
+    <div class="grid grid-cols-2 row-gap-6">
+      @livewire('ms.associate-courses-revs', ['alphaCourse' => $alphacourseId])
+      @livewire('ms.vector-users')
+      @livewire('ms.associate-courses-favs')
+    </div>
+
   </div>
 @endsection
