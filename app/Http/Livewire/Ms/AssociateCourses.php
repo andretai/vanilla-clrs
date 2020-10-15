@@ -5,7 +5,7 @@ namespace App\Http\Livewire\Ms;
 use Illuminate\Support\Facades\DB;
 use Livewire\Component;
 
-class AssociateCoursesRevs extends Component
+class AssociateCourses extends Component
 {
     /**
      * Terms
@@ -14,17 +14,18 @@ class AssociateCoursesRevs extends Component
      *  beta courses = the other secondary courses
      */
 
-    public $alphaCourse;
-    public $resultCount = 5;
+    public $type = 'ratings';
+    public $alphaCourse = 0;
+    public $resultCount = 10;
 
     public function render()
     {
-        if(sizeof($this->getRatedCourses()) > 0) {
-            return view('livewire.ms.associate-courses-revs', [
-                'courses' => $this->getRatedCourses(),
+        if(sizeof($this->getRatedCourses($this->type)) > 0) {
+            return view('livewire.ms.associate-courses', [
+                'courses' => $this->getRatedCourses($this->type),
                 // 'userratings' => sizeof($this->getAlphaCourseUserIds()),
                 // 'alsorated' => array_values(array_unique($this->getAlsoRated())),
-                'assoc' => $this->calcAssoc(),
+                'assoc' => $this->calcAssoc($this->type, $this->resultCount, $this->alphaCourse),
                 'alphaCourseId' => $this->alphaCourse
             ]);
         } else {
@@ -40,9 +41,9 @@ class AssociateCoursesRevs extends Component
      * First, we need to find out what courses (course_id) were rated by users (without duplication) from the ratings table.
      * Then, from the list of course_id, we will get all the course details from the courses table.
      */
-    public function getRatedCourses() {
+    public function getRatedCourses($type) {
         $ratedCourses = [];
-        $ratings = DB::table('ratings')->select('course_id')->distinct()->get()->toArray();
+        $ratings = DB::table($type)->select('course_id')->distinct()->get()->toArray();
         foreach($ratings as $rating) {
             $ratedCourse = DB::table('courses')->where('id', $rating->course_id)->first();
             array_push($ratedCourses, $ratedCourse);
@@ -54,9 +55,9 @@ class AssociateCoursesRevs extends Component
      * Next, we want to know which users rated the alpha course (and to count them later).
      * From the ratings table, we will get the ratings for the alpha course and collect the user_id for each of these ratings.
      */
-    public function getAlphaCourseUsers() {
-        $alphaCourse = $this->getRatedCourses()[$this->alphaCourse]->id;
-        $alphaCourseRatings = DB::table('ratings')->where('course_id', $alphaCourse)->get()->toArray();
+    public function getAlphaCourseUsers($type, $alphaCourse) {
+        $alphaCourseId = $this->getRatedCourses($type)[$alphaCourse]->id;
+        $alphaCourseRatings = DB::table($type)->where('course_id', $alphaCourseId)->get()->toArray();
         $alphaCourseUsers = [];
         foreach($alphaCourseRatings as $alphaCourseRating) {
             array_push($alphaCourseUsers, $alphaCourseRating->user_id);
@@ -68,18 +69,18 @@ class AssociateCoursesRevs extends Component
      * Now, we need to collect the ratings which do not belong to the alpha course.
      * Remember, we want to find out how many users who have rated the alpha course also rated another course to calculate what other courses are suitable to recommend.
      */
-    public function getBetaCoursesRatings() {
-        $alphaCourseId = $this->getRatedCourses()[$this->alphaCourse]->id;
-        $betaCoursesRatings = DB::table('ratings')->where('course_id', '!=', $alphaCourseId)->get();
+    public function getBetaCoursesRatings($type, $alphaCourse) {
+        $alphaCourseId = $this->getRatedCourses($type)[$alphaCourse]->id;
+        $betaCoursesRatings = DB::table($type)->where('course_id', '!=', $alphaCourseId)->get();
         return $betaCoursesRatings;
     }
 
     /**
      * We have the beta courses already, we need to eliminate those not rated by the alpha users and return those that were.
      */
-    public function getBetaCoursesByAlphaUsers() {
-        $alphaCourseUsers = $this->getAlphaCourseUsers();
-        $betaCoursesRatings = $this->getBetaCoursesRatings();
+    public function getBetaCoursesByAlphaUsers($type, $alphaCourse) {
+        $alphaCourseUsers = $this->getAlphaCourseUsers($type, $alphaCourse);
+        $betaCoursesRatings = $this->getBetaCoursesRatings($type, $alphaCourse);
         $betaCoursesByAlphaUsers = [];
         foreach($alphaCourseUsers as $alphaCourseUser) {
             foreach($betaCoursesRatings as $betaCoursesRating) {
@@ -92,7 +93,7 @@ class AssociateCoursesRevs extends Component
         return $betaCoursesByAlphaUsers;
     }
 
-    public function calcAssoc() 
+    public function calcAssoc($type, $resultCount, $alphaCourse) 
     {
         # How to Calculate Association
         # Assoc = (Y + X) / Y
@@ -100,14 +101,14 @@ class AssociateCoursesRevs extends Component
         #       Y = user count of users who've rated alpha course,
         #       X = user count of users who've rated alpha course and a specific beta course.
 
-        $betaCoursesByAlphaUsers = $this->getBetaCoursesByAlphaUsers();
+        $betaCoursesByAlphaUsers = $this->getBetaCoursesByAlphaUsers($type, $alphaCourse);
 
         # In case there's any duplication, most likely during testing because of the database is seeded randomly.
         # array_values() to reindex the array after array_unique().
         $betaCoursesByAlphaUsers_unique = array_values(array_unique($betaCoursesByAlphaUsers));
         
         # A.k.a. Y (refer to formula).
-        $alphaCourseUsers_count = sizeof($this->getAlphaCourseUsers());
+        $alphaCourseUsers_count = sizeof($this->getAlphaCourseUsers($type, $alphaCourse));
         
         # A.k.a. array containing X values, each value in this array will be used to calculate association for each beta course.
         $betaCourses_count = [];
@@ -130,7 +131,7 @@ class AssociateCoursesRevs extends Component
         # Sort in descending order.
         arsort($result);
 
-        return array_slice($result, 0, $this->resultCount);
+        return array_slice($result, 0, $resultCount);
     }
 
 }

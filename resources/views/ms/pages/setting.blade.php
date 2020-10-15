@@ -1,14 +1,12 @@
 @extends('ms.layouts.app')
 
 @section('content')
-  <div>
+  <div class="m-6">
     <p>Settings</p>
     <a href="{{ route('courses.seed') }}">Seed</a>
-    <div class="grid grid-cols-2 row-gap-6">
-      @livewire('ms.associate-courses-revs', ['alphaCourse' => $alphacourseId])
-      @livewire('ms.vector-users')
-      @livewire('ms.associate-courses-favs')
+    <div class="grid grid-cols-2 col-gap-6 row-gap-6">
+      @livewire('ms.associate-courses')
+      @livewire('ms.collab-filter', ['userCount' => $numberOfUsers])
     </div>
-
   </div>
 @endsection
