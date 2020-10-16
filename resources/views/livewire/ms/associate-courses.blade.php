@@ -1,5 +1,12 @@
-<div>   
-  <p class="font-bold">Course Association by Course Favorites (Non-Personalized)</p>
+<div>
+  <p class="font-bold">Course Association (Non-Personalized)</p>
+  <div class="flex justify-between my-3">
+    <p class="italic font-semibold">Filter by</p>
+    <select class="border border-gray-300" wire:model="type">
+      <option value="ratings">Ratings</option>
+      <option value="favorites">Favorites</option>
+    </select>
+  </div>
   <div>
     <p class="my-3 font-semibold italic">Alpha Course</p>
     <select wire:model="alphaCourse" class="border border-gray-300">
@@ -10,12 +17,16 @@
       @endif        
     </select>
   </div>
+  <div class="flex justify-between my-3">
+    <p class="italic font-semibold">Result Count</p>
+    <select class="border border-gray-300" wire:model="resultCount">
+      <option value={{5}}>5</option>
+      <option value={{10}}>10</option>
+      <option value={{15}}>15</option>
+    </select>
+  </div>
   <div class="">
     <p class="my-3 font-semibold italic">Results</p>
-    <div class="grid grid-cols-5">
-      <p class="col-span-4 text-center">Course Names</p>
-      <p class="col-span-1 text-center">Scores</p>
-    </div>
     @if ($assoc)
       @foreach ($assoc as $item => $item_score)
       <div class="flex">

@@ -7,23 +7,18 @@ use Livewire\Component;
 
 class VectorUsers extends Component
 {
-    public $alphaUser = 4;
+    public $alphaUser = 3;
 
     public function render()
     {
         return view('livewire.ms.vector-users', [
-            'alpha' => $this->alphaUser,
-            'result' => $this->calc_vector()
+            'result' => $this->calc_vector($this->alphaUser)
         ]);
     }
 
-    /**
-     * 
-     * @return all course_id favorited by alpha user
-     */
-    public function getAlphaUserFavoritedCourseIds()
+    public function getAlphaUserFavoritedCourseIds($alphaUser)
     {
-        $alphaFavs = DB::table('favorites')->select('course_id')->where('user_id', $this->alphaUser)->get()->toArray();
+        $alphaFavs = DB::table('favorites')->select('course_id')->where('user_id', $alphaUser)->get()->toArray();
         $alphaUserFavoritedCourseIds = [];
         foreach($alphaFavs as $alphaFav) {
             array_push($alphaUserFavoritedCourseIds, $alphaFav->course_id);
@@ -31,13 +26,9 @@ class VectorUsers extends Component
         return $alphaUserFavoritedCourseIds;
     }
 
-    /**
-     * 
-     * @return all user_id of non-alpha users that have favorited at least 1 course
-     */
-    public function getNonAlphaUsersIds()
+    public function getNonAlphaUsersIds($alphaUser)
     {
-        $nonAlphaUsers = DB::table('favorites')->select('user_id')->where('user_id', '!=', $this->alphaUser)->distinct()->get()->toArray();
+        $nonAlphaUsers = DB::table('favorites')->select('user_id')->where('user_id', '!=', $alphaUser)->distinct()->get()->toArray();
         $nonAlphaUsersIds = [];
         foreach($nonAlphaUsers as $nonAlphaUser) {
             array_push($nonAlphaUsersIds, $nonAlphaUser->user_id);
@@ -53,7 +44,7 @@ class VectorUsers extends Component
      * This means user B may be more generous in favoriting courses, making it a less significant factor.
      * Hence, the proportions of favorites also carries weight, as you will notice in the calculation.
      */
-    public function calc_vector()
+    public function calc_vector($alphaUser)
     {
         # How to Calculate Vector
         # Vector score = ( X1 * X1 / X2 ) * ( X1 * X1 / X3 )
@@ -62,8 +53,8 @@ class VectorUsers extends Component
         #       X2 = Total number of favorites by alpha user
         #       X3 = Total number of favorites by non-alpha user
 
-        $alphaFavs = $this->getAlphaUserFavoritedCourseIds();
-        $nonAlphaUsers = $this->getNonAlphaUsersIds();
+        $alphaFavs = $this->getAlphaUserFavoritedCourseIds($alphaUser);
+        $nonAlphaUsers = $this->getNonAlphaUsersIds($alphaUser);
         $vector_scores = [];
         # Iterate through non-alpha users to calculate each vector score with alpha user
         foreach($nonAlphaUsers as $nonAlphaUser) {
@@ -98,6 +89,6 @@ class VectorUsers extends Component
             $array = array('user_id' => $keys[$i], 'vector_score' => $vector_scores[$keys[$i]]);
             array_push($result, $array);
         }
-        return $result;
+        return [$alphaUser, $result];
     }
 }
