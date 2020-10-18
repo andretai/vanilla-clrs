@@ -18,6 +18,11 @@ class UcourseController extends Controller
         return view('course')->with(['courses'=>$courses]);
     }
 
+    public function coursedetails($id)
+    {
+        $coursedetails = Course::find($id);
+        return view('coursedetails')->with(['coursedetails'=>$coursedetails]);
+    }
     /**
      * Show the form for creating a new resource.
      *

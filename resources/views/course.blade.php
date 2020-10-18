@@ -3,7 +3,8 @@
 @section('content')
 <div class=" flex flex-wrap ">
     @foreach( $courses as $course)
-    <div class="mt-6 px-2 w-1/5">
+
+    <a class="mt-6 px-2 w-64" href="/course/{{$course->id}}">
         <div class="bg-white border rounded-lg overflow-hidden hover:shadow-xl">
             <img class="h-48 w-full object-cover" src="{{$course->image}}" alt="{{$course->description}}">
             <div class="p-6">
@@ -30,7 +31,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </a>
     @endforeach
 
 </div>

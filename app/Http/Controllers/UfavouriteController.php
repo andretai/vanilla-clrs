@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Favourite;
+use App\Models\Course;
 
 class UfavouriteController extends Controller
 {
@@ -13,7 +16,10 @@ class UfavouriteController extends Controller
      */
     public function index()
     {
-        return view('favourite');
+        $user = Auth::User();
+        $favourites = Favourite::with('course')->where('user_id', $user->id)->get();
+
+        return view('favourite')->with(['favourites' => $favourites]);
     }
 
     /**
@@ -21,11 +27,40 @@ class UfavouriteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function addtofav($id)
     {
-        //
-    }
+        $course = Course::find($id);
+        if (!$course) {
+            abort(404);
+        }
 
+        $user = Auth::User();
+
+        $favourite = Favourite::where('user_id', $user->id)->where('course_id', $id)->first();
+        //if favourite is empty then this is the first favourite
+        if (!$favourite) {
+            $newFavourite = Favourite::insert(
+                ['user_id' => $user->id, 'course_id' => $id]
+            );
+            return redirect()->back()->with('success', 'Course added as favourite successfully!');
+        } else {
+            return redirect()->back()->with('exist', 'Course already added as favourite!');
+        }
+    }
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function removefav(Request $request)
+    {
+        if($request->id){
+            $course = Favourite::where('id',$request->id)->first();
+            $remove = Favourite::where('id',$request->id)->delete();
+            return redirect()->back()->with('alert','A course has been removed!');
+        }
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -67,17 +102,6 @@ class UfavouriteController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
     {
         //
     }

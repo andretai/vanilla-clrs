@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'CLRS') }}</title>
+    <title>@yield('title')</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -20,6 +20,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e460f14c9c.js" crossorigin="anonymous"></script>
+    @livewireStyles
 </head>
 
 <body class="bg-gray-200">
@@ -48,8 +49,9 @@
                         Course
                     </a>
                     <a href="/favourite" class="{{'favourite' == request()->path() ? 'font-extrabold' : '' }} text-lg block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-                        Favourite
+                        Favourite <span class=" rounded-full bg-indigo-500 uppercase px-2 py-1 text-xs font-bold mr-3">{{$favCount}}</span>
                     </a>
+                    
                     </a>
                     <a href="/promotion" class="{{'promotion' == request()->path() ? 'font-extrabold' : '' }} text-lg block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
                         Promotion
@@ -86,7 +88,8 @@
     <main class="p-10">
         @yield('content')
     </main>
-
+    @livewireScripts
+    @yield('scripts')
 </body>
 
 </html>
