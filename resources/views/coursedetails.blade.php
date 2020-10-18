@@ -28,7 +28,23 @@
                 <p class="w-full mt-4 p-3 bg-red-700 hover:bg-red-600 text-l rounded-lg uppercase text-white justified text-center font-bold tracking-wide">
                     <a href="addtofav/{{$coursedetails->id}}">Add Favourite</a>
                 </p>
-
+                <div>
+                    <p class="mt-4 font-bold text-xl text-center">Rating:
+                        @foreach(range(1,5) as $i)
+                        <span class="fa-stack" style="width:1em">
+                            <i class="far fa-star fa-stack-1x"></i>
+                            @if($coursedetails->averageRating >0)
+                            @if($coursedetails->averageRating >0.5)
+                            <i class="fas fa-star fa-stack-1x"></i>
+                            @else
+                            <i class="fas fa-star-half fa-stack-1x"></i>
+                            @endif
+                            @endif
+                            @php $coursedetails->averageRating--; @endphp
+                        </span>
+                        @endforeach
+                    </p>
+                </div>
             </div>
         </div>
         <div class="w-2/3 bg-white rounded-lg m-2 p-5">
@@ -47,20 +63,47 @@
         </div>
     </div>
     <div class="bg-white rounded-lg m-6 p-5">
-        <div class="p-3">
-            <h2 class=" font-bold text-2xl text-gray-900">Review & Rating</h2>
-            <div class="text-sm flex mt-4 flex-col">
-                <Rating></Rating>
-                <label for="description" class="font-semibold text-xl mt-2 mb-2"></label>
-                <textarea class=" appearance-none w-full border border-gray-200 p-2 h-32 focus:outline-none focus:border-gray-500" placeholder="Enter your description"></textarea>
-            </div>
-            <div class="submit">
-                <button type="submit" class=" rounded-lg w-full bg-blue-600 shadow-lg text-white px-4 py-2 hover:bg-blue-700 mt-8 text-center font-semibold focus:outline-none ">
-                    Submit
-                </button>
-            </div>
+        <h2 class=" font-bold text-2xl text-gray-900">Review & Rating</h2>
+        @if($coursedetails->userRating)
+        <div>
+            <p>Name: {{$coursedetails->userRating->user->name}}</p>
+            <p>Rating: {{$coursedetails->userRating->rate}}</p>
+            <p>Review: {{$coursedetails->userRating->review}}</p>
+
         </div>
+        @else
+
+        <div class="p-3">
+            <form action="/rating/{{$coursedetails->id}}" method="GET" role="review">
+                <div>
+                    <select name="rating" id='rating' class="form-control ml-3" style="width: 150px">
+                        <option value="">Rating</option>
+                        <option value="1">1 star</option>
+                        <option value="2">2 star</option>
+                        <option value="3">3 star</option>
+                        <option value="4">4 star</option>
+                        <option value="5">5 star</option>
+                    </select>
+                </div>
+                <div class="text-sm flex mt-4 flex-col">
+                    <textarea name="review" type="text" class=" appearance-none w-full border border-gray-200 p-2 h-32 focus:outline-none focus:border-gray-500" placeholder="Enter your review"></textarea>
+                </div>
+                <div>
+                    <button type="submit" class=" rounded-lg w-full bg-blue-600 shadow-lg text-white px-4 py-2 hover:bg-blue-700 mt-8 text-center font-semibold focus:outline-none ">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+    @endif
+    @foreach($coursedetails->allrating as $rating)
+    <div class="mt-4">
+        <p>Name: {{$rating->user->name}}</p>
+        <p>Rating: {{$rating->rate}}</p>
+        <p>Review: {{$rating->review}}</p>
+
     </div>
+    @endforeach
 </div>
 
 

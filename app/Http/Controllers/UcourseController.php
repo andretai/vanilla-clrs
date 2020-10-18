@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Course;
-
+use App\Models\Rating;
+use Illuminate\Support\Facades\Auth;
 class UcourseController extends Controller
 {
     /**
@@ -20,17 +21,38 @@ class UcourseController extends Controller
 
     public function coursedetails($id)
     {
+        $user = Auth::User();
         $coursedetails = Course::find($id);
+        $userRating = Rating::with('user')->where('user_id', $user->id)->where('course_id',$id)->first();
+        $allRating = Rating::with('user')->where('course_id',$id)->whereNotIn('user_id',[$user->id])->get();
+        $averageRating = Rating::where('course_id',$id)->avg('rate');
+        $coursedetails->averageRating = $averageRating;
+        $coursedetails->allrating = $allRating;
+        $coursedetails->userRating = $userRating;
+        //return $coursedetails;
         return view('coursedetails')->with(['coursedetails'=>$coursedetails]);
     }
     /**
-     * Show the form for creating a new resource.
+     * Show the form for creating a new rating.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function rating(Request $request)
     {
-        
+        if($request->rating){
+            $user = Auth::User();
+            $course = Course::where('id',$request->id)->first();
+            $rating = Rating::insert(
+                ['course_id'=> $request->id, 
+                'platform_id' => 1, 
+                'user_id' => $user->id, 
+                'title'=> $course->title,
+                'review' => $request->review,
+                'rate' => $request->rating]
+            );
+            //return Rating::all();
+            return redirect()->back()->with('success', 'Thanks for the rating and review!');
+        }
     }
 
     /**
