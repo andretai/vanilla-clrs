@@ -54,6 +54,11 @@ Route::get('/ms/courses/seed', [MsController::class, 'seed'])->name('courses.see
 Route::get('/ms/courses/test', [CoursesController::class, 'getRec']);
 
 //user
+Route::get('/home/seedcategory', [HomeController::class, 'seedCategory'])->middleware('auth');
 Route::get('/course', [UcourseController::class, 'index'])->middleware('auth');
+Route::get('/course/{id}', [UcourseController::class, 'coursedetails'])->middleware('auth');
 Route::get('/favourite', [UfavouriteController::class, 'index'])->middleware('auth');
 Route::get('/promotion', [UpromotionController::class, 'index'])->middleware('auth');
+Route::get('/course/addtofav/{id}',[UfavouriteController::class, 'addtofav'])->middleware('auth');
+Route::get('/favourite/removefav/{id}',[UfavouriteController::class, 'removefav'])->middleware('auth');
+Route::get('/rating/{id}',[UCourseController::class, 'rating'])->middleware('auth');
