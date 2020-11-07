@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\CoursesController;
+use App\Http\Controllers\PlatformsController;
+use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MsController;
 use App\Http\Controllers\Recommend\AssocAlsoRated;
@@ -38,7 +40,8 @@ Route::get('/ms/statistics', [StatsController::class, 'index'])->name('ms-stats'
 Route::get('/ms/settings', [SetsController::class, 'index'])->name('ms-sets')->middleware(IsAdmin::class);
 
 Route::get('/ms/courses', [MsController::class, 'indexCourse'])->name('ms-course')->middleware(IsAdmin::class);
-Route::get('/ms/platforms', function() { return view('ms.pages.platform'); })->name('ms-platform')->middleware(IsAdmin::class);
+Route::get('/ms/platforms', [MsController::class, 'indexPlatform'])->name('ms-platform')->middleware(IsAdmin::class);
+Route::get('/ms/categories', [MsController::class, 'indexCategory'])->name('ms-category')->middleware(IsAdmin::class);
 Route::get('/ms/promos', function() { return view('ms.pages.promo'); })->name('ms-promo')->middleware(IsAdmin::class);
 Route::get('/ms/users', function() { return view('ms.pages.user'); })->name('ms-user')->middleware(IsAdmin::class);
 
@@ -49,6 +52,14 @@ Route::get('/ms/remove', [MsController::class, 'remove'])->name('ms-remove')->mi
 Route::post('/ms/courses/store', [CoursesController::class, 'store'])->name('courses.store')->middleware(IsAdmin::class);
 Route::post('/ms/courses/update', [CoursesController::class, 'update'])->name('courses.update')->middleware(IsAdmin::class);
 Route::get('/ms/courses/delete', [CoursesController::class, 'delete'])->name('courses.delete')->middleware(IsAdmin::class);
+
+Route::post('/ms/platforms/store', [PlatformsController::class, 'store'])->name('platforms.store')->middleware(IsAdmin::class);
+Route::post('/ms/platforms/update', [PlatformsController::class, 'update'])->name('platforms.update')->middleware(IsAdmin::class);
+Route::get('/ms/platforms/delete', [PlatformsController::class, 'delete'])->name('platforms.delete')->middleware(IsAdmin::class);
+
+Route::post('/ms/categories/store', [CategoriesController::class, 'store'])->name('categories.store')->middleware(IsAdmin::class);
+Route::post('/ms/categories/update', [CategoriesController::class, 'update'])->name('categories.update')->middleware(IsAdmin::class);
+Route::get('/ms/categories/delete', [CategoriesController::class, 'delete'])->name('categories.delete')->middleware(IsAdmin::class);
 
 Route::get('/ms/courses/seed', [MsController::class, 'seed'])->name('courses.seed');
 Route::get('/ms/courses/test', [CoursesController::class, 'getRec']);

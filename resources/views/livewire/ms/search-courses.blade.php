@@ -23,7 +23,7 @@
         </div>
         <div class="w-2/12">Preview</div>
         <div class="w-8/12">Title</div>
-        <div class="w-1/13">Action</div>
+        <div class="w-1/12">Action</div>
       </div>
       @foreach ($courses as $course)
         <div class="flex items-center my-2 border border-gray-300 rounded-md">

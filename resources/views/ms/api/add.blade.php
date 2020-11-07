@@ -2,7 +2,13 @@
 
 @section('content')
   <div class="">
-    <form action="{{ route('courses.store') }}" method="POST">
+    <form
+      @if ($item_type === 'category')
+        action="{{ route('categories.store') }}"
+      @else
+        action="{{ route($item_type.'s.store') }}"
+      @endif 
+      method="POST">
       @csrf
       <div class="px-6 py-6 flex justify-between items-center border-b border-gray-300">
         <div class="flex">

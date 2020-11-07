@@ -84,13 +84,20 @@
               class="nav-side-links"
             @endif
           >Platforms</a>
+          <a href="{{ url('/ms/categories') }}"
+            @if (Route::currentRouteName() === 'ms-category')
+              class="nav-side-links bg-gray-700"
+            @else
+              class="nav-side-links"
+            @endif
+          >Categories</a>
           <a href="{{ url('/ms/promos') }}"
             @if (Route::currentRouteName() === 'ms-promo')
               class="nav-side-links bg-gray-700"
             @else
               class="nav-side-links"
             @endif
-          >Promos</a>
+          >Promotions</a>
           <a href="{{ url('/ms/users') }}"
             @if (Route::currentRouteName() === 'ms-user')
               class="nav-side-links bg-gray-700"

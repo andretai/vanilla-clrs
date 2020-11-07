@@ -21,8 +21,8 @@ class CoursesController extends Controller
             'image' => '',
             'url' => 'required',
             'price' => 'required',
-            'category' => 'required',
-            'platform' => 'required'
+            'category_id' => 'required',
+            'platform_id' => 'required'
         ]);
         
         $course = new Course;
@@ -31,8 +31,8 @@ class CoursesController extends Controller
         $course->image = $request->image;
         $course->url = $request->url;
         $course->price = $request->price;
-        $course->category = $request->category;
-        $course->platform = $request->platform;
+        $course->category_id = $request->category_id;
+        $course->platform_id = $request->platform_id;
         $course->save();
 
         return view('ms.api.add', [
@@ -51,7 +51,8 @@ class CoursesController extends Controller
             'image' => '',
             'url' => 'required',
             'price' => 'required',
-            'platform' => 'required'
+            'category_id' => 'required',
+            'platform_id' => 'required'
         ]);
 
         DB::table('courses')->where('id', $item_id)->update([
@@ -60,7 +61,8 @@ class CoursesController extends Controller
             'image' => $request->image,
             'url' => $request->url,
             'price' => $request->price,
-            'platform' => $request->platform
+            'category_id' => $request->category_id,
+            'platform_id' => $request->platform_id
         ]);
         
         return view('ms.api.edit', [
@@ -87,8 +89,8 @@ class CoursesController extends Controller
         array_push($item_fields, (object) array('name' => 'image', 'type' => 'text'));
         array_push($item_fields, (object) array('name' => 'url', 'type' => 'text'));
         array_push($item_fields, (object) array('name' => 'price', 'type' => 'text'));
-        array_push($item_fields, (object) array('name' => 'category', 'type' => 'text'));
-        array_push($item_fields, (object) array('name' => 'platform', 'type' => 'text'));
+        array_push($item_fields, (object) array('name' => 'category_id', 'type' => 'number'));
+        array_push($item_fields, (object) array('name' => 'platform_id', 'type' => 'number'));
         return $item_fields;
     }
 
@@ -99,8 +101,8 @@ class CoursesController extends Controller
         array_push($item_values, (object) array('name' => 'image', 'type' => 'text', 'value' => $item->image));
         array_push($item_values, (object) array('name' => 'url', 'type' => 'text', 'value' => $item->url));
         array_push($item_values, (object) array('name' => 'price', 'type' => 'text', 'value' => $item->price));
-        array_push($item_values, (object) array('name' => 'category', 'type' => 'text', 'value' => $item->category));
-        array_push($item_values, (object) array('name' => 'platform', 'type' => 'text', 'value' => $item->platform));
+        array_push($item_values, (object) array('name' => 'category_id', 'type' => 'number', 'value' => $item->category_id));
+        array_push($item_values, (object) array('name' => 'platform_id', 'type' => 'number', 'value' => $item->platform_id));
         return $item_values;
     }
 }
