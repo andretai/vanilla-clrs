@@ -23,12 +23,17 @@ class UcourseController extends Controller
     {
         $user = Auth::User();
         $coursedetails = Course::find($id);
+        //get user rating
         $userRating = Rating::with('user')->where('user_id', $user->id)->where('course_id',$id)->first();
+        $coursedetails->userRating = $userRating;
+        //get all user rating
         $allRating = Rating::with('user')->where('course_id',$id)->whereNotIn('user_id',[$user->id])->get();
+        $coursedetails->allrating = $allRating;
+        //calculate average rating
         $averageRating = Rating::where('course_id',$id)->avg('rate');
         $coursedetails->averageRating = $averageRating;
-        $coursedetails->allrating = $allRating;
-        $coursedetails->userRating = $userRating;
+        //get number of total rating
+        $coursedetails->totalRating = Rating::where('course_id',$id)->count();
         //return $coursedetails;
         return view('coursedetails')->with(['coursedetails'=>$coursedetails]);
     }
