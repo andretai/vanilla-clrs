@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\Favorite;
+use App\Models\Favourite;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class FavoriteFactory extends Factory
+class FavouriteFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Favorite::class;
+    protected $model = Favourite::class;
 
     /**
      * Define the model's default state.

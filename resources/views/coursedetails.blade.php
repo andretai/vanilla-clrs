@@ -34,16 +34,17 @@
                         <span class="fa-stack" style="width:1em">
                             <i class="far fa-star fa-stack-1x"></i>
                             @if($coursedetails->averageRating >0)
-                            @if($coursedetails->averageRating >0.5)
-                            <i class="fas fa-star fa-stack-1x"></i>
-                            @else
-                            <i class="fas fa-star-half fa-stack-1x"></i>
-                            @endif
+                                @if($coursedetails->averageRating >0.5)
+                                <i class="fas fa-star fa-stack-1x"></i>
+                                @else
+                                <i class="fas fa-star-half fa-stack-1x"></i>
+                                @endif
                             @endif
                             @php $coursedetails->averageRating--; @endphp
                         </span>
                         @endforeach
                     </p>
+                    <p class="mt-2 font-bold text-xl text-center"> ({{$coursedetails->totalRating }} Reviewers)</p>
                 </div>
             </div>
         </div>
@@ -95,16 +96,16 @@
                 </div>
             </form>
         </div>
-    @endif
-    @foreach($coursedetails->allrating as $rating)
-    <div class="mt-4">
-        <p>Name: {{$rating->user->name}}</p>
-        <p>Rating: {{$rating->rate}}</p>
-        <p>Review: {{$rating->review}}</p>
+        @endif
+        @foreach($coursedetails->allrating as $rating)
+        <div class="mt-4">
+            <p>Name: {{$rating->user->name}}</p>
+            <p>Rating: {{$rating->rate}}</p>
+            <p>Review: {{$rating->review}}</p>
 
+        </div>
+        @endforeach
     </div>
-    @endforeach
-</div>
 
 
-@endsection
+    @endsection

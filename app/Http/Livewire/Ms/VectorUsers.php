@@ -16,19 +16,19 @@ class VectorUsers extends Component
         ]);
     }
 
-    public function getAlphaUserFavoritedCourseIds($alphaUser)
+    public function getAlphaUserFavouritedCourseIds($alphaUser)
     {
-        $alphaFavs = DB::table('favorites')->select('course_id')->where('user_id', $alphaUser)->get()->toArray();
-        $alphaUserFavoritedCourseIds = [];
+        $alphaFavs = DB::table('favourites')->select('course_id')->where('user_id', $alphaUser)->get()->toArray();
+        $alphaUserFavouritedCourseIds = [];
         foreach($alphaFavs as $alphaFav) {
-            array_push($alphaUserFavoritedCourseIds, $alphaFav->course_id);
+            array_push($alphaUserFavouritedCourseIds, $alphaFav->course_id);
         }
-        return $alphaUserFavoritedCourseIds;
+        return $alphaUserFavouritedCourseIds;
     }
 
     public function getNonAlphaUsersIds($alphaUser)
     {
-        $nonAlphaUsers = DB::table('favorites')->select('user_id')->where('user_id', '!=', $alphaUser)->distinct()->get()->toArray();
+        $nonAlphaUsers = DB::table('favourites')->select('user_id')->where('user_id', '!=', $alphaUser)->distinct()->get()->toArray();
         $nonAlphaUsersIds = [];
         foreach($nonAlphaUsers as $nonAlphaUser) {
             array_push($nonAlphaUsersIds, $nonAlphaUser->user_id);
@@ -38,44 +38,44 @@ class VectorUsers extends Component
 
     /**
      * This method aims to calculate the vector scores between the alpha user and non-alpha users.
-     * Higher vector score means greater similarity between the alpha user and a non-alpha user in terms of favorites.
+     * Higher vector score means greater similarity between the alpha user and a non-alpha user in terms of favourites.
      * In simpler terms, user A and user B both rated on the same few courses.
-     * However, user A and user B each has favorited different number of courses, for example, user A favorited 20 courses while user B favorited 100 courses.
+     * However, user A and user B each has favourited different number of courses, for example, user A favourited 20 courses while user B favourited 100 courses.
      * This means user B may be more generous in favoriting courses, making it a less significant factor.
-     * Hence, the proportions of favorites also carries weight, as you will notice in the calculation.
+     * Hence, the proportions of favourites also carries weight, as you will notice in the calculation.
      */
     public function calc_vector($alphaUser)
     {
         # How to Calculate Vector
         # Vector score = ( X1 * X1 / X2 ) * ( X1 * X1 / X3 )
         # Where
-        #       X1 = Number of courses favorited by both alpha and non-alpha users
-        #       X2 = Total number of favorites by alpha user
-        #       X3 = Total number of favorites by non-alpha user
+        #       X1 = Number of courses favourited by both alpha and non-alpha users
+        #       X2 = Total number of favourites by alpha user
+        #       X3 = Total number of favourites by non-alpha user
 
-        $alphaFavs = $this->getAlphaUserFavoritedCourseIds($alphaUser);
+        $alphaFavs = $this->getAlphaUserFavouritedCourseIds($alphaUser);
         $nonAlphaUsers = $this->getNonAlphaUsersIds($alphaUser);
         $vector_scores = [];
         # Iterate through non-alpha users to calculate each vector score with alpha user
         foreach($nonAlphaUsers as $nonAlphaUser) {
-            # Get all courses favorited by this user
-            $favoritedCourses = DB::table('favorites')->select('course_id')
+            # Get all courses favourited by this user
+            $favouritedCourses = DB::table('favourites')->select('course_id')
                                                       ->where('user_id', $nonAlphaUser)
                                                       ->distinct()
                                                       ->get()
                                                       ->toArray();
             $count = 0;
-            # Iterate through courses favorited by the alpha users and find any identical courses favorited by the non-alpha user.
+            # Iterate through courses favourited by the alpha users and find any identical courses favourited by the non-alpha user.
             foreach($alphaFavs as $alphaFav) {
-                foreach($favoritedCourses as $favoritedCourse) {
-                    if($alphaFav === $favoritedCourse->course_id) {
+                foreach($favouritedCourses as $favouritedCourse) {
+                    if($alphaFav === $favouritedCourse->course_id) {
                         $count++;
                     }
                 }
             }
             # With the values we needed we calculate the vector score for a user in each iteration (refer to calculation).
             $alpha = $count * ( $count / sizeof($alphaFavs) );
-            $nonAlpha = $count * ( $count / sizeof($favoritedCourses) );
+            $nonAlpha = $count * ( $count / sizeof($favouritedCourses) );
             $vector_score = $alpha * $nonAlpha;
             $vector_scores[$nonAlphaUser] = $vector_score;
         }
