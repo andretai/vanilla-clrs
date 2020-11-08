@@ -113,6 +113,6 @@ class CalcAssoc extends Controller
         # Sort in descending order.
         arsort($result);
 
-        return array_slice($result, 0, $resultCount);
+        return array_keys(array_slice($result, 0, $resultCount));
     }
 }

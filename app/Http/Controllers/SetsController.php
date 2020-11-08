@@ -13,6 +13,7 @@ class SetsController extends Controller
 {
     public function index() {
         $this->sendRatings();
+        app('App\Http\Controllers\CoursesController')->getRec();
         return view('ms.pages.setting', [
             'ratings' => Rating::all(),
             'numberOfUsers' => sizeof(User::all())

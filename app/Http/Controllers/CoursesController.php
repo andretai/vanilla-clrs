@@ -10,8 +10,9 @@ use Illuminate\Support\Facades\DB;
 class CoursesController extends Controller
 {
     public function getRec() {
-        # getRecommendations($idOfAlphaCourse, $numberOfRecommendationResults)
-        return dd(app('\App\Http\Controllers\Recommend\CalcAssoc')->getRecommendations(2, 5, 'favourites'));
+        # getRecommendations($thecourseurviewing, $numofrecommendations, $ratingsorfavourites)
+        $result = app('\App\Http\Controllers\Recommend\CalcAssoc')->getRecommendations(1, 5, 'favourites');
+        return dd($result);
     }
 
     public function store(Request $request) {
