@@ -91,8 +91,8 @@
               class="nav-side-links"
             @endif
           >Categories</a>
-          <a href="{{ url('/ms/promos') }}"
-            @if (Route::currentRouteName() === 'ms-promo')
+          <a href="{{ url('/ms/promotions') }}"
+            @if (Route::currentRouteName() === 'ms-promotion')
               class="nav-side-links bg-gray-700"
             @else
               class="nav-side-links"

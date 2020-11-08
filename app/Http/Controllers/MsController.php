@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Course;
 use App\Models\Platform;
+use App\Models\Promotion;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
@@ -28,8 +29,8 @@ class MsController extends Controller
             case 'category':
                 $item_fields = app('App\Http\Controllers\CategoriesController')->categoryFields([]);
                 break;
-            case 'promo':
-                $item_fields = $this->promoFields($item_fields);
+            case 'promotion':
+                $item_fields = app('App\Http\Controllers\PromotionsController')->promotionFields([]);
                 break;
             default:
                 break;
@@ -57,6 +58,10 @@ class MsController extends Controller
             case 'category':
                 $item = DB::table('categories')->find($item_id);
                 $item_fields = app('App\Http\Controllers\CategoriesController')->categoryFieldsValues($item);
+                break;
+            case 'promotion':
+                $item = DB::table('promotions')->find($item_id);
+                $item_fields = app('App\Http\Controllers\PromotionsController')->promotionFieldsValues($item);
                 break;
             default:
                 break;
@@ -129,13 +134,10 @@ class MsController extends Controller
         ]);
     }
 
-    public function promoFields($item_fields) {
-        array_push($item_fields, (object) array('name' => 'title', 'type' => 'text'));
-        array_push($item_fields, (object) array('name' => 'description', 'type' => 'text'));
-        array_push($item_fields, (object) array('name' => 'image', 'type' => 'text'));
-        array_push($item_fields, (object) array('name' => 'start date', 'type' => 'date'));
-        array_push($item_fields, (object) array('name' => 'end date', 'type' => 'date'));
-        array_push($item_fields, (object) array('name' => 'url', 'type' => 'text'));
-        return $item_fields;
+    public function indexPromotion() {
+        $promotions = Promotion::all();
+        return view('ms.pages.promotion', [
+            'promotions' => $promotions
+        ]);
     }
 }

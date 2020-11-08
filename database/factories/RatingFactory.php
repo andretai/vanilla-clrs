@@ -22,9 +22,9 @@ class RatingFactory extends Factory
     public function definition()
     {
         return [
-            'course_id' => $this->faker->numberBetween(2, 205),
-            'platform_id' => $this->faker->numberBetween(1, 5),
-            'user_id' => $this->faker->numberBetween(3, 102),
+            'course_id' => $this->faker->numberBetween(1, 204),
+            'platform_id' => 1,
+            'user_id' => $this->faker->numberBetween(2, 101),
             'title' => $this->faker->realText(50, 2),
             'review' => $this->faker->realText(200, 2),
             'rate' => $this->faker->numberBetween(1, 5)
