@@ -12,8 +12,6 @@ use Illuminate\Support\Facades\Storage;
 class SetsController extends Controller
 {
     public function index() {
-        $this->sendRatings();
-        app('App\Http\Controllers\CoursesController')->getRec();
         return view('ms.pages.setting', [
             'ratings' => Rating::all(),
             'numberOfUsers' => sizeof(User::all())
@@ -34,6 +32,6 @@ class SetsController extends Controller
             array_push($results, $obj);
         }
         $json = json_encode(array('results' => $results), JSON_PRETTY_PRINT);
-        Storage::disk('s3')->put('ratings/texts.json', $json);
+        // Storage::disk('s3')->put('ratings/texts.json', $json);
     }
 }

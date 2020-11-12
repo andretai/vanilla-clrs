@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Rating;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Facades\Storage;
 
 class RatingFactory extends Factory
 {
@@ -21,12 +22,17 @@ class RatingFactory extends Factory
      */
     public function definition()
     {
+        static $count = 0;
+        $file = Storage::get('transformed.json');
+        $decoded = json_decode($file);
+        $current = $count;
+        $count++;
         return [
             'course_id' => $this->faker->numberBetween(1, 204),
             'platform_id' => 1,
             'user_id' => $this->faker->numberBetween(2, 101),
-            'title' => $this->faker->realText(50, 2),
-            'review' => $this->faker->realText(200, 2),
+            'title' => $decoded[$current]->title,
+            'review' => $decoded[$current]->review,
             'rate' => $this->faker->numberBetween(1, 5)
         ];
     }
