@@ -22,7 +22,7 @@ class RatingFactory extends Factory
      */
     public function definition()
     {
-        static $count = 0;
+        STATIC $count = 0;
         $file = Storage::get('transformed.json');
         $decoded = json_decode($file);
         $current = $count;
