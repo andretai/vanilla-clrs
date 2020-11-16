@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Favourite extends Model
 {
     use HasFactory;
-    
+
+    protected $fillable = ['user_id','course_id'];
 
     public function user()
     {
@@ -19,4 +20,5 @@ class Favourite extends Model
     {
         return $this->belongsTo('App\Models\Course');
     }
+    public $timestamps = true;
 }

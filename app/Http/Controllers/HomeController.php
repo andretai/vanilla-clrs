@@ -28,6 +28,8 @@ class HomeController extends Controller
         return view('home')->with(['categories'=>$categories]);
     }
 
+    
+
     public function seedCategory()
     {
         $categories = ['Art','Computer','Cooking','Dance','Exercise','Gardening','Health','Language'];

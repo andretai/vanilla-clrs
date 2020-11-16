@@ -23,10 +23,10 @@
                 <div>
 
                     <h2 class="pl-2 font-bold text-2xl text-gray-900">{{$favourite->course->title}}</h2>
-                    <p class="pl-2 mt-3 font-base text-xl text-gray-600 tracking-wide">{{$favourite->course->category}} &bull; Created
+                    <p class="pl-2 mt-3 font-base text-xl text-gray-600 tracking-wide">{{$favourite->course->category->category}} &bull; Created
                         by: Andre Tai</p>
                     <p class="pl-2 italic monospaced text-gray-600 text-xl">Duration: 5 Hours</p>
-                    <p class="pl-2 italic monospaced text-gray-600 text-xl">Platform: {{$favourite->course->platform}}</p>
+                    <p class="pl-2 italic monospaced text-gray-600 text-xl">Platform: {{$favourite->course->platform->platform}}</p>
 
                     <p class="pl-2 italic monospaced text-gray-600 text-xl ">Price: {{$favourite->course->price}}</p>
                 </div>
@@ -35,7 +35,7 @@
                             <i class="fas fa-trash-alt"></i>
                         </a>
                     </p>
-                    <p><a href="course/{{$favourite->id}}" class="mt-4 p-3 pl-4 pr-4 bg-blue-700 hover:bg-blue-600 text-l rounded-lg uppercase text-white justified text-center font-bold tracking-wide">
+                    <p><a href="course/{{$favourite->course_id}}" class="mt-4 p-3 pl-4 pr-4 bg-blue-700 hover:bg-blue-600 text-l rounded-lg uppercase text-white justified text-center font-bold tracking-wide">
                             <i class="fas fa-info"></i>
                         </a></p>
                 </div>

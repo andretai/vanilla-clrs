@@ -16,4 +16,23 @@ class Course extends Model
     public function ratings(){
         return $this->hasMany('App\Models\Rating');
     }
+    public function category()
+    {
+        return $this->belongsTo('App\Models\Category');
+    }
+
+    public function platform()
+    {
+        return $this->belongsTo('App\Models\Platform');
+    }
+        
+    public function avgRating()
+    {
+        return $this->ratings()->avg('rate');
+    }
+
+    public function countRating()
+    {
+        return $this->ratings()->count();
+    }
 }

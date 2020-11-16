@@ -39,7 +39,7 @@ class UfavouriteController extends Controller
         $favourite = Favourite::where('user_id', $user->id)->where('course_id', $id)->first();
         //if favourite is empty then this is the first favourite
         if (!$favourite) {
-            $newFavourite = Favourite::insert(
+            $newFavourite = Favourite::create(
                 ['user_id' => $user->id, 'course_id' => $id]
             );
             return redirect()->back()->with('success', 'Course added as favourite successfully!');
@@ -55,8 +55,9 @@ class UfavouriteController extends Controller
      */
     public function removefav(Request $request)
     {
+        $user = Auth::User();
         if($request->id){
-            $course = Favourite::where('id',$request->id)->first();
+            //$course = Favourite::where('id',$request->id)->first();
             $remove = Favourite::where('id',$request->id)->delete();
             return redirect()->back()->with('alert','A course has been removed!');
         }
