@@ -14,19 +14,23 @@ class UfavouriteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $user = Auth::User();
         $favourites = Favourite::with('course')->where('user_id', $user->id)->get();
         $getFirstFavCourse = Favourite::with('course')->where('user_id', $user->id)->first();
-        $result = app('App\Http\Controllers\Recommend\CalcAssoc')->getRecommendations($getFirstFavCourse->course_id, 4, 'favourites');
-        //var_dump($result);
+        if (!$request->favourite) {
+            $result = app('App\Http\Controllers\Recommend\CalcAssoc')->getRecommendations($getFirstFavCourse->course_id, 4, 'favourites');
+        } else {
+            $result = app('App\Http\Controllers\Recommend\CalcAssoc')->getRecommendations($request->favourite, 4, 'favourites');
+        }
         $recommendCourse = array();
         foreach ($result as $r) {
-            $temp = Course::where('title',$r)->first();
-            array_push($recommendCourse,$temp);
+            $temp = Course::where('title', $r)->first();
+            array_push($recommendCourse, $temp);
         }
         $favourites->recommendCourse = $recommendCourse;
+
         return view('favourite')->with(['favourites' => $favourites]);
     }
 
@@ -64,10 +68,10 @@ class UfavouriteController extends Controller
     public function removefav(Request $request)
     {
         $user = Auth::User();
-        if($request->id){
+        if ($request->id) {
             //$course = Favourite::where('id',$request->id)->first();
-            $remove = Favourite::where('id',$request->id)->delete();
-            return redirect()->back()->with('alert','A course has been removed!');
+            $remove = Favourite::where('id', $request->id)->delete();
+            return redirect()->back()->with('alert', 'A course has been removed!');
         }
     }
     /**

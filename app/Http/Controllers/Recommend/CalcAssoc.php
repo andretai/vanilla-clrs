@@ -88,7 +88,7 @@ class CalcAssoc extends Controller
         $betaCoursesByAlphaUsers_arr = $this->getBetaCoursesByAlphaUsers($alphaCourse, $metric);
         $betaCoursesByAlphaUsers = $betaCoursesByAlphaUsers_arr[0];
         $betaCourseObjects = $betaCoursesByAlphaUsers_arr[1];
-        dd($betaCourseObjects);
+        //dd($betaCourseObjects);
         # In case there's any duplication, most likely during testing because of the database is seeded randomly.
         # array_values() to reindex the array after array_unique().
         $betaCoursesByAlphaUsers_unique = array_values(array_unique($betaCoursesByAlphaUsers));

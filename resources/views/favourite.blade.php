@@ -18,7 +18,9 @@
 
             <div class="flex py-3">
                 <div class="">
-                    <img class="overflow-hidden h-auto w-64 object-cover" src="{{$favourite->course->image}}" :alt="">
+                    <a href="course/{{$favourite->course_id}}">
+                        <img class="overflow-hidden h-auto w-64 object-cover" src="{{$favourite->course->image}}" :alt="">
+                    </a>
                 </div>
                 <div class="px-5 w-3/5">
                     <a href="course/{{$favourite->course_id}}">
@@ -45,6 +47,29 @@
         <div class="pt-10">
             <!-- Recommendation -->
             <h2 class=" font-bold text-2xl text-gray-900">People also looking for</h2>
+            <div class=" pt-4 w-full md:w-3/5 mb-6 md:mb-0">
+                <form action="/favourite" method="GET" role="change">
+                    <label class="block uppercase tracking-wide text-gray-700 text-sm font-bold mb-2" for="grid-state">
+                        Recommend course based on your favourite list
+                    </label>
+                    <div class="inline-block relative mr-5">
+                        <select class="block appearance-none w-full bg-gray-300 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="favourite" id="favourite">
+                            @foreach($favourites as $favourite)
+                            <option value="{{$favourite->course_id}}">{{$favourite->course->title}}</option>
+                            @endforeach
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
+                        </div>
+                    </div>
+                    <div class="inline-block">
+                        <button class="shadow bg-indigo-700 hover:bg-indigo-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="submit">
+                            Change
+                        </button>
+                    </div>
+                </form>
+            </div>
             <div class="flex">
                 @foreach($favourites->recommendCourse as $course)
                 <a class="mt-6 px-2 w-64" href="/course/{{$course->id}}">

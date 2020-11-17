@@ -79,6 +79,7 @@
             <h2 class=" font-bold text-2xl text-gray-900">People Also Check</h2>
             <div class="divide-y divide-blue-300">
                 @foreach($coursedetails->recommendCourse as $r)
+                <div>
                 <a href="{{$r->id}}">
                     <div class="flex py-3">
                         <div>
@@ -99,6 +100,7 @@
                         </div>
                     </div>
                 </a>
+                </div>
                 @endforeach
             </div>
         </div>
