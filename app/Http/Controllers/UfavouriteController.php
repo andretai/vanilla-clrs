@@ -18,7 +18,15 @@ class UfavouriteController extends Controller
     {
         $user = Auth::User();
         $favourites = Favourite::with('course')->where('user_id', $user->id)->get();
-
+        $getFirstFavCourse = Favourite::with('course')->where('user_id', $user->id)->first();
+        $result = app('App\Http\Controllers\Recommend\CalcAssoc')->getRecommendations($getFirstFavCourse->course_id, 4, 'favourites');
+        //var_dump($result);
+        $recommendCourse = array();
+        foreach ($result as $r) {
+            $temp = Course::where('title',$r)->first();
+            array_push($recommendCourse,$temp);
+        }
+        $favourites->recommendCourse = $recommendCourse;
         return view('favourite')->with(['favourites' => $favourites]);
     }
 

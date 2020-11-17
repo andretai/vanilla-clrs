@@ -79,15 +79,25 @@
             <h2 class=" font-bold text-2xl text-gray-900">People Also Check</h2>
             <div class="divide-y divide-blue-300">
                 @foreach($coursedetails->recommendCourse as $r)
-                <a href="{{$r->id}}" <div class="flex py-3">
-                    <img class="h-16 w-16 object-cover" src="{{$r->image}}" alt="{{$r->image}}">
-                    <div class="px-3 w-3/5">
-                        <p class=" font-bold">{{$r->title}}</p>
-                        <p class="inline-block capitalize font-semibold"><i class="fas fa-window-restore fa-sm mr-2"></i>{{$r->platform->platform}}</p>
+                <a href="{{$r->id}}">
+                    <div class="flex py-3">
+                        <div>
+                            <img class="h-16 w-16 object-cover" src="{{$r->image}}" alt="{{$r->image}}">
+                        </div>
+                        <div class="px-3 w-3/5">
+                            <p class=" font-bold">{{$r->title}}</p>
+                            <p class="inline-block capitalize font-semibold"><i class="fas fa-window-restore fa-sm mr-2"></i>{{$r->platform->platform}}</p>
+                        </div>
+                        <div>
+                            <p class="px-8 text-orange-600">{{$r->avgRating()}}<i class="fas fa-star fa-sm pl-3"></i></p>
+                        </div>
+                        <div>
+                            <p class=" w-12"><i class="fas fa-user-alt fa-sm mr-2"></i> {{$r->countRating()}}</p>
+                        </div>
+                        <div>
+                            <p class="pl-4 font-semibold text-red-700">{{$r->price}}</p>
+                        </div>
                     </div>
-                    <p class="px-8 text-orange-600">{{number_format($r->avgRating(),1)}}<i class="fas fa-star fa-sm pl-3"></i></p>
-                    <p class=" w-12"><i class="fas fa-user-alt fa-sm mr-2"></i> {{$r->countRating()}}</p>
-                    <p class="pl-4 font-semibold text-red-700">{{$r->price}}</p>
                 </a>
                 @endforeach
             </div>
@@ -98,37 +108,37 @@
             @if($coursedetails->userRating)
             <div class="p-3 my-2">
                 <div class="flex justify-between">
-                <div class="flex">
-                    <p class="font-bold text-lg">{{$coursedetails->userRating->user->name}}</p>
-                    <p class="mx-3 py-1 text-xs text-gray-500 font-semibold">{{$coursedetails->userRating->created_at->diffForHumans()}}
-                    </p>
-                </div>
-                <div class="flex">
-                <a href="#"class="mr-3 text-gray-600"><i class="fas fa-edit"></i></a>
-                <a href="/rating/removerating/{{$coursedetails->userRating->id}}" class="text-red-700"><i class="far fa-trash-alt"></i></a>
-                </div>
+                    <div class="flex">
+                        <p class="font-bold text-lg">{{$coursedetails->userRating->user->name}}</p>
+                        <p class="mx-3 py-1 text-xs text-gray-500 font-semibold">{{$coursedetails->userRating->created_at->diffForHumans()}}
+                        </p>
+                    </div>
+                    <div class="flex">
+                        <a href="#" class="mr-3 text-gray-600"><i class="fas fa-edit"></i></a>
+                        <a href="/rating/removerating/{{$coursedetails->userRating->id}}" class="text-red-700"><i class="far fa-trash-alt"></i></a>
+                    </div>
                 </div>
                 <div class="mt-1 flex">
-                <p class="font-semibold text-gray-800 text-xl mr-4">{{$coursedetails->userRating->title}}</p>
-                <p class="font-semibold text-yellow-400">
-                    @foreach(range(1,5) as $i)
-                    <span class="fa-stack" style="width:1em">
-                        <i class="far fa-star fa-stack-1x"></i>
-                        @if($coursedetails->userRating->rate >0)
-                        @if($coursedetails->userRating->rate >0.5)
-                        <i class="fas fa-star fa-stack-1x"></i>
-                        @else
-                        <i class="fas fa-star-half fa-stack-1x"></i>
-                        @endif
-                        @endif
-                        @php $coursedetails->userRating->rate--; @endphp
-                    </span>
-                    @endforeach
-                </p>
-            </div>
+                    <p class="font-semibold text-gray-800 text-xl mr-4">{{$coursedetails->userRating->title}}</p>
+                    <p class="font-semibold text-yellow-400">
+                        @foreach(range(1,5) as $i)
+                        <span class="fa-stack" style="width:1em">
+                            <i class="far fa-star fa-stack-1x"></i>
+                            @if($coursedetails->userRating->rate >0)
+                            @if($coursedetails->userRating->rate >0.5)
+                            <i class="fas fa-star fa-stack-1x"></i>
+                            @else
+                            <i class="fas fa-star-half fa-stack-1x"></i>
+                            @endif
+                            @endif
+                            @php $coursedetails->userRating->rate--; @endphp
+                        </span>
+                        @endforeach
+                    </p>
+                </div>
                 <p class="text-gray-800">{{$coursedetails->userRating->review}}</p>
             </div>
-<hr class="border-black">
+            <hr class="border-black">
             @else
 
             <div class="p-3">
@@ -165,23 +175,23 @@
                         </p>
                     </div>
                     <div class="mt-1 flex">
-                    <p class="font-semibold text-gray-800 text-xl mr-4">{{$rating->title}}</p>
+                        <p class="font-semibold text-gray-800 text-xl mr-4 ">{{$rating->title}}</p>
 
-                    <p class="font-semibold text-yellow-400">
-                        @foreach(range(1,5) as $i)
-                        <span class="fa-stack" style="width:1em">
-                            <i class="far fa-star fa-stack-1x"></i>
-                            @if($rating->rate >0)
-                            @if($rating->rate >0.5)
-                            <i class="fas fa-star fa-stack-1x"></i>
-                            @else
-                            <i class="fas fa-star-half fa-stack-1x"></i>
-                            @endif
-                            @endif
-                            @php $rating->rate--; @endphp
-                        </span>
-                        @endforeach
-                    </p>
+                        <p class="font-semibold text-yellow-400">
+                            @foreach(range(1,5) as $i)
+                            <span class="fa-stack" style="width:1em">
+                                <i class="far fa-star fa-stack-1x"></i>
+                                @if($rating->rate >0)
+                                @if($rating->rate >0.5)
+                                <i class="fas fa-star fa-stack-1x"></i>
+                                @else
+                                <i class="fas fa-star-half fa-stack-1x"></i>
+                                @endif
+                                @endif
+                                @php $rating->rate--; @endphp
+                            </span>
+                            @endforeach
+                        </p>
                     </div>
                     <p class="text-gray-800">{{$rating->review}}</p>
 

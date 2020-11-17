@@ -28,7 +28,7 @@ class Course extends Model
         
     public function avgRating()
     {
-        return $this->ratings()->avg('rate');
+        return number_format($this->ratings()->avg('rate'),1);
     }
 
     public function countRating()
