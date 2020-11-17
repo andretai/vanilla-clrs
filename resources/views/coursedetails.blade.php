@@ -29,9 +29,9 @@
         <div class="flex">
             <div class="w-2/3 pr-2">
                 <div class="mb-2">
-                    <a href="#" class="text-gray-200 font-semibold">Online Course</a>
+                    <a href="/course" class="text-gray-200 font-semibold">Online Course</a>
                     <span class="text-gray-200">></span>
-                    <a href="#" class="text-gray-200 font-semibold capitalize">{{$coursedetails->category->category}}</a>
+                    <a href="/search?title=&category={{$coursedetails->category_id}}" class="text-gray-200 font-semibold capitalize">{{$coursedetails->category->category}}</a>
                 </div>
                 <h2 class="font-bold text-3xl text-white pb-2">{{$coursedetails->title}}</h2>
                 <p class="text-xl text-white">{{$coursedetails->description}}</p>

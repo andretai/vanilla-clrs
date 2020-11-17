@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Course;
+use App\Models\Category;
 use App\Models\Rating;
 use Illuminate\Support\Facades\Auth;
 
@@ -16,7 +17,26 @@ class UcourseController extends Controller
      */
     public function index()
     {
-        $courses = Course::paginate(21);
+        $courses = Course::paginate(20);
+        $categories = Category::get();
+        $courses->categories=$categories;
+        return view('course')->with(['courses' => $courses]);
+    }
+
+    public function search(Request $request, Course $courses)
+    {
+        $courses = $courses->newQuery();
+        if($request->filled('title')){
+            $courses->where('title','LIKE',"%{$request->get('title')}%");
+        }
+        if($request->filled('category')){
+            $courses->where('category_id',$request->get('category'));
+            
+        }
+        $courses = $courses->paginate(20);
+        $courses->categories=Category::get();
+        session()->put('forms.category', $request->get('category'));
+        session()->put('forms.title', $request->get('title'));
         return view('course')->with(['courses' => $courses]);
     }
 

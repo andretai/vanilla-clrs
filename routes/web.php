@@ -72,6 +72,8 @@ Route::get('/ms/courses/test', [CoursesController::class, 'getRec']);
 //user
 Route::get('/home/seedcategory', [HomeController::class, 'seedCategory'])->middleware('auth');
 Route::get('/course', [UcourseController::class, 'index'])->middleware('auth');
+Route::get('/search',[UcourseController::class, 'search'])->middleware('auth');
+Route::get('/category/{$id}',[UcourseController::class, 'category'])->middleware('auth');
 Route::get('/course/{id}', [UcourseController::class, 'coursedetails'])->middleware('auth');
 Route::get('/favourite', [UfavouriteController::class, 'index'])->middleware('auth');
 Route::get('/promotion', [UpromotionController::class, 'index'])->middleware('auth');
