@@ -4,7 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
+use App\Models\Course;
+use App\Models\Favourite;
+use App\Models\Rating;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\DB;
 class HomeController extends Controller
 {
     /**
@@ -24,8 +29,32 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $categories = Category::all();
-        return view('home')->with(['categories'=>$categories]);
+        $courses = collect();
+        $favourites = Favourite::select('course_id', DB::raw('count(*) as total'))
+        ->groupBy('course_id')
+        ->orderBy('total', 'DESC')
+        ->take(5)
+        ->get();
+
+        $ratings = Rating::select('course_id', DB::raw('avg(rate) as avg_rating'))
+        ->groupBy('course_id')
+        ->orderBy('avg_rating','DESC')
+        ->take(5)
+        ->get();
+        //print_r($rating);
+
+        $categories = Favourite::leftJoin('courses','favourites.course_id', '=', 'courses.id')
+        ->select('favourites.id','favourites.course_id','courses.*', DB::raw('count(courses.category_id) as total'))
+        ->groupBy('courses.category_id')
+        ->orderBy('total', 'DESC')
+        ->take(10)
+        ->get();
+        //print_r($categories);
+        $courses->favourites=$favourites;
+        $courses->ratings=$ratings;
+        $courses->categories=$categories;
+
+        return view('home')->with(['courses'=>$courses]);
     }
 
     

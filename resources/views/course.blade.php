@@ -40,7 +40,7 @@
     @foreach( $courses as $course)
     <a class="mt-6 px-2 w-64" href="/course/{{$course->id}}">
         <div class="bg-white border rounded-lg overflow-hidden hover:shadow-xl">
-            <img class="h-48 w-full object-cover" src="{{$course->image}}" alt="{{$course->description}}">
+            <img class="h-40 w-full object-cover" src="{{$course->image}}" alt="{{$course->description}}">
             <div class="p-6">
                 <div class="flex items-baseline">
                     <span class="inline-block bg-teal-200 text-teal-800 text-xs px-2 rounded-full uppercase font-semibold tracking-wide">{{$course->platform->platform}}</span>

@@ -30,6 +30,7 @@ class UfavouriteController extends Controller
             array_push($recommendCourse, $temp);
         }
         $favourites->recommendCourse = $recommendCourse;
+        session()->put('forms.fav', $request->get('favourite'));
 
         return view('favourite')->with(['favourites' => $favourites]);
     }
