@@ -63,16 +63,18 @@ class CalcAssoc extends Controller
     public function getBetaCoursesByAlphaUsers($alphaCourse, $metric) {
         $alphaCourseUsers = $this->getAlphaCourseUsers($alphaCourse, $metric);
         $betaCoursesRatings = $this->getBetaCoursesRatings($alphaCourse, $metric);
+        $betaCourseTitlesByAlphaUsers = [];
         $betaCoursesByAlphaUsers = [];
         foreach($alphaCourseUsers as $alphaCourseUser) {
             foreach($betaCoursesRatings as $betaCoursesRating) {
                 if($betaCoursesRating->user_id === $alphaCourseUser) {
                     $betaCourseTitle = DB::table('courses')->where('id', $betaCoursesRating->course_id)->first();
-                    array_push($betaCoursesByAlphaUsers, $betaCourseTitle->title);
+                    array_push($betaCourseTitlesByAlphaUsers, $betaCourseTitle->title);
+                    array_push($betaCoursesByAlphaUsers, $betaCourseTitle);
                 }
             }
         }
-        return $betaCoursesByAlphaUsers;
+        return [$betaCourseTitlesByAlphaUsers, $betaCoursesByAlphaUsers];
     }
 
     public function calc_assoc($alphaCourse, $resultCount, $metric) 
@@ -83,8 +85,10 @@ class CalcAssoc extends Controller
         #       Y = user count of users who've rated alpha course,
         #       X = user count of users who've rated alpha course and a specific beta course.
 
-        $betaCoursesByAlphaUsers = $this->getBetaCoursesByAlphaUsers($alphaCourse, $metric);
-
+        $betaCoursesByAlphaUsers_arr = $this->getBetaCoursesByAlphaUsers($alphaCourse, $metric);
+        $betaCoursesByAlphaUsers = $betaCoursesByAlphaUsers_arr[0];
+        $betaCourseObjects = $betaCoursesByAlphaUsers_arr[1];
+        dd($betaCourseObjects);
         # In case there's any duplication, most likely during testing because of the database is seeded randomly.
         # array_values() to reindex the array after array_unique().
         $betaCoursesByAlphaUsers_unique = array_values(array_unique($betaCoursesByAlphaUsers));

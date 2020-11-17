@@ -9,21 +9,24 @@ use function Aws\filter;
 
 class DescTags extends Component
 {
-    public $course_id = 1;
+    public $course_id = 3;
 
     public function render()
     {
-        $this->findCoursesWithSimilarTags();
+        $related = $this->findCoursesWithSimilarTags();
+        $tags = $this->getKeywords();
         return view('livewire.ms.desc-tags', [
-            'tags' => $this->getKeywords(),
+            'tags' => $tags,
             'courses' => DB::table('courses')->get(),
-            'related' => $this->findCoursesWithSimilarTags()
+            'related' => $related
         ]);
     }
 
     public function getKeywords() {
-        $keywords = DB::table('tags')->select('keywords')->where('course_id', '=', $this->course_id)->get()->toArray()[0]->keywords;
-        return preg_split("/ /", $keywords);        
+        if(DB::table('tags')->where('course_id', $this->course_id)->first()) {
+            $keywords = DB::table('tags')->select('keywords')->where('course_id', '=', $this->course_id)->get()->toArray()[0]->keywords;
+            return preg_split("/ /", $keywords);
+        }
     }
 
     public function findCoursesWithSimilarTags() {
@@ -34,11 +37,13 @@ class DescTags extends Component
             if($tag->course_id == $this->course_id) {
                 continue;
             }
-            foreach ($keywords_arr as $keyword) {
-                if(str_contains($tag->keywords, $keyword)) {
-                    $course = DB::table('courses')->where('id', $tag->course_id)->first();
-                    array_push($courses, $course->title);
-                    break;
+            if($keywords_arr) {
+                foreach ($keywords_arr as $keyword) {
+                    if(str_contains($tag->keywords, $keyword)) {
+                        $course = DB::table('courses')->where('id', $tag->course_id)->first();
+                        array_push($courses, $course);
+                        break;
+                    }
                 }
             }
         }

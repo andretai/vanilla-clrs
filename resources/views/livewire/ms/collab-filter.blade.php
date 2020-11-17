@@ -1,5 +1,5 @@
 <div>
-  <p class="font-bold">Collaborative Filtering (Content-Based)</p>
+  <p class=" mt-3 font-bold">Collaborative Filtering (Content-Based)</p>
   <div class="flex justify-between my-3">
     <p class="italic font-semibold">Filter by</p>
     <select class="border border-gray-300" wire:model="type">
