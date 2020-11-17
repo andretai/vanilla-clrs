@@ -11,7 +11,7 @@
                 <div class="flex items-baseline">
                     <span class="inline-block bg-teal-200 text-teal-800 text-xs px-2 rounded-full uppercase font-semibold tracking-wide">new</span>
                     <div class="ml-2 text-gray-600 text-xs uppercase font-semibold truncate">
-                        {{$course->category}}
+                        {{$course->category->category}}
                     </div>
                 </div>
 
@@ -21,7 +21,7 @@
                     By: Andre Tai
                 </div>
                 <div class="flex items-baseline">
-                    <span class="inline-block text-teal-800 text-xs uppercase font-semibold tracking-wide pr-1">{{$course->platform}}</span>
+                    <span class="inline-block text-teal-800 text-xs uppercase font-semibold tracking-wide pr-1">{{$course->platform->platform}}</span>
                     <div class="mt-3 text-teal-800 text-xs uppercase font-semibold tracking-wide">
                         &bull; {{ $course->price }}
                     </div>

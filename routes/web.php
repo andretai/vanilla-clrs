@@ -78,3 +78,4 @@ Route::get('/promotion', [UpromotionController::class, 'index'])->middleware('au
 Route::get('/course/addtofav/{id}',[UfavouriteController::class, 'addtofav'])->middleware('auth');
 Route::get('/favourite/removefav/{id}',[UfavouriteController::class, 'removefav'])->middleware('auth');
 Route::get('/rating/{id}',[UCourseController::class, 'rating'])->middleware('auth');
+Route::get('/rating/removerating/{id}',[UCourseController::class, 'removerating'])->middleware('auth');

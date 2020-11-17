@@ -9,6 +9,8 @@ class Rating extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['user_id','course_id','platform_id','title','review','rate'];
+
     public function course()
     {
         return $this->belongsTo('App\Models\Course');
