@@ -6,6 +6,7 @@ use App\Models\Category;
 use App\Models\Course;
 use App\Models\Platform;
 use App\Models\Promotion;
+use App\Models\Rating;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
@@ -118,15 +119,24 @@ class MsController extends Controller
             foreach ($entry->reviews as $review) {
                 $words = preg_split("/ /", $review->content);
                 $title = join(" ", array_slice($words, 0, 5));
-                DB::table('ratings')->insert([
-                    'course_id' => $course->id,
-                    'category_id' => $category->id,
-                    'platform_id' => $platform->id,
-                    'user_id' => random_int(1, 100),
-                    'title' => $title,
-                    'review' => $review->content,
-                    'rate' => $review->rating
-                ]);
+                // DB::table('ratings')->insert([
+                //     'course_id' => $course->id,
+                //     'category_id' => $category->id,
+                //     'platform_id' => $platform->id,
+                //     'user_id' => random_int(1, 100),
+                //     'title' => $title,
+                //     'review' => $review->content,
+                //     'rate' => $review->rating
+                // ]);
+                $rating = new Rating;
+                $rating->course_id = $course->id;
+                $rating->category_id = $category->id;
+                $rating->platform_id = $platform->id;
+                $rating->user_id = random_int(1,100);
+                $rating->title = $title;
+                $rating->review = $review->content;
+                $rating->rate = $review->rating;
+                $rating->save();
             }
         }
         return dd("DONE");
