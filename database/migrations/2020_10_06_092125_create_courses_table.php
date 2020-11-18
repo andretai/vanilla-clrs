@@ -22,6 +22,8 @@ class CreateCoursesTable extends Migration
             $table->string('price');
             $table->integer('category_id');
             $table->integer('platform_id');
+            $table->bigInteger('external_id')->nullable();
+            $table->string('instructor')->nullable();
             $table->timestamps();
         });
     }

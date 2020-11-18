@@ -7,7 +7,7 @@ use Livewire\Component;
 
 class VectorUsers extends Component
 {
-    public $alphaUser = 3;
+    public $alphaUser = 1;
 
     public function render()
     {

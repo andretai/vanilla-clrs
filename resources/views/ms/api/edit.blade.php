@@ -30,7 +30,7 @@
           </div>
           <input type="{{$item_field->type}}" name="{{$item_field->name}}"
             @if ($item_field->value)
-              value={{ $item_field->value }}
+              value="{{ $item_field->value }}"
             @endif
             @if ($errors->has($item_field->name))
               class="my-3 p-2 w-full block border border-red-500 rounded-sm font-semibold"
@@ -39,7 +39,7 @@
             @endif
           >
           @if ($item_field->name === 'image')
-            <img class="w-1/2 mb-6 shadow-md" src={{ $item_field->value }} alt="">
+            <img class="w-1/2 mb-6 shadow-md" src="{{ $item_field->value }}" alt="">
           @endif
         @endforeach  
       </div>   

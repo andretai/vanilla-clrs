@@ -14,10 +14,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $file = Storage::get('transformed.json');
-        $decoded = json_decode($file);
-        // \App\Models\User::factory(100)->create();
-        \App\Models\Rating::factory(sizeof($decoded))->create();
-        // \App\Models\Favourite::factory(1000)->create();
+        // $file = Storage::get('transformed.json');
+        // $decoded = json_decode($file);
+        \App\Models\User::factory(99)->create();
+        // \App\Models\Rating::factory(sizeof($decoded))->create();
+        \App\Models\Favourite::factory(1000)->create();
     }
 }
