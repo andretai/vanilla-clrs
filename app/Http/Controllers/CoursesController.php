@@ -22,6 +22,8 @@ class CoursesController extends Controller
             'image' => '',
             'url' => 'required',
             'price' => 'required',
+            'instructor' => '',
+            'external_id' => '',
             'category_id' => 'required',
             'platform_id' => 'required'
         ]);
@@ -32,6 +34,8 @@ class CoursesController extends Controller
         $course->image = $request->image;
         $course->url = $request->url;
         $course->price = $request->price;
+        $course->instructor = $request->instructor;
+        $course->external_id = $request->external_id;
         $course->category_id = $request->category_id;
         $course->platform_id = $request->platform_id;
         $course->save();
@@ -90,6 +94,8 @@ class CoursesController extends Controller
         array_push($item_fields, (object) array('name' => 'image', 'type' => 'text'));
         array_push($item_fields, (object) array('name' => 'url', 'type' => 'text'));
         array_push($item_fields, (object) array('name' => 'price', 'type' => 'text'));
+        array_push($item_fields, (object) array('name' => 'instructor', 'type' => 'text'));
+        array_push($item_fields, (object) array('name' => 'external_id', 'type' => 'number'));
         array_push($item_fields, (object) array('name' => 'category_id', 'type' => 'number'));
         array_push($item_fields, (object) array('name' => 'platform_id', 'type' => 'number'));
         return $item_fields;
@@ -102,6 +108,8 @@ class CoursesController extends Controller
         array_push($item_values, (object) array('name' => 'image', 'type' => 'text', 'value' => $item->image));
         array_push($item_values, (object) array('name' => 'url', 'type' => 'text', 'value' => $item->url));
         array_push($item_values, (object) array('name' => 'price', 'type' => 'text', 'value' => $item->price));
+        array_push($item_values, (object) array('name' => 'instructor', 'type' => 'text', 'value' => $item->instructor));
+        array_push($item_values, (object) array('name' => 'external_id', 'type' => 'number', 'value' => $item->external_id));
         array_push($item_values, (object) array('name' => 'category_id', 'type' => 'number', 'value' => $item->category_id));
         array_push($item_values, (object) array('name' => 'platform_id', 'type' => 'number', 'value' => $item->platform_id));
         return $item_values;
