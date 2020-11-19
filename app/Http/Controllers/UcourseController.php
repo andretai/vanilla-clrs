@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Course;
+use App\Models\Category;
 use App\Models\Rating;
 use Illuminate\Support\Facades\Auth;
 
@@ -16,7 +17,26 @@ class UcourseController extends Controller
      */
     public function index()
     {
-        $courses = Course::paginate(21);
+        $courses = Course::paginate(20);
+        $categories = Category::get();
+        $courses->categories=$categories;
+        return view('course')->with(['courses' => $courses]);
+    }
+
+    public function search(Request $request, Course $courses)
+    {
+        $courses = $courses->newQuery();
+        if($request->filled('title')){
+            $courses->where('title','LIKE',"%{$request->get('title')}%");
+        }
+        if($request->filled('category')){
+            $courses->where('category_id',$request->get('category'));
+            
+        }
+        $courses = $courses->paginate(20);
+        $courses->categories=Category::get();
+        session()->put('forms.category', $request->get('category'));
+        session()->put('forms.title', $request->get('title'));
         return view('course')->with(['courses' => $courses]);
     }
 
@@ -39,12 +59,12 @@ class UcourseController extends Controller
 
         $result = app('App\Http\Controllers\Recommend\CalcAssoc')->getRecommendations($id, 5, 'ratings');
         //var_dump($result);
-        $recommendCourse = array();
-        foreach ($result as $r) {
-            $temp = Course::where('title',$r)->first();
-            array_push($recommendCourse,$temp);
-        }
-        $coursedetails->recommendCourse = $recommendCourse;
+        // $recommendCourse = array();
+        // foreach ($result as $r) {
+        //     $temp = Course::where('title',$r)->first();
+        //     array_push($recommendCourse,$temp);
+        // }
+        $coursedetails->recommendCourse = $result;
         return view('coursedetails')->with(['coursedetails' => $coursedetails]);
     }
     /**

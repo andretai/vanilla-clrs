@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Recommend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
-
+use App\Models\Course;
 
 class CalcAssoc extends Controller
 {
@@ -27,7 +27,7 @@ class CalcAssoc extends Controller
         $ratedCourses = [];
         $ratings = DB::table($metric)->select('course_id')->distinct()->get()->toArray();
         foreach($ratings as $rating) {
-            $ratedCourse = DB::table('courses')->where('id', $rating->course_id)->first();
+            $ratedCourse = Course::where('id', $rating->course_id)->first();
             array_push($ratedCourses, $ratedCourse);
         }
         return $ratedCourses;
@@ -68,7 +68,7 @@ class CalcAssoc extends Controller
         foreach($alphaCourseUsers as $alphaCourseUser) {
             foreach($betaCoursesRatings as $betaCoursesRating) {
                 if($betaCoursesRating->user_id === $alphaCourseUser) {
-                    $betaCourseTitle = DB::table('courses')->where('id', $betaCoursesRating->course_id)->first();
+                    $betaCourseTitle = Course::where('id', $betaCoursesRating->course_id)->first();
                     // array_push($betaCourseTitlesByAlphaUsers, $betaCourseTitle->title);
                     array_push($betaCourseTitlesByAlphaUsers, $betaCourseTitle->id);
                     array_push($betaCoursesByAlphaUsers, $betaCourseTitle);

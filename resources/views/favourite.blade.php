@@ -18,7 +18,9 @@
 
             <div class="flex py-3">
                 <div class="">
-                    <img class="overflow-hidden h-auto w-64 object-cover" src="{{$favourite->course->image}}" :alt="">
+                    <a href="course/{{$favourite->course_id}}">
+                        <img class="overflow-hidden h-auto w-64 object-cover" src="{{$favourite->course->image}}" :alt="">
+                    </a>
                 </div>
                 <div class="px-5 w-3/5">
                     <a href="course/{{$favourite->course_id}}">
@@ -45,27 +47,50 @@
         <div class="pt-10">
             <!-- Recommendation -->
             <h2 class=" font-bold text-2xl text-gray-900">People also looking for</h2>
+            <div class=" pt-4 w-full md:w-3/5 mb-6 md:mb-0">
+                <form action="/favourite" method="GET" role="change">
+                    <label class="block uppercase tracking-wide text-gray-700 text-sm font-bold mb-2" for="grid-state">
+                        Recommend course based on your favourite list
+                    </label>
+                    <div class="inline-block relative mr-5">
+                        <select class="block appearance-none w-full bg-gray-300 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="favourite" id="favourite">
+                            @foreach($favourites as $favourite)
+                            <option value="{{$favourite->course_id}}" @if(session('forms.fav')==$favourite->course_id) selected="selected" @endif>{{$favourite->course->title}}</option>
+                            @endforeach
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
+                        </div>
+                    </div>
+                    <div class="inline-block">
+                        <button class="shadow bg-indigo-700 hover:bg-indigo-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="submit">
+                            Change
+                        </button>
+                    </div>
+                </form>
+            </div>
             <div class="flex">
                 @foreach($favourites->recommendCourse as $course)
-                <a class="mt-6 px-2 w-64" href="/course/{{$course->id}}">
+                <a class="mt-6 px-2 w-64" href="/course/{{$course->course->id}}">
                     <div class="bg-white border rounded-lg overflow-hidden hover:shadow-xl">
-                        <img class="h-48 w-full object-cover" src="{{$course->image}}" alt="{{$course->description}}">
+                        <img class="h-48 w-full object-cover" src="{{$course->course->image}}" alt="{{$course->course->description}}">
                         <div class="p-6">
                             <div class="flex items-baseline">
-                                <span class="inline-block bg-teal-200 text-teal-800 text-xs px-2 rounded-full uppercase font-semibold tracking-wide">{{$course->platform->platform}}</span>
+                                <span class="inline-block bg-teal-200 text-teal-800 text-xs px-2 rounded-full uppercase font-semibold tracking-wide">{{$course->course->platform->platform}}</span>
                                 <div class="ml-2 text-gray-600 text-xs uppercase font-semibold truncate">
-                                    {{$course->category->category}}
+                                    {{$course->course->category->category}}
                                 </div>
                             </div>
 
-                            <h4 class="mt-1 font-semibold text-lg leading-tight truncate">{{ $course->title }}</h4>
+                            <h4 class="mt-1 font-semibold text-lg leading-tight truncate">{{ $course->course->title }}</h4>
 
                             <div class="text-gray-600 mt-1 capitalize font-semibold truncate">
-                                Andre Tai <span class="text-orange-600 ml-3">{{$course->avgRating()}} <i class="fas fa-star fa-sm pl-1"></i></span>
+                                {{$course->course->instructor}} <span class="text-orange-600 ml-3">{{$course->course->avgRating()}} <i class="fas fa-star fa-sm pl-1"></i></span>
                             </div>
                             <div class="flex items-baseline">
                                 <div class="mt-2 text-red-700 text-lg font-semibold tracking-wide">
-                                    {{ $course->price }}
+                                    {{ $course->course->price }}
                                 </div>
                             </div>
                         </div>
