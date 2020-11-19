@@ -59,12 +59,12 @@ class UcourseController extends Controller
 
         $result = app('App\Http\Controllers\Recommend\CalcAssoc')->getRecommendations($id, 5, 'ratings');
         //var_dump($result);
-        $recommendCourse = array();
-        foreach ($result as $r) {
-            $temp = Course::where('title',$r)->first();
-            array_push($recommendCourse,$temp);
-        }
-        $coursedetails->recommendCourse = $recommendCourse;
+        // $recommendCourse = array();
+        // foreach ($result as $r) {
+        //     $temp = Course::where('title',$r)->first();
+        //     array_push($recommendCourse,$temp);
+        // }
+        $coursedetails->recommendCourse = $result;
         return view('coursedetails')->with(['coursedetails' => $coursedetails]);
     }
     /**

@@ -24,12 +24,8 @@ class UfavouriteController extends Controller
         } else {
             $result = app('App\Http\Controllers\Recommend\CalcAssoc')->getRecommendations($request->favourite, 4, 'favourites');
         }
-        $recommendCourse = array();
-        foreach ($result as $r) {
-            $temp = Course::where('title', $r)->first();
-            array_push($recommendCourse, $temp);
-        }
-        $favourites->recommendCourse = $recommendCourse;
+        
+        $favourites->recommendCourse = $result;
         session()->put('forms.fav', $request->get('favourite'));
 
         return view('favourite')->with(['favourites' => $favourites]);
