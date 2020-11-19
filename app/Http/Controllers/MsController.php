@@ -88,6 +88,7 @@ class MsController extends Controller
         $file = Storage::get('courses_all.json');
         $decoded = json_decode($file);
         foreach ($decoded as $entry) {
+            // If category doesn't exist, create new category.
             $category = DB::table('categories')->where('category', '=', $entry->category)->first();
             if($category === null) {
                 $request = new Request();
@@ -95,6 +96,7 @@ class MsController extends Controller
                 app('App\Http\Controllers\CategoriesController')->store($request);
                 $category = DB::table('categories')->where('category', '=', $entry->category)->first();
             }
+            // If platform doesn't exist, create new platform.
             $platform = DB::table('platforms')->where('platform', '=', $entry->platform)->first();
             if($platform === null) {
                 $request = new Request();
@@ -102,6 +104,7 @@ class MsController extends Controller
                 app('App\Http\Controllers\PlatformsController')->store($request);
                 $platform = DB::table('platforms')->where('platform', '=', $entry->platform)->first();
             }
+            // Package course as a request and send to the 'store' method of 'CoursesController'
             $request = new Request();
             $request->replace([
                 'platform_id' => $platform->id,
@@ -115,19 +118,11 @@ class MsController extends Controller
                 'url' => $entry->url
             ]);
             app('App\Http\Controllers\CoursesController')->store($request);
+            // Create records for 'ratings' table based on course's default ratings.
             $course = DB::table('courses')->where('external_id', '=', $entry->external_id)->first();
             foreach ($entry->reviews as $review) {
                 $words = preg_split("/ /", $review->content);
                 $title = join(" ", array_slice($words, 0, 5));
-                // DB::table('ratings')->insert([
-                //     'course_id' => $course->id,
-                //     'category_id' => $category->id,
-                //     'platform_id' => $platform->id,
-                //     'user_id' => random_int(1, 100),
-                //     'title' => $title,
-                //     'review' => $review->content,
-                //     'rate' => $review->rating
-                // ]);
                 $rating = new Rating;
                 $rating->course_id = $course->id;
                 $rating->category_id = $category->id;

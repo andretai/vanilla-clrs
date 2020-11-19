@@ -16,6 +16,7 @@ class SetsController extends Controller
         // $this->sendRatings();
         // $this->createDescTags();
         // app('\App\Http\Controllers\Recommend\CalcAssoc')->getRecommendations(1, 5, 'favourites');
+        app('App\Http\Controllers\CoursesController')->getRec();
         return view('ms.pages.setting', [
             'ratings' => Rating::all(),
             'numberOfUsers' => sizeof(User::all())
@@ -47,14 +48,16 @@ class SetsController extends Controller
     }
 
     public function createDescTags() {
-        $file = Storage::get('keywords_weights_nn.json');
+        $file = Storage::get('keywords_weights.json');
         $decoded = json_decode($file);
         foreach ($decoded as $obj) {
-            $tags = new Tag();
-            $tags->course_id = $obj->course_id;
-            $tags->type = "descriptive";
-            $tags->keywords = join(" ", $obj->keywords);
-            $tags->save();
+            if($obj->keywords !== []) {
+                $tags = new Tag();
+                $tags->course_id = $obj->course_id;
+                $tags->type = "descriptive";
+                $tags->keywords = join(" ", $obj->keywords);
+                $tags->save();
+            }
         }
     }
 }

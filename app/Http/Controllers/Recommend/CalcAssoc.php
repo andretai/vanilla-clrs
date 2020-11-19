@@ -69,7 +69,8 @@ class CalcAssoc extends Controller
             foreach($betaCoursesRatings as $betaCoursesRating) {
                 if($betaCoursesRating->user_id === $alphaCourseUser) {
                     $betaCourseTitle = DB::table('courses')->where('id', $betaCoursesRating->course_id)->first();
-                    array_push($betaCourseTitlesByAlphaUsers, $betaCourseTitle->title);
+                    // array_push($betaCourseTitlesByAlphaUsers, $betaCourseTitle->title);
+                    array_push($betaCourseTitlesByAlphaUsers, $betaCourseTitle->id);
                     array_push($betaCoursesByAlphaUsers, $betaCourseTitle);
                 }
             }
@@ -88,10 +89,10 @@ class CalcAssoc extends Controller
         $betaCoursesByAlphaUsers_arr = $this->getBetaCoursesByAlphaUsers($alphaCourse, $metric);
         $betaCoursesByAlphaUsers = $betaCoursesByAlphaUsers_arr[0];
         $betaCourseObjects = $betaCoursesByAlphaUsers_arr[1];
-        //dd($betaCourseObjects);
+        // dd($betaCourseObjects);
         # In case there's any duplication, most likely during testing because of the database is seeded randomly.
         # array_values() to reindex the array after array_unique().
-        $betaCoursesByAlphaUsers_unique = array_values(array_unique($betaCoursesByAlphaUsers));
+        // $betaCoursesByAlphaUsers_unique = array_values(array_unique($betaCoursesByAlphaUsers));
         
         # A.k.a. Y (refer to formula).
         $alphaCourseUsers_count = sizeof($this->getAlphaCourseUsers($alphaCourse, $metric));
@@ -100,8 +101,10 @@ class CalcAssoc extends Controller
         $betaCourses_count = [];
 
         # To calculate the number of occurences of beta courses that were rated by the alpha course's users.
-        foreach($betaCoursesByAlphaUsers_unique as $betaCourse) {
-            $count = array_count_values($betaCoursesByAlphaUsers)[$betaCourse];
+        // foreach($betaCoursesByAlphaUsers_unique as $betaCourse) {
+        foreach($betaCourseObjects as $betaCourse) {
+            // $count = array_count_values($betaCoursesByAlphaUsers)[$betaCourse];
+            $count = array_count_values($betaCoursesByAlphaUsers)[$betaCourse->id];
             array_push($betaCourses_count, $count);
         }
 
@@ -110,13 +113,26 @@ class CalcAssoc extends Controller
         # To calculate the association score for each beta course.
         for ($i=0; $i < sizeof($betaCourses_count); $i++) { 
             $assoc = ($alphaCourseUsers_count + $betaCourses_count[$i]) / $alphaCourseUsers_count;
-            $courseTitle = $betaCoursesByAlphaUsers_unique[$i];
-            $result[$courseTitle] = number_format($assoc, 2, '.', ',');
+            // $courseTitle = $betaCoursesByAlphaUsers_unique[$i];
+            $courseTitle = $betaCourseObjects[$i];
+            // $result[$courseTitle] = number_format($assoc, 2, '.', ',');
+            array_push($result, (object) array(
+                'assoc' => number_format($assoc, 2, '.', ','),
+                'course' => $courseTitle
+            ));
         }
+        // dd($result);
 
         # Sort in descending order.
-        arsort($result);
+        // arsort($result);
+        // usort($result, function ($a, $b) {
+        //     return $b->assoc - $a->assoc;
+        // });
+        $col = array_column($result, 'assoc');
+        array_multisort($col, SORT_DESC, $result);
 
-        return array_keys(array_slice($result, 0, $resultCount));
+        $result = array_slice($result, 0, $resultCount);
+
+        return $result;
     }
 }
