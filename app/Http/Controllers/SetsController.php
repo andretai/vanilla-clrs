@@ -16,7 +16,7 @@ class SetsController extends Controller
         // $this->sendRatings();
         // $this->createDescTags();
         // app('\App\Http\Controllers\Recommend\CalcAssoc')->getRecommendations(1, 5, 'favourites');
-        app('App\Http\Controllers\CoursesController')->getRec();
+        // app('App\Http\Controllers\CoursesController')->getRec();
         return view('ms.pages.setting', [
             'ratings' => Rating::all(),
             'numberOfUsers' => sizeof(User::all())
