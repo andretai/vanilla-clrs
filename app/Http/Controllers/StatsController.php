@@ -9,10 +9,19 @@ use Illuminate\Support\Facades\DB;
 class StatsController extends Controller
 {
     public function index(Request $request) {
-        $charts = [$this->mostRatedCategories(), $this->mostFavouritedCourses()];
+        $charts = [
+            $this->byCategory('most favourites by category', SORT_DESC, '# of Favourites', null, 'favourites', 10, 'bar'),
+            $this->byCategory('most ratings by category', SORT_DESC, '# of Ratings', null, 'ratings', 10, 'bar'),
+            $this->byCategory('least favourites by category', SORT_ASC, '# of Favourites', null, 'favourites', 10, 'bar'),
+            $this->byCategory('least ratings by category', SORT_ASC, '# of Ratings', null, 'ratings', 10, 'bar'),
+            $this->byCategory('most positive ratings by category', SORT_DESC, '# of Ratings', '>', 'ratings', 10, 'bar'),
+            $this->byCategory('most negative ratings by category', SORT_DESC, '# of Ratings', '<', 'ratings', 10, 'bar'),
+            $this->proportion('courses per category', '# of Courses', 'categories', 'courses', 'pie'),
+            $this->proportion('ratings per category', '# of Ratings', 'categories', 'ratings', 'pie')
+        ];
         $col = $request->query('col');
         if($col === null) {
-            $col = 3;
+            $col = 2;
         }
         return view('ms.pages.stat')
             ->with('charts', $charts)
@@ -57,40 +66,49 @@ class StatsController extends Controller
         return $results;
     }
 
-    public function mostRatedCategories() {
-        $categories = DB::table('ratings')->select('category_id')->distinct()->get();
+    public function proportion($name, $metric, $table, $table2, $type) {
+        $categories = DB::table($table)->select('id')->get();
         $results = [];
         foreach ($categories as $category) {
-            $count = DB::table('ratings')->where('category_id', $category->category_id)->count();
-            $category_name = DB::table('categories')->where('id', $category->category_id)->first()->category;
-            $metric = '# of Ratings';
+            $count = DB::table($table2)->where('category_id', $category->id)->count();
+            $category_name = DB::table($table)->where('id', $category->id)->first()->category;
+            $metric = $metric;
             array_push($results, (object) array('subject' => $category_name, 'score' => $count, 'metric' => $metric));
         }
-        $col = array_column($results, 'score');
-        array_multisort($col, SORT_DESC, $results);
         $payload = (object) array(
-            'name' => 'most rated categories',
-            'type' => 'bar',
-            'data' => $this->data(array_slice($results, 0, 5))
+            'name' => $name,
+            'type' => $type,
+            'data' => $this->data($results)
         );
         return $payload;
     }
 
-    public function mostFavouritedCourses() {
-        $courses = DB::table('favourites')->select('course_id')->distinct()->get();
+    public function byCategory($name, $sort, $metric, $ops, $table, $number, $type) {
+        $categories = DB::table('categories')->select('id')->get();
         $results = [];
-        foreach ($courses as $course) {
-            $count = DB::table('favourites')->where('course_id', $course->course_id)->count();
-            $course_name = DB::table('courses')->where('id', $course->course_id)->first()->title;
-            $metric = '# of Favourites';
-            array_push($results, (object) array('subject' => $course_name, 'score' => $count, 'metric' => $metric));
+        foreach ($categories as $category) {
+            $category_courses = DB::table('courses')->where('category_id', $category->id)->get();
+            $count = 0;
+            foreach ($category_courses as $cat_course) {
+                if($ops === null) {
+                    $count += DB::table($table)->where('course_id', $cat_course->id)->count();
+                }
+            }
+            if($ops !== null) {
+                $count += DB::table('ratings')
+                            ->where('category_id', $category->id)
+                            ->where('rate', $ops, 3)
+                            ->count();
+            }
+            $category_name = DB::table('categories')->where('id', $category->id)->first()->category;
+            array_push($results, (object) array('subject' => $category_name, 'score' => $count, 'metric' => $metric));
         }
         $col = array_column($results, 'score');
-        array_multisort($col, SORT_DESC, $results);
+        array_multisort($col, $sort, $results);
         $payload = (object) array(
-            'name' => 'most favourited courses',
-            'type' => 'pie',
-            'data' => $this->data(array_slice($results, 0, 5))
+            'name' => $name,
+            'type' => $type,
+            'data' => $this->data(array_slice($results, 0, $number))
         );
         return $payload;
     }
