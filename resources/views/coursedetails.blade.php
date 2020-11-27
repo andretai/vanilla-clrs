@@ -56,7 +56,7 @@
                 </div>
 
                 <p class=" mt-3 font-base text-xl text-white tracking-wide">Created
-                    by Andre Tai </p>
+                    by {{$coursedetails->instructor }} </p>
                 <div class="flex">
                     <p class="text-white text-xl mr-6"><i class="far fa-clock mr-2"></i>5 Hours</p>
                     <p class="text-white text-xl mr-6 capitalize"><i class="fas fa-window-restore mr-2"></i> {{$coursedetails->platform->platform}}</p>
