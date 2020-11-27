@@ -50,9 +50,10 @@
                 </div>
 
                 <h4 class="mt-1 font-semibold text-lg leading-tight truncate">{{ $course->title }}</h4>
-
-                <div class="text-gray-600 mt-1 capitalize font-semibold truncate">
-                    Andre Tai <span class="text-orange-600 ml-3">{{$course->avgRating()}} <i class="fas fa-star fa-sm pl-1"></i></span>
+                <div class="flex mt-1">
+                    <div class="text-gray-600 capitalize w-24 font-semibold truncate">
+                        {{$course->instructor}}</div>
+                    <div class="text-orange-600 ml-3">{{$course->avgRating()}} <i class="fas fa-star fa-sm pl-1"></i></div>
                 </div>
                 <div class="flex items-baseline">
                     <div class="mt-2 text-red-700 text-lg font-semibold tracking-wide">

@@ -26,7 +26,7 @@
                     <a href="course/{{$favourite->course_id}}">
                         <h2 class=" font-bold text-2xl text-gray-900">{{$favourite->course->title}}</h2>
                         <div class="flex mt-1">
-                            <p class="pr-5 font-semibold text-lg">Andre Tai</p>
+                            <p class="pr-5 font-semibold text-lg">{{$favourite->course->instructor}}</p>
                             <p class="font-semibold text-orange-600 text-lg">{{$favourite->course->avgRating()}}<i class="fas fa-star fa-sm pl-3"></i></p>
                         </div>
                         <p class="text-xl capitalize"><i class="fas fa-window-restore fa-sm mr-2"></i> {{$favourite->course->platform->platform}}</p>
@@ -85,9 +85,11 @@
 
                             <h4 class="mt-1 font-semibold text-lg leading-tight truncate">{{ $course->course->title }}</h4>
 
-                            <div class="text-gray-600 mt-1 capitalize font-semibold truncate">
-                                {{$course->course->instructor}} <span class="text-orange-600 ml-3">{{$course->course->avgRating()}} <i class="fas fa-star fa-sm pl-1"></i></span>
-                            </div>
+                            <div class="flex mt-1">
+                            <div class="text-gray-600 capitalize w-24 font-semibold truncate">
+                                {{$course->course->instructor}}</div>
+                            <div class="text-orange-600 ml-3">{{$course->course->avgRating()}} <i class="fas fa-star fa-sm pl-1"></i></div>
+                        </div>
                             <div class="flex items-baseline">
                                 <div class="mt-2 text-red-700 text-lg font-semibold tracking-wide">
                                     {{ $course->course->price }}
