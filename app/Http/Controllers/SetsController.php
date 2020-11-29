@@ -31,6 +31,9 @@ class SetsController extends Controller
         foreach($ratings as $rating) {
             $collection = DB::table('ratings')->select('review')->where('course_id', $rating->course_id)->get()->toArray();
             $reviewTexts = [];
+            $course = DB::table('courses')->where('id', $rating->course_id)->get()->toArray();
+            array_push($reviewTexts, $course[0]->title);
+            array_push($reviewTexts, $course[0]->description);
             foreach($collection as $collect) {
                 array_push($reviewTexts, $collect->review);
             }

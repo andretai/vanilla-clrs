@@ -7,6 +7,7 @@ use App\Models\Course;
 use App\Models\Platform;
 use App\Models\Promotion;
 use App\Models\Rating;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
@@ -163,5 +164,11 @@ class MsController extends Controller
         return view('ms.pages.promotion', [
             'promotions' => $promotions
         ]);
+    }
+
+    public function indexUser() {
+        $users = User::all();
+        return view('ms.pages.user')
+                ->with('users', $users);
     }
 }

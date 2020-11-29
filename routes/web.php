@@ -44,7 +44,7 @@ Route::get('/ms/courses', [MsController::class, 'indexCourse'])->name('ms-course
 Route::get('/ms/platforms', [MsController::class, 'indexPlatform'])->name('ms-platform')->middleware(IsAdmin::class);
 Route::get('/ms/categories', [MsController::class, 'indexCategory'])->name('ms-category')->middleware(IsAdmin::class);
 Route::get('/ms/promotions', [MsController::class, 'indexPromotion'])->name('ms-promotion')->middleware(IsAdmin::class);
-Route::get('/ms/users', function() { return view('ms.pages.user'); })->name('ms-user')->middleware(IsAdmin::class);
+Route::get('/ms/users', [MsController::class, 'indexUser'])->name('ms-user')->middleware(IsAdmin::class);
 
 Route::get('/ms/add', [MsController::class, 'add'])->name('ms-add')->middleware(IsAdmin::class);
 Route::get('/ms/edit', [MsController::class, 'edit'])->name('ms-edit')->middleware(IsAdmin::class);
