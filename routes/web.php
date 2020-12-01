@@ -74,10 +74,12 @@ Route::get('/home/seedcategory', [HomeController::class, 'seedCategory'])->middl
 Route::get('/course', [UcourseController::class, 'index'])->middleware('auth');
 Route::get('/search',[UcourseController::class, 'search'])->middleware('auth');
 Route::get('/category/{$id}',[UcourseController::class, 'category'])->middleware('auth');
-Route::get('/course/{id}', [UcourseController::class, 'coursedetails'])->middleware('auth');
+Route::get('/course/{id}', [UcourseController::class, 'coursedetails'])->name('coursedetails')->middleware('auth');
 Route::get('/favourite', [UfavouriteController::class, 'index'])->middleware('auth');
 Route::get('/promotion', [UpromotionController::class, 'index'])->middleware('auth');
 Route::get('/course/addtofav/{id}',[UfavouriteController::class, 'addtofav'])->middleware('auth');
 Route::get('/favourite/removefav/{id}',[UfavouriteController::class, 'removefav'])->middleware('auth');
 Route::get('/rating/{id}',[UCourseController::class, 'rating'])->middleware('auth');
 Route::get('/rating/removerating/{id}',[UCourseController::class, 'removerating'])->middleware('auth');
+Route::get('/rating/editrating/{id}',[UCourseController::class, 'editrating'])->middleware('auth');
+Route::post('updaterating',[UCourseController::class, 'updaterating'])->name('ratings.update')->middleware('auth');
