@@ -10,7 +10,7 @@
   <div class="flex justify-between my-3">
     <p class="italic font-semibold">Alpha User</p>
     <select class="border border-gray-300" wire:model="alphaUser">
-      @for ($i = 3; $i < $userCount; $i++)
+      @for ($i = 3; $i <= $userCount; $i++)
         <option value={{$i}}>{{$i}}</option>
       @endfor
     </select>
