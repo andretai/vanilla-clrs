@@ -19,22 +19,21 @@ class UcourseController extends Controller
     {
         $courses = Course::paginate(20);
         $categories = Category::get();
-        $courses->categories=$categories;
+        $courses->categories = $categories;
         return view('course')->with(['courses' => $courses]);
     }
 
     public function search(Request $request, Course $courses)
     {
         $courses = $courses->newQuery();
-        if($request->filled('title')){
-            $courses->where('title','LIKE',"%{$request->get('title')}%");
+        if ($request->filled('title')) {
+            $courses->where('title', 'LIKE', "%{$request->get('title')}%");
         }
-        if($request->filled('category')){
-            $courses->where('category_id',$request->get('category'));
-            
+        if ($request->filled('category')) {
+            $courses->where('category_id', $request->get('category'));
         }
         $courses = $courses->paginate(20);
-        $courses->categories=Category::get();
+        $courses->categories = Category::get();
         session()->put('forms.category', $request->get('category'));
         session()->put('forms.title', $request->get('title'));
         return view('course')->with(['courses' => $courses]);
@@ -94,10 +93,27 @@ class UcourseController extends Controller
 
     public function removerating(Request $request)
     {
-        if($request->id){
-            $remove=Rating::where('id',$request->id)->delete();
-            return redirect()->back()->with('alert','Review has been removed!');
+        if ($request->id) {
+            $remove = Rating::where('id', $request->id)->delete();
+            return redirect()->back()->with('alert', 'Review has been removed!');
         }
+    }
+
+    public function editrating(Request $request)
+    {
+        $review = Rating::where('id', $request->id)->first();
+        return view('editrating')->with(['review' => $review]);
+    }
+
+    public function updaterating(Request $request)
+    {
+        $course = Rating::where('id',$request->id)->first();
+        $review = Rating::where('id', $request->id)->update([
+            'title' => $request->title,
+            'review' => $request->review,
+            'rate' => $request->rating
+        ]);
+        return redirect()->route('coursedetails',$course->course_id)->with('update', 'Review has been updated!');
     }
 
     /**
