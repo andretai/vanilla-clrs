@@ -10,6 +10,7 @@ use App\Models\Rating;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 class HomeController extends Controller
 {
     /**
@@ -29,6 +30,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $user = Auth::User();
         $courses = collect();
         $favourites = Favourite::select('course_id', DB::raw('count(*) as total'))
         ->groupBy('course_id')
@@ -42,7 +44,9 @@ class HomeController extends Controller
         ->take(5)
         ->get();
         //print_r($rating);
-
+        $ratingRec=app('App\Http\Controllers\Recommend\CollabFil')->getRecommendations($user->id, 5, 'ratings');
+        //var_dump($ratingRec);
+        $favRec=app('App\Http\Controllers\Recommend\CollabFil')->getRecommendations($user->id, 5, 'favourites');
         $categories = Favourite::leftJoin('courses','favourites.course_id', '=', 'courses.id')
         ->select('favourites.id','favourites.course_id','courses.*', DB::raw('count(courses.category_id) as total'))
         ->groupBy('courses.category_id')
@@ -53,22 +57,11 @@ class HomeController extends Controller
         $courses->favourites=$favourites;
         $courses->ratings=$ratings;
         $courses->categories=$categories;
+        $courses->ratingRec=$ratingRec;
+        $courses->favRec=$favRec;
 
         return view('home')->with(['courses'=>$courses]);
     }
 
     
-
-    public function seedCategory()
-    {
-        $categories = ['Art','Computer','Cooking','Dance','Exercise','Gardening','Health','Language'];
-        
-        foreach($categories as $category)
-        {
-            $result = Category::insert(
-                ['category' => $category, 'image' =>'images/'.$category.'.jpg']
-            );
-        }
-        return Category::all();
-    }
 }
