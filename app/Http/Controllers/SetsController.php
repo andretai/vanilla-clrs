@@ -23,6 +23,14 @@ class SetsController extends Controller
         ]);
     }
 
+    public function seed() {
+        return view('ms.pages.settings.seed');
+    }
+
+    public function recommend() {
+        return view('ms.pages.settings.recommend');
+    }
+
     public function sendRatings()
     {
         $ratings = DB::table('ratings')->select('course_id')->distinct()->get()->toArray();

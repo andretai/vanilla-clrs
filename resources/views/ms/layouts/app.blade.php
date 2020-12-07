@@ -50,7 +50,11 @@
             <svg class="w-4 h-4 mr-3 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M19.95 11A10 10 0 1 1 9 .05V11h10.95zm-.08-2.6H11.6V.13a10 10 0 0 1 8.27 8.27z"/></svg>
             <a href="{{ route('ms-stats') }}">Statistics</a></li>
           <li
-            @if (Route::currentRouteName() === 'ms-sets')
+            @if (
+              Route::currentRouteName() === 'ms-sets' ||
+              Route::currentRouteName() === 'ms-sets-seed' ||
+              Route::currentRouteName() === 'ms-sets-recommend'
+            )
               class="nav-top-links bg-blue-400 flex justify-between items-center"
             @else
               class="nav-top-links flex justify-between items-center"

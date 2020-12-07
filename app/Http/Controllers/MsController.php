@@ -179,6 +179,27 @@ class MsController extends Controller
     public function indexUser() {
         $users = User::all();
         return view('ms.pages.user')
-                ->with('users', $users);
+                ->with('users', $users)
+                ->with('message', '');
+    }
+
+    public function modUser(Request $request) {
+        $user_id = $request->query('user_id');
+        $is_admin = $request->query('is_admin');
+        $message = '';
+        if($is_admin) {
+            DB::table('users')->where('id', $user_id)->update([
+                'is_admin' => 0
+            ]);
+            $message = 'User '.$user_id.' has been un-modded.';
+        } else {
+            DB::table('users')->where('id', $user_id)->update([
+                'is_admin' => 1
+            ]);
+            $message = 'User '.$user_id.' has been modded.';
+        }
+        return view('ms.pages.user')
+                ->with('users', User::all())
+                ->with('message', $message);
     }
 }
