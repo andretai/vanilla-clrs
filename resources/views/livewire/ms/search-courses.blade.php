@@ -17,7 +17,7 @@
       @foreach ($courses as $course)
         <div class="flex items-center my-2 border border-gray-300 rounded-md">
           <div class="w-1/12 py-3 text-center">{{ $course->id }}</div>
-          <div class="w-2/12"><img src={{ $course->image }} alt=""></div>
+          <div class="w-2/12"><img class="object-cover h-20 mx-auto" src={{ $course->image }} alt=""></div>
           <div class="w-8/12 px-3">{{ $course->title }}</div>
           <div class="w-1/12"><a href="{{ route('ms-edit', ['item_type' => 'course', 'id' => $course->id]) }}">EDIT</a></div>
         </div>

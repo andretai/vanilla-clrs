@@ -20,7 +20,7 @@
             {{ $category->id }}
           </div>
           <div class="w-2/12">
-            <img src="{{ $category->image }}"/>
+            <img class="object-cover h-20 mx-auto" src="{{ $category->image }}"/>
           </div>
           <div class="w-8/12 px-3 capitalize">
             {{ $category->category }}
