@@ -39,12 +39,15 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/ms', [MsController::class, 'index'])->name('ms-home')->middleware(IsAdmin::class);
 Route::get('/ms/statistics', [StatsController::class, 'index'])->name('ms-stats')->middleware(IsAdmin::class);
 Route::get('/ms/settings', [SetsController::class, 'index'])->name('ms-sets')->middleware(IsAdmin::class);
+Route::get('/ms/settings/seed', [SetsController::class, 'seed'])->name('ms-sets-seed')->middleware(IsAdmin::class);
+Route::get('/ms/settings/recommend', [SetsController::class, 'recommend'])->name('ms-sets-recommend')->middleware(IsAdmin::class);
 
 Route::get('/ms/courses', [MsController::class, 'indexCourse'])->name('ms-course')->middleware(IsAdmin::class);
 Route::get('/ms/platforms', [MsController::class, 'indexPlatform'])->name('ms-platform')->middleware(IsAdmin::class);
 Route::get('/ms/categories', [MsController::class, 'indexCategory'])->name('ms-category')->middleware(IsAdmin::class);
 Route::get('/ms/promotions', [MsController::class, 'indexPromotion'])->name('ms-promotion')->middleware(IsAdmin::class);
-Route::get('/ms/users', function() { return view('ms.pages.user'); })->name('ms-user')->middleware(IsAdmin::class);
+Route::get('/ms/users', [MsController::class, 'indexUser'])->name('ms-user')->middleware(IsAdmin::class);
+Route::get('/ms/users/mod', [MsController::class, 'modUser'])->name('ms-user-mod')->middleware(IsAdmin::class);
 
 Route::get('/ms/add', [MsController::class, 'add'])->name('ms-add')->middleware(IsAdmin::class);
 Route::get('/ms/edit', [MsController::class, 'edit'])->name('ms-edit')->middleware(IsAdmin::class);

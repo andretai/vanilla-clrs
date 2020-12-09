@@ -3,7 +3,7 @@
 @section('content')
   <div>
     <div class="px-6 pt-6 pb-3 flex justify-between items-center">
-      <p class="font-semibold">Courses</p>
+      <p class="font-semibold text-3xl">Manage Categories</p>
       <div class="flex items-center">
         <p class="mr-6">{{ sizeof($categories) }} records</p>
         <a href="{{route('ms-add', ['item_type' => 'category'])}}">

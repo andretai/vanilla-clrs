@@ -9,7 +9,7 @@ use function Aws\filter;
 
 class DescTags extends Component
 {
-    public $course_id = 3;
+    public $course_id = 1;
 
     public function render()
     {
@@ -34,19 +34,24 @@ class DescTags extends Component
         $keywords_arr = $this->getKeywords();
         $courses = [];
         foreach ($tags as $tag) {
+            $score = 0;
+            $course = DB::table('courses')->where('id', $tag->course_id)->first();
             if($tag->course_id == $this->course_id) {
                 continue;
             }
             if($keywords_arr) {
                 foreach ($keywords_arr as $keyword) {
                     if(str_contains($tag->keywords, $keyword)) {
-                        $course = DB::table('courses')->where('id', $tag->course_id)->first();
-                        array_push($courses, $course);
-                        break;
+                        $score = $score + 1;
                     }
                 }
             }
+            if($score > 0) {
+                array_push($courses, (object) array('course' => $course, 'score' => $score, 'kw' => $tag->keywords));
+            }
         }
-        return $courses;
+        $col = array_column($courses, 'score');
+        array_multisort($col, SORT_DESC, $courses);
+        return array_slice($courses, 0, 5);
     }
 }

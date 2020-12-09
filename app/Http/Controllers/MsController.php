@@ -7,6 +7,7 @@ use App\Models\Course;
 use App\Models\Platform;
 use App\Models\Promotion;
 use App\Models\Rating;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
@@ -85,8 +86,19 @@ class MsController extends Controller
     }
 
     public function seed() {
-        $file = Storage::get('courses_all.json');
-        $decoded = json_decode($file);
+        $fileNames = [
+            'courses_udemy.json', 
+            'courses_futurelearn.json'
+        ];
+        foreach($fileNames as $fileName) {
+            $file = Storage::get($fileName);
+            $decoded = json_decode($file);
+            $this->seedem($decoded);
+        }
+        return dd("DONE");
+    }
+
+    public function seedem($decoded) {
         foreach ($decoded as $entry) {
             // If category doesn't exist, create new category.
             $category = DB::table('categories')->where('category', '=', $entry->category)->first();
@@ -134,7 +146,6 @@ class MsController extends Controller
                 $rating->save();
             }
         }
-        return dd("DONE");
     }
 
     public function indexCourse() {
@@ -163,5 +174,32 @@ class MsController extends Controller
         return view('ms.pages.promotion', [
             'promotions' => $promotions
         ]);
+    }
+
+    public function indexUser() {
+        $users = User::all();
+        return view('ms.pages.user')
+                ->with('users', $users)
+                ->with('message', '');
+    }
+
+    public function modUser(Request $request) {
+        $user_id = $request->query('user_id');
+        $is_admin = $request->query('is_admin');
+        $message = '';
+        if($is_admin) {
+            DB::table('users')->where('id', $user_id)->update([
+                'is_admin' => 0
+            ]);
+            $message = 'User '.$user_id.' has been un-modded.';
+        } else {
+            DB::table('users')->where('id', $user_id)->update([
+                'is_admin' => 1
+            ]);
+            $message = 'User '.$user_id.' has been modded.';
+        }
+        return view('ms.pages.user')
+                ->with('users', User::all())
+                ->with('message', $message);
     }
 }

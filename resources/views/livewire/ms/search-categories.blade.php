@@ -19,10 +19,10 @@
           <div class="w-1/12 py-3 text-center">
             {{ $category->id }}
           </div>
-          <div class="w-2/12 px-3">
-            {{ $category->image }}
+          <div class="w-2/12">
+            <img class="object-cover h-20 mx-auto" src="{{ $category->image }}"/>
           </div>
-          <div class="w-8/12 px-3">
+          <div class="w-8/12 px-3 capitalize">
             {{ $category->category }}
           </div>
           <div class="w-1/12">

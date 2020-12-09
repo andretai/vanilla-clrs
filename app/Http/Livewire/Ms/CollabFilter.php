@@ -8,7 +8,7 @@ use Livewire\Component;
 class CollabFilter extends Component
 {
     public $type = 'ratings';
-    public $alphaUser = 4;
+    public $alphaUser = 1;
     public $userCount;
 
     public function render()

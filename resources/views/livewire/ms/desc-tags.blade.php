@@ -9,7 +9,7 @@
       </option>
     @endforeach
   </select>
-  <div class="grid grid-cols-2 col-gap-3">
+  <div class="">
     <div>
       <p class="my-3">These tags are used to describe the above courses.</p>
       <div class="grid grid-cols-5 col-gap-3 row-gap-2 p-3 border border-gray-500 rounded-md">
@@ -22,14 +22,14 @@
         @endif
       </div>
     </div>
-    <div>
+    <div class="pb-24">
       <p class="my-3">These courses are also described by one or more of the tags.</p>
-      <div style="height: 500px" class="p-3 border border-gray-500 rounded-md overflow-y-scroll">
+      <div style="height: 300px" class="p-3 border border-gray-500 rounded-md overflow-y-scroll">
         @if ($related)
           @foreach ($related as $rel)
             <button class="flex justify-between w-full bg-gray-200 mb-2 p-2 rounded-md cursor-default focus:outline-none">
-              <p>{{$rel->id}}</p>
-              <p>{{$rel->title}}</p>
+              <p>{{$rel->course->id}}</p>
+              <p>{{$rel->course->title}}</p>
             </button>
           @endforeach
         @else

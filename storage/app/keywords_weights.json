@@ -4,26 +4,41 @@
     "keywords": [
       "easy",
       "mind",
-      "practice"
+      "practice",
+      "basic",
+      "science",
+      "important",
+      "mastery",
+      "nothing"
     ]
   },
   {
     "course_id": 3,
     "keywords": [
+      "photorealism",
       "great",
-      "job"
+      "job",
+      "beginner",
+      "draw",
+      "master"
     ]
   },
   {
     "course_id": 4,
     "keywords": [
+      "pencil",
       "bueno",
-      "muy"
+      "muy",
+      "course"
     ]
   },
   {
     "course_id": 5,
-    "keywords": []
+    "keywords": [
+      "soap",
+      "step",
+      "homemade"
+    ]
   },
   {
     "course_id": 7,
@@ -35,13 +50,16 @@
   {
     "course_id": 8,
     "keywords": [
-      "good"
+      "good",
+      "design",
+      "paint"
     ]
   },
   {
     "course_id": 9,
     "keywords": [
-      "course"
+      "course",
+      "gesture"
     ]
   },
   {
@@ -50,25 +68,38 @@
       "nice",
       "small",
       "course",
-      "enjoyed"
+      "enjoyed",
+      "paint",
+      "watercolor"
     ]
   },
   {
     "course_id": 11,
     "keywords": [
-      "anime"
+      "anime",
+      "draw",
+      "learn",
+      "style"
     ]
   },
   {
     "course_id": 12,
     "keywords": [
-      "paint"
+      "paint",
+      "beginner",
+      "master",
+      "oil",
+      "painting",
+      "skill"
     ]
   },
   {
     "course_id": 13,
     "keywords": [
-      "imformative"
+      "imformative",
+      "body",
+      "natural",
+      "beauty"
     ]
   },
   {
@@ -81,13 +112,19 @@
     "course_id": 15,
     "keywords": [
       "good",
-      "info"
+      "info",
+      "learn",
+      "classic",
+      "eyelash"
     ]
   },
   {
     "course_id": 16,
     "keywords": [
+      "makeup",
       "course",
+      "effortless",
+      "real",
       "great",
       "yay"
     ]
@@ -98,7 +135,8 @@
       "si",
       "ok",
       "love",
-      "much"
+      "much",
+      "step"
     ]
   },
   {
@@ -107,12 +145,15 @@
       "love",
       "certificate",
       "great",
-      "informative"
+      "informative",
+      "nail"
     ]
   },
   {
     "course_id": 19,
     "keywords": [
+      "application",
+      "home",
       "easy",
       "follow",
       "overwhelming"
@@ -120,24 +161,40 @@
   },
   {
     "course_id": 20,
-    "keywords": []
+    "keywords": [
+      "natural"
+    ]
   },
   {
     "course_id": 21,
     "keywords": [
-      "music"
+      "cupping",
+      "facial",
+      "music",
+      "healthy",
+      "home",
+      "vibrant"
     ]
+  },
+  {
+    "course_id": 22,
+    "keywords": []
   },
   {
     "course_id": 23,
     "keywords": [
       "course",
-      "good"
+      "good",
+      "artistry",
+      "professional",
+      "everyday",
+      "fashion"
     ]
   },
   {
     "course_id": 24,
     "keywords": [
+      "makeup",
       "know",
       "model",
       "good",
@@ -148,8 +205,10 @@
     "course_id": 25,
     "keywords": [
       "clear",
+      "therapy",
       "computer",
-      "volume"
+      "volume",
+      "art"
     ]
   },
   {
@@ -157,12 +216,23 @@
     "keywords": [
       "clear",
       "curious",
+      "creativity",
+      "gilbert",
+      "workshop",
       "est"
+    ]
+  },
+  {
+    "course_id": 27,
+    "keywords": [
+      "aromatherapy",
+      "diploma"
     ]
   },
   {
     "course_id": 28,
     "keywords": [
+      "inspirational",
       "great",
       "elegant",
       "simple",
@@ -173,38 +243,53 @@
     "course_id": 29,
     "keywords": [
       "good",
+      "blueprint",
+      "hero",
       "great",
       "information"
     ]
   },
   {
     "course_id": 31,
-    "keywords": []
+    "keywords": [
+      "masterclass",
+      "story"
+    ]
   },
   {
     "course_id": 32,
     "keywords": [
-      "enjoyable"
+      "enjoyable",
+      "art",
+      "therapy"
     ]
   },
   {
     "course_id": 33,
     "keywords": [
       "basic",
-      "better"
+      "better",
+      "fiction"
     ]
   },
   {
     "course_id": 34,
     "keywords": [
+      "step",
       "course",
-      "enjoyable"
+      "enjoyable",
+      "crowd",
+      "intro",
+      "wow"
     ]
   },
   {
     "course_id": 35,
     "keywords": [
       "excellent",
+      "home",
+      "sell",
+      "meditation",
       "step",
       "understand"
     ]
@@ -215,12 +300,16 @@
       "good",
       "easy",
       "spoken",
-      "understand"
+      "understand",
+      "excellent",
+      "instructor",
+      "knowledgeable"
     ]
   },
   {
     "course_id": 38,
     "keywords": [
+      "loss",
       "goal",
       "interesting",
       "matched"
@@ -229,6 +318,8 @@
   {
     "course_id": 39,
     "keywords": [
+      "diploma",
+      "loss",
       "apt",
       "explanation",
       "superb",
@@ -239,20 +330,31 @@
   },
   {
     "course_id": 40,
-    "keywords": []
+    "keywords": [
+      "self",
+      "diet",
+      "plan"
+    ]
   },
   {
     "course_id": 41,
     "keywords": [
-      "thankyou"
+      "thankyou",
+      "game",
+      "lean",
+      "enjoyable",
+      "think"
     ]
   },
   {
     "course_id": 42,
     "keywords": [
+      "lose",
       "easy",
       "good",
-      "watch"
+      "watch",
+      "fastest",
+      "way"
     ]
   },
   {
@@ -275,17 +377,21 @@
   },
   {
     "course_id": 45,
-    "keywords": []
+    "keywords": [
+      "weight"
+    ]
   },
   {
     "course_id": 46,
     "keywords": [
+      "lbs",
       "info"
     ]
   },
   {
     "course_id": 47,
     "keywords": [
+      "psychology",
       "much",
       "repetition",
       "positive"
@@ -293,24 +399,38 @@
   },
   {
     "course_id": 48,
-    "keywords": []
+    "keywords": [
+      "lose"
+    ]
   },
   {
     "course_id": 50,
-    "keywords": []
+    "keywords": [
+      "introduction",
+      "business",
+      "learn",
+      "socialism",
+      "austrian"
+    ]
   },
   {
     "course_id": 51,
     "keywords": [
+      "introductory",
+      "empirical",
       "informing",
       "great",
-      "course"
+      "course",
+      "introduction"
     ]
   },
   {
     "course_id": 52,
     "keywords": [
-      "interested"
+      "minister",
+      "prime",
+      "interested",
+      "economic"
     ]
   },
   {
@@ -318,21 +438,39 @@
     "keywords": [
       "clear",
       "explanation",
+      "linear",
+      "non",
       "course"
     ]
   },
   {
     "course_id": 54,
     "keywords": [
+      "printable",
+      "coronavirus",
+      "impact",
       "look",
       "rest",
       "thought"
     ]
   },
   {
+    "course_id": 55,
+    "keywords": [
+      "economy",
+      "international",
+      "political",
+      "global",
+      "social"
+    ]
+  },
+  {
     "course_id": 56,
     "keywords": [
+      "introductory",
       "course",
+      "microeconomic",
+      "introduction",
       "great",
       "learn",
       "someone"
@@ -340,11 +478,18 @@
   },
   {
     "course_id": 57,
-    "keywords": []
+    "keywords": [
+      "erp",
+      "zero"
+    ]
   },
   {
     "course_id": 58,
     "keywords": [
+      "analysis",
+      "supply",
+      "foundation",
+      "strong",
       "knowledge",
       "prior"
     ]
@@ -352,6 +497,7 @@
   {
     "course_id": 61,
     "keywords": [
+      "superhuman",
       "interesting",
       "course",
       "great",
@@ -367,12 +513,15 @@
     "keywords": [
       "start",
       "wait",
-      "great"
+      "great",
+      "certificate",
+      "diploma"
     ]
   },
   {
     "course_id": 64,
     "keywords": [
+      "certification",
       "precise",
       "clear",
       "information"
@@ -380,19 +529,27 @@
   },
   {
     "course_id": 65,
-    "keywords": []
+    "keywords": [
+      "gym"
+    ]
   },
   {
     "course_id": 66,
     "keywords": [
+      "build",
       "amazing",
       "knowledgable",
-      "para"
+      "para",
+      "gain",
+      "muscle",
+      "program"
     ]
   },
   {
     "course_id": 67,
     "keywords": [
+      "beginner",
+      "sequence",
       "good",
       "pace"
     ]
@@ -401,16 +558,24 @@
     "course_id": 68,
     "keywords": [
       "\u0627\u0644\u0643\u062b\u064a\u0631",
-      "\u062c\u064a\u062f\u0629"
+      "\u062c\u064a\u062f\u0629",
+      "certification",
+      "gym",
+      "trainer"
     ]
   },
   {
     "course_id": 69,
-    "keywords": []
+    "keywords": [
+      "approach",
+      "relief",
+      "research"
+    ]
   },
   {
     "course_id": 70,
     "keywords": [
+      "iii",
       "great",
       "information",
       "lot"
@@ -421,12 +586,17 @@
     "keywords": [
       "informative",
       "awesome",
-      "many"
+      "many",
+      "complete",
+      "posture",
+      "stretching"
     ]
   },
   {
     "course_id": 72,
-    "keywords": []
+    "keywords": [
+      "muscle"
+    ]
   },
   {
     "course_id": 73,
@@ -442,10 +612,11 @@
       "great",
       "knowledgeable",
       "something",
+      "thank",
       "information",
       "new",
       "much",
-      "thank"
+      "beauty"
     ]
   },
   {
@@ -457,27 +628,32 @@
   {
     "course_id": 76,
     "keywords": [
+      "know",
       "good",
       "thing",
       "course",
-      "know",
-      "massage"
+      "step"
     ]
   },
   {
     "course_id": 78,
     "keywords": [
       "practical",
+      "health",
       "good",
       "little",
-      "repetitive"
+      "repetitive",
+      "certification",
+      "coaching"
     ]
   },
   {
     "course_id": 79,
     "keywords": [
       "mind",
-      "thank"
+      "thank",
+      "life",
+      "meditation"
     ]
   },
   {
@@ -493,7 +669,13 @@
   },
   {
     "course_id": 81,
-    "keywords": []
+    "keywords": [
+      "comprehensive",
+      "course",
+      "cupping",
+      "massage",
+      "therapy"
+    ]
   },
   {
     "course_id": 82,
@@ -504,7 +686,10 @@
   },
   {
     "course_id": 83,
-    "keywords": []
+    "keywords": [
+      "herbalism",
+      "medicinal"
+    ]
   },
   {
     "course_id": 84,
@@ -515,12 +700,15 @@
       "insightful",
       "humor",
       "information",
-      "simple"
+      "simple",
+      "massage"
     ]
   },
   {
     "course_id": 85,
     "keywords": [
+      "happiness",
+      "certification",
       "content",
       "great",
       "thank"
@@ -528,12 +716,17 @@
   },
   {
     "course_id": 86,
-    "keywords": []
+    "keywords": [
+      "anxiety",
+      "stress"
+    ]
   },
   {
     "course_id": 87,
     "keywords": [
-      "good"
+      "good",
+      "positive",
+      "psychology"
     ]
   },
   {
@@ -549,13 +742,17 @@
     "keywords": [
       "perfect",
       "awesome",
-      "session"
+      "session",
+      "happy",
+      "life",
+      "success"
     ]
   },
   {
     "course_id": 90,
     "keywords": [
       "great",
+      "mindfulness",
       "concise",
       "refresher"
     ]
@@ -566,7 +763,9 @@
       "lot",
       "new",
       "excellent",
-      "experience"
+      "experience",
+      "effortless",
+      "manifestation"
     ]
   },
   {
@@ -574,7 +773,10 @@
     "keywords": [
       "easy",
       "understand",
-      "course"
+      "course",
+      "mindfulness",
+      "certification",
+      "practitioner"
     ]
   },
   {
@@ -591,13 +793,16 @@
       "eye",
       "lot",
       "amazing",
-      "excellent"
+      "excellent",
+      "best"
     ]
   },
   {
     "course_id": 96,
     "keywords": [
       "perfect",
+      "practitioner",
+      "psychology",
       "comprehensive",
       "presented",
       "didnt",
@@ -606,20 +811,32 @@
       "awesome",
       "extra",
       "thank",
-      "course"
+      "course",
+      "face",
+      "smile"
     ]
   },
   {
     "course_id": 99,
-    "keywords": []
+    "keywords": [
+      "confidence",
+      "create",
+      "radiate"
+    ]
   },
   {
     "course_id": 100,
-    "keywords": []
+    "keywords": [
+      "master",
+      "negotiation",
+      "successful"
+    ]
   },
   {
     "course_id": 101,
     "keywords": [
+      "body",
+      "language",
       "aware",
       "non",
       "verbal"
@@ -630,14 +847,19 @@
     "keywords": [
       "perfect",
       "\u308f\u304b\u308a\u3084\u3059\u3044",
-      "\u65b9\u6cd5\u8ad6\u306e\u307f\u3067\u306f\u306a\u304f"
+      "\u65b9\u6cd5\u8ad6\u306e\u307f\u3067\u306f\u306a\u304f",
+      "assertiveness",
+      "guide",
+      "minute"
     ]
   },
   {
     "course_id": 104,
     "keywords": [
       "communication",
-      "good"
+      "good",
+      "machine",
+      "master"
     ]
   },
   {
@@ -645,6 +867,8 @@
     "keywords": [
       "easy",
       "quick",
+      "confidence",
+      "learn",
       "day",
       "great"
     ]
@@ -652,12 +876,16 @@
   {
     "course_id": 107,
     "keywords": [
+      "communication",
       "money"
     ]
   },
   {
     "course_id": 108,
     "keywords": [
+      "influence",
+      "persuasion",
+      "psychology",
       "clear",
       "information",
       "interesting"
@@ -666,46 +894,75 @@
   {
     "course_id": 109,
     "keywords": [
-      "best"
+      "best",
+      "essential",
+      "new",
+      "great"
     ]
   },
   {
     "course_id": 110,
-    "keywords": []
+    "keywords": [
+      "masterclass",
+      "business",
+      "start",
+      "transform",
+      "active",
+      "listening"
+    ]
   },
   {
     "course_id": 111,
-    "keywords": []
+    "keywords": [
+      "science",
+      "leadership"
+    ]
   },
   {
     "course_id": 113,
     "keywords": [
-      "course"
+      "course",
+      "team"
     ]
   },
   {
     "course_id": 114,
     "keywords": [
       "interesting",
-      "topic"
+      "topic",
+      "motivating",
+      "science"
     ]
   },
   {
     "course_id": 116,
     "keywords": [
       "awesomeness",
+      "leadership",
+      "masterclass",
       "enjoy",
       "good",
-      "information"
+      "information",
+      "course",
+      "enjoyed",
+      "knowledgeable"
     ]
   },
   {
     "course_id": 117,
-    "keywords": []
+    "keywords": [
+      "charge",
+      "leadership"
+    ]
   },
   {
     "course_id": 118,
-    "keywords": []
+    "keywords": [
+      "skill",
+      "work",
+      "confidence",
+      "conflict"
+    ]
   },
   {
     "course_id": 119,
@@ -717,10 +974,13 @@
   {
     "course_id": 120,
     "keywords": [
+      "leadership",
       "yes",
       "expository",
-      "leader",
-      "match"
+      "high",
+      "performing",
+      "match",
+      "leader"
     ]
   },
   {
@@ -733,39 +993,67 @@
       "course",
       "easy",
       "good",
-      "information"
+      "information",
+      "certification",
+      "guide"
     ]
   },
   {
     "course_id": 122,
     "keywords": [
+      "life",
       "teaching",
-      "wonderful"
+      "wonderful",
+      "art",
+      "healing"
+    ]
+  },
+  {
+    "course_id": 123,
+    "keywords": [
+      "brach",
+      "stressful"
     ]
   },
   {
     "course_id": 124,
     "keywords": [
+      "meditation",
       "great"
     ]
   },
   {
     "course_id": 125,
-    "keywords": []
+    "keywords": [
+      "brach",
+      "tara",
+      "harmful",
+      "heal",
+      "meditation"
+    ]
   },
   {
     "course_id": 126,
     "keywords": [
-      "good"
+      "good",
+      "mindfulness",
+      "art",
+      "master"
     ]
   },
   {
     "course_id": 127,
-    "keywords": []
+    "keywords": [
+      "meditation",
+      "master",
+      "course"
+    ]
   },
   {
     "course_id": 128,
     "keywords": [
+      "meditation",
+      "productivity",
       "great",
       "introduction",
       "meditaition"
@@ -776,12 +1064,19 @@
     "keywords": [
       "easy",
       "listen",
+      "care",
+      "essential",
+      "advanced",
+      "body",
       "course"
     ]
   },
   {
     "course_id": 131,
-    "keywords": []
+    "keywords": [
+      "complete",
+      "training"
+    ]
   },
   {
     "course_id": 132,
@@ -789,33 +1084,47 @@
   },
   {
     "course_id": 133,
-    "keywords": []
+    "keywords": [
+      "certificate",
+      "diploma"
+    ]
   },
   {
     "course_id": 134,
     "keywords": [
+      "loss",
       "information"
     ]
   },
   {
     "course_id": 135,
     "keywords": [
-      "confidence"
+      "confidence",
+      "beginner",
+      "certification"
     ]
   },
   {
     "course_id": 136,
-    "keywords": []
+    "keywords": [
+      "nutrition"
+    ]
   },
   {
     "course_id": 137,
-    "keywords": []
+    "keywords": [
+      "eat"
+    ]
   },
   {
     "course_id": 138,
     "keywords": [
       "detailed",
-      "explanation"
+      "explanation",
+      "health",
+      "master",
+      "next",
+      "surprising"
     ]
   },
   {
@@ -827,6 +1136,8 @@
   {
     "course_id": 140,
     "keywords": [
+      "diploma",
+      "planning",
       "course",
       "subject"
     ]
@@ -838,12 +1149,15 @@
       "course",
       "depth",
       "satisfied",
-      "watching"
+      "watching",
+      "vegan",
+      "certification"
     ]
   },
   {
     "course_id": 142,
     "keywords": [
+      "meal",
       "enjoyable",
       "great"
     ]
@@ -851,26 +1165,39 @@
   {
     "course_id": 143,
     "keywords": [
+      "diploma",
       "informative",
-      "point"
+      "point",
+      "case",
+      "clear",
+      "happy",
+      "nutrition"
     ]
   },
   {
     "course_id": 144,
     "keywords": [
       "fun",
-      "informative"
+      "informative",
+      "certificate",
+      "dietary",
+      "diploma"
     ]
   },
   {
     "course_id": 145,
     "keywords": [
-      "perfect"
+      "perfect",
+      "creation"
     ]
   },
   {
     "course_id": 147,
-    "keywords": []
+    "keywords": [
+      "teach",
+      "english",
+      "online"
+    ]
   },
   {
     "course_id": 148,
@@ -878,22 +1205,27 @@
       "informative",
       "interesting",
       "insightful",
-      "section"
+      "section",
+      "udemy"
     ]
   },
   {
     "course_id": 149,
-    "keywords": []
+    "keywords": [
+      "udemy"
+    ]
   },
   {
     "course_id": 150,
     "keywords": [
       "enjoyable",
       "informative",
+      "creation",
       "hi",
       "know",
       "want",
-      "course"
+      "course",
+      "unofficial"
     ]
   },
   {
@@ -903,37 +1235,61 @@
       "guidance",
       "useful",
       "beneficial",
-      "formative"
+      "formative",
+      "articulate",
+      "course",
+      "storyline"
     ]
   },
   {
     "course_id": 152,
     "keywords": [
       "use",
-      "freelance"
+      "course",
+      "entry",
+      "successful",
+      "freelance",
+      "professional"
     ]
   },
   {
     "course_id": 153,
     "keywords": [
+      "online",
       "excellent",
       "eye",
-      "opener"
+      "opener",
+      "feeling",
+      "launch",
+      "ready"
     ]
   },
   {
     "course_id": 154,
     "keywords": [
       "great",
+      "blueprint",
       "course"
     ]
   },
   {
     "course_id": 155,
     "keywords": [
+      "lean",
       "course",
       "good",
-      "learn"
+      "learn",
+      "agile",
+      "management"
+    ]
+  },
+  {
+    "course_id": 156,
+    "keywords": [
+      "aptitude",
+      "ace",
+      "shortcut",
+      "quantitative"
     ]
   },
   {
@@ -942,12 +1298,19 @@
       "demonstration",
       "appropriate",
       "helpful",
-      "much"
+      "much",
+      "facilitator",
+      "workshop",
+      "empower",
+      "group",
+      "course"
     ]
   },
   {
     "course_id": 159,
     "keywords": [
+      "mature",
+      "responsible",
       "brilliant",
       "topic",
       "helpful"
@@ -957,6 +1320,7 @@
     "course_id": 160,
     "keywords": [
       "full",
+      "professional",
       "content",
       "good"
     ]
@@ -965,27 +1329,32 @@
     "course_id": 161,
     "keywords": [
       "good",
-      "course"
+      "diploma",
+      "relationship",
+      "use"
     ]
   },
   {
     "course_id": 162,
     "keywords": [
+      "marriage",
+      "masterclass",
       "help",
       "relationship",
       "helpful",
       "much",
       "need",
-      "honesty",
-      "lot",
-      "work"
+      "content"
     ]
   },
   {
     "course_id": 163,
     "keywords": [
       "course",
-      "great"
+      "great",
+      "avoid",
+      "intelligent",
+      "teen"
     ]
   },
   {
@@ -994,16 +1363,21 @@
       "lot",
       "great",
       "introduction",
+      "focus",
+      "freedom",
       "articulate",
-      "course",
       "certificate",
-      "diploma"
+      "course",
+      "mindfulness"
     ]
   },
   {
     "course_id": 167,
     "keywords": [
+      "coach",
       "detailed",
+      "best",
+      "relationship",
       "course",
       "excellent"
     ]
@@ -1011,6 +1385,9 @@
   {
     "course_id": 168,
     "keywords": [
+      "certified",
+      "mindfulness",
+      "practitioner",
       "easy",
       "follow",
       "loved",
@@ -1022,6 +1399,7 @@
   {
     "course_id": 169,
     "keywords": [
+      "iphone",
       "great",
       "easy",
       "understand",
@@ -1032,6 +1410,9 @@
   {
     "course_id": 170,
     "keywords": [
+      "camera",
+      "learn",
+      "use",
       "chew",
       "sure",
       "think"
@@ -1039,26 +1420,36 @@
   },
   {
     "course_id": 171,
-    "keywords": []
+    "keywords": [
+      "road",
+      "simple",
+      "photography"
+    ]
   },
   {
     "course_id": 172,
     "keywords": [
       "good",
+      "food",
       "light"
     ]
   },
   {
     "course_id": 173,
     "keywords": [
-      "informative"
+      "informative",
+      "digital",
+      "photography"
     ]
   },
   {
     "course_id": 174,
     "keywords": [
       "good",
-      "helpful"
+      "helpful",
+      "camera",
+      "learn",
+      "use"
     ]
   },
   {
@@ -1067,7 +1458,8 @@
       "lecturer",
       "clear",
       "easy",
-      "photo"
+      "masterclass",
+      "great"
     ]
   },
   {
@@ -1084,8 +1476,9 @@
   {
     "course_id": 180,
     "keywords": [
+      "affinity",
+      "photo",
       "good",
-      "ipad",
       "view"
     ]
   },
@@ -1098,6 +1491,7 @@
     "keywords": [
       "excellent",
       "clear",
+      "tarot",
       "meaning",
       "understand"
     ]
@@ -1105,15 +1499,19 @@
   {
     "course_id": 183,
     "keywords": [
+      "psychic",
       "alot",
       "fro",
-      "learnt"
+      "learnt",
+      "development"
     ]
   },
   {
     "course_id": 184,
     "keywords": [
-      "el"
+      "el",
+      "healing",
+      "professional"
     ]
   },
   {
@@ -1131,7 +1529,8 @@
       "good",
       "match",
       "atlantis",
-      "info"
+      "info",
+      "crystal"
     ]
   },
   {
@@ -1139,6 +1538,9 @@
     "keywords": [
       "communication",
       "animal",
+      "easy",
+      "learn",
+      "process",
       "new",
       "clear",
       "first"
@@ -1147,34 +1549,46 @@
   {
     "course_id": 188,
     "keywords": [
-      "course",
       "sal",
-      "thank"
+      "course",
+      "thank",
+      "power",
+      "therapy"
     ]
   },
   {
     "course_id": 189,
     "keywords": [
       "believe",
-      "totalmente"
+      "totalmente",
+      "professional",
+      "practitioner"
     ]
   },
   {
     "course_id": 190,
     "keywords": [
-      "course",
       "\u0434\u043e\u0441\u0442\u0430\u0442\u043e\u0447\u043d\u043e",
       "\u043f\u0440\u0430\u043a\u0442\u0438\u043a\u0438",
-      "great"
+      "course",
+      "great",
+      "heal",
+      "present",
+      "past"
     ]
   },
   {
     "course_id": 191,
     "keywords": [
       "part",
+      "academy",
+      "foundation",
       "follow",
       "understand",
       "experience",
+      "grass",
+      "reading",
+      "card",
       "easy"
     ]
   },
@@ -1183,12 +1597,21 @@
     "keywords": [
       "style",
       "card",
-      "good"
+      "good",
+      "certification",
+      "master",
+      "learn",
+      "life",
+      "money"
     ]
   },
   {
     "course_id": 193,
     "keywords": [
+      "publish",
+      "world",
+      "freelance",
+      "learn",
       "catchy",
       "clear",
       "valuable",
@@ -1200,6 +1623,8 @@
   {
     "course_id": 194,
     "keywords": [
+      "travel",
+      "journal",
       "early",
       "helpful",
       "path"
@@ -1209,7 +1634,6 @@
     "course_id": 195,
     "keywords": [
       "shorter",
-      "great",
       "information",
       "useful"
     ]
@@ -1222,12 +1646,13 @@
       "interesting",
       "super",
       "able",
+      "get",
+      "world",
       "personal",
       "learning",
       "lot",
       "bring",
-      "cool",
-      "travel"
+      "cool"
     ]
   },
   {
@@ -1237,6 +1662,7 @@
       "waste",
       "honest",
       "rendition",
+      "luxury",
       "lot",
       "wisdom",
       "yeah"
@@ -1248,7 +1674,12 @@
       "good",
       "knowledgable",
       "basic",
-      "course"
+      "course",
+      "huge",
+      "sign",
+      "card",
+      "reward",
+      "credit"
     ]
   },
   {
@@ -1256,34 +1687,38 @@
     "keywords": [
       "much",
       "lot",
-      "information",
-      "course"
+      "travel",
+      "course",
+      "information"
     ]
   },
   {
     "course_id": 200,
     "keywords": [
-      "course",
-      "digital"
+      "course"
     ]
   },
   {
     "course_id": 201,
     "keywords": [
-      "airbnb"
+      "easy",
+      "income",
+      "residual"
     ]
   },
   {
     "course_id": 202,
     "keywords": [
       "helpful",
-      "info"
+      "info",
+      "canada",
+      "immigrate"
     ]
   },
   {
     "course_id": 203,
     "keywords": [
-      "course",
+      "imovie",
       "match",
       "perfect"
     ]
@@ -1291,9 +1726,11 @@
   {
     "course_id": 204,
     "keywords": [
-      "good",
+      "way",
       "great",
-      "compass",
+      "good",
+      "basic",
+      "navigation",
       "decent",
       "detail",
       "guess"
