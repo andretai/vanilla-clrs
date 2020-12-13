@@ -4,10 +4,18 @@
 <div class="bg-indigo-700 px-32 p-10 flex justify-center">
     <h2 class="text-4xl text-white font-semibold pt-8 ">Continuous Learning Recommendation System</h2>
 </div>
-<div class="px-10 py-6">
+
+<div class="px-20 py-6 ">
+
     <div>
-        <div class="p-2 pt-6 block tracking-wide text-3xl font-bold">
-            Most Favourite
+        <div class="flex p-2 pt-6">
+            <div class="block tracking-wide text-3xl font-bold pr-4">
+                Most Favourite
+            </div>
+            <div class="pt-2 text-2xl">
+
+            </div>
+            @livewire('rec-feedbacks',['rec'=>1])
         </div>
         <div class="flex">
             @foreach($courses->favourites as $course)
@@ -46,8 +54,14 @@
         </div>
     </div>
     <div>
-        <div class="p-2 pt-6 block tracking-wide text-3xl font-bold">
-            People are viewing
+        <div class="flex p-2 pt-6">
+            <div class="block tracking-wide text-3xl font-bold pr-4">
+                People are viewing
+            </div>
+            <div class="pt-2 text-2xl">
+
+            </div>
+            @livewire('rec-feedbacks',['rec'=>2])
         </div>
         <div class="flex">
             @foreach($courses->ratingRec as $course)
@@ -82,8 +96,14 @@
         </div>
     </div>
     <div>
-        <div class="p-2 pt-6 block tracking-wide text-3xl font-bold">
-            People added in their lists
+        <div class="flex p-2 pt-6">
+            <div class="block tracking-wide text-3xl font-bold pr-4">
+                People added in their lists
+            </div>
+            <div class="pt-2 text-2xl">
+
+            </div>
+            @livewire('rec-feedbacks',['rec'=>3])
         </div>
         <div class="flex">
             @foreach($courses->favRec as $course)
@@ -117,11 +137,18 @@
 
         </div>
     </div>
-    
+
     <div>
-        <div class="p-2 pt-6 block tracking-wide text-3xl font-bold">
-            Top Categories
+        <div class="flex p-2 pt-6">
+            <div class="block tracking-wide text-3xl font-bold pr-4">
+                Top Categories
+            </div>
+            <div class="pt-2 text-2xl">
+
+            </div>
+            @livewire('rec-feedbacks',['rec'=>4])
         </div>
+
         <div class="flex flex-wrap">
             @foreach($courses->categories as $course)
             <a class="mt-2 px-2 w-64" href="/search?title=&category={{$course->course->category_id}}">
