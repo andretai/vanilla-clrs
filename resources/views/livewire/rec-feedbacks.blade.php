@@ -4,15 +4,15 @@
     </div>
     <div>
         @if(!$this->liked)
-        <button wire:click="like" type="submit"><i class="text-indigo-700 far fa-thumbs-up pr-3"></i></button>
+        <button class="focus:outline-none" wire:click="like" type="submit"><i class="text-indigo-700 hover:text-indigo-500 far fa-thumbs-up pr-3"></i></button>
         @else
-        <button wire:click="undo" type="submit"><i class="text-indigo-700 fas fa-thumbs-up pr-3"></i></button>
+        <button class="focus:outline-none" wire:click="undo" type="submit"><i class="text-indigo-700 hover:text-indigo-500 fas fa-thumbs-up pr-3"></i></button>
         @endif
 
         @if(!$this->disliked)
-        <button wire:click="dislike" type="submit"><i class="text-indigo-700 far fa-thumbs-down"></i></button>
+        <button class="focus:outline-none" wire:click="dislike" type="submit"><i class="text-indigo-700 hover:text-indigo-500 far fa-thumbs-down"></i></button>
         @else
-        <button wire:click="undo" type="submit"><i class="text-indigo-700 fas fa-thumbs-down"></i></button>
+        <button class="focus:outline-none" wire:click="undo" type="submit"><i class="text-indigo-700 hover:text-indigo-500 fas fa-thumbs-down"></i></button>
         @endif
     </div>
 </div>
