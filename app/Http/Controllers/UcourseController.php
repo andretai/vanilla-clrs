@@ -107,13 +107,13 @@ class UcourseController extends Controller
 
     public function updaterating(Request $request)
     {
-        $course = Rating::where('id',$request->id)->first();
+        $course = Rating::where('id', $request->id)->first();
         $review = Rating::where('id', $request->id)->update([
             'title' => $request->title,
             'review' => $request->review,
             'rate' => $request->rating
         ]);
-        return redirect()->route('coursedetails',$course->course_id)->with('update', 'Review has been updated!');
+        return redirect()->route('coursedetails', $course->course_id)->with('update', 'Review has been updated!');
     }
 
     /**

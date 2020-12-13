@@ -42,7 +42,7 @@
 
             <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
                 <div class="text-sm lg:flex-grow">
-                    <a href="/home" class="{{'home' == request()->path() ? 'font-bold' : '' }} text-lg block mt-4 lg:inline-block lg:mt-0 text-indigo-700 hover:text-indigo-600 mr-4">
+                    <a href="/" class="{{'home' == request()->path() ? 'font-bold' : '' }} text-lg block mt-4 lg:inline-block lg:mt-0 text-indigo-700 hover:text-indigo-600 mr-4">
                         Home
                     </a>
                     <a href="/course" class="{{'course' == request()->path() ? 'font-bold' : '' }} text-lg block mt-4 lg:inline-block lg:mt-0  text-indigo-700 hover:text-indigo-600 mr-4">
