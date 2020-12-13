@@ -5,15 +5,11 @@
     <h2 class="text-4xl text-white font-semibold pt-8 ">Continuous Learning Recommendation System</h2>
 </div>
 
-<div class="px-20 py-6 ">
-
+<div class="px-20 py-6">
     <div>
         <div class="flex p-2 pt-6">
             <div class="block tracking-wide text-3xl font-bold pr-4">
                 Most Favourite
-            </div>
-            <div class="pt-2 text-2xl">
-
             </div>
             @livewire('rec-feedbacks',['rec'=>1])
         </div>
@@ -50,16 +46,12 @@
                 </div>
             </a>
             @endforeach
-
         </div>
     </div>
     <div>
         <div class="flex p-2 pt-6">
             <div class="block tracking-wide text-3xl font-bold pr-4">
                 People are viewing
-            </div>
-            <div class="pt-2 text-2xl">
-
             </div>
             @livewire('rec-feedbacks',['rec'=>2])
         </div>
@@ -100,9 +92,6 @@
             <div class="block tracking-wide text-3xl font-bold pr-4">
                 People added in their lists
             </div>
-            <div class="pt-2 text-2xl">
-
-            </div>
             @livewire('rec-feedbacks',['rec'=>3])
         </div>
         <div class="flex">
@@ -142,9 +131,6 @@
         <div class="flex p-2 pt-6">
             <div class="block tracking-wide text-3xl font-bold pr-4">
                 Top Categories
-            </div>
-            <div class="pt-2 text-2xl">
-
             </div>
             @livewire('rec-feedbacks',['rec'=>4])
         </div>
