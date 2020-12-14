@@ -14,7 +14,7 @@
             @livewire('rec-feedbacks',['rec'=>1])
         </div>
         <div class="flex">
-            @foreach($courses->favourites as $course)
+            @foreach($courses->mfavourite as $course)
             <a class="mt-2 px-2 w-64" href="/course/{{$course->course->id}}">
                 <div class="bg-white border rounded-lg overflow-hidden hover:shadow-xl">
                     <img class="h-40 w-full object-cover" src="{{$course->course->image}}" alt="{{$course->course->description}}">
@@ -136,7 +136,7 @@
         </div>
 
         <div class="flex flex-wrap">
-            @foreach($courses->categories as $course)
+            @foreach($courses->tcategory as $course)
             <a class="mt-2 px-2 w-64" href="/search?title=&category={{$course->course->category_id}}">
                 <div class="bg-white border rounded-lg overflow-hidden hover:shadow-xl">
                     <img class="h-32 w-full object-cover" src="{{$course->course->image}}" alt="{{$course->course->description}}">

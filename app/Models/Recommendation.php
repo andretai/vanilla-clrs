@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Recommendation extends Model
 {
     use HasFactory;
-    protected $fillable = ['name', 'order'];
+    protected $fillable = ['name', 'order','key'];
 
     public function recommendations_rating()
     {

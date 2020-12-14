@@ -48,7 +48,7 @@ class UcourseController extends Controller
         $userRating = Rating::with('user')->where('user_id', $user->id)->where('course_id', $id)->first();
         $coursedetails->userRating = $userRating;
         //get all user rating
-        $allRating = Rating::with('user')->where('course_id', $id)->whereNotIn('user_id', [$user->id])->get();
+        $allRating = Rating::with('user')->where('course_id', $id)->whereNotIn('user_id', [$user->id])->paginate(20);
         $coursedetails->allrating = $allRating;
         //calculate average rating
         $averageRating = Rating::where('course_id', $id)->avg('rate');
