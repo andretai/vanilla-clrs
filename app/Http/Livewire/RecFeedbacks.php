@@ -50,6 +50,7 @@ class RecFeedbacks extends Component
                     'sentiment' => true
                 ]);
         }
+        session()->flash('review', 'Thank you for your review!');
     }
 
     public function dislike()
@@ -71,23 +72,24 @@ class RecFeedbacks extends Component
                     'sentiment' => false
                 ]);
         }
+        session()->flash('review', 'Thank you for your review!');
     }
 
     public function undo()
     {
         $undo = RecommendationsRating::where('user_id', $this->user->id)
-                ->where('rec_id', $this->rec)->delete();
+            ->where('rec_id', $this->rec)->delete();
+        session()->flash('undo', 'Review has been undo!');
     }
-    
+
     public function getLikedProperty()
     {
-        return RecommendationsRating::where('user_id',$this->user->id)
-        ->where('rec_id',$this->rec)->where('sentiment',true)->exists();
+        return RecommendationsRating::where('user_id', $this->user->id)
+            ->where('rec_id', $this->rec)->where('sentiment', true)->exists();
     }
     public function getDislikedProperty()
     {
-        return RecommendationsRating::where('user_id',$this->user->id)
-        ->where('rec_id',$this->rec)->where('sentiment',false)->exists();
+        return RecommendationsRating::where('user_id', $this->user->id)
+            ->where('rec_id', $this->rec)->where('sentiment', false)->exists();
     }
 }
-
