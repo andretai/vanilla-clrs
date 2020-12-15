@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Course;
 use Illuminate\Http\Request;
 use App\Models\Rating;
+use App\Models\Recommendation;
+use App\Models\RecommendationsRating;
 use App\Models\Tag;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
@@ -28,7 +30,62 @@ class SetsController extends Controller
     }
 
     public function recommend() {
-        return view('ms.pages.settings.recommend');
+        $recRatings = RecommendationsRating::all();
+        $recs = Recommendation::all()->sortBy('order');
+        $results = [];
+        foreach ($recs as $rec) {
+            $ratings = $recRatings->where('rec_id', $rec->id);
+            $count = $ratings->count();
+            $pos = $ratings->where('sentiment', 1)->count();
+            $ratio = ($pos/$count) * 100;
+            array_push($results, (object) array(
+                'name'=>$rec->name,
+                'type'=>$rec->type, 
+                'count'=>$count, 
+                'positive'=>$pos, 
+                'ratio'=>$ratio));
+        }
+        return view('ms.pages.settings.recommend')
+                ->with('results', $results)
+                ->with('recommendations', $recs);
+    }
+
+    public function recommend_action(Request $request) {
+        $action = $request->query('action');
+        $rec_id = $request->query('rec_id');
+        $alpha = DB::table('recommendations')->where('id', $rec_id)->first();
+        switch($action) {
+            case 'up': {
+                $above = DB::table('recommendations')->where('order', '<', $alpha->order)->get();
+                if($above) {
+                    $item = $above[sizeof($above)-1];
+                    DB::table('recommendations')->where('id', $item->id)->update([
+                        'order' => $item->order + 1
+                    ]);
+                    DB::table('recommendations')->where('id', $alpha->id)->update([
+                        'order' => $alpha->order - 1
+                    ]);
+                }
+                break;
+            }
+            case 'down': {
+                $below = DB::table('recommendations')->where('order', '>', $alpha->order)->get();
+                if($below) {
+                    $item = $below[0];
+                    DB::table('recommendations')->where('id', $item->id)->update([
+                        'order' => $item->order - 1
+                    ]);
+                    DB::table('recommendations')->where('id', $alpha->id)->update([
+                        'order' => $alpha->order + 1
+                    ]);
+                }
+                break;
+            }
+            default: {
+                break;
+            }
+        }
+        return redirect('/ms/settings/recommend');
     }
 
     public function sendRatings()

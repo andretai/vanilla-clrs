@@ -15,6 +15,7 @@ class CreateRecommendationsTable extends Migration
     {
         Schema::create('recommendations', function (Blueprint $table) {
             $table->id();
+            $table->string('type');
             $table->string('name');
             $table->string('key');
             $table->integer('order');

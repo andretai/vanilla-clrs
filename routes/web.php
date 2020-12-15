@@ -39,6 +39,7 @@ Route::get('/ms/statistics', [StatsController::class, 'index'])->name('ms-stats'
 Route::get('/ms/settings', [SetsController::class, 'index'])->name('ms-sets')->middleware(IsAdmin::class);
 Route::get('/ms/settings/seed', [SetsController::class, 'seed'])->name('ms-sets-seed')->middleware(IsAdmin::class);
 Route::get('/ms/settings/recommend', [SetsController::class, 'recommend'])->name('ms-sets-recommend')->middleware(IsAdmin::class);
+Route::get('/ms/settings/recommend/move', [SetsController::class, 'recommend_action'])->name('ms-sets-recommend-move')->middleware(IsAdmin::class);
 
 Route::get('/ms/courses', [MsController::class, 'indexCourse'])->name('ms-course')->middleware(IsAdmin::class);
 Route::get('/ms/platforms', [MsController::class, 'indexPlatform'])->name('ms-platform')->middleware(IsAdmin::class);
