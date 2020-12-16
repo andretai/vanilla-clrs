@@ -31,19 +31,32 @@
       </div>
     @endforeach
   </div>
-  <div class="mt-6">
+  <hr class="mt-8">
+  <div class="mt-6 capitalize">
+    <p class="mb-6 font-semibold text-xl">Manage Recommendation</p>
     @php
       $count = 1;  
     @endphp
+    <div class="flex px-6 font-semibold text-center">
+      <div class="flex w-11/12">
+        <p class="w-1/12">no</p>
+        <p class="w-3/12">type</p>
+        <p class="w-6/12">name</p>
+        <p class="w-2/12">order</p>
+      </div>
+      <div class="w-1/12">
+        <p>actions</p>
+      </div>
+    </div>
     @foreach ($recommendations as $rec)
-      <div class="flex justify-between items-center my-3 p-3 border border-gray-500 rounded-sm">
-        <div class="flex">
-          <p class="mr-6">{{ $count }}</p>
-          <p class="mr-6">{{ $rec->name }}</p>
-          <p class="mr-6">{{ $rec->type }}</p>
-          <p class="mr-6">order {{ $rec->order }}</p>
+      <div class="flex justify-between items-center my-3 px-6 py-3 border border-gray-500 rounded-md shadow-sm">
+        <div class="flex w-11/12">
+          <p class="w-1/12 text-center">{{ $count }}</p>
+          <p class="w-3/12">{{ $rec->type }}</p>
+          <p class="w-6/12">{{ $rec->name }}</p>
+          <p class="w-2/12 text-center">{{ $rec->order }}</p>
         </div>
-        <div class="grid grid-cols-4 col-gap-3">
+        <div class="grid grid-cols-2 w-1/12">
           <a href="{{ route('ms-sets-recommend-move', ['rec_id' => $rec->id, 'action' => 'up'])}}">
             <img src="/images/top.png" class="w-6"/>
           </a>
