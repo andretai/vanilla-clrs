@@ -85,17 +85,20 @@ class MsController extends Controller
         ]);
     }
 
-    public function seed() {
-        $fileNames = [
-            'courses_udemy.json', 
-            'courses_futurelearn.json'
-        ];
-        foreach($fileNames as $fileName) {
-            $file = Storage::get($fileName);
-            $decoded = json_decode($file);
-            $this->seedem($decoded);
-        }
-        return dd("DONE");
+    public function seed(Request $request) {
+        // $fileNames = [
+        //     'courses_udemy.json', 
+        //     'courses_futurelearn.json'
+        // ];
+        // foreach($fileNames as $fileName) {
+        //     $file = Storage::get($fileName);
+        //     $decoded = json_decode($file);
+        //     $this->seedem($decoded);
+        // }
+        $platform = $request->query('platform');
+        $fileName = 'courses_'.$platform.'.json';
+        dd($fileName);
+        return redirect('/ms/settings/seed');
     }
 
     public function seedem($decoded) {

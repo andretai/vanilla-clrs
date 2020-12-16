@@ -38,6 +38,7 @@ Route::get('/ms', [MsController::class, 'index'])->name('ms-home')->middleware(I
 Route::get('/ms/statistics', [StatsController::class, 'index'])->name('ms-stats')->middleware(IsAdmin::class);
 Route::get('/ms/settings', [SetsController::class, 'index'])->name('ms-sets')->middleware(IsAdmin::class);
 Route::get('/ms/settings/seed', [SetsController::class, 'seed'])->name('ms-sets-seed')->middleware(IsAdmin::class);
+Route::get('/ms/settings/seed/confirm', [SetsController::class, 'seedConfirm'])->name('ms-sets-seed-confirm')->middleware(IsAdmin::class);
 Route::get('/ms/settings/recommend', [SetsController::class, 'recommend'])->name('ms-sets-recommend')->middleware(IsAdmin::class);
 Route::get('/ms/settings/recommend/move', [SetsController::class, 'recommend_action'])->name('ms-sets-recommend-move')->middleware(IsAdmin::class);
 

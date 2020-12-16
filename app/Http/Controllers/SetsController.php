@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Course;
+use App\Models\Platform;
 use Illuminate\Http\Request;
 use App\Models\Rating;
 use App\Models\Recommendation;
@@ -11,6 +12,7 @@ use App\Models\Tag;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
+use stdClass;
 
 class SetsController extends Controller
 {
@@ -26,7 +28,23 @@ class SetsController extends Controller
     }
 
     public function seed() {
-        return view('ms.pages.settings.seed');
+        $platforms = Platform::all();
+        $datasets = [];
+        foreach ($platforms as $platform) {
+            $fileName = 'courses_'.$platform->platform.'.json';
+            $file = Storage::get($fileName);
+            $decoded = json_decode($file);
+            $datasets[$platform->platform] = (object) array('count'=>sizeof($decoded));
+        }
+        return view('ms.pages.settings.seed')
+                ->with('platforms', $platforms)
+                ->with('datasets', $datasets);
+    }
+
+    public function seedConfirm(Request $request) {
+        return view('ms.api.seed')
+                ->with('platform', $request->query('platform'))
+                ->with('count', $request->query('count'));
     }
 
     public function recommend() {
