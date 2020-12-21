@@ -38,7 +38,12 @@ class CalcAssoc extends Controller
      * From the ratings table, we will get the ratings for the alpha course and collect the user_id for each of these ratings.
      */
     public function getAlphaCourseUsers($alphaCourse, $metric) {
-        $alphaCourseId = $this->getRatedCourses($metric)[$alphaCourse]->id;
+        $ratedCourses = $this->getRatedCourses($metric);
+        // If course is not rated by any user.
+        if(!isset($ratedCourses[$alphaCourse])){
+            return [];
+        }
+        $alphaCourseId = $ratedCourses[$alphaCourse]->id;
         $alphaCourseRatings = DB::table($metric)->where('course_id', $alphaCourseId)->get()->toArray();
         $alphaCourseUsers = [];
         foreach($alphaCourseRatings as $alphaCourseRating) {
@@ -52,6 +57,11 @@ class CalcAssoc extends Controller
      * Remember, we want to find out how many users who have rated the alpha course also rated another course to calculate what other courses are suitable to recommend.
      */
     public function getBetaCoursesRatings($alphaCourse, $metric) {
+        $ratedCourses = $this->getRatedCourses($metric);
+        // If course is not rated by any user.
+        if(!isset($ratedCourses[$alphaCourse])){
+            return [];
+        }
         $alphaCourseId = $this->getRatedCourses($metric)[$alphaCourse]->id;
         $betaCoursesRatings = DB::table($metric)->where('course_id', '!=', $alphaCourseId)->get();
         return $betaCoursesRatings;
@@ -63,6 +73,9 @@ class CalcAssoc extends Controller
     public function getBetaCoursesByAlphaUsers($alphaCourse, $metric) {
         $alphaCourseUsers = $this->getAlphaCourseUsers($alphaCourse, $metric);
         $betaCoursesRatings = $this->getBetaCoursesRatings($alphaCourse, $metric);
+        if(($alphaCourseUsers == []) || ($betaCoursesRatings == [])){
+            return [];
+        }
         $betaCourseTitlesByAlphaUsers = [];
         $betaCoursesByAlphaUsers = [];
         foreach($alphaCourseUsers as $alphaCourseUser) {
@@ -87,6 +100,10 @@ class CalcAssoc extends Controller
         #       X = user count of users who've rated alpha course and a specific beta course.
 
         $betaCoursesByAlphaUsers_arr = $this->getBetaCoursesByAlphaUsers($alphaCourse, $metric);
+        // If alpha course and/or its beta course(s) are not rated by any user. 
+        if($betaCoursesByAlphaUsers_arr == []){
+            return [];
+        }
         $betaCoursesByAlphaUsers = $betaCoursesByAlphaUsers_arr[0];
         $betaCourseObjects = $betaCoursesByAlphaUsers_arr[1];
         // dd($betaCourseObjects);
