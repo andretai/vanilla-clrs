@@ -24,9 +24,9 @@
             <a href="{{ route('ms-user-mod', ['user_id' => $user->id, 'is_admin' => $user->is_admin])}}">
               <svg
                @if ($user->is_admin)
-                class="w-5 text-red-600 fill-current"
+                class="w-5 ml-3 text-red-600 fill-current"
                @else
-                class="w-5 text-gray-600 fill-current"
+                class="w-5 ml-3 text-gray-600 fill-current"
                @endif
                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M20 12v5H0v-5a2 2 0 1 0 0-4V3h20v5a2 2 0 1 0 0 4zM3 5v10h14V5H3zm7 7.08l-2.92 2.04L8.1 10.7 5.27 8.56l3.56-.08L10 5.12l1.17 3.36 3.56.08-2.84 2.15 1.03 3.4L10 12.09z"/></svg>
             </a>

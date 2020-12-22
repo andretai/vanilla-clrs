@@ -27,6 +27,17 @@
         </a>
       </div>
     @endforeach
+    @if (isset($status))
+      <div class="col-span-5 flex items-center w-1/2 font-semibold capitalize">
+        @if ($status)
+          <img class="w-1/12 p-2" src="/images/checked.png" alt="">
+          <p class="w-11/12 text-green-500">Operation completed.</p>
+        @else
+          <img class="w-1/12 p-2" src="/images/wrong.png" alt="">
+          <p class="w-11/12 text-red-600">Operation failed.</p>
+        @endif
+      </div>
+    @endif
   </div>
 </div>
 @endsection

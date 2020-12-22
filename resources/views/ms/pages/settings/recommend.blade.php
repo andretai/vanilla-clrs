@@ -36,7 +36,24 @@
   </div>
   <hr class="mt-8">
   <div class="mt-6 capitalize">
-    <p class="mb-6 font-semibold text-xl">Manage Recommendation</p>
+    <div class="flex mb-6 items-center justify-between">
+      <p class="font-semibold text-xl">Manage Recommendation</p>
+      @if (isset($status))
+        <div class="flex items-center font-semibold capitalize">
+          @if ($status)
+            <div class="w-1/12">
+              <img class="w-24" src="/images/checked.png" alt="">
+            </div>
+            <p class="w-11/12 ml-3 text-green-500">Operation completed.</p>
+          @else
+            <div class="w-1/12">
+              <img class="w-24" src="/images/wrong.png" alt="">
+            </div>
+            <p class="w-11/12 ml-3 text-red-500">Operation failed.</p>
+          @endif
+        </div>
+      @endif
+    </div>
     @php
       $count = 1;  
     @endphp

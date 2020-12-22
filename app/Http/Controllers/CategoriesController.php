@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -27,20 +28,26 @@ class CategoriesController extends Controller
     }
 
     public function update(Request $request) {
-        $item_id = $request->query('id');
-        $request->validate([
-            'category' => 'required',
-            'image' => ''
-        ]);
-        DB::table('categories')->where('id', $item_id)->update([
-            'category' => $request->category,
-            'image' =>  $request->image
-        ]);
+        $status = true;
+        try {
+            $item_id = $request->query('id');
+            $request->validate([
+                'category' => 'required',
+                'image' => ''
+            ]);
+            DB::table('categories')->where('id', $item_id)->update([
+                'category' => $request->category,
+                'image' =>  $request->image
+            ]);
+        } catch(Exception $e){
+            $status = false;
+        }
         return view('ms.api.edit', [
             'back' => route('ms-category'),
             'item_id' => $item_id,
             'item_type' => 'category',
-            'item_fields' => $this->categoryFieldsValues($request)
+            'item_fields' => $this->categoryFieldsValues($request),
+            'status' => $status
         ]);
     }
 

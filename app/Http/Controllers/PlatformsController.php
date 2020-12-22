@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Platform;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -23,18 +24,24 @@ class PlatformsController extends Controller
     }
 
     public function update(Request $request) {
-        $item_id = $request->query('id');
-        $request->validate([
-            'platform' => 'required'
-        ]);
-        DB::table('platforms')->where('id', $item_id)->update([
-            'platform' => $request->platform
-        ]);
+        $status = true;
+        try {
+            $item_id = $request->query('id');
+            $request->validate([
+                'platform' => 'required'
+            ]);
+            DB::table('platforms')->where('id', $item_id)->update([
+                'platform' => $request->platform
+            ]);
+        } catch(Exception $e){
+            $status = false;
+        }
         return view('ms.api.edit', [
             'back' => route('ms-platform'),
             'item_type' => 'platform',
             'item_id' => $item_id,
-            'item_fields' => $this->platformFieldsValues($request)
+            'item_fields' => $this->platformFieldsValues($request),
+            'status' => $status
         ]);
     }
 
