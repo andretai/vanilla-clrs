@@ -126,8 +126,10 @@ class MsController extends Controller
                 'url' => $entry->url
             ]);
             app('App\Http\Controllers\CoursesController')->store($request);
+            // Get the ID of the newly added course.
+            $new_course = DB::table('courses')->orderBy('id', 'desc')->first();
             // Create records for 'ratings' table based on course's default ratings.
-            $course = DB::table('courses')->where('external_id', '=', $entry->external_id)->first();
+            $course = DB::table('courses')->where('id', '=', $new_course->id)->first();
             foreach ($entry->reviews as $review) {
                 $words = preg_split("/ /", $review->content);
                 $title = join(" ", array_slice($words, 0, 5));
