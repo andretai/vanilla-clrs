@@ -51,7 +51,7 @@
     <div>
         <div class="flex p-2 pt-6">
             <div class="block tracking-wide text-3xl font-bold pr-4">
-                People are viewing
+                Recommend Course Based on Your Review
             </div>
             @livewire('rec-feedbacks',['rec'=>2])
         </div>
@@ -90,7 +90,7 @@
     <div>
         <div class="flex p-2 pt-6">
             <div class="block tracking-wide text-3xl font-bold pr-4">
-                People added in their lists
+            Recommend Course Based on Your Favourite List
             </div>
             @livewire('rec-feedbacks',['rec'=>3])
         </div>
@@ -126,7 +126,6 @@
 
         </div>
     </div>
-
     <div>
         <div class="flex p-2 pt-6">
             <div class="block tracking-wide text-3xl font-bold pr-4">
