@@ -32,7 +32,14 @@
             <a class="font-bold" href="{{ url('/ms') }}">clrs-ms</a>
           </li>
           <li
-            @if (Route::currentRouteName() !== 'ms-stats' && Route::currentRouteName() !== 'ms-sets')
+            @if (
+              Route::currentRouteName() !== 'ms-stats' && 
+              Route::currentRouteName() !== 'ms-sets' &&
+              Route::currentRouteName() !== 'ms-sets-seed' &&
+              Route::currentRouteName() !== 'ms-sets-recommend' &&
+              Route::currentRouteName() !== 'ms-sets-seed-confirm' &&
+              Route::currentRouteName() !== 'ms-sets-recommend-move'
+            )
               class="nav-top-links bg-blue-400 flex justify-between items-center"
             @else
               class="nav-top-links flex justify-between items-center"
@@ -53,7 +60,9 @@
             @if (
               Route::currentRouteName() === 'ms-sets' ||
               Route::currentRouteName() === 'ms-sets-seed' ||
-              Route::currentRouteName() === 'ms-sets-recommend'
+              Route::currentRouteName() === 'ms-sets-recommend' ||
+              Route::currentRouteName() === 'ms-sets-seed-confirm' ||
+              Route::currentRouteName() === 'ms-sets-recommend-move'
             )
               class="nav-top-links bg-blue-400 flex justify-between items-center"
             @else
@@ -61,7 +70,7 @@
             @endif
           >
             <svg class="w-4 h-4 mr-3 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M3.94 6.5L2.22 3.64l1.42-1.42L6.5 3.94c.52-.3 1.1-.54 1.7-.7L9 0h2l.8 3.24c.6.16 1.18.4 1.7.7l2.86-1.72 1.42 1.42-1.72 2.86c.3.52.54 1.1.7 1.7L20 9v2l-3.24.8c-.16.6-.4 1.18-.7 1.7l1.72 2.86-1.42 1.42-2.86-1.72c-.52.3-1.1.54-1.7.7L11 20H9l-.8-3.24c-.6-.16-1.18-.4-1.7-.7l-2.86 1.72-1.42-1.42 1.72-2.86c-.3-.52-.54-1.1-.7-1.7L0 11V9l3.24-.8c.16-.6.4-1.18.7-1.7zM10 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
-            <a href="{{ route('ms-sets') }}">Settings</a></li>
+            <a href="{{ route('ms-sets-seed') }}">Settings</a></li>
         </ul>
         <div class="flex items-center">
           <div class="flex items-center px-6">
