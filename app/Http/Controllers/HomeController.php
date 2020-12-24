@@ -57,7 +57,6 @@ class HomeController extends Controller
         // $courses->favRec = $favRec;
         // $courses->tcategory = $tcategory;
         $rec = DB::table('recommendations')->orderBy('order','ASC')->get();
-        var_dump($rec);
         return view('home')->with(['rec' => $rec]);
     }
 
