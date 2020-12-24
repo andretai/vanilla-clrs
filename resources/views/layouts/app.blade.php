@@ -70,7 +70,7 @@
                         <a href="{{ route('register') }}" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white bg-indigo-700 border-indigo-700 hover:border-transparent hover:bg-indigo-500 mt-4 lg:mt-0">{{ __('Register') }}</a>
                         @endif
                         @else
-                        <a href="#responsive-header" class="inline-block uppercase rounded-full px-4 py-2 text-xl  text-white font-bold lg:mt-0 mr-4 bg-indigo-700 hover:text-white ">
+                        <a href="{{route('userdetails')}}" class="inline-block uppercase rounded-full px-4 py-2 text-xl  text-white font-bold lg:mt-0 mr-4 bg-indigo-700 hover:text-white ">
                             {{ substr(Auth::user()->name,0,1) }}
                         </a>
                         <a class="inline-block text-sm px-4 py-2 leading-none border rounded text-white bg-indigo-700 hover:border-transparent  hover:bg-indigo-500 mt-4 lg:mt-0" href="{{ route('logout') }}" onclick="event.preventDefault();
