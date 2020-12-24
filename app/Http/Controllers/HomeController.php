@@ -64,6 +64,7 @@ class HomeController extends Controller
     {
         $names = ['Most Favourite', 'People are viewing', 'People added in their lists', 'Top Category'];
         $keys = ['mfavourite', 'ratingRec', 'favRec', 'tcategory'];
+        $type = ['non-personalized', 'collaborative filtering','collaborative filtering','non-personalized' ];
         $orders = [1, 2, 3, 4];
 
         foreach ($names as $index => $name) {
@@ -71,7 +72,8 @@ class HomeController extends Controller
                 [
                     'name' => $name,
                     'key' => $keys[$index],
-                    'order' => $orders[$index]
+                    'order' => $orders[$index],
+                    'type' => $type[$index]
 
                 ]
             );
