@@ -9,7 +9,7 @@
                 <label class="block uppercase tracking-wide text-white text-sm font-bold mb-2" for="grid-city">
                     Course Name
                 </label>
-                <input type="text" class="appearance-none block w-full bg-white text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="title" value="{{session('forms.title')}}" placeholder="Example: Cooking">
+                <input type="text" class="appearance-none block w-full bg-white text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="title" value="" placeholder="Example: Cooking">
             </div>
             <div>
                 <label class="block uppercase tracking-wide text-white text-sm font-bold mb-2" for="grid-state">
@@ -67,5 +67,4 @@
 </div>
 <div class="py-12 px-32">
     {{ $courses->appends(request()->query())->links() }}
-</div>
-@endsection
+</div>@endsection

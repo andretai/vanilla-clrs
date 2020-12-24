@@ -41,43 +41,48 @@
             </div>
 
             <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-                <div class="text-sm lg:flex-grow">
-                    <a href="/" class="{{'home' == request()->path() ? 'font-bold' : '' }} text-lg block mt-4 lg:inline-block lg:mt-0 text-indigo-700 hover:text-indigo-600 mr-4">
-                        Home
-                    </a>
-                    <a href="/course" class="{{'course' == request()->path() ? 'font-bold' : '' }} text-lg block mt-4 lg:inline-block lg:mt-0  text-indigo-700 hover:text-indigo-600 mr-4">
-                        Course
-                    </a>
-                    <a href="/favourite" class="{{'favourite' == request()->path() ? 'font-bold' : '' }} text-lg block mt-4 lg:inline-block lg:mt-0 text-indigo-700 hover:text-indigo-600 mr-4">
-                        Favourite <span class=" rounded-full bg-indigo-700 uppercase px-2 py-1 text-xs text-white font-bold mr-3">{{$favCount}}</span>
-                    </a>
+                <div class="flex text-sm lg:flex-grow">
+                    <div>
+                        <a href="/" class="text-lg block mt-4 lg:inline-block lg:mt-0 text-indigo-700 hover:text-indigo-600 mr-4">
+                            Home
+                        </a>
+                        <a href="/course" class="text-lg block mt-4 lg:inline-block lg:mt-0  text-indigo-700 hover:text-indigo-600 mr-4">
+                            Course
+                        </a>
+                        <a href="/favourite" class="text-lg block mt-4 lg:inline-block lg:mt-0 text-indigo-700 hover:text-indigo-600 mr-4">
+                            Favourite <span class=" rounded-full bg-indigo-700 uppercase px-2 py-1 text-xs text-white font-bold mr-3">{{$favCount}}</span>
+                        </a>
+
+                        </a>
+                        <a href="/promotion" class="text-lg block mt-4 lg:inline-block lg:mt-0 text-indigo-700 hover:text-indigo-600">
+                            Promotion
+                        </a>
+                    </div>
                     
-                    </a>
-                    <a href="/promotion" class="{{'promotion' == request()->path() ? 'font-bold' : '' }} text-lg block mt-4 lg:inline-block lg:mt-0 text-indigo-700 hover:text-indigo-600">
-                        Promotion
-                    </a>
                 </div>
-                <div>
-                    @guest
-                    <a href="{{ route('login') }}" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white bg-indigo-700 border-indigo-700 hover:border-transparent hover:bg-indigo-500 mt-4 mr-3 lg:mt-0">{{ __('Login') }}</a>
-                    @if (Route::has('register'))
-                    <a href="{{ route('register') }}" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white bg-indigo-700 border-indigo-700 hover:border-transparent hover:bg-indigo-500 mt-4 lg:mt-0">{{ __('Register') }}</a>
-                    @endif
-                    @else
-                    <a href="#responsive-header" class="inline-block uppercase rounded-full px-4 py-2 text-xl  text-white font-bold lg:mt-0 mr-4 bg-indigo-700 hover:text-white ">
-                        {{ substr(Auth::user()->name,0,1) }}
-                    </a>
-                    <a class="inline-block text-sm px-4 py-2 leading-none border rounded text-white bg-indigo-700 hover:border-transparent  hover:bg-indigo-500 mt-4 lg:mt-0" href="{{ route('logout') }}" onclick="event.preventDefault();
+                @livewire('search-dropdown')
+                <div class="flex lg:flex lg:items-center lg:w-auto">
+                    @livewire('guidelines')
+                    <div>
+                        @guest
+                        <a href="{{ route('login') }}" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white bg-indigo-700 border-indigo-700 hover:border-transparent hover:bg-indigo-500 mt-4 mr-3 lg:mt-0">{{ __('Login') }}</a>
+                        @if (Route::has('register'))
+                        <a href="{{ route('register') }}" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white bg-indigo-700 border-indigo-700 hover:border-transparent hover:bg-indigo-500 mt-4 lg:mt-0">{{ __('Register') }}</a>
+                        @endif
+                        @else
+                        <a href="{{route('userdetails')}}" class="inline-block uppercase rounded-full px-4 py-2 text-xl  text-white font-bold lg:mt-0 mr-4 bg-indigo-700 hover:text-white ">
+                            {{ substr(Auth::user()->name,0,1) }}
+                        </a>
+                        <a class="inline-block text-sm px-4 py-2 leading-none border rounded text-white bg-indigo-700 hover:border-transparent  hover:bg-indigo-500 mt-4 lg:mt-0" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
-                    </a>
+                            {{ __('Logout') }}
+                        </a>
 
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                    </form>
-
-
-                    @endguest
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                        @endguest
+                    </div>
                 </div>
             </div>
         </nav>

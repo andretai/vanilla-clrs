@@ -86,3 +86,4 @@ Route::get('/rating/{id}',[UCourseController::class, 'rating'])->middleware('aut
 Route::get('/rating/removerating/{id}',[UCourseController::class, 'removerating'])->middleware('auth');
 Route::get('/rating/editrating/{id}',[UCourseController::class, 'editrating'])->middleware('auth');
 Route::post('updaterating',[UCourseController::class, 'updaterating'])->name('ratings.update')->middleware('auth');
+Route::get('/userdetails', [UserController::class, 'index'])->name('userdetails')->middleware('auth');

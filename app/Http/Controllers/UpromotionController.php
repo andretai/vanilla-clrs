@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Goutte;
 
 class UpromotionController extends Controller
 {
@@ -13,6 +14,7 @@ class UpromotionController extends Controller
      */
     public function index()
     {
+    
         return view('promotion');
     }
 

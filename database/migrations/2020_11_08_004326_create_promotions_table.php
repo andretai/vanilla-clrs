@@ -20,7 +20,7 @@ class CreatePromotionsTable extends Migration
             $table->string('image')->nullable();
             $table->date('start_date')->nullable();
             $table->date('end_date')->nullable();
-            $table->string('url');
+            $table->string('url')->nullable();
             $table->timestamps();
         });
     }
