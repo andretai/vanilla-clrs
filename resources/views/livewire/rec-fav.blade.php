@@ -3,9 +3,9 @@
     <div>
         <div class="flex p-2 pt-6">
             <div class="block tracking-wide text-3xl font-bold pr-4">
-            Recommend Course Based on Your Favourite List
+            Recommend Course Based on Your Favourite
             </div>
-            @livewire('rec-feedbacks',['rec'=>3])
+            @livewire('rec-feedbacks',['rec'=>$order[0]->id])
         </div>
         <div class="flex">
             @foreach($recFav as $course)

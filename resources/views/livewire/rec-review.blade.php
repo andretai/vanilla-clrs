@@ -5,7 +5,7 @@
             <div class="block tracking-wide text-3xl font-bold pr-4">
                 Recommend Course Based on Your Review
             </div>
-            @livewire('rec-feedbacks',['rec'=>2])
+            @livewire('rec-feedbacks',['rec'=>$order[0]->id])
         </div>
         <div class="flex">
             @foreach($recReview as $course)

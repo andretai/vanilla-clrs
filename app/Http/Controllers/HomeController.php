@@ -32,38 +32,39 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $user = Auth::User();
-        $courses = collect();
-        $mfavourite = Favourite::leftJoin('courses', 'favourites.course_id', '=', 'courses.id')
-            ->select('course_id', DB::raw('count(*) as total'))
-            ->groupBy('course_id')
-            ->orderBy('total', 'DESC')
-            ->take(5)
-            ->get();
+        // $user = Auth::User();
+        // $courses = collect();
+        // $mfavourite = Favourite::leftJoin('courses', 'favourites.course_id', '=', 'courses.id')
+        //     ->select('course_id', DB::raw('count(*) as total'))
+        //     ->groupBy('course_id')
+        //     ->orderBy('total', 'DESC')
+        //     ->take(5)
+        //     ->get();
 
-        //print_r($rating);
-        $ratingRec = app('App\Http\Controllers\Recommend\CollabFil')->getRecommendations($user->id, 5, 'ratings');
-        //var_dump($ratingRec);
-        $favRec = app('App\Http\Controllers\Recommend\CollabFil')->getRecommendations($user->id, 5, 'favourites');
-        $tcategory = Favourite::leftJoin('courses', 'favourites.course_id', '=', 'courses.id')
-            ->select('favourites.id', 'favourites.course_id', 'courses.*', DB::raw('count(courses.category_id) as total'))
-            ->groupBy('courses.category_id')
-            ->orderBy('total', 'DESC')
-            ->take(10)
-            ->get();
-        //print_r($categories);
-        $courses->mfavourite = $mfavourite;
-        $courses->ratingRec = $ratingRec;
-        $courses->favRec = $favRec;
-        $courses->tcategory = $tcategory;
-
-        return view('home')->with(['courses' => $courses]);
+        // //print_r($rating);
+        // $ratingRec = app('App\Http\Controllers\Recommend\CollabFil')->getRecommendations($user->id, 5, 'ratings');
+        // //var_dump($ratingRec);
+        // $favRec = app('App\Http\Controllers\Recommend\CollabFil')->getRecommendations($user->id, 5, 'favourites');
+        // $tcategory = Favourite::leftJoin('courses', 'favourites.course_id', '=', 'courses.id')
+        //     ->select('favourites.id', 'favourites.course_id', 'courses.*', DB::raw('count(courses.category_id) as total'))
+        //     ->groupBy('courses.category_id')
+        //     ->orderBy('total', 'DESC')
+        //     ->take(10)
+        //     ->get();
+        // //print_r($categories);
+        // $courses->mfavourite = $mfavourite;
+        // $courses->ratingRec = $ratingRec;
+        // $courses->favRec = $favRec;
+        // $courses->tcategory = $tcategory;
+        $rec = DB::table('recommendations')->orderBy('order','ASC')->get();
+        var_dump($rec);
+        return view('home')->with(['rec' => $rec]);
     }
 
     public function generateRec()
     {
         $names = ['Most Favourite', 'People are viewing', 'People added in their lists', 'Top Category'];
-        $keys = ['mfavourite', 'ratingRec', 'favRec', 'tcategory'];
+        $keys = ['mFav', 'recReview', 'recFav', 'recCategory'];
         $type = ['non-personalized', 'collaborative filtering','collaborative filtering','non-personalized' ];
         $orders = [1, 2, 3, 4];
 

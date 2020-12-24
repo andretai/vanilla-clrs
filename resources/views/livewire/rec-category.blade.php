@@ -3,9 +3,9 @@
     <div>
         <div class="flex p-2 pt-6">
             <div class="block tracking-wide text-3xl font-bold pr-4">
-                Top Categories
+                Top Categories 
             </div>
-            @livewire('rec-feedbacks',['rec'=>4])
+            @livewire('rec-feedbacks',['rec'=>$order[0]->id])
         </div>
 
         <div class="flex flex-wrap">

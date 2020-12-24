@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 class RecCategory extends Component
 {
+    public $order;
     public function render()
     {
         
@@ -19,5 +20,10 @@ class RecCategory extends Component
             ->get();
 
         return view('livewire.rec-category', compact('recCategory'));
+    }
+    public function mount()
+    { 
+        $this->order = DB::table('recommendations')->where('key','recCategory')->get()->toArray();
+        
     }
 }
