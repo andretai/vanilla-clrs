@@ -12,7 +12,7 @@
         <div class="w-1/12">ID</div>
         <div class="w-2/12">Preview</div>
         <div class="w-8/12">Category</div>
-        <div class="w-1/12">Action</div>
+        <div class="w-1/12 text-left">Action</div>
       </div>
       @foreach ($categories as $category)
         <div class="flex items-center my-2 border border-gray-300 rounded-md">
@@ -29,7 +29,9 @@
             <a href="{{ route('ms-edit', [
               'item_type' => 'category',
               'id' => $category->id
-            ])}}">EDIT</a>
+            ])}}">
+              <svg class="w-5 ml-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M17 16v4h-2v-4h-2v-3h6v3h-2zM1 9h6v3H1V9zm6-4h6v3H7V5zM3 0h2v8H3V0zm12 0h2v12h-2V0zM9 0h2v4H9V0zM3 12h2v8H3v-8zm6-4h2v12H9V8z"/></svg>
+            </a>
           </div>
         </div>
       @endforeach

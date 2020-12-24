@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Recommend\AssocAlsoRated;
 use App\Models\Course;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -27,64 +28,78 @@ class CoursesController extends Controller
             'category_id' => 'required',
             'platform_id' => 'required'
         ]);
-        
-        $course = new Course;
-        $course->title = $request->title;
-        $course->description = $request->description;
-        $course->image = $request->image;
-        $course->url = $request->url;
-        $course->price = $request->price;
-        $course->instructor = $request->instructor;
-        $course->external_id = $request->external_id;
-        $course->category_id = $request->category_id;
-        $course->platform_id = $request->platform_id;
-        $course->save();
+
+        $status = true;
+        try {
+            $course = new Course;
+            $course->title = $request->title;
+            $course->description = $request->description;
+            $course->image = $request->image;
+            $course->url = $request->url;
+            $course->price = $request->price;
+            $course->instructor = $request->instructor;
+            $course->external_id = $request->external_id;
+            $course->category_id = $request->category_id;
+            $course->platform_id = $request->platform_id;
+            $course->save();
+        } catch(Exception $e){
+            $status = false;
+        }
 
         return view('ms.api.add', [
             'back' => route('ms-course'),
             'item_type' => 'course',
-            'item_fields' => $this->courseFields([])
+            'item_fields' => $this->courseFields([]),
+            'status' => $status
         ]);
     }
 
     public function update(Request $request) {
-        $item_id = $request->query('id');
-
-        $request->validate([
-            'title' => 'required',
-            'description' => 'required',
-            'image' => '',
-            'url' => 'required',
-            'price' => 'required',
-            'category_id' => 'required',
-            'platform_id' => 'required'
-        ]);
-
-        DB::table('courses')->where('id', $item_id)->update([
-            'title' => $request->title,
-            'description' => $request->description,
-            'image' => $request->image,
-            'url' => $request->url,
-            'price' => $request->price,
-            'category_id' => $request->category_id,
-            'platform_id' => $request->platform_id
-        ]);
-        
+        $status = false;
+        try {
+            $item_id = $request->query('id');
+            $request->validate([
+                'title' => 'required',
+                'description' => 'required',
+                'image' => '',
+                'url' => 'required',
+                'price' => 'required',
+                'category_id' => 'required',
+                'platform_id' => 'required'
+            ]);
+            DB::table('courses')->where('id', $item_id)->update([
+                'title' => $request->title,
+                'description' => $request->description,
+                'image' => $request->image,
+                'url' => $request->url,
+                'price' => $request->price,
+                'category_id' => $request->category_id,
+                'platform_id' => $request->platform_id
+            ]);
+        } catch(Exception $e) {
+            $status = false;
+        }
         return view('ms.api.edit', [
             'back' => route('ms-course'),
             'item_type' => 'course',
             'item_id' => $item_id,
-            'item_fields' => $this->courseFieldsValues($request)
+            'item_fields' => $this->courseFieldsValues($request),
+            'status' => $status
         ]);
     }
 
     public function delete(Request $request) {
-        $item_id = $request->query('id');
-        DB::table('courses')->delete($item_id);
+        $status = true;
+        try {
+            $item_id = $request->query('id');
+            DB::table('courses')->delete($item_id);
+        } catch(Exception $e){
+            $status = false;
+        }
         $courses = Course::all();
         return view('ms.pages.course', [
             'courses' => $courses,
-            'delete_message' => 'Course deleted.'
+            'status' => $status
         ]);
     }
 

@@ -8,6 +8,7 @@ use App\Models\Platform;
 use App\Models\Promotion;
 use App\Models\Rating;
 use App\Models\User;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
@@ -86,12 +87,28 @@ class MsController extends Controller
     }
 
     public function seed(Request $request) {
-        $platform = $request->query('platform');
-        $fileName = 'courses_'.$platform.'.json';
-        $file = Storage::get($fileName);
-        $decoded = json_decode($file);
-        $this->seedem($decoded);
-        return redirect('/ms/settings/seed');
+        $status = true;
+        try {
+            $platform = $request->query('platform');
+            $fileName = 'courses_'.$platform.'.json';
+            $file = Storage::get($fileName);
+            $decoded = json_decode($file);
+            $this->seedem($decoded);
+        } catch(Exception $e) {
+            $status = false;
+        }
+        $platforms = Platform::all();
+        $datasets = [];
+        foreach ($platforms as $platform) {
+            $fileName = 'courses_'.$platform->platform.'.json';
+            $file = Storage::get($fileName);
+            $decoded = json_decode($file);
+            $datasets[$platform->platform] = (object) array('count'=>sizeof($decoded));
+        }
+        return view('ms.pages.settings.seed')
+                ->with('platforms', $platforms)
+                ->with('datasets', $datasets)
+                ->with('status', $status);
     }
 
     public function seedem($decoded) {

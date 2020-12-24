@@ -10,6 +10,7 @@ use App\Models\Recommendation;
 use App\Models\RecommendationsRating;
 use App\Models\Tag;
 use App\Models\User;
+use Exception;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use stdClass;
@@ -47,7 +48,7 @@ class SetsController extends Controller
                 ->with('count', $request->query('count'));
     }
 
-    public function recommend() {
+    public function recommend(Request $request) {
         $recRatings = RecommendationsRating::all();
         $recs = Recommendation::all()->sortBy('order');
         $results = [];
@@ -63,47 +64,58 @@ class SetsController extends Controller
                 'positive'=>$pos, 
                 'ratio'=>$ratio));
         }
+        if($request->query('status') !== null){
+            return view('ms.pages.settings.recommend')
+                ->with('results', $results)
+                ->with('recommendations', $recs)
+                ->with('status', $request->query('status'));
+        }
         return view('ms.pages.settings.recommend')
                 ->with('results', $results)
                 ->with('recommendations', $recs);
     }
 
     public function recommend_action(Request $request) {
-        $action = $request->query('action');
-        $rec_id = $request->query('rec_id');
-        $alpha = DB::table('recommendations')->where('id', $rec_id)->first();
-        switch($action) {
-            case 'up': {
-                $above = DB::table('recommendations')->where('order', '<', $alpha->order)->get();
-                if($above) {
-                    $item = $above[sizeof($above)-1];
-                    DB::table('recommendations')->where('id', $item->id)->update([
-                        'order' => $item->order + 1
-                    ]);
-                    DB::table('recommendations')->where('id', $alpha->id)->update([
-                        'order' => $alpha->order - 1
-                    ]);
+        $status = true;
+        try {
+            $action = $request->query('action');
+            $rec_id = $request->query('rec_id');
+            $alpha = DB::table('recommendations')->where('id', $rec_id)->first();
+            switch($action) {
+                case 'up': {
+                    $above = DB::table('recommendations')->where('order', '<', $alpha->order)->get();
+                    if($above) {
+                        $item = $above[sizeof($above)-1];
+                        DB::table('recommendations')->where('id', $item->id)->update([
+                            'order' => $item->order + 1
+                        ]);
+                        DB::table('recommendations')->where('id', $alpha->id)->update([
+                            'order' => $alpha->order - 1
+                        ]);
+                    }
+                    break;
                 }
-                break;
-            }
-            case 'down': {
-                $below = DB::table('recommendations')->where('order', '>', $alpha->order)->get();
-                if($below) {
-                    $item = $below[0];
-                    DB::table('recommendations')->where('id', $item->id)->update([
-                        'order' => $item->order - 1
-                    ]);
-                    DB::table('recommendations')->where('id', $alpha->id)->update([
-                        'order' => $alpha->order + 1
-                    ]);
+                case 'down': {
+                    $below = DB::table('recommendations')->where('order', '>', $alpha->order)->get();
+                    if($below) {
+                        $item = $below[0];
+                        DB::table('recommendations')->where('id', $item->id)->update([
+                            'order' => $item->order - 1
+                        ]);
+                        DB::table('recommendations')->where('id', $alpha->id)->update([
+                            'order' => $alpha->order + 1
+                        ]);
+                    }
+                    break;
                 }
-                break;
+                default: {
+                    break;
+                }
             }
-            default: {
-                break;
-            }
+        } catch(Exception $e) {
+            $status = false;
         }
-        return redirect('/ms/settings/recommend');
+        return redirect(route('ms-sets-recommend', ['status' => $status]));
     }
 
     public function sendRatings()

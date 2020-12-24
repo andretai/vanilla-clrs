@@ -2,7 +2,10 @@
 
 @section('content')
 <div class="px-6 pt-6 pb-3 flex justify-between items-center">
-  <p class="font-semibold text-3xl">Manage Users</p>
+  <div class="flex">
+    <svg class="w-8 mr-3 fill-current text-yellow-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5 5a5 5 0 0 1 10 0v2A5 5 0 0 1 5 7V5zM0 16.68A19.9 19.9 0 0 1 10 14c3.64 0 7.06.97 10 2.68V20H0v-3.32z"/></svg>
+    <p class="font-semibold text-xl">Users Management</p>
+  </div>  
   <div class="flex items-center">
     <p class="mr-6">{{ sizeof($users) }} records</p>
     {{-- <a href="{{route('ms-add', ['item_type' => 'user'])}}">

@@ -32,8 +32,8 @@
 </script>
 <div class="grid grid-cols-{{$col}} col-gap-3 row-gap-3 pb-24">
   @foreach ($charts as $chart)
-    <div class="p-6 border border-dotted border-gray-500 rounded-lg">
-      <p class="mb-6 font-semibold capitalize">{{$chart->name}}</p>
+    <div class="p-6 border border-gray-500 rounded-lg shadow-md transform duration-300 hover:border-green-500">
+      <p class="mb-6 capitalize">{{$chart->name}}</p>
       <canvas id="{{$chart->name}}"></canvas>
     </div>
   @endforeach

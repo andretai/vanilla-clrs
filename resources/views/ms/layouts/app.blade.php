@@ -32,7 +32,14 @@
             <a class="font-bold" href="{{ url('/ms') }}">clrs-ms</a>
           </li>
           <li
-            @if (Route::currentRouteName() !== 'ms-stats' && Route::currentRouteName() !== 'ms-sets')
+            @if (
+              Route::currentRouteName() !== 'ms-stats' && 
+              Route::currentRouteName() !== 'ms-sets' &&
+              Route::currentRouteName() !== 'ms-sets-seed' &&
+              Route::currentRouteName() !== 'ms-sets-recommend' &&
+              Route::currentRouteName() !== 'ms-sets-seed-confirm' &&
+              Route::currentRouteName() !== 'ms-sets-recommend-move'
+            )
               class="nav-top-links bg-blue-400 flex justify-between items-center"
             @else
               class="nav-top-links flex justify-between items-center"
@@ -53,7 +60,9 @@
             @if (
               Route::currentRouteName() === 'ms-sets' ||
               Route::currentRouteName() === 'ms-sets-seed' ||
-              Route::currentRouteName() === 'ms-sets-recommend'
+              Route::currentRouteName() === 'ms-sets-recommend' ||
+              Route::currentRouteName() === 'ms-sets-seed-confirm' ||
+              Route::currentRouteName() === 'ms-sets-recommend-move'
             )
               class="nav-top-links bg-blue-400 flex justify-between items-center"
             @else
@@ -61,7 +70,7 @@
             @endif
           >
             <svg class="w-4 h-4 mr-3 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M3.94 6.5L2.22 3.64l1.42-1.42L6.5 3.94c.52-.3 1.1-.54 1.7-.7L9 0h2l.8 3.24c.6.16 1.18.4 1.7.7l2.86-1.72 1.42 1.42-1.72 2.86c.3.52.54 1.1.7 1.7L20 9v2l-3.24.8c-.16.6-.4 1.18-.7 1.7l1.72 2.86-1.42 1.42-2.86-1.72c-.52.3-1.1.54-1.7.7L11 20H9l-.8-3.24c-.6-.16-1.18-.4-1.7-.7l-2.86 1.72-1.42-1.42 1.72-2.86c-.3-.52-.54-1.1-.7-1.7L0 11V9l3.24-.8c.16-.6.4-1.18.7-1.7zM10 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
-            <a href="{{ route('ms-sets') }}">Settings</a></li>
+            <a href="{{ route('ms-sets-seed') }}">Settings</a></li>
         </ul>
         <div class="flex items-center">
           <div class="flex items-center px-6">
@@ -111,7 +120,7 @@
             <svg class="w-4 h-4 mr-3 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M16 16v2H4v-2H0V4h4V2h12v2h4v12h-4zM14 5.5V4H6v12h8V5.5zm2 .5v8h2V6h-2zM4 6H2v8h2V6z"/></svg>
             <p>Categories</p>
           </a>
-          <a href="{{ url('/ms/promotions') }}"
+          {{-- <a href="{{ url('/ms/promotions') }}"
             @if (Route::currentRouteName() === 'ms-promotion')
               class="flex items-center pl-6 py-2 bg-gray-700"
             @else
@@ -120,7 +129,7 @@
           >
             <svg class="w-4 h-4 mr-3 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9 20v-1.7l.01-.24L15.07 12h2.94c1.1 0 1.99.89 1.99 2v4a2 2 0 0 1-2 2H9zm0-3.34V5.34l2.08-2.07a1.99 1.99 0 0 1 2.82 0l2.83 2.83a2 2 0 0 1 0 2.82L9 16.66zM0 1.99C0 .9.89 0 2 0h4a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zM4 17a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg>
             <p>Promotions</p>
-          </a>
+          </a> --}}
           <a href="{{ url('/ms/users') }}"
             @if (Route::currentRouteName() === 'ms-user')
               class="flex items-center pl-6 py-2 bg-gray-700"
