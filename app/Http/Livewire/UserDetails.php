@@ -3,11 +3,13 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
-
+use Illuminate\Support\Facades\Auth;
 class UserDetails extends Component
 {
     public function render()
     {
-        return view('livewire.user-details');
+        $user = Auth::User();
+
+        return view('livewire.user-details',compact('user'));
     }
 }

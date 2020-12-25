@@ -19,13 +19,16 @@ class UfavouriteController extends Controller
         $user = Auth::User();
         $favourites = Favourite::with('course')->where('user_id', $user->id)->get();
         $getFirstFavCourse = Favourite::with('course')->where('user_id', $user->id)->first();
-        if (!$request->favourite) {
-            $result = app('App\Http\Controllers\Recommend\CalcAssoc')->getRecommendations($getFirstFavCourse->course_id, 4, 'favourites');
-        } else {
-            $result = app('App\Http\Controllers\Recommend\CalcAssoc')->getRecommendations($request->favourite, 4, 'favourites');
+        if (!$favourites->isEmpty()) {
+            if (!$request->favourite) {
+                $result = app('App\Http\Controllers\Recommend\CalcAssoc')->getRecommendations($getFirstFavCourse->course_id, 4, 'favourites');
+                $favourites->recommendCourse = $result;
+            } else {
+                $result = app('App\Http\Controllers\Recommend\CalcAssoc')->getRecommendations($request->favourite, 4, 'favourites');
+                $favourites->recommendCourse = $result;
+            }
         }
         
-        $favourites->recommendCourse = $result;
         session()->put('forms.fav', $request->get('favourite'));
 
         return view('favourite')->with(['favourites' => $favourites]);
