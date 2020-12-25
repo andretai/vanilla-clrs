@@ -32,10 +32,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // $user = Auth::User();
+        $user = Auth::User();
         // $courses = collect();
-        // $mfavourite = Favourite::leftJoin('courses', 'favourites.course_id', '=', 'courses.id')
-        //     ->select('course_id', DB::raw('count(*) as total'))
+        // $mfavourite = Favourite::select('course_id', DB::raw('count(*) as total'))
         //     ->groupBy('course_id')
         //     ->orderBy('total', 'DESC')
         //     ->take(5)
@@ -56,7 +55,14 @@ class HomeController extends Controller
         // $courses->ratingRec = $ratingRec;
         // $courses->favRec = $favRec;
         // $courses->tcategory = $tcategory;
-        $rec = DB::table('recommendations')->orderBy('order','ASC')->get();
+        $favourite = Favourite::where('user_id', $user->id)->first();
+        $review = Rating::where('user_id', $user->id)->first();
+        if (empty($favourite) || empty($review)) {
+            $rec = DB::table('recommendations')->where('type', 'non-personalized')->orderBy('order', 'ASC')->get();
+        } else {
+            $rec = DB::table('recommendations')->orderBy('order', 'ASC')->get();
+        }
+
         return view('home')->with(['rec' => $rec]);
     }
 
@@ -64,7 +70,7 @@ class HomeController extends Controller
     {
         $names = ['Most Favourite', 'People are viewing', 'People added in their lists', 'Top Category'];
         $keys = ['mFav', 'recReview', 'recFav', 'recCategory'];
-        $type = ['non-personalized', 'collaborative filtering','collaborative filtering','non-personalized' ];
+        $type = ['non-personalized', 'collaborative filtering', 'collaborative filtering', 'non-personalized'];
         $orders = [1, 2, 3, 4];
 
         foreach ($names as $index => $name) {

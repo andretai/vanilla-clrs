@@ -5,6 +5,7 @@
     <div class="bg-indigo-700 px-32 p-10">
         <h2 class="text-4xl text-white font-semibold pt-8">Favourite</h2>
     </div>
+    @if(!$favourites->isEmpty())
     <div class="px-32 p-10">
         @if (session('alert'))
         <div class="m-5 flex items-center bg-blue-500 text-white text-sm font-bold px-4 py-3" role="alert">
@@ -86,10 +87,10 @@
                             <h4 class="mt-1 font-semibold text-lg leading-tight truncate">{{ $course->course->title }}</h4>
 
                             <div class="flex mt-1">
-                            <div class="text-gray-600 capitalize w-24 font-semibold truncate">
-                                {{$course->course->instructor}}</div>
-                            <div class="text-orange-600 ml-3">{{$course->course->avgRating()}} <i class="fas fa-star fa-sm pl-1"></i></div>
-                        </div>
+                                <div class="text-gray-600 capitalize w-24 font-semibold truncate">
+                                    {{$course->course->instructor}}</div>
+                                <div class="text-orange-600 ml-3">{{$course->course->avgRating()}} <i class="fas fa-star fa-sm pl-1"></i></div>
+                            </div>
                             <div class="flex items-baseline">
                                 <div class="mt-2 text-red-700 text-lg font-semibold tracking-wide">
                                     {{ $course->course->price }}
@@ -104,6 +105,23 @@
         </div>
 
     </div>
+    @else
+    <div class="px-32 p-10">
+
+        <div class="mx-auto h-full flex justify-center items-center pb-5"><i class="fas fa-book fa-7x text-indigo-700"></i></div>
+        <div class=" mx-auto h-full flex justify-center items-center text-3xl font-bold">No Course is Found</div>
+        <div class=" mx-auto h-full flex justify-center items-center text-2xl font-semibold">Lets Add Some Course to Your Favourite List</div>
+        <div class="flex justify-center items-center py-5">
+        <a 
+        href="/course" 
+        target="_blank" 
+        class=" text-lg px-3 py-4 border rounded text-white bg-indigo-700 border-white hover:border-transparent hover:bg-indigo-500 lg:mt-0">
+        Get Some At Course Page<i class="fas fa-info-circle ml-2">
+        </i></a>
+        </div>
+    </div>
+</div>
+@endif
 </div>
 @endsection
 
