@@ -86,12 +86,6 @@
           <a href="{{ route('ms-sets-recommend-move', ['rec_id' => $rec->id, 'action' => 'down'])}}">
             <img src="/images/top.png" class="w-6 transform rotate-180"/>
           </a>
-          {{-- <a href="{{ route('ms-sets-recommend-move', ['rec_id' => $rec->id, 'action' => 'top'])}}">
-            <img src="/images/top.png" class="w-6"/>
-          </a>
-          <a href="{{ route('ms-sets-recommend-move', ['rec_id' => $rec->id, 'action' => 'bottom'])}}">
-            <img src="/images/top.png" class="w-6 transform rotate-180"/>
-          </a> --}}
         </div>
       </div>
       @php
