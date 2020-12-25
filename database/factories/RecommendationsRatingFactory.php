@@ -23,7 +23,6 @@ class RecommendationsRatingFactory extends Factory
     {
         return [
             'rec_id' => $this->faker->numberBetween(1,4),
-            // 'rec_id' => 4,
             'user_id' => $this->faker->numberBetween(1, 100),
             'sentiment' => $this->faker->boolean(80)
         ];

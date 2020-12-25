@@ -29,7 +29,7 @@
               class="font-semibold text-blue-600 text-3xl"
             @endif
           >
-            {{$result->ratio}}%
+            {{ round($result->ratio) }}%
           </p>
           <p class="ml-3">positive</p>
         </div>

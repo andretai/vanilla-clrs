@@ -161,6 +161,7 @@ class MsController extends Controller
                 $rating->save();
             }
         }
+        app('\App\Http\Controllers\SetsController')->createDescTags();
     }
 
     public function indexCourse() {
