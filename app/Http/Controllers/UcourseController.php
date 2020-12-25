@@ -7,7 +7,8 @@ use App\Models\Course;
 use App\Models\Category;
 use App\Models\Rating;
 use Illuminate\Support\Facades\Auth;
-
+use App\Models\Favourite;
+use Illuminate\Support\Facades\DB;
 class UcourseController extends Controller
 {
     /**
@@ -57,13 +58,12 @@ class UcourseController extends Controller
         $coursedetails->totalRating = Rating::where('course_id', $id)->count();
 
         $result = app('App\Http\Controllers\Recommend\CalcAssoc')->getRecommendations($id, 5, 'ratings');
-        //var_dump($result);
-        // $recommendCourse = array();
-        // foreach ($result as $r) {
-        //     $temp = Course::where('title',$r)->first();
-        //     array_push($recommendCourse,$temp);
-        // }
+        $mostReview = Course::where('category_id',$coursedetails->category_id)
+        ->take(5)
+        ->get();
         $coursedetails->recommendCourse = $result;
+        $coursedetails->mostReview = $mostReview;
+
         return view('coursedetails')->with(['coursedetails' => $coursedetails]);
     }
     /**

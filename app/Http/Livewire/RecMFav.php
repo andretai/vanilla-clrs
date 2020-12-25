@@ -14,8 +14,7 @@ class RecMFav extends Component
 
     public function render()
     {
-        $mFav = Favourite::leftJoin('courses', 'favourites.course_id', '=', 'courses.id')
-            ->select('course_id', DB::raw('count(*) as total'))
+        $mFav = Favourite::select('course_id', DB::raw('count(*) as total'))
             ->groupBy('course_id')
             ->orderBy('total', 'DESC')
             ->take(5)

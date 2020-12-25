@@ -83,6 +83,35 @@
 
     <div class="bg-white px-32 p-10 ">
         <div class="w-2/3 py-4 pb-10">
+            @if(!$coursedetails->recommendCourse)
+            <h2 class=" font-bold text-2xl text-gray-900">Same Category Courses</h2>
+            <div class="divide-y divide-blue-300">
+                @foreach($coursedetails->mostReview as $r)
+                <div>
+                    <a href="{{$r->id}}">
+                        <div class="flex py-3">
+                            <div>
+                                <img class="h-16 w-16 object-cover" src="{{$r->image}}" alt="{{$r->image}}">
+                            </div>
+                            <div class="px-3 w-3/5">
+                                <p class=" font-bold">{{$r->title}}</p>
+                                <p class="inline-block capitalize font-semibold"><i class="fas fa-window-restore fa-sm mr-2"></i>{{$r->platform->platform}}</p>
+                            </div>
+                            <div>
+                                <p class="px-8 text-orange-600">{{$r->avgRating()}}<i class="fas fa-star fa-sm pl-3"></i></p>
+                            </div>
+                            <div>
+                                <p class=" w-16"><i class="fas fa-user-alt fa-sm mr-2"></i> {{$r->countRating()}}</p>
+                            </div>
+                            <div>
+                                <p class="pl-4 font-semibold text-red-700">{{$r->price}}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                @endforeach
+            </div>
+            @else
             <h2 class=" font-bold text-2xl text-gray-900">People Also Check</h2>
             <div class="divide-y divide-blue-300">
                 @foreach($coursedetails->recommendCourse as $r)
@@ -110,6 +139,7 @@
                 </div>
                 @endforeach
             </div>
+            @endif
         </div>
         <div class="w-2/3">
             <h2 class=" font-bold text-2xl text-gray-900">Reviews</h2>
