@@ -18,10 +18,6 @@ use stdClass;
 class SetsController extends Controller
 {
     public function index() {
-        // $this->sendRatings();
-        // $this->createDescTags();
-        // app('\App\Http\Controllers\Recommend\CalcAssoc')->getRecommendations(1, 5, 'favourites');
-        // app('App\Http\Controllers\CoursesController')->getRec();
         return view('ms.pages.setting', [
             'ratings' => Rating::all(),
             'numberOfUsers' => sizeof(User::all())
@@ -86,10 +82,10 @@ class SetsController extends Controller
                     $above = DB::table('recommendations')->where('order', '<', $alpha->order)->get();
                     if($above) {
                         $item = $above[sizeof($above)-1];
-                        DB::table('recommendations')->where('id', $item->id)->update([
+                        DB::table('recommendations')->where('key', $item->key)->update([
                             'order' => $item->order + 1
                         ]);
-                        DB::table('recommendations')->where('id', $alpha->id)->update([
+                        DB::table('recommendations')->where('key', $alpha->key)->update([
                             'order' => $alpha->order - 1
                         ]);
                     }
@@ -99,10 +95,10 @@ class SetsController extends Controller
                     $below = DB::table('recommendations')->where('order', '>', $alpha->order)->get();
                     if($below) {
                         $item = $below[0];
-                        DB::table('recommendations')->where('id', $item->id)->update([
+                        DB::table('recommendations')->where('key', $item->key)->update([
                             'order' => $item->order - 1
                         ]);
-                        DB::table('recommendations')->where('id', $alpha->id)->update([
+                        DB::table('recommendations')->where('key', $alpha->key)->update([
                             'order' => $alpha->order + 1
                         ]);
                     }

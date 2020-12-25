@@ -20,7 +20,7 @@
   <div class="grid grid-cols-5 col-gap-6 row-gap-6">
     @foreach ($platforms as $platform)
       <div class="p-6 border border-gray-500 rounded-md shadow-md">
-        <img src="{{ $platform->image }}" alt="" class="h-32 mx-auto">
+        <img src="/images/{{ $platform->image }}" alt="" class="h-32 mx-auto">
         <p class="mt-3 capitalize font-semibold text-lg">{{ $platform->platform }}</p>
         <p class="mb-3 text-sm">{{ $datasets[$platform->platform]->count }} course(s).</p>
         <a href="{{ route('ms-sets-seed-confirm', ['platform'=>$platform->platform, 'count'=>$datasets[$platform->platform]->count]) }}"
