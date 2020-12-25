@@ -55,7 +55,7 @@ class CoursesController extends Controller
     }
 
     public function update(Request $request) {
-        $status = false;
+        $status = true;
         try {
             $item_id = $request->query('id');
             $request->validate([
