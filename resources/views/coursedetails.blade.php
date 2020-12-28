@@ -87,67 +87,87 @@
         <div class="w-2/3">
             <h2 class=" font-bold text-3xl text-gray-900">Reviews</h2>
             @if(Auth::User())
-                @if($coursedetails->userRating)
-                <div class="p-3 my-2">
-                    <div class="flex justify-between">
-                        <div class="flex">
-                            <p class="font-bold text-lg">{{$coursedetails->userRating->user->name}}</p>
-                            <p class="mx-3 py-1 text-xs text-gray-500 font-semibold">{{$coursedetails->userRating->created_at->diffForHumans()}}
-                            </p>
-                        </div>
-                        <div class="flex">
-                            <a href="/rating/editrating/{{$coursedetails->userRating->id}}" class="mr-3 text-gray-600"><i class="fas fa-edit"></i></a>
-                            <a href="/rating/removerating/{{$coursedetails->userRating->id}}" class="text-red-700"><i class="far fa-trash-alt"></i></a>
-                        </div>
-                    </div>
-                    <div class="mt-1 flex">
-                        <p class="font-semibold text-gray-800 text-xl mr-4">{{$coursedetails->userRating->title}}</p>
-                        <p class="font-semibold text-yellow-400">
-                            @foreach(range(1,5) as $i)
-                            <span class="fa-stack" style="width:1em">
-                                <i class="far fa-star fa-stack-1x"></i>
-                                @if($coursedetails->userRating->rate >0)
-                                @if($coursedetails->userRating->rate >0.5)
-                                <i class="fas fa-star fa-stack-1x"></i>
-                                @else
-                                <i class="fas fa-star-half fa-stack-1x"></i>
-                                @endif
-                                @endif
-                                @php $coursedetails->userRating->rate--; @endphp
-                            </span>
-                            @endforeach
+            @if($coursedetails->userRating)
+            <div class="p-3 my-2">
+                <div class="flex justify-between">
+                    <div class="flex">
+                        <p class="font-bold text-lg">{{$coursedetails->userRating->user->name}}</p>
+                        <p class="mx-3 py-1 text-xs text-gray-500 font-semibold">{{$coursedetails->userRating->created_at->diffForHumans()}}
                         </p>
                     </div>
-                    <p class="text-gray-800">{{$coursedetails->userRating->review}}</p>
+                    <div class="flex">
+                        <a href="/rating/editrating/{{$coursedetails->userRating->id}}" class="mr-3 text-gray-600"><i class="fas fa-edit"></i></a>
+                        <a href="/rating/removerating/{{$coursedetails->userRating->id}}" class="text-red-700"><i class="far fa-trash-alt"></i></a>
+                    </div>
                 </div>
-                <hr class="border-black">
-                @else
-
-                <div class="p-3">
-                    <form action="/rating/{{$coursedetails->id}}" method="GET" role="review">
-                        <div>
-                            <select name="rating" id='rating' style="width: 150px">
-                                <option value="">Rating</option>
-                                <option value="1">1 star</option>
-                                <option value="2">2 star</option>
-                                <option value="3">3 star</option>
-                                <option value="4">4 star</option>
-                                <option value="5">5 star</option>
-                            </select>
-                        </div>
-                        <div class="text-sm flex mt-4 flex-col">
-                            <input name="title" type="text" class="mb-5 appearance-none w-full border border-gray-400 p-2 focus:outline-none focus:border-gray-500" placeholder="Enter your title"></input>
-                            <textarea name="review" type="text" class=" appearance-none w-full border border-gray-400 p-2 h-32 focus:outline-none focus:border-gray-500" placeholder="Enter your review"></textarea>
-                        </div>
-                        <div>
-                            <button type="submit" class=" rounded-lg w-full bg-indigo-700 shadow-lg text-white px-4 py-2 hover:bg-indigo-500 mt-8 text-center font-semibold focus:outline-none ">
-                                Submit
-                            </button>
-                        </div>
-                    </form>
+                <div class="mt-1 flex">
+                    <p class="font-semibold text-gray-800 text-xl mr-4">{{$coursedetails->userRating->title}}</p>
+                    <p class="font-semibold text-yellow-400">
+                        @foreach(range(1,5) as $i)
+                        <span class="fa-stack" style="width:1em">
+                            <i class="far fa-star fa-stack-1x"></i>
+                            @if($coursedetails->userRating->rate >0)
+                            @if($coursedetails->userRating->rate >0.5)
+                            <i class="fas fa-star fa-stack-1x"></i>
+                            @else
+                            <i class="fas fa-star-half fa-stack-1x"></i>
+                            @endif
+                            @endif
+                            @php $coursedetails->userRating->rate--; @endphp
+                        </span>
+                        @endforeach
+                    </p>
                 </div>
+                <p class="text-gray-800">{{$coursedetails->userRating->review}}</p>
+            </div>
+            <hr class="border-black">
+            @else
 
-                @endif
+            <div class="p-3">
+
+                <form action="{{ route('ratings.create',['id' => $coursedetails->id]) }}" method="POST" role="review">
+                    @csrf
+                    <div>
+                        <select name="rating" id='rating' style="width: 150px">
+                            <option value="">Rating</option>
+                            <option value="1">1 star</option>
+                            <option value="2">2 star</option>
+                            <option value="3">3 star</option>
+                            <option value="4">4 star</option>
+                            <option value="5">5 star</option>
+                        </select>
+                        @error('rating')
+                        <span class="invalid-feedback" role="alert">
+                            <p class="text-red-500">{{ $message }}</p>
+                        </span>
+                        @enderror
+                    </div>
+                    <div class="flex mt-4 flex-col">
+                        <div class="mb-5">
+                            <input name="title" type="text" class="appearance-none w-full border border-gray-400 p-2 focus:outline-none focus:border-gray-500" placeholder="Enter your title"></input>
+                            @error('title')
+                            <span class="invalid-feedback" role="alert">
+                                <p class="text-red-500">{{ $message }}</p>
+                            </span>
+                            @enderror
+                        </div>
+
+                        <textarea name="review" type="text" class=" appearance-none w-full border border-gray-400 p-2 h-32 focus:outline-none focus:border-gray-500" placeholder="Enter your review"></textarea>
+                        @error('review')
+                        <span class="invalid-feedback" role="alert">
+                            <p class="text-red-500">{{ $message }}</p>
+                        </span>
+                        @enderror
+                    </div>
+                    <div>
+                        <button type="submit" class=" rounded-lg w-full bg-indigo-700 shadow-lg text-white px-4 py-2 hover:bg-indigo-500 mt-8 text-center font-semibold focus:outline-none ">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            @endif
             @endif
 
             @if($coursedetails->allrating->isEmpty())

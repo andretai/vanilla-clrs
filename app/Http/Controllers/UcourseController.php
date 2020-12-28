@@ -9,6 +9,8 @@ use App\Models\Rating;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Favourite;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
+use App\Http\Requests\ReviewRequest;
 
 class UcourseController extends Controller
 {
@@ -53,7 +55,7 @@ class UcourseController extends Controller
             //get all user rating
             $allRating = Rating::with('user')->where('course_id', $id)->whereNotIn('user_id', [$user->id])->paginate(20);
             $coursedetails->allrating = $allRating;
-        }else{
+        } else {
             $allRating = Rating::with('user')->where('course_id', $id)->paginate(20);
             $coursedetails->allrating = $allRating;
         }
@@ -72,24 +74,27 @@ class UcourseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function rating(Request $request)
+    public function createrating(Request $request)
     {
-        if ($request->rating) {
-            $user = Auth::User();
-            $course = Course::where('id', $request->id)->first();
-            $rating = Rating::create(
-                [
-                    'course_id' => $request->id,
-                    'platform_id' => 1,
-                    'user_id' => $user->id,
-                    'title' => $request->title,
-                    'review' => $request->review,
-                    'rate' => $request->rating
-                ]
-            );
-            //return Rating::all();
-            return redirect()->back()->with('success', 'Thanks for the rating and review!');
-        }
+        $user = Auth::User();
+        $course = Course::where('id', $request->id)->first();
+        $data = $request->validate([
+            'title' => ['required'],
+            'rating' => ['required'],
+            'review' => ['required']
+        ]);
+        $rating = Rating::create(
+            [
+                'course_id' => $request->id,
+                'platform_id' => 1,
+                'user_id' => $user->id,
+                'title' => $data['title'],
+                'review' => $data['review'],
+                'rate' => $data['rating']
+            ]
+        );
+
+        return redirect()->route('coursedetails', $course->id)->with('success', 'Thanks for the rating and review!');
     }
 
     public function removerating(Request $request)
@@ -109,10 +114,15 @@ class UcourseController extends Controller
     public function updaterating(Request $request)
     {
         $course = Rating::where('id', $request->id)->first();
+        $data = $request->validate([
+            'title' => ['required'],
+            'rating' => ['required'],
+            'review' => ['required']
+        ]);
         $review = Rating::where('id', $request->id)->update([
-            'title' => $request->title,
-            'review' => $request->review,
-            'rate' => $request->rating
+            'title' => $data['title'],
+            'review' => $data['review'],
+            'rate' => $data['rating']
         ]);
         return redirect()->route('coursedetails', $course->course_id)->with('update', 'Review has been updated!');
     }
