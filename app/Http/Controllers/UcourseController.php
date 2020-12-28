@@ -9,6 +9,7 @@ use App\Models\Rating;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Favourite;
 use Illuminate\Support\Facades\DB;
+
 class UcourseController extends Controller
 {
     /**
@@ -46,23 +47,23 @@ class UcourseController extends Controller
         $user = Auth::User();
         $coursedetails = Course::find($id);
         //get user rating
-        $userRating = Rating::with('user')->where('user_id', $user->id)->where('course_id', $id)->first();
-        $coursedetails->userRating = $userRating;
-        //get all user rating
-        $allRating = Rating::with('user')->where('course_id', $id)->whereNotIn('user_id', [$user->id])->paginate(20);
-        $coursedetails->allrating = $allRating;
+        if ($user) {
+            $userRating = Rating::with('user')->where('user_id', $user->id)->where('course_id', $id)->first();
+            $coursedetails->userRating = $userRating;
+            //get all user rating
+            $allRating = Rating::with('user')->where('course_id', $id)->whereNotIn('user_id', [$user->id])->paginate(20);
+            $coursedetails->allrating = $allRating;
+        }else{
+            $allRating = Rating::with('user')->where('course_id', $id)->paginate(20);
+            $coursedetails->allrating = $allRating;
+        }
+
+
         //calculate average rating
         $averageRating = Rating::where('course_id', $id)->avg('rate');
         $coursedetails->averageRating = $averageRating;
         //get number of total rating
         $coursedetails->totalRating = Rating::where('course_id', $id)->count();
-
-        $result = app('App\Http\Controllers\Recommend\CalcAssoc')->getRecommendations($id, 5, 'ratings');
-        $mostReview = Course::where('category_id',$coursedetails->category_id)
-        ->take(5)
-        ->get();
-        $coursedetails->recommendCourse = $result;
-        $coursedetails->mostReview = $mostReview;
 
         return view('coursedetails')->with(['coursedetails' => $coursedetails]);
     }

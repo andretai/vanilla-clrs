@@ -5,7 +5,7 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 class Newsletter extends Component
 {
-    public $data =[];
+    public $data;
 
     public function render()
     {
@@ -13,10 +13,7 @@ class Newsletter extends Component
         return view('livewire.newsletter');
     }
 
-    public function doWebScraping()
-    {
 
-    }
 
 
 }

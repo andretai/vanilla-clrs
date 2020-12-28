@@ -3,7 +3,7 @@
     <div>
         <div class="flex p-2 pt-6">
             <div class="block tracking-wide text-3xl font-bold pr-4">
-                Recommend Course Based on Your Review
+                People are viewing
             </div>
             @livewire('rec-feedbacks',['rec'=>$order[0]->id])
         </div>

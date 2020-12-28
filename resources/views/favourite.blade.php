@@ -71,6 +71,38 @@
                     </div>
                 </form>
             </div>
+            @if(!$favourites->recommendCourse)
+            <div class="flex">
+                @foreach($favourites->recommendCategoryCourse as $course)
+                <a class="mt-6 px-2 w-64" href="/course/{{$course->id}}">
+                    <div class="bg-white border rounded-lg overflow-hidden hover:shadow-xl">
+                        <img class="h-48 w-full object-cover" src="{{$course->image}}" alt="{{$course->description}}">
+                        <div class="p-6">
+                            <div class="flex items-baseline">
+                                <span class="inline-block bg-teal-200 text-teal-800 text-xs px-2 rounded-full uppercase font-semibold tracking-wide">{{$course->platform->platform}}</span>
+                                <div class="ml-2 text-gray-600 text-xs uppercase font-semibold truncate">
+                                    {{$course->category->category}}
+                                </div>
+                            </div>
+
+                            <h4 class="mt-1 font-semibold text-lg leading-tight truncate">{{ $course->title }}</h4>
+
+                            <div class="flex mt-1">
+                                <div class="text-gray-600 capitalize w-24 font-semibold truncate">
+                                    {{$course->instructor}}</div>
+                                <div class="text-orange-600 ml-3">{{$course->avgRating()}} <i class="fas fa-star fa-sm pl-1"></i></div>
+                            </div>
+                            <div class="flex items-baseline">
+                                <div class="mt-2 text-red-700 text-lg font-semibold tracking-wide">
+                                    {{ $course->price }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                @endforeach
+            </div>
+            @else
             <div class="flex">
                 @foreach($favourites->recommendCourse as $course)
                 <a class="mt-6 px-2 w-64" href="/course/{{$course->course->id}}">
@@ -100,8 +132,8 @@
                     </div>
                 </a>
                 @endforeach
-
             </div>
+            @endif
         </div>
 
     </div>
@@ -112,12 +144,9 @@
         <div class=" mx-auto h-full flex justify-center items-center text-3xl font-bold">No Course is Found</div>
         <div class=" mx-auto h-full flex justify-center items-center text-2xl font-semibold">Lets Add Some Course to Your Favourite List</div>
         <div class="flex justify-center items-center py-5">
-        <a 
-        href="/course" 
-        target="_blank" 
-        class=" text-lg px-3 py-4 border rounded text-white bg-indigo-700 border-white hover:border-transparent hover:bg-indigo-500 lg:mt-0">
-        Get Some At Course Page<i class="fas fa-info-circle ml-2">
-        </i></a>
+            <a href="/course" target="_blank" class=" text-lg px-3 py-4 border rounded text-white bg-indigo-700 border-white hover:border-transparent hover:bg-indigo-500 lg:mt-0">
+                Get Some At Course Page<i class="fas fa-info-circle ml-2">
+                </i></a>
         </div>
     </div>
 </div>

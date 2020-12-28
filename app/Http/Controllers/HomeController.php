@@ -15,15 +15,6 @@ use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
     /**
      * Show the application dashboard.
@@ -33,35 +24,18 @@ class HomeController extends Controller
     public function index()
     {
         $user = Auth::User();
-        // $courses = collect();
-        // $mfavourite = Favourite::select('course_id', DB::raw('count(*) as total'))
-        //     ->groupBy('course_id')
-        //     ->orderBy('total', 'DESC')
-        //     ->take(5)
-        //     ->get();
-
-        // //print_r($rating);
-        // $ratingRec = app('App\Http\Controllers\Recommend\CollabFil')->getRecommendations($user->id, 5, 'ratings');
-        // //var_dump($ratingRec);
-        // $favRec = app('App\Http\Controllers\Recommend\CollabFil')->getRecommendations($user->id, 5, 'favourites');
-        // $tcategory = Favourite::leftJoin('courses', 'favourites.course_id', '=', 'courses.id')
-        //     ->select('favourites.id', 'favourites.course_id', 'courses.*', DB::raw('count(courses.category_id) as total'))
-        //     ->groupBy('courses.category_id')
-        //     ->orderBy('total', 'DESC')
-        //     ->take(10)
-        //     ->get();
-        // //print_r($categories);
-        // $courses->mfavourite = $mfavourite;
-        // $courses->ratingRec = $ratingRec;
-        // $courses->favRec = $favRec;
-        // $courses->tcategory = $tcategory;
-        $favourite = Favourite::where('user_id', $user->id)->first();
-        $review = Rating::where('user_id', $user->id)->first();
-        if (empty($favourite) || empty($review)) {
+        if($user){
+            $favourite = Favourite::where('user_id', $user->id)->first();
+            $review = Rating::where('user_id', $user->id)->first();
+            if (empty($favourite) || empty($review)) {
+                $rec = DB::table('recommendations')->where('type', 'non-personalized')->orderBy('order', 'ASC')->get();
+            } else {
+                $rec = DB::table('recommendations')->orderBy('order', 'ASC')->get();
+            }
+        }else{
             $rec = DB::table('recommendations')->where('type', 'non-personalized')->orderBy('order', 'ASC')->get();
-        } else {
-            $rec = DB::table('recommendations')->orderBy('order', 'ASC')->get();
         }
+        
 
         return view('home')->with(['rec' => $rec]);
     }
