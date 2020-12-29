@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Newsletter;
 use Illuminate\Http\Request;
-use Goutte;
+use App\Models\Promotion;
 
 class UpromotionController extends Controller
 {
@@ -14,8 +15,9 @@ class UpromotionController extends Controller
      */
     public function index()
     {
-    
-        return view('promotion');
+        $promotions = Promotion::all();
+
+        return view('promotion',compact('promotions'));
     }
 
     /**

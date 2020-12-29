@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Promotion extends Model
 {
-    protected $fillable = ['title','description','image', 'url'];
+    protected $fillable = ['platform','description','image','code', 'url'];
     use HasFactory;
 }
