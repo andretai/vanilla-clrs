@@ -4,7 +4,9 @@
             <div class="block tracking-wide text-3xl font-bold pr-4">
                 Most Favourite
             </div>
+            @if(Auth::User())
             @livewire('rec-feedbacks',['rec'=>$order[0]->id])
+            @endif
         </div>
         <div class="flex">
             @foreach($mFav as $course)

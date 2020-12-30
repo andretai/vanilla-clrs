@@ -17,21 +17,35 @@ class UfavouriteController extends Controller
     public function index(Request $request)
     {
         $user = Auth::User();
-        $favourites = Favourite::with('course')->where('user_id', $user->id)->get();
+        $favourites = Favourite::with('course')->where('user_id', $user->id)->paginate(6);
+        $favouritesRec = Favourite::with('course')->where('user_id', $user->id)->get();
         $getFirstFavCourse = Favourite::with('course')->where('user_id', $user->id)->first();
+
         if (!$favourites->isEmpty()) {
             if (!$request->favourite) {
-                $result = app('App\Http\Controllers\Recommend\CalcAssoc')->getRecommendations($getFirstFavCourse->course_id, 4, 'favourites');
+                $result = app('App\Http\Controllers\Recommend\CalcAssoc')->getRecommendations($getFirstFavCourse->course_id, 5, 'favourites');
+                $course = Course::where('id',$getFirstFavCourse->course_id)->first();
+                $filterCategory = Course::where('category_id', $course->category_id)
+                    ->take(5)
+                    ->get();
                 $favourites->recommendCourse = $result;
+                $favourites->recommendCategoryCourse = $filterCategory;
             } else {
-                $result = app('App\Http\Controllers\Recommend\CalcAssoc')->getRecommendations($request->favourite, 4, 'favourites');
+                $result = app('App\Http\Controllers\Recommend\CalcAssoc')->getRecommendations($request->favourite, 5, 'favourites');
+                $course = Course::where('id',$request->favourite)->first();
+                $filterCategory = Course::where('category_id', $course->category_id)
+                    ->take(5)
+                    ->get();
                 $favourites->recommendCourse = $result;
+                $favourites->recommendCategoryCourse = $filterCategory;
             }
         }
-        
+
         session()->put('forms.fav', $request->get('favourite'));
 
-        return view('favourite')->with(['favourites' => $favourites]);
+        return view('favourite')
+        ->with('favourites', $favourites)
+        ->with('favouritesRec' ,$favouritesRec);
     }
 
     /**

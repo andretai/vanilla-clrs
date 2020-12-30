@@ -5,8 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Promotion extends Model
+class Newsletter extends Model
 {
-    protected $fillable = ['platform','description','image','code', 'url'];
+    protected $fillable = ['title','description','url','date', 'platform'];
     use HasFactory;
 }

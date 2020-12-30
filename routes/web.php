@@ -30,7 +30,6 @@ use App\Http\Controllers\UpromotionController;
 
 Auth::routes();
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
 
 // Management System
 
@@ -73,17 +72,17 @@ Route::get('/ms/courses/seed', [MsController::class, 'seed'])->name('courses.see
 Route::get('/ms/courses/test', [CoursesController::class, 'getRec']);
 
 //user
-Route::get('/home/seedrec', [HomeController::class, 'generateRec'])->middleware('auth');
-Route::get('/course', [UcourseController::class, 'index'])->middleware('auth');
-Route::get('/search',[UcourseController::class, 'search'])->middleware('auth');
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/course', [UcourseController::class, 'index']);
+Route::get('/search',[UcourseController::class, 'search']);
 Route::get('/category/{$id}',[UcourseController::class, 'category'])->middleware('auth');
-Route::get('/course/{id}', [UcourseController::class, 'coursedetails'])->name('coursedetails')->middleware('auth');
+Route::get('/course/{id}', [UcourseController::class, 'coursedetails'])->name('coursedetails');
 Route::get('/favourite', [UfavouriteController::class, 'index'])->middleware('auth');
 Route::get('/promotion', [UpromotionController::class, 'index'])->middleware('auth');
 Route::get('/course/addtofav/{id}',[UfavouriteController::class, 'addtofav'])->middleware('auth');
 Route::get('/favourite/removefav/{id}',[UfavouriteController::class, 'removefav'])->middleware('auth');
-Route::get('/rating/{id}',[UCourseController::class, 'rating'])->middleware('auth');
+Route::post('/createrating',[UCourseController::class, 'createrating'])->name('ratings.create')->middleware('auth');
 Route::get('/rating/removerating/{id}',[UCourseController::class, 'removerating'])->middleware('auth');
 Route::get('/rating/editrating/{id}',[UCourseController::class, 'editrating'])->middleware('auth');
-Route::post('updaterating',[UCourseController::class, 'updaterating'])->name('ratings.update')->middleware('auth');
+Route::post('/updaterating',[UCourseController::class, 'updaterating'])->name('ratings.update')->middleware('auth');
 Route::get('/userdetails', [UserController::class, 'index'])->name('userdetails')->middleware('auth');

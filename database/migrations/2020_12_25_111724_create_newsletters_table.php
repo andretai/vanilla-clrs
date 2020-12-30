@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePromotionsTable extends Migration
+class CreateNewslettersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,13 @@ class CreatePromotionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('promotions', function (Blueprint $table) {
+        Schema::create('newsletters', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('description');
+            $table->string('url');
             $table->string('platform');
-            $table->string('description')->nullable();
-            $table->string('image')->nullable();
-            $table->string('code');
-            $table->date('start_date')->nullable();
-            $table->date('end_date')->nullable();
-            $table->string('url')->nullable();
+            $table->date('date');
             $table->timestamps();
         });
     }
@@ -33,6 +31,6 @@ class CreatePromotionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('promotions');
+        Schema::dropIfExists('newsletters');
     }
 }
