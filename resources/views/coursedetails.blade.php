@@ -43,23 +43,23 @@
                 <h2 class="font-bold text-3xl text-white pb-2">{{$coursedetails->title}}</h2>
                 <p class="text-xl text-white">{{$coursedetails->description}}</p>
                 <div class="flex mt-3">
-                    <p class="mr-1 mt-1 font-semibold text-yellow-400">{{number_format($coursedetails->averageRating,1)}}</p>
+                    <p class="mr-1 mt-1 font-semibold text-yellow-400">{{number_format($averageRating,1)}}</p>
                     <p class="font-semibold text-yellow-400">
                         @foreach(range(1,5) as $i)
                         <span class="fa-stack" style="width:1em">
                             <i class="far fa-star fa-stack-1x"></i>
-                            @if($coursedetails->averageRating >0)
-                            @if($coursedetails->averageRating >0.5)
+                            @if($averageRating >0)
+                            @if($averageRating >0.5)
                             <i class="fas fa-star fa-stack-1x"></i>
                             @else
                             <i class="fas fa-star-half fa-stack-1x"></i>
                             @endif
                             @endif
-                            @php $coursedetails->averageRating--; @endphp
+                            @php $averageRating--; @endphp
                         </span>
                         @endforeach
                     </p>
-                    <p class="ml-3 mt-1 font-bold text-white"> ({{$coursedetails->totalRating }} ratings)</p>
+                    <p class="ml-3 mt-1 font-bold text-white"> ({{$totalRating }} ratings)</p>
                 </div>
 
                 <p class=" mt-3 font-base text-xl text-white tracking-wide">Created
@@ -87,38 +87,38 @@
         <div class="w-2/3">
             <h2 class=" font-bold text-3xl text-gray-900">Reviews</h2>
             @if(Auth::User())
-            @if($coursedetails->userRating)
+            @if($userRating)
             <div class="p-3 my-2">
                 <div class="flex justify-between">
                     <div class="flex">
-                        <p class="font-bold text-lg">{{$coursedetails->userRating->user->name}}</p>
-                        <p class="mx-3 py-1 text-xs text-gray-500 font-semibold">{{$coursedetails->userRating->created_at->diffForHumans()}}
+                        <p class="font-bold text-lg">{{$userRating->user->name}}</p>
+                        <p class="mx-3 py-1 text-xs text-gray-500 font-semibold">{{$userRating->created_at->diffForHumans()}}
                         </p>
                     </div>
                     <div class="flex">
-                        <a href="/rating/editrating/{{$coursedetails->userRating->id}}" class="mr-3 text-gray-600"><i class="fas fa-edit"></i></a>
-                        <a href="/rating/removerating/{{$coursedetails->userRating->id}}" class="text-red-700"><i class="far fa-trash-alt"></i></a>
+                        <a href="/rating/editrating/{{$userRating->id}}" class="mr-3 text-gray-600"><i class="fas fa-edit"></i></a>
+                        <a href="/rating/removerating/{{$userRating->id}}" class="text-red-700"><i class="far fa-trash-alt"></i></a>
                     </div>
                 </div>
                 <div class="mt-1 flex">
-                    <p class="font-semibold text-gray-800 text-xl mr-4">{{$coursedetails->userRating->title}}</p>
+                    <p class="font-semibold text-gray-800 text-xl mr-4">{{$userRating->title}}</p>
                     <p class="font-semibold text-yellow-400">
                         @foreach(range(1,5) as $i)
                         <span class="fa-stack" style="width:1em">
                             <i class="far fa-star fa-stack-1x"></i>
-                            @if($coursedetails->userRating->rate >0)
-                            @if($coursedetails->userRating->rate >0.5)
+                            @if($userRating->rate >0)
+                            @if($userRating->rate >0.5)
                             <i class="fas fa-star fa-stack-1x"></i>
                             @else
                             <i class="fas fa-star-half fa-stack-1x"></i>
                             @endif
                             @endif
-                            @php $coursedetails->userRating->rate--; @endphp
+                            @php $userRating->rate--; @endphp
                         </span>
                         @endforeach
                     </p>
                 </div>
-                <p class="text-gray-800">{{$coursedetails->userRating->review}}</p>
+                <p class="text-gray-800">{{$userRating->review}}</p>
             </div>
             <hr class="border-black">
             @else
@@ -170,13 +170,13 @@
             @endif
             @endif
 
-            @if($coursedetails->allrating->isEmpty())
+            @if($allRating->isEmpty())
             <div class="my-2">
                 <p class=" text-lg font-semibold">This course doesn't have any reviews yet.</p>
             </div>
             @else
             <div class="divide-y divide-black">
-                @foreach($coursedetails->allrating as $rating)
+                @foreach($allRating as $rating)
                 <div class="p-3 my-2">
                     <div class="flex">
                         <p class="font-bold text-lg">{{$rating->user->name}}</p>
@@ -207,7 +207,7 @@
                 @endforeach
             </div>
             <div class="pt-5 px-5">
-                {{ $coursedetails->allrating->appends(request()->query())->links() }}
+                {{ $allRating->appends(request()->query())->links() }}
             </div>
             @endif
         </div>

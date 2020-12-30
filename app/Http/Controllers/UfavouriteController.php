@@ -17,7 +17,8 @@ class UfavouriteController extends Controller
     public function index(Request $request)
     {
         $user = Auth::User();
-        $favourites = Favourite::with('course')->where('user_id', $user->id)->get();
+        $favourites = Favourite::with('course')->where('user_id', $user->id)->paginate(6);
+        $favouritesRec = Favourite::with('course')->where('user_id', $user->id)->get();
         $getFirstFavCourse = Favourite::with('course')->where('user_id', $user->id)->first();
 
         if (!$favourites->isEmpty()) {
@@ -42,7 +43,9 @@ class UfavouriteController extends Controller
 
         session()->put('forms.fav', $request->get('favourite'));
 
-        return view('favourite')->with(['favourites' => $favourites]);
+        return view('favourite')
+        ->with('favourites', $favourites)
+        ->with('favouritesRec' ,$favouritesRec);
     }
 
     /**

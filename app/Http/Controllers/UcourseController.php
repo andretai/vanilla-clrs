@@ -51,23 +51,23 @@ class UcourseController extends Controller
         //get user rating
         if ($user) {
             $userRating = Rating::with('user')->where('user_id', $user->id)->where('course_id', $id)->first();
-            $coursedetails->userRating = $userRating;
             //get all user rating
             $allRating = Rating::with('user')->where('course_id', $id)->whereNotIn('user_id', [$user->id])->paginate(20);
-            $coursedetails->allrating = $allRating;
         } else {
             $allRating = Rating::with('user')->where('course_id', $id)->paginate(20);
-            $coursedetails->allrating = $allRating;
         }
-
-
+        
         //calculate average rating
         $averageRating = Rating::where('course_id', $id)->avg('rate');
-        $coursedetails->averageRating = $averageRating;
         //get number of total rating
-        $coursedetails->totalRating = Rating::where('course_id', $id)->count();
+        $totalRating = Rating::where('course_id', $id)->count();
 
-        return view('coursedetails')->with(['coursedetails' => $coursedetails]);
+        return view('coursedetails')
+        ->with('coursedetails', $coursedetails)
+        ->with('userRating', $userRating)
+        ->with('allRating', $allRating)
+        ->with('averageRating', $averageRating)
+        ->with('totalRating', $totalRating);
     }
     /**
      * Show the form for creating a new rating.

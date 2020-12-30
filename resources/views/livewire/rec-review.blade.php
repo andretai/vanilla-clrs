@@ -3,7 +3,7 @@
     <div>
         <div class="flex p-2 pt-6">
             <div class="block tracking-wide text-3xl font-bold pr-4">
-                People are viewing
+                People interested in those courses
             </div>
             @livewire('rec-feedbacks',['rec'=>$order[0]->id])
         </div>

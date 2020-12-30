@@ -14,7 +14,7 @@
                         <p class="inline-block capitalize font-semibold"><i class="fas fa-window-restore fa-sm mr-2"></i>{{$r->platform->platform}}</p>
                     </div>
                     <div>
-                        <p class="px-8 text-orange-600">{{$r->avgRating()}}<i class="fas fa-star fa-sm pl-3"></i></p>
+                        <p class=" w-32  px-8 text-orange-600">{{$r->avgRating()}}<i class="fas fa-star fa-sm pl-3"></i></p>
                     </div>
                     <div>
                         <p class=" w-16"><i class="fas fa-user-alt fa-sm mr-2"></i> {{$r->countRating()}}</p>
@@ -42,7 +42,7 @@
                         <p class="inline-block capitalize font-semibold"><i class="fas fa-window-restore fa-sm mr-2"></i>{{$r->course->platform->platform}}</p>
                     </div>
                     <div>
-                        <p class="px-8 text-orange-600">{{$r->course->avgRating()}}<i class="fas fa-star fa-sm pl-3"></i></p>
+                        <p class=" w-32 px-8 text-orange-600">{{$r->course->avgRating()}}<i class="fas fa-star fa-sm pl-3"></i></p>
                     </div>
                     <div>
                         <p class=" w-16"><i class="fas fa-user-alt fa-sm mr-2"></i> {{$r->course->countRating()}}</p>
