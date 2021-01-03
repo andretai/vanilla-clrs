@@ -1,7 +1,7 @@
 <div>
 <button wire:click="create()" class=" focus:outline-none text-lg block mt-8 mr-4 lg:mt-0 text-indigo-700 hover:text-indigo-600">How To Use</button>
 
-@if($isOpenHome)
+@if($isOpenHome ||$open_guidelines)
     @include('livewire.guideline-home')
 @endif
 @if($isOpenCourse)

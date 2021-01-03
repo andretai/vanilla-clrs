@@ -54,8 +54,11 @@
                         </a>
 
                         </a>
-                        <a href="/promotion" class="text-lg block mt-4 lg:inline-block lg:mt-0 text-indigo-700 hover:text-indigo-600">
+                        <a href="/promotion" class="text-lg block mt-4 lg:inline-block lg:mt-0  text-indigo-700 hover:text-indigo-600 mr-4">
                             Promotion
+                        </a>
+                        <a href="/newsletter" class="text-lg block mt-4 lg:inline-block lg:mt-0 text-indigo-700 hover:text-indigo-600">
+                            Newsletter
                         </a>
                     </div>
                     

@@ -50,7 +50,7 @@ class RecFeedbacks extends Component
                     'sentiment' => true
                 ]);
         }
-        session()->flash('review', 'Thank you for your review!');
+        session()->flash('like', 'Thank you for your review!');
     }
 
     public function dislike()
@@ -72,7 +72,7 @@ class RecFeedbacks extends Component
                     'sentiment' => false
                 ]);
         }
-        session()->flash('review', 'Thank you for your review!');
+        session()->flash('dislike', 'Thank you for your review!');
     }
 
     public function undo()
