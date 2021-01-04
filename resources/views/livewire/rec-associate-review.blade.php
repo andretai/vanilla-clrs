@@ -2,7 +2,7 @@
     @if(!$rec)
     <h2 class=" font-bold text-2xl text-gray-900">Same Category Courses</h2>
     <div class="divide-y divide-blue-300">
-        @foreach($category[0] as $index => $r)
+        @foreach($category[0] as $r)
         <div>
             <a href="{{$r->id}}">
                 <div class="flex py-3">

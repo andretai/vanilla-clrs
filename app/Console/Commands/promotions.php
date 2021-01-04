@@ -39,14 +39,14 @@ class promotions extends Command
     {
         $promotion = [
             array(
-                'platform' => 'udemy',
+                'platform_id' => 1,
                 'description' => 'Get 10% Discount For Best Udemy Courses With Coupon Codes That Guarantee Great Savings Up To 50USD.',
                 'image' => '/images/udemy.png',
                 'code' => 'UDEMYCLRS10',
                 'url' => 'https://www.udemy.com/'
             ),
             array(
-                'platform' => 'futurelearn',
+                'platform_id' => 2,
                 'description' => 'Get 10% Discount For Best Futurelearn Courses With Coupon Codes That Guarantee Great Savings Up To 50USD.',
                 'image' => '/images/futurelearn.jpg',
                 'code' => 'FLCLRS10',
@@ -57,7 +57,7 @@ class promotions extends Command
         for ($i = 0; $i < sizeof($promotion); $i++) {
             $rec = new Promotion();
             $rec->id = $i + 1;
-            $rec->platform = $promotion[$i]['platform'];
+            $rec->platform_id = $promotion[$i]['platform_id'];
             $rec->description = $promotion[$i]['description'];
             $rec->image = $promotion[$i]['image'];
             $rec->code = $promotion[$i]['code'];

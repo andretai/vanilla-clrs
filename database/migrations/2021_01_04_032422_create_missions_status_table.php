@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMissionsTable extends Migration
+class CreateMissionsStatusTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreateMissionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('missions', function (Blueprint $table) {
+        Schema::create('missions_status', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('reward');
-            $table->string('type');
-            $table->string('volume');
-            $table->bigInteger('platform_id');
+            $table->bigInteger('mission_id');
+            $table->bigInteger('user_id');
+            $table->boolean('status');
             $table->timestamps();
         });
     }
@@ -31,6 +29,6 @@ class CreateMissionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('missions');
+        Schema::dropIfExists('missions_status');
     }
 }
