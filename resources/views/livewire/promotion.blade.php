@@ -10,7 +10,7 @@
                     <p class="text-4xl font-bold pb-5 pr-5">Quests</p>
                 </div>
                 <div>
-                     <button wire:click="refresh" class="text-red-800 text-lg font-semibold pt-4 hover:text-red-500 focus:outline-none"><i class="fas fa-sync pr-2"></i>Refresh</button>
+                    <button wire:click="refresh" class="text-red-800 text-lg font-semibold pt-4 hover:text-red-500 focus:outline-none"><i class="fas fa-sync pr-2"></i>Refresh</button>
                 </div>
             </div>
 
@@ -28,16 +28,25 @@
                 <p>{{ session('success') }}</p>
             </div>
             @endif
-
+            @if(!$missions->isEmpty())
             <div class="divide-y divide-black">
                 @foreach($missions as $mission)
                 <div>
                     <div class="flex py-3">
                         <div class="pr-5 pt-3">
-                            <i class="fas fa-question-circle fa-3x"></i>
+                            @if(!$this->checkProgress($mission))
+                                <i class="fas fa-question-circle fa-3x"></i>
+                            @else
+                                @if(!$this->checkClaim($mission->id))
+                                    <i class="fas fa-check-circle fa-3x  text-orange-700"></i>
+                                @else
+                                    <i class="fas fa-check-circle fa-3x text-gray-600"></i>
+                                @endif 
+                            @endif
+
                         </div>
                         <div class="px-3 w-9/12">
-                            <p class="text-3xl font-bold">{{$mission->title}}</p>
+                            <p class="text-3xl font-bold">{{$mission->title}} <span class="text-orange-600 font-semibold text-2xl ml-3"> {{$this->getProgress($mission)}}/{{$mission->volume}}</span></p>
                             <p class=" text-orange-600 text-lg inline-block capitalize font-semibold"><i class="fas fa-info-circle mr-2"></i>Reward: {{$mission->reward}}% Discount Promo Code for {{$mission->platform->platform}} platform</p>
                         </div>
                         <div>
@@ -61,6 +70,15 @@
                 </div>
                 @endforeach
             </div>
+            @else
+            <div class="px-32 p-10">
+
+                <div class="mx-auto h-full flex justify-center items-center pb-5"><i class="fas fa-tasks fa-7x text-indigo-700"></i></div>
+                <div class=" mx-auto h-full flex justify-center items-center text-3xl font-bold">No quests is Found</div>
+                <div class=" mx-auto h-full flex justify-center items-center text-2xl font-semibold">Latest quests will be update soon!</div>
+
+            </div>
+            @endif
         </div>
         <div>
             <p class="text-4xl font-bold pb-5">Promotion</p>

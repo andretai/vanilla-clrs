@@ -18,7 +18,7 @@ class Promotion extends Component
     public function render()
     {
         $missions = Mission::all();
-        $promotions = ModelsPromotion::all();
+        $promotions = ModelsPromotion::where("user_id",Auth::User()->id)->get();
         
         return view('livewire.promotion')
             ->with('missions', $missions)
@@ -82,6 +82,31 @@ class Promotion extends Component
                 ]
             );
             return redirect()->back()->with('claimed', 'Promotion Code claim successfully!');
+        }
+    }
+    public function getProgress($mission){
+        if (str_contains($mission->type, "favourite")) {
+            $check = Favourite::leftJoin('courses', 'favourites.course_id', '=', 'courses.id')
+                ->select('favourites.id', 'favourites.course_id', 'courses.*')
+                ->where('user_id', Auth::User()->id)
+                ->where('courses.platform_id', $mission->platform_id)
+                ->count();
+
+            if ($check >= intval($mission->volume)) {
+                return $mission->volume;
+            } else {
+                return $check;
+            }
+        } elseif (str_contains($mission->type, "comment")) {
+            $check = Rating::where('user_id', Auth::User()->id)
+                ->where('platform_id', $mission->platform_id)
+                ->count();
+
+            if ($check >= intval($mission->volume)) {
+                return $mission->volume;
+            } else {
+                return $check;
+            }
         }
     }
     public function checkClaim($id)
