@@ -37,10 +37,12 @@ class UcourseController extends Controller
             $courses->where('category_id', $request->get('category'));
         }
         $courses = $courses->paginate(20);
+        
         $courses->categories = Category::get();
         session()->put('forms.category', $request->get('category'));
         session()->put('forms.title', $request->get('title'));
-        return view('course')->with(['courses' => $courses]);
+        return view('course')
+        ->with(['courses' => $courses]);
     }
 
 
@@ -54,6 +56,7 @@ class UcourseController extends Controller
             //get all user rating
             $allRating = Rating::with('user')->where('course_id', $id)->whereNotIn('user_id', [$user->id])->paginate(20);
         } else {
+            $userRating = [];
             $allRating = Rating::with('user')->where('course_id', $id)->paginate(20);
         }
         

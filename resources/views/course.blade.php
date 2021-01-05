@@ -3,7 +3,6 @@
 @section('content')
 <div class="bg-indigo-700">
     <form action="/search" method="GET" role="search">
-
         <div class="flex flex-wrap justify-center px-12 py-6 pt-20">
             <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                 <label class="block uppercase tracking-wide text-white text-sm font-bold mb-2" for="grid-city">
@@ -37,6 +36,7 @@
     </form>
 </div>
 <div class="flex flex-wrap justify-center px-12 p-6">
+    @if(!$courses->isEmpty())
     @foreach( $courses as $course)
     <a class="mt-6 px-2 w-64" href="/course/{{$course->id}}">
         <div class="bg-white border rounded-lg overflow-hidden hover:shadow-xl">
@@ -64,7 +64,16 @@
         </div>
     </a>
     @endforeach
+    @else
+    <div class="px-32 p-10">
+        <div class="mx-auto h-full flex justify-center items-center"><i class="fas fa-book fa-7x text-indigo-700"></i></div>
+        <div class="mx-auto h-full flex text-3xl font-bold">No Course is Found</div>
+    </div>
+    @endif
 </div>
+
+
 <div class="py-12 px-32">
     {{ $courses->appends(request()->query())->links() }}
-</div>@endsection
+</div>
+@endsection

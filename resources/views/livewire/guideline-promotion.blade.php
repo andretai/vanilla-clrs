@@ -13,7 +13,7 @@
                         <img class="h-auto w-auto object-cover" src="http://vanillaclrs.test/images/guidelinePromotion.jpg" alt="guidelines for home page">
                     </div>
                     <div class="mb-4 text-2xl font-bold">
-                        In Promotion page, you will receive the promotion for the courses in different platform.
+                        In Promotion page, you can do quest to claim for promotion.
                     </div>
                 </div>
             </div>
