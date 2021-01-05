@@ -15,6 +15,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\UfavouriteController;
 use App\Http\Controllers\UcourseController;
 use App\Http\Controllers\UpromotionController;
+use App\Http\Controllers\UnewsletterController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -79,6 +80,7 @@ Route::get('/category/{$id}',[UcourseController::class, 'category'])->middleware
 Route::get('/course/{id}', [UcourseController::class, 'coursedetails'])->name('coursedetails');
 Route::get('/favourite', [UfavouriteController::class, 'index'])->middleware('auth');
 Route::get('/promotion', [UpromotionController::class, 'index'])->middleware('auth');
+Route::get('/newsletter', [UnewsletterController::class, 'index']);
 Route::get('/course/addtofav/{id}',[UfavouriteController::class, 'addtofav'])->middleware('auth');
 Route::get('/favourite/removefav/{id}',[UfavouriteController::class, 'removefav'])->middleware('auth');
 Route::post('/createrating',[UCourseController::class, 'createrating'])->name('ratings.create')->middleware('auth');

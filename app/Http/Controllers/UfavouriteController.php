@@ -17,7 +17,7 @@ class UfavouriteController extends Controller
     public function index(Request $request)
     {
         $user = Auth::User();
-        $favourites = Favourite::with('course')->where('user_id', $user->id)->paginate(6);
+        $favourites = Favourite::with('course')->where('user_id', $user->id)->paginate(4);
         $favouritesRec = Favourite::with('course')->where('user_id', $user->id)->get();
         $getFirstFavCourse = Favourite::with('course')->where('user_id', $user->id)->first();
 

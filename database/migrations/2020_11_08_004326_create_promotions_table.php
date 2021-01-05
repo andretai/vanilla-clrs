@@ -15,7 +15,8 @@ class CreatePromotionsTable extends Migration
     {
         Schema::create('promotions', function (Blueprint $table) {
             $table->id();
-            $table->string('platform');
+            $table->bigInteger('user_id');
+            $table->bigInteger('platform_id')->nullable();
             $table->string('description')->nullable();
             $table->string('image')->nullable();
             $table->string('code');

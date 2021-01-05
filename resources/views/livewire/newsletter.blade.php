@@ -1,5 +1,4 @@
 <div class="px-32 pt-3 pb-10">
-    <h2 class="text-5xl text-indigo-700 font-bold pt-8">Newsletter</h2>
     <div>
         <div class="divide-y divide-black">
             @foreach($news as $n)

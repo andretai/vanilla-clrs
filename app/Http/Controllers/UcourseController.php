@@ -61,7 +61,8 @@ class UcourseController extends Controller
         $averageRating = Rating::where('course_id', $id)->avg('rate');
         //get number of total rating
         $totalRating = Rating::where('course_id', $id)->count();
-
+        //count total rating
+        
         return view('coursedetails')
         ->with('coursedetails', $coursedetails)
         ->with('userRating', $userRating)
@@ -79,14 +80,14 @@ class UcourseController extends Controller
         $user = Auth::User();
         $course = Course::where('id', $request->id)->first();
         $data = $request->validate([
-            'title' => ['required'],
+            'title' => ['required','max:20','min:5'],
             'rating' => ['required'],
-            'review' => ['required']
+            'review' => ['required','max:255','min:10']
         ]);
         $rating = Rating::create(
             [
                 'course_id' => $request->id,
-                'platform_id' => 1,
+                'platform_id' => $course->platform_id,
                 'user_id' => $user->id,
                 'title' => $data['title'],
                 'review' => $data['review'],
@@ -115,9 +116,9 @@ class UcourseController extends Controller
     {
         $course = Rating::where('id', $request->id)->first();
         $data = $request->validate([
-            'title' => ['required'],
+            'title' => ['required','max:10','min:5'],
             'rating' => ['required'],
-            'review' => ['required']
+            'review' => ['required','max:255','min:15']
         ]);
         $review = Rating::where('id', $request->id)->update([
             'title' => $data['title'],

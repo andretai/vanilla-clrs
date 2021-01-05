@@ -1,4 +1,4 @@
-<div class="px-20 py-6">
+<div class="px-12 py-6">
     
     <div>
         <div class="flex p-2 pt-6">
@@ -7,7 +7,7 @@
             </div>
             @livewire('rec-feedbacks',['rec'=>$order[0]->id])
         </div>
-        <div class="flex">
+        <div class="flex flex-wrap">
             @foreach($recReview as $course)
             <a class="mt-2 px-2 w-64" href="/course/{{$course->id}}">
                 <div class="bg-white border rounded-lg overflow-hidden hover:shadow-xl">

@@ -1,5 +1,5 @@
 <div class="flex pt-2 text-2xl">
-    <div class="block uppercase tracking-wide text-indigo-700 text-lg font-bold pt-1 pr-4">
+    <div class="block uppercase tracking-wide text-indigo-700 text-lg font-bold pt-1 pr-4 py-4">
         Do you like the recommendation?
     </div>
     <div class="pr-10">
@@ -16,12 +16,16 @@
         @endif
     </div>
     <div>
-        @if(session()->has('review'))
-        <div class="items-center bg-indigo-700 rounded-md text-white text-sm font-bold px-4 py-2">
-            {{session('review')}}
+        @if(session()->has('like'))
+        <div class="items-center bg-indigo-700 rounded-md text-white text-lg font-bold px-4 py-2">
+            {{session('like')}}
+        </div>
+        @elseif(session()->has('dislike'))
+        <div class="items-center bg-red-700 rounded-md text-white text-lg font-bold px-4 py-2">
+            {{session('dislike')}}
         </div>
         @elseif(session()->has('undo'))
-        <div class="items-center bg-indigo-700 rounded-md text-white text-sm font-bold px-4 py-2">
+        <div class="items-center bg-indigo-700 rounded-md text-white text-lg font-bold px-4 py-2">
             {{session('undo')}}
         </div>
         @endif

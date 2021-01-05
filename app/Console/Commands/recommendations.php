@@ -40,7 +40,7 @@ class recommendations extends Command
     {
         $recommendations = [
             array('name' => 'Most Favourite', 'key' => 'mFav', 'order' => 1, 'type' => 'non-personalized'),
-            array('name' => 'People are viewing', 'key' => 'recReview', 'order' => 2, 'type' => 'collaborative filtering'),
+            array('name' => 'People interested in those courses', 'key' => 'recReview', 'order' => 2, 'type' => 'collaborative filtering'),
             array('name' => 'People added in lists', 'key' => 'recFav', 'order' => 3, 'type' => 'collaborative filtering'),
             array('name' => 'Top Category', 'key' => 'recCategory', 'order' => 4, 'type' => 'non-personalized')
         ];

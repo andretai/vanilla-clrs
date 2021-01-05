@@ -15,9 +15,7 @@ class UpromotionController extends Controller
      */
     public function index()
     {
-        $promotions = Promotion::all();
-
-        return view('promotion',compact('promotions'));
+        return view('promotion');
     }
 
     /**

@@ -16,7 +16,7 @@
 
     @elseif($r->key=="recCategory")
     @livewire('rec-category')
-    @endif`
+    @endif
 
 @endforeach
 

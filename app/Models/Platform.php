@@ -12,4 +12,10 @@ class Platform extends Model
     public function courses(){
         return $this->hasMany('App\Models\Course');
     }
+    public function missions(){
+        return $this->hasMany('App\Models\Mission');
+    }
+    public function promotions(){
+        return $this->hasMany('App\Models\Promotion');
+    }
 }
