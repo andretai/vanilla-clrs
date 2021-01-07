@@ -14,8 +14,13 @@
     @elseif($r->key=="recFav")
     @livewire('rec-fav')
 
+    @elseif($r->key=="recTag")
+    @livewire('rec-tag')
+
     @elseif($r->key=="recCategory")
     @livewire('rec-category')
+
+
     @endif
 
 @endforeach

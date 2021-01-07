@@ -43,7 +43,6 @@ class newsletters extends Command
         $udemy_file = Storage::get('udemy_newsletter.json');
         $fl_newsletter = json_decode($fl_file, true);
         $udemy_newsletter = json_decode($udemy_file, true);
-        var_dump($udemy_file);
 
         foreach ($fl_newsletter as $fl) {
             $temp = $fl['date'];

@@ -39,10 +39,10 @@ class missions extends Command
     public function handle()
     {
         $missions = [
-            array('title' => 'Comment one Udemy course', 'reward' => '15', 'type'=> 'comment','volume'=> '1', 'platform_id' => 1),
-            array('title' => 'Comment one FutureLearn course', 'reward' => '15', 'type'=> 'comment','volume'=> '1', 'platform_id' => 2),
-            array('title' => 'Add 3 Udemy course in favourite list', 'reward' => '10', 'type'=> 'favourite','volume'=> '3', 'platform_id' => 1),
-            array('title' => 'Add 3 FutureLearn course in favourite list', 'reward' => '10', 'type'=> 'favourite','volume'=> '3', 'platform_id' => 2)
+            array('title' => 'Comment one Udemy course', 'reward' => 15, 'type'=> 'comment','volume'=> 1, 'platform_id' => 1),
+            array('title' => 'Comment one FutureLearn course', 'reward' => 15, 'type'=> 'comment','volume'=> 1, 'platform_id' => 2),
+            array('title' => 'Add 3 Udemy course in favourite list', 'reward' => 10, 'type'=> 'favourite','volume'=> 3, 'platform_id' => 1),
+            array('title' => 'Add 3 FutureLearn course in favourite list', 'reward' => 10, 'type'=> 'favourite','volume'=> 3, 'platform_id' => 2)
         ];
         for ($i = 0; $i < sizeof($missions); $i++) {
             $mission = new Mission();

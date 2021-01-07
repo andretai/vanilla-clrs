@@ -42,7 +42,8 @@ class recommendations extends Command
             array('name' => 'Most Favourite', 'key' => 'mFav', 'order' => 1, 'type' => 'non-personalized'),
             array('name' => 'People interested in those courses', 'key' => 'recReview', 'order' => 2, 'type' => 'collaborative filtering'),
             array('name' => 'People added in lists', 'key' => 'recFav', 'order' => 3, 'type' => 'collaborative filtering'),
-            array('name' => 'Top Category', 'key' => 'recCategory', 'order' => 4, 'type' => 'non-personalized')
+            array('name' => 'Course you may interest', 'key' => 'recTag', 'order' => 4, 'type' => 'content-based'),
+            array('name' => 'Top Category', 'key' => 'recCategory', 'order' => 5, 'type' => 'non-personalized')
         ];
         for ($i=0; $i < sizeof($recommendations) ; $i++) { 
             $rec = new Recommendation();
