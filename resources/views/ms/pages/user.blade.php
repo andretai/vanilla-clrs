@@ -14,11 +14,11 @@
   </div>
 </div>
 @if ($message !== '')
-  <div class="flex w-1/4 justify-between items-center mx-6 px-6 py-3 bg-green-200 rounded-md">
-    <p>{{ $message ?? '' }}</p>
-    <a href="{{ route('ms-user') }}">
-      <svg class="w-4 text-red-600 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/></svg>
-    </a>
+  <div class="flex items-center mt-6 ml-6 font-semibold capitalize" >
+    <div class="">
+      <img class="w-6" src="/images/checked.png" alt="">
+    </div>
+    <p class="ml-3 text-green-500">{{$message}}</p>
   </div>
 @endif
 @livewire('search-users', ['users' => $users, 'message' => $message ?? ''])

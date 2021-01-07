@@ -46,6 +46,7 @@ Route::get('/ms/courses', [MsController::class, 'indexCourse'])->name('ms-course
 Route::get('/ms/platforms', [MsController::class, 'indexPlatform'])->name('ms-platform')->middleware(IsAdmin::class);
 Route::get('/ms/categories', [MsController::class, 'indexCategory'])->name('ms-category')->middleware(IsAdmin::class);
 Route::get('/ms/promotions', [MsController::class, 'indexPromotion'])->name('ms-promotion')->middleware(IsAdmin::class);
+Route::get('/ms/missions', [MsController::class, 'indexMission'])->name('ms-mission')->middleware(IsAdmin::class);
 Route::get('/ms/users', [MsController::class, 'indexUser'])->name('ms-user')->middleware(IsAdmin::class);
 Route::get('/ms/users/mod', [MsController::class, 'modUser'])->name('ms-user-mod')->middleware(IsAdmin::class);
 

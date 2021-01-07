@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Course;
+use App\Models\Mission;
 use App\Models\Platform;
 use App\Models\Promotion;
 use App\Models\Rating;
@@ -35,6 +36,8 @@ class MsController extends Controller
             case 'promotion':
                 $item_fields = app('App\Http\Controllers\PromotionsController')->promotionFields([]);
                 break;
+            case 'mission':
+                $item_fields = app('\App\Http\Controllers\MissionsController')->missionFields([]);
             default:
                 break;
         }
@@ -65,6 +68,10 @@ class MsController extends Controller
             case 'promotion':
                 $item = DB::table('promotions')->find($item_id);
                 $item_fields = app('App\Http\Controllers\PromotionsController')->promotionFieldsValues($item);
+                break;
+            case 'mission':
+                $item = DB::table('missions')->find($item_id);
+                $item_fields = app('App\Http\Controllers\MissionsController')->missionFieldsValues($item);
                 break;
             default:
                 break;
@@ -117,7 +124,7 @@ class MsController extends Controller
             $category = DB::table('categories')->where('category', '=', $entry->category)->first();
             if($category === null) {
                 $request = new Request();
-                $request->replace([ 'category' => $entry->category, 'image' => '' ]);
+                $request->replace([ 'category' => $entry->category, 'image' => $entry->image ?? '' ]);
                 app('App\Http\Controllers\CategoriesController')->store($request);
                 $category = DB::table('categories')->where('category', '=', $entry->category)->first();
             }
@@ -189,6 +196,13 @@ class MsController extends Controller
         $promotions = Promotion::all();
         return view('ms.pages.promotion', [
             'promotions' => $promotions
+        ]);
+    }
+
+    public function indexMission() {
+        $missions = Mission::all();
+        return view('ms.pages.mission', [
+            'missions' => $missions
         ]);
     }
 

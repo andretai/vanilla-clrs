@@ -7,10 +7,10 @@
       <div class="w-4/5 p-3">
         <p class=" font-semibold text-lg">
           {{-- Are you sure you want to delete {{ $item_type }} {{ $item_id }} ? --}}
-          Are you sure you want to delete this course ?
+          Are you sure you want to delete this {{ $item_type }} ?
         </p>
         <p class="font-semibold text-red-600 text-sm">
-          Doing so will remove the course and all of its data.
+          Doing so will remove the {{$item_type}} and all of its data.
         </p>
       </div>
     </div>
