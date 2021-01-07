@@ -5,8 +5,8 @@ use App\Http\Controllers\PlatformsController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\PromotionsController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MissionsController;
 use App\Http\Controllers\MsController;
-use App\Http\Controllers\Recommend\AssocAlsoRated;
 use App\Http\Controllers\SetsController;
 use App\Http\Controllers\StatsController;
 use App\Http\Middleware\IsAdmin;
@@ -68,6 +68,10 @@ Route::get('/ms/categories/delete', [CategoriesController::class, 'delete'])->na
 Route::post('/ms/promotions/store', [PromotionsController::class, 'store'])->name('promotions.store')->middleware(IsAdmin::class);
 Route::post('/ms/promotions/update', [PromotionsController::class, 'update'])->name('promotions.update')->middleware(IsAdmin::class);
 Route::get('/ms/promotions/delete', [PromotionsController::class, 'delete'])->name('promotions.delete')->middleware(IsAdmin::class);
+
+Route::post('/ms/missions/store', [MissionsController::class, 'store'])->name('missions.store')->middleware(IsAdmin::class);
+Route::post('/ms/missions/update', [MissionsController::class, 'update'])->name('missions.update')->middleware(IsAdmin::class);
+Route::get('/ms/missions/delete', [MissionsController::class, 'delete'])->name('missions.delete')->middleware(IsAdmin::class);
 
 Route::get('/ms/courses/seed', [MsController::class, 'seed'])->name('courses.seed');
 Route::get('/ms/courses/test', [CoursesController::class, 'getRec']);
