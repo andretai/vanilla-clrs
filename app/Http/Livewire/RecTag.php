@@ -22,11 +22,13 @@ class RecTag extends Component
         //if no similar course is found (no similar tag), recommend same category course as the course in favourite list
         if (!empty($course_contain_related_keyword)) {
             $unique_course_id = array_unique($course_contain_related_keyword);
-            $random_course_id = array_rand($unique_course_id, 5);
-            $recTag = $this->getCourseDetails($random_course_id);
+            $random_index = array_rand($unique_course_id, 5);
+            $recTag = $this->getCourseDetails($random_index, $unique_course_id);
         } else {
-            $favourite = Favourite::where('user_id',Auth::User()->id)->first();
-            $course = Course::where('id', $favourite->course_id)->first();
+            $favourite = Favourite::select('course_id')
+            ->where('user_id',Auth::User()->id)->get()->toArray();
+            $random_course_id = array_rand($favourite, 1);
+            $course = Course::where('id', $favourite[$random_course_id]['course_id'])->first();
             $filterCategory = Course::where('category_id', $course->category_id)
                 ->take(5)
                 ->get();
@@ -75,11 +77,11 @@ class RecTag extends Component
         return $course_contain_related_keyword;
     }
     //get the course details
-    public function getCourseDetails($course_id)
+    public function getCourseDetails($index, $course_id)
     {
         $course_details = [];
-        foreach ($course_id as $id) {
-            $course = Course::where('id', $id)->first();
+        foreach ($index as $i) {
+            $course = Course::where('id', $course_id[$i])->first();
             array_push($course_details, $course);
         }
         return $course_details;
