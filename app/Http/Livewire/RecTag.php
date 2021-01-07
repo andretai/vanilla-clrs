@@ -19,6 +19,7 @@ class RecTag extends Component
         $tag_keyword = $this->getTag($tag);
         $course_contain_related_keyword = $this->getRelatedCourse($tag_keyword, $tag);
 
+        //if no similar course is found (no similar tag), recommend same category course as the course in favourite list
         if (!empty($course_contain_related_keyword)) {
             $unique_course_id = array_unique($course_contain_related_keyword);
             $random_course_id = array_rand($unique_course_id, 5);
@@ -39,7 +40,7 @@ class RecTag extends Component
     {
         $this->order = DB::table('recommendations')->where('key', 'recTag')->get()->toArray();
     }
-
+    //get all the tag from the json file
     public function getTag($tag)
     {
         $getTag = [];
@@ -59,7 +60,7 @@ class RecTag extends Component
         }
         return $getTag;
     }
-
+    //get the course that has the same tags with the course in favourite list
     public function getRelatedCourse($tag_keyword, $tag)
     {
         $course_contain_related_keyword = [];
@@ -73,7 +74,7 @@ class RecTag extends Component
         }
         return $course_contain_related_keyword;
     }
-
+    //get the course details
     public function getCourseDetails($course_id)
     {
         $course_details = [];
