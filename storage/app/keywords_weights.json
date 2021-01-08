@@ -2,24 +2,29 @@
   {
     "course_id": 1,
     "keywords": [
-      "easy",
+      "science",
+      "mastery",
       "mind",
       "practice",
-      "basic",
-      "science",
-      "important",
-      "mastery",
-      "nothing"
+      "art",
+      "anyone",
+      "skill",
+      "talent"
+    ]
+  },
+  {
+    "course_id": 2,
+    "keywords": [
+      "core",
+      "drawing",
+      "video"
     ]
   },
   {
     "course_id": 3,
     "keywords": [
-      "photorealism",
-      "great",
       "job",
       "beginner",
-      "draw",
       "master"
     ]
   },
@@ -27,67 +32,90 @@
     "course_id": 4,
     "keywords": [
       "pencil",
-      "bueno",
-      "muy",
-      "course"
+      "follow",
+      "multiple",
+      "practice"
     ]
   },
   {
     "course_id": 5,
     "keywords": [
       "soap",
-      "step",
-      "homemade"
+      "information",
+      "lot"
+    ]
+  },
+  {
+    "course_id": 6,
+    "keywords": [
+      "paint",
+      "play"
     ]
   },
   {
     "course_id": 7,
     "keywords": [
+      "beginner",
+      "bit",
       "time",
-      "different"
+      "start",
+      "today"
     ]
   },
   {
     "course_id": 8,
     "keywords": [
-      "good",
+      "video",
       "design",
-      "paint"
+      "paint",
+      "art",
+      "bring",
+      "life"
     ]
   },
   {
     "course_id": 9,
     "keywords": [
-      "course",
+      "continuation",
+      "everything",
+      "need",
+      "process",
+      "step",
+      "art",
+      "science",
       "gesture"
     ]
   },
   {
     "course_id": 10,
     "keywords": [
-      "nice",
-      "small",
-      "course",
-      "enjoyed",
       "paint",
-      "watercolor"
+      "fact",
+      "love",
+      "studio",
+      "foundation",
+      "help",
+      "work"
     ]
   },
   {
     "course_id": 11,
     "keywords": [
-      "anime",
+      "style",
       "draw",
-      "learn",
-      "style"
+      "anime"
     ]
   },
   {
     "course_id": 12,
     "keywords": [
+      "voice",
+      "si",
       "paint",
       "beginner",
       "master",
+      "right",
+      "speed",
       "oil",
       "painting",
       "skill"
@@ -96,47 +124,59 @@
   {
     "course_id": 13,
     "keywords": [
-      "imformative",
       "body",
-      "natural",
+      "power",
+      "wellness",
       "beauty"
     ]
   },
   {
     "course_id": 14,
     "keywords": [
-      "course"
+      "skin",
+      "excellent",
+      "answer",
+      "jot",
+      "time",
+      "beauty",
+      "care",
+      "herbalism"
     ]
   },
   {
     "course_id": 15,
     "keywords": [
-      "good",
-      "info",
-      "learn",
-      "classic",
-      "eyelash"
+      "eyelash",
+      "love",
+      "beginner",
+      "extension"
     ]
   },
   {
     "course_id": 16,
     "keywords": [
-      "makeup",
-      "course",
       "effortless",
-      "real",
-      "great",
-      "yay"
+      "instructor",
+      "fro",
+      "age",
+      "experience",
+      "manner",
+      "helpful",
+      "night",
+      "transformation"
     ]
   },
   {
     "course_id": 17,
     "keywords": [
       "si",
-      "ok",
       "love",
-      "much",
-      "step"
+      "step",
+      "beauty",
+      "technique",
+      "information",
+      "lot",
+      "video"
     ]
   },
   {
@@ -144,122 +184,141 @@
     "keywords": [
       "love",
       "certificate",
-      "great",
-      "informative",
-      "nail"
+      "nail",
+      "business",
+      "market"
     ]
   },
   {
     "course_id": 19,
     "keywords": [
+      "overwhelming",
       "application",
-      "home",
-      "easy",
-      "follow",
-      "overwhelming"
+      "home"
     ]
   },
   {
     "course_id": 20,
     "keywords": [
-      "natural"
+      "mark",
+      "lot",
+      "comment",
+      "teaching",
+      "beauty",
+      "create",
+      "face"
     ]
   },
   {
     "course_id": 21,
     "keywords": [
       "cupping",
-      "facial",
       "music",
-      "healthy",
       "home",
-      "vibrant"
+      "vibrant",
+      "follow",
+      "information",
+      "gusto",
+      "lo",
+      "video"
     ]
   },
   {
     "course_id": 22,
-    "keywords": []
+    "keywords": [
+      "level"
+    ]
   },
   {
     "course_id": 23,
     "keywords": [
-      "course",
-      "good",
+      "information",
       "artistry",
-      "professional",
-      "everyday",
-      "fashion"
+      "fashion",
+      "live",
+      "distance",
+      "hair"
     ]
   },
   {
     "course_id": 24,
     "keywords": [
-      "makeup",
-      "know",
-      "model",
-      "good",
-      "name"
+      "confidence",
+      "informative",
+      "watch",
+      "certificate",
+      "name",
+      "date",
+      "model"
     ]
   },
   {
     "course_id": 25,
     "keywords": [
-      "clear",
+      "art",
       "therapy",
       "computer",
       "volume",
-      "art"
+      "part"
     ]
   },
   {
     "course_id": 26,
     "keywords": [
-      "clear",
-      "curious",
+      "elle",
+      "tout",
       "creativity",
-      "gilbert",
       "workshop",
-      "est"
+      "inspiration",
+      "journey"
     ]
   },
   {
     "course_id": 27,
     "keywords": [
-      "aromatherapy",
-      "diploma"
+      "diploma",
+      "everything",
+      "massage",
+      "need"
     ]
   },
   {
     "course_id": 28,
     "keywords": [
-      "inspirational",
-      "great",
       "elegant",
-      "simple",
-      "course"
+      "simple"
     ]
   },
   {
     "course_id": 29,
     "keywords": [
-      "good",
+      "video",
       "blueprint",
       "hero",
-      "great",
-      "information"
+      "class",
+      "game",
+      "information",
+      "well"
+    ]
+  },
+  {
+    "course_id": 30,
+    "keywords": [
+      "breakthrough",
+      "work"
     ]
   },
   {
     "course_id": 31,
     "keywords": [
-      "masterclass",
-      "story"
+      "story",
+      "start",
+      "style"
     ]
   },
   {
     "course_id": 32,
     "keywords": [
-      "enjoyable",
       "art",
       "therapy"
     ]
@@ -267,8 +326,9 @@
   {
     "course_id": 33,
     "keywords": [
-      "basic",
-      "better",
+      "writing",
+      "depth",
+      "need",
       "fiction"
     ]
   },
@@ -276,10 +336,7 @@
     "course_id": 34,
     "keywords": [
       "step",
-      "course",
-      "enjoyable",
       "crowd",
-      "intro",
       "wow"
     ]
   },
@@ -287,235 +344,299 @@
     "course_id": 35,
     "keywords": [
       "excellent",
+      "subject",
       "home",
-      "sell",
-      "meditation",
+      "instructor",
+      "listener",
       "step",
-      "understand"
+      "understand",
+      "meditation",
+      "create",
+      "sell"
+    ]
+  },
+  {
+    "course_id": 36,
+    "keywords": [
+      "painting",
+      "paint",
+      "art"
     ]
   },
   {
     "course_id": 37,
     "keywords": [
-      "good",
-      "easy",
-      "spoken",
       "understand",
-      "excellent",
       "instructor",
-      "knowledgeable"
+      "information",
+      "straightforward",
+      "crash",
+      "keto",
+      "ketosis"
     ]
   },
   {
     "course_id": 38,
     "keywords": [
-      "loss",
       "goal",
-      "interesting",
-      "matched"
+      "loss",
+      "body",
+      "dream",
+      "nutrition"
     ]
   },
   {
     "course_id": 39,
     "keywords": [
-      "diploma",
-      "loss",
+      "training",
       "apt",
       "explanation",
-      "superb",
-      "much",
-      "new",
-      "training"
+      "diploma",
+      "loss",
+      "manner",
+      "science",
+      "certificate",
+      "point",
+      "side"
     ]
   },
   {
     "course_id": 40,
     "keywords": [
+      "help",
+      "hope",
+      "plan",
+      "psychology",
       "self",
-      "diet",
-      "plan"
+      "control",
+      "loss"
     ]
   },
   {
     "course_id": 41,
     "keywords": [
-      "thankyou",
       "game",
-      "lean",
-      "enjoyable",
-      "think"
+      "loss",
+      "halfway",
+      "content",
+      "presentation",
+      "success"
     ]
   },
   {
     "course_id": 42,
     "keywords": [
-      "lose",
-      "easy",
-      "good",
+      "way",
+      "understanding",
       "watch",
-      "fastest",
-      "way"
+      "follow",
+      "get",
+      "eat",
+      "exercise"
     ]
   },
   {
     "course_id": 43,
     "keywords": [
-      "real",
-      "multiple",
-      "nutritional",
-      "course",
-      "i\u00e2",
-      "mobile"
+      "subject",
+      "mobile",
+      "eating",
+      "world"
     ]
   },
   {
     "course_id": 44,
     "keywords": [
-      "informative",
-      "good"
+      "weight"
     ]
   },
   {
     "course_id": 45,
     "keywords": [
-      "weight"
+      "weight",
+      "difficulty",
+      "problem",
+      "watching",
+      "band",
+      "fast",
+      "loss"
     ]
   },
   {
     "course_id": 46,
     "keywords": [
-      "lbs",
-      "info"
+      "trainer",
+      "body",
+      "program",
+      "transformation",
+      "laid",
+      "shape",
+      "weight",
+      "presentation"
     ]
   },
   {
     "course_id": 47,
     "keywords": [
       "psychology",
-      "much",
       "repetition",
-      "positive"
+      "admire",
+      "loss",
+      "practitioner",
+      "weight"
     ]
   },
   {
     "course_id": 48,
     "keywords": [
-      "lose"
+      "something",
+      "fast",
+      "intermittent",
+      "body",
+      "exercise",
+      "percentage",
+      "information",
+      "money",
+      "time"
+    ]
+  },
+  {
+    "course_id": 49,
+    "keywords": [
+      "guide",
+      "analysis",
+      "panel"
     ]
   },
   {
     "course_id": 50,
     "keywords": [
       "introduction",
+      "overview",
       "business",
-      "learn",
-      "socialism",
-      "austrian"
+      "socialism"
     ]
   },
   {
     "course_id": 51,
     "keywords": [
       "introductory",
-      "empirical",
-      "informing",
-      "great",
-      "course",
-      "introduction"
+      "introduction",
+      "someone",
+      "everything",
+      "year"
     ]
   },
   {
     "course_id": 52,
     "keywords": [
+      "found",
+      "unit",
+      "facing",
       "minister",
-      "prime",
-      "interested",
-      "economic"
+      "bit",
+      "gain",
+      "understanding",
+      "detail",
+      "match",
+      "status"
     ]
   },
   {
     "course_id": 53,
     "keywords": [
-      "clear",
+      "regression",
+      "instructor",
+      "helpful",
       "explanation",
-      "linear",
-      "non",
-      "course"
+      "deal",
+      "guidance",
+      "introduction"
     ]
   },
   {
     "course_id": 54,
     "keywords": [
-      "printable",
-      "coronavirus",
       "impact",
+      "video",
       "look",
-      "rest",
-      "thought"
+      "rest"
     ]
   },
   {
     "course_id": 55,
     "keywords": [
       "economy",
-      "international",
-      "political",
-      "global",
-      "social"
+      "shape"
     ]
   },
   {
     "course_id": 56,
     "keywords": [
       "introductory",
-      "course",
-      "microeconomic",
       "introduction",
-      "great",
-      "learn",
-      "someone"
+      "interesting",
+      "someone",
+      "informative",
+      "depth",
+      "engaging",
+      "manner"
     ]
   },
   {
     "course_id": 57,
     "keywords": [
-      "erp",
-      "zero"
+      "zero",
+      "match",
+      "information"
     ]
   },
   {
     "course_id": 58,
     "keywords": [
+      "knowledge",
+      "command",
       "analysis",
       "supply",
-      "foundation",
-      "strong",
-      "knowledge",
-      "prior"
+      "instructor",
+      "demand",
+      "foundation"
+    ]
+  },
+  {
+    "course_id": 59,
+    "keywords": [
+      "economy"
+    ]
+  },
+  {
+    "course_id": 60,
+    "keywords": [
+      "regression",
+      "introduction"
     ]
   },
   {
     "course_id": 61,
     "keywords": [
-      "superhuman",
-      "interesting",
-      "course",
-      "great",
-      "info",
+      "testosterone",
       "wait",
-      "best",
-      "bost",
-      "testosterone"
+      "bunch",
+      "try"
     ]
+  },
+  {
+    "course_id": 62,
+    "keywords": []
   },
   {
     "course_id": 63,
     "keywords": [
       "start",
-      "wait",
-      "great",
       "certificate",
-      "diploma"
+      "diploma",
+      "foundation",
+      "refresher"
     ]
   },
   {
@@ -523,124 +644,160 @@
     "keywords": [
       "certification",
       "precise",
-      "clear",
-      "information"
+      "information",
+      "instructor",
+      "mat"
     ]
   },
   {
     "course_id": 65,
     "keywords": [
-      "gym"
+      "das",
+      "ist",
+      "gym",
+      "man",
+      "muscle",
+      "science"
     ]
   },
   {
     "course_id": 66,
     "keywords": [
-      "build",
-      "amazing",
-      "knowledgable",
       "para",
+      "good",
+      "build",
+      "harmonic",
+      "excelente",
+      "content",
       "gain",
       "muscle",
-      "program"
+      "program",
+      "instructor",
+      "taking",
+      "time"
     ]
   },
   {
     "course_id": 67,
     "keywords": [
+      "pace",
       "beginner",
-      "sequence",
-      "good",
-      "pace"
+      "mat",
+      "sequence"
     ]
   },
   {
     "course_id": 68,
     "keywords": [
-      "certification",
-      "gym",
-      "trainer"
+      "concise",
+      "presentation",
+      "informative"
     ]
   },
   {
     "course_id": 69,
     "keywords": [
-      "approach",
-      "relief",
-      "research"
+      "productive",
+      "job",
+      "exercise",
+      "relaxation"
     ]
   },
   {
     "course_id": 70,
     "keywords": [
-      "iii",
-      "great",
+      "lot",
+      "wait",
+      "git",
       "information",
-      "lot"
+      "qualification",
+      "teacher",
+      "instructor",
+      "practitioner",
+      "certification",
+      "start",
+      "art"
     ]
   },
   {
     "course_id": 71,
     "keywords": [
-      "informative",
       "awesome",
-      "many",
-      "complete",
+      "aware",
       "posture",
-      "stretching"
+      "gut",
+      "flexibility",
+      "die",
+      "ist",
+      "top"
     ]
   },
   {
     "course_id": 72,
     "keywords": [
-      "muscle"
+      "bien",
+      "modulo",
+      "muscle",
+      "champion",
+      "world"
     ]
   },
   {
     "course_id": 73,
     "keywords": [
-      "excellent",
       "information",
-      "relevant"
+      "medicine"
     ]
   },
   {
     "course_id": 74,
     "keywords": [
-      "great",
-      "knowledgeable",
-      "something",
-      "thank",
       "information",
-      "new",
-      "much",
-      "beauty"
+      "something",
+      "well",
+      "ce",
+      "living",
+      "instructor",
+      "mark",
+      "beauty",
+      "cleaning",
+      "use"
     ]
   },
   {
     "course_id": 75,
     "keywords": [
-      "day"
+      "day",
+      "certificate",
+      "relaxation"
     ]
   },
   {
     "course_id": 76,
     "keywords": [
-      "know",
-      "good",
+      "acupressure",
       "thing",
-      "course",
-      "step"
+      "help",
+      "massage",
+      "certificate",
+      "pain"
+    ]
+  },
+  {
+    "course_id": 77,
+    "keywords": [
+      "master",
+      "enhance",
+      "health",
+      "sleep"
     ]
   },
   {
     "course_id": 78,
     "keywords": [
-      "practical",
+      "part",
+      "section",
       "health",
-      "good",
-      "little",
-      "repetitive",
       "certification",
       "coaching"
     ]
@@ -648,8 +805,8 @@
   {
     "course_id": 79,
     "keywords": [
+      "blowing",
       "mind",
-      "thank",
       "life",
       "meditation"
     ]
@@ -657,204 +814,271 @@
   {
     "course_id": 80,
     "keywords": [
+      "difference",
+      "easy",
+      "healing",
+      "health",
+      "love",
       "balance",
       "flow",
-      "increase",
-      "difference",
-      "excellent",
-      "real"
+      "increase"
     ]
   },
   {
     "course_id": 81,
     "keywords": [
+      "silicone",
       "comprehensive",
-      "course",
-      "cupping",
       "massage",
-      "therapy"
+      "therapy",
+      "cupping"
     ]
   },
   {
     "course_id": 82,
     "keywords": [
-      "good",
-      "useful"
+      "work",
+      "movement",
+      "body",
+      "office",
+      "day",
+      "tension"
     ]
   },
   {
     "course_id": 83,
     "keywords": [
+      "certificate",
       "herbalism",
-      "medicinal"
+      "medicine",
+      "use"
     ]
   },
   {
     "course_id": 84,
     "keywords": [
-      "good",
-      "easy",
-      "follow",
       "insightful",
-      "humor",
+      "advertising",
       "information",
-      "simple",
-      "massage"
+      "humor",
+      "basis",
+      "mark",
+      "massage",
+      "tool"
     ]
   },
   {
     "course_id": 85,
     "keywords": [
-      "happiness",
-      "certification",
       "content",
-      "great",
-      "thank"
+      "certification",
+      "happiness",
+      "help",
+      "coach",
+      "life"
     ]
   },
   {
     "course_id": 86,
     "keywords": [
+      "speaking",
+      "instructor",
       "anxiety",
-      "stress"
+      "stress",
+      "everything",
+      "life",
+      "understand"
     ]
   },
   {
     "course_id": 87,
     "keywords": [
-      "good",
-      "positive",
       "psychology"
     ]
   },
   {
     "course_id": 88,
     "keywords": [
-      "good",
+      "follow",
+      "complete",
       "everything",
-      "excellent"
+      "excellent",
+      "behavior",
+      "certification",
+      "therapy"
     ]
   },
   {
     "course_id": 89,
     "keywords": [
       "perfect",
-      "awesome",
       "session",
-      "happy",
       "life",
-      "success"
+      "success",
+      "create",
+      "progress"
     ]
   },
   {
     "course_id": 90,
     "keywords": [
-      "great",
       "mindfulness",
       "concise",
-      "refresher"
+      "refresher",
+      "use",
+      "friend",
+      "self",
+      "sense"
     ]
   },
   {
     "course_id": 91,
     "keywords": [
       "lot",
-      "new",
-      "excellent",
       "experience",
-      "effortless",
-      "manifestation"
+      "interesting"
     ]
   },
   {
     "course_id": 92,
     "keywords": [
-      "easy",
+      "found",
       "understand",
-      "course",
-      "mindfulness",
+      "program",
       "certification",
-      "practitioner"
+      "practitioner",
+      "auto",
+      "pilot"
     ]
   },
   {
     "course_id": 93,
     "keywords": [
-      "thank",
-      "encouraged",
-      "journey"
+      "journey",
+      "blueprint",
+      "clarity",
+      "life"
     ]
   },
   {
     "course_id": 94,
     "keywords": [
-      "eye",
-      "lot",
       "amazing",
-      "excellent",
-      "best"
+      "opener",
+      "lot",
+      "eye",
+      "charge",
+      "work",
+      "author",
+      "selling"
+    ]
+  },
+  {
+    "course_id": 95,
+    "keywords": [
+      "happiness",
+      "science",
+      "life",
+      "way"
     ]
   },
   {
     "course_id": 96,
     "keywords": [
+      "extra",
+      "well",
       "perfect",
       "practitioner",
-      "psychology",
-      "comprehensive",
-      "presented",
-      "didnt",
-      "happy",
-      "teach",
-      "awesome",
-      "extra",
-      "thank",
-      "course",
+      "apply",
       "face",
-      "smile"
+      "smooth",
+      "video",
+      "didnt",
+      "teach",
+      "psychology"
+    ]
+  },
+  {
+    "course_id": 97,
+    "keywords": [
+      "influence",
+      "audience",
+      "use"
+    ]
+  },
+  {
+    "course_id": 98,
+    "keywords": [
+      "body",
+      "language",
+      "communication"
     ]
   },
   {
     "course_id": 99,
     "keywords": [
+      "session",
+      "thought",
+      "future",
+      "till",
       "confidence",
       "create",
-      "radiate"
+      "radiate",
+      "everyone",
+      "inner",
+      "meet"
     ]
   },
   {
     "course_id": 100,
     "keywords": [
+      "relevant",
       "master",
       "negotiation",
-      "successful"
+      "experience",
+      "life",
+      "understand"
     ]
   },
   {
     "course_id": 101,
     "keywords": [
+      "need",
+      "super",
       "body",
-      "language",
-      "aware",
-      "non",
-      "verbal"
+      "language"
     ]
   },
   {
     "course_id": 102,
     "keywords": [
       "perfect",
-      "assertiveness",
       "guide",
-      "minute"
+      "communication"
+    ]
+  },
+  {
+    "course_id": 103,
+    "keywords": [
+      "occasion",
+      "speaking"
     ]
   },
   {
     "course_id": 104,
     "keywords": [
+      "everything",
       "communication",
-      "good",
-      "machine",
+      "machine"
+    ]
+  },
+  {
+    "course_id": 105,
+    "keywords": [
+      "anyone",
+      "persuasion",
+      "day",
+      "manipulation",
       "master"
     ]
   },
@@ -862,100 +1086,137 @@
     "course_id": 106,
     "keywords": [
       "easy",
-      "quick",
-      "confidence",
-      "learn",
       "day",
-      "great"
+      "confidence",
+      "body",
+      "language"
     ]
   },
   {
     "course_id": 107,
     "keywords": [
       "communication",
-      "money"
+      "worth",
+      "money",
+      "develop",
+      "style",
+      "amount",
+      "control"
     ]
   },
   {
     "course_id": 108,
     "keywords": [
+      "interesting",
+      "information",
       "influence",
       "persuasion",
       "psychology",
-      "clear",
-      "information",
-      "interesting"
+      "marketing",
+      "success"
     ]
   },
   {
     "course_id": 109,
     "keywords": [
-      "best",
-      "essential",
-      "new",
-      "great"
+      "language",
+      "corse",
+      "field",
+      "training",
+      "feeling",
+      "certification",
+      "improvement",
+      "management",
+      "manager",
+      "attention",
+      "energy",
+      "guy"
     ]
   },
   {
     "course_id": 110,
     "keywords": [
-      "masterclass",
+      "listening",
+      "reminder",
       "business",
-      "start",
-      "transform",
-      "active",
-      "listening"
+      "transform"
     ]
   },
   {
     "course_id": 111,
     "keywords": [
+      "awareness",
       "science",
-      "leadership"
+      "leadership",
+      "behavior",
+      "brain",
+      "content",
+      "help",
+      "work"
+    ]
+  },
+  {
+    "course_id": 112,
+    "keywords": [
+      "day",
+      "leader",
+      "think"
     ]
   },
   {
     "course_id": 113,
     "keywords": [
-      "course",
       "team"
     ]
   },
   {
     "course_id": 114,
     "keywords": [
+      "excellent",
+      "wonderful",
       "interesting",
       "topic",
-      "motivating",
-      "science"
+      "science",
+      "motivation",
+      "team"
+    ]
+  },
+  {
+    "course_id": 115,
+    "keywords": [
+      "influence",
+      "building",
+      "team"
     ]
   },
   {
     "course_id": 116,
     "keywords": [
-      "awesomeness",
       "leadership",
-      "masterclass",
+      "awesomeness",
       "enjoy",
-      "good",
-      "information",
-      "course",
-      "enjoyed",
-      "knowledgeable"
+      "success",
+      "information"
     ]
   },
   {
     "course_id": 117,
     "keywords": [
+      "moment",
       "charge",
-      "leadership"
+      "leadership",
+      "office",
+      "team"
     ]
   },
   {
     "course_id": 118,
     "keywords": [
+      "information",
       "skill",
       "work",
+      "pace",
+      "wish",
       "confidence",
       "conflict"
     ]
@@ -971,27 +1232,29 @@
     "course_id": 120,
     "keywords": [
       "leadership",
-      "yes",
+      "content",
+      "experience",
       "expository",
-      "high",
-      "performing",
       "match",
+      "part",
+      "building",
       "leader"
     ]
   },
   {
     "course_id": 121,
     "keywords": [
+      "information",
+      "love",
+      "excelente",
+      "certification",
+      "guide",
+      "practice",
+      "see",
+      "ghost",
       "video",
       "weird",
-      "excelente",
-      "todo",
-      "course",
-      "easy",
-      "good",
-      "information",
-      "certification",
-      "guide"
+      "meditation"
     ]
   },
   {
@@ -999,28 +1262,31 @@
     "keywords": [
       "life",
       "teaching",
-      "wonderful",
       "art",
-      "healing"
+      "healing",
+      "key",
+      "process"
     ]
   },
   {
     "course_id": 123,
     "keywords": [
-      "brach",
-      "stressful"
+      "brach"
     ]
   },
   {
     "course_id": 124,
     "keywords": [
-      "meditation",
-      "great"
+      "deeply",
+      "meditate",
+      "meditation"
     ]
   },
   {
     "course_id": 125,
     "keywords": [
+      "concept",
+      "addiction",
       "brach",
       "tara",
       "harmful",
@@ -1031,7 +1297,6 @@
   {
     "course_id": 126,
     "keywords": [
-      "good",
       "mindfulness",
       "art",
       "master"
@@ -1042,62 +1307,95 @@
     "keywords": [
       "meditation",
       "master",
-      "course"
+      "branch",
+      "topic"
     ]
   },
   {
     "course_id": 128,
     "keywords": [
-      "meditation",
-      "productivity",
-      "great",
       "introduction",
-      "meditaition"
+      "yang",
+      "stress",
+      "boost",
+      "meditation",
+      "productivity"
+    ]
+  },
+  {
+    "course_id": 129,
+    "keywords": [
+      "mindfulness",
+      "life",
+      "meditation"
     ]
   },
   {
     "course_id": 130,
     "keywords": [
-      "easy",
       "listen",
       "care",
-      "essential",
-      "advanced",
+      "anything",
+      "make",
+      "energy",
       "body",
-      "course"
+      "cleaning"
     ]
   },
   {
     "course_id": 131,
     "keywords": [
-      "complete",
-      "training"
+      "mindfulness",
+      "training",
+      "clarity",
+      "information",
+      "music"
     ]
   },
   {
     "course_id": 132,
-    "keywords": []
+    "keywords": [
+      "match",
+      "inner",
+      "yoga"
+    ]
   },
   {
     "course_id": 133,
     "keywords": [
+      "amount",
       "certificate",
-      "diploma"
+      "diploma",
+      "eat",
+      "science",
+      "understand"
     ]
   },
   {
     "course_id": 134,
     "keywords": [
       "loss",
-      "information"
+      "information",
+      "build",
+      "meal",
+      "plan"
     ]
   },
   {
     "course_id": 135,
     "keywords": [
       "confidence",
+      "accurate",
+      "love",
+      "information",
+      "passion",
+      "work",
+      "body",
+      "understand",
       "beginner",
-      "certification"
+      "certification",
+      "nutrition",
+      "fitness"
     ]
   },
   {
@@ -1109,65 +1407,77 @@
   {
     "course_id": 137,
     "keywords": [
-      "eat"
+      "explanation",
+      "eat",
+      "health",
+      "way",
+      "weight",
+      "food"
     ]
   },
   {
     "course_id": 138,
     "keywords": [
-      "detailed",
       "explanation",
-      "health",
       "master",
-      "next",
-      "surprising"
+      "health",
+      "food",
+      "person",
+      "life",
+      "transform"
     ]
   },
   {
     "course_id": 139,
     "keywords": [
-      "excellent"
+      "excellent",
+      "voice",
+      "es",
+      "la",
+      "aid",
+      "order",
+      "watch",
+      "certification",
+      "nutrition"
     ]
   },
   {
     "course_id": 140,
     "keywords": [
+      "trainer",
+      "diet",
       "diploma",
-      "planning",
-      "course",
-      "subject"
+      "create",
+      "nutrition",
+      "plan"
     ]
   },
   {
     "course_id": 141,
     "keywords": [
-      "knowledge",
-      "course",
       "depth",
-      "satisfied",
+      "knowledge",
       "watching",
-      "vegan",
-      "certification"
+      "certification",
+      "nutrition"
     ]
   },
   {
     "course_id": 142,
     "keywords": [
-      "meal",
-      "enjoyable",
-      "great"
+      "way",
+      "brad",
+      "meal"
     ]
   },
   {
     "course_id": 143,
     "keywords": [
-      "diploma",
-      "informative",
+      "nutrition",
       "point",
       "case",
-      "clear",
-      "happy",
-      "nutrition"
+      "diploma",
+      "love"
     ]
   },
   {
@@ -1183,98 +1493,120 @@
   {
     "course_id": 145,
     "keywords": [
+      "creation",
+      "reading",
+      "ya",
       "perfect",
-      "creation"
+      "si"
+    ]
+  },
+  {
+    "course_id": 146,
+    "keywords": [
+      "awesome",
+      "create",
+      "make",
+      "teaching",
+      "year"
     ]
   },
   {
     "course_id": 147,
     "keywords": [
+      "glad",
       "teach",
-      "english",
-      "online"
+      "information",
+      "teaching",
+      "anyone",
+      "career",
+      "guide"
     ]
   },
   {
     "course_id": 148,
     "keywords": [
-      "informative",
       "interesting",
+      "income",
       "insightful",
       "section",
-      "udemy"
+      "creation",
+      "experience",
+      "honest"
     ]
   },
   {
     "course_id": 149,
     "keywords": [
-      "udemy"
+      "excellent",
+      "cheap",
+      "dirt",
+      "student"
     ]
   },
   {
     "course_id": 150,
     "keywords": [
-      "enjoyable",
-      "informative",
       "creation",
+      "success",
+      "comprehensive",
       "hi",
+      "informative",
+      "tech",
+      "check",
       "know",
       "want",
-      "course",
-      "unofficial"
+      "instructor"
     ]
   },
   {
     "course_id": 151,
     "keywords": [
-      "love",
       "guidance",
-      "useful",
+      "love",
       "beneficial",
-      "formative",
       "articulate",
-      "course",
-      "storyline"
+      "start"
     ]
   },
   {
     "course_id": 152,
     "keywords": [
-      "use",
-      "course",
       "entry",
-      "successful",
-      "freelance",
-      "professional"
+      "use",
+      "gon",
+      "professional",
+      "information",
+      "look"
     ]
   },
   {
     "course_id": 153,
     "keywords": [
-      "online",
-      "excellent",
+      "launch",
+      "feeling",
       "eye",
       "opener",
-      "feeling",
-      "launch",
-      "ready"
+      "creation",
+      "business",
+      "figure",
+      "selling"
     ]
   },
   {
     "course_id": 154,
     "keywords": [
-      "great",
       "blueprint",
-      "course"
+      "income",
+      "creation",
+      "guide",
+      "comprehensive",
+      "material",
+      "way"
     ]
   },
   {
     "course_id": 155,
     "keywords": [
-      "lean",
-      "course",
-      "good",
-      "learn",
       "agile",
       "management"
     ]
@@ -1283,122 +1615,145 @@
     "course_id": 156,
     "keywords": [
       "aptitude",
-      "ace",
-      "shortcut",
-      "quantitative"
+      "ace"
+    ]
+  },
+  {
+    "course_id": 157,
+    "keywords": [
+      "amazing",
+      "raise"
     ]
   },
   {
     "course_id": 158,
     "keywords": [
-      "demonstration",
+      "coaching",
       "appropriate",
-      "helpful",
-      "much",
+      "demonstration",
       "facilitator",
-      "workshop",
-      "empower",
-      "group",
-      "course"
+      "workshop"
     ]
   },
   {
     "course_id": 159,
     "keywords": [
-      "mature",
-      "responsible",
-      "brilliant",
       "topic",
-      "helpful"
+      "mature",
+      "raise",
+      "create",
+      "home",
+      "loving",
+      "parent",
+      "today",
+      "understanding"
     ]
   },
   {
     "course_id": 160,
     "keywords": [
-      "full",
-      "professional",
       "content",
-      "good"
+      "interesting",
+      "es",
+      "mon",
+      "child",
+      "diploma",
+      "psychology",
+      "therapy",
+      "case"
     ]
   },
   {
     "course_id": 161,
     "keywords": [
-      "good",
+      "substance",
       "diploma",
       "relationship",
+      "help",
       "use"
     ]
   },
   {
     "course_id": 162,
     "keywords": [
+      "content",
       "marriage",
-      "masterclass",
+      "lot",
+      "coaching",
       "help",
-      "relationship",
-      "helpful",
-      "much",
-      "need",
-      "content"
+      "relationship"
     ]
   },
   {
     "course_id": 163,
     "keywords": [
-      "course",
-      "great",
       "avoid",
-      "intelligent",
-      "teen"
+      "teen",
+      "toddler"
+    ]
+  },
+  {
+    "course_id": 164,
+    "keywords": [
+      "transform",
+      "growth",
+      "relationship"
+    ]
+  },
+  {
+    "course_id": 165,
+    "keywords": [
+      "learning",
+      "prep",
+      "effortless",
+      "life"
     ]
   },
   {
     "course_id": 166,
     "keywords": [
-      "lot",
-      "great",
       "introduction",
-      "focus",
-      "freedom",
+      "thought",
+      "easy",
       "articulate",
+      "thorough",
+      "lot",
+      "help",
       "certificate",
-      "course",
-      "mindfulness"
+      "diploma",
+      "mindfulness",
+      "focus",
+      "freedom"
     ]
   },
   {
     "course_id": 167,
     "keywords": [
       "coach",
-      "detailed",
-      "best",
-      "relationship",
-      "course",
-      "excellent"
+      "excellent",
+      "coaching",
+      "relationship"
     ]
   },
   {
     "course_id": 168,
     "keywords": [
-      "certified",
+      "life",
+      "relate",
+      "sentence",
       "mindfulness",
       "practitioner",
-      "easy",
+      "concept",
       "follow",
-      "loved",
-      "good",
-      "need",
-      "sentence"
+      "attention"
     ]
   },
   {
     "course_id": 169,
     "keywords": [
-      "iphone",
-      "great",
-      "easy",
       "understand",
+      "get",
+      "series",
       "interesting",
       "love"
     ]
@@ -1406,100 +1761,141 @@
   {
     "course_id": 170,
     "keywords": [
-      "camera",
-      "learn",
-      "use",
-      "chew",
       "sure",
-      "think"
+      "beginner",
+      "photography",
+      "camera",
+      "use"
     ]
   },
   {
     "course_id": 171,
     "keywords": [
-      "road",
-      "simple",
-      "photography"
+      "photography",
+      "road"
     ]
   },
   {
     "course_id": 172,
     "keywords": [
-      "good",
+      "lot",
       "food",
-      "light"
+      "information",
+      "time"
     ]
   },
   {
     "course_id": 173,
     "keywords": [
-      "informative",
-      "digital",
-      "photography"
+      "photography",
+      "information",
+      "quality",
+      "easy"
     ]
   },
   {
     "course_id": 174,
     "keywords": [
-      "good",
-      "helpful",
       "camera",
-      "learn",
-      "use"
+      "use",
+      "beginner",
+      "canon",
+      "photography"
     ]
   },
   {
     "course_id": 175,
     "keywords": [
+      "gimp",
       "lecturer",
-      "clear",
-      "easy",
-      "masterclass",
-      "great"
+      "follow",
+      "beginner",
+      "photo",
+      "notch",
+      "time",
+      "value",
+      "bit",
+      "information",
+      "version"
     ]
   },
   {
     "course_id": 176,
     "keywords": [
+      "wird",
       "night",
+      "photography",
+      "die",
+      "family"
+    ]
+  },
+  {
+    "course_id": 177,
+    "keywords": [
+      "photography",
+      "shoot",
+      "get",
+      "start"
+    ]
+  },
+  {
+    "course_id": 178,
+    "keywords": [
       "photography"
     ]
   },
   {
     "course_id": 179,
-    "keywords": []
+    "keywords": [
+      "photo",
+      "manner",
+      "explanation",
+      "flash",
+      "humour",
+      "information",
+      "camera",
+      "guide",
+      "photography"
+    ]
   },
   {
     "course_id": 180,
     "keywords": [
+      "shine",
+      "view",
       "affinity",
-      "photo",
-      "good",
-      "view"
+      "photo"
     ]
   },
   {
     "course_id": 181,
-    "keywords": []
+    "keywords": [
+      "content",
+      "certificate",
+      "level",
+      "master",
+      "deliverance",
+      "point",
+      "speedy"
+    ]
   },
   {
     "course_id": 182,
     "keywords": [
-      "excellent",
-      "clear",
-      "tarot",
+      "experience",
+      "sal",
       "meaning",
-      "understand"
+      "tarot"
     ]
   },
   {
     "course_id": 183,
     "keywords": [
-      "psychic",
-      "alot",
+      "development",
+      "bit",
+      "jade",
       "fro",
-      "learnt",
-      "development"
+      "learnt"
     ]
   },
   {
@@ -1507,47 +1903,62 @@
     "keywords": [
       "el",
       "healing",
-      "professional"
+      "gusto",
+      "guidance",
+      "reference",
+      "practitioner",
+      "background",
+      "music",
+      "offer",
+      "training",
+      "realm"
     ]
   },
   {
     "course_id": 185,
     "keywords": [
-      "good",
+      "initiation",
+      "lot",
       "teacher",
-      "shamanism"
+      "peace",
+      "shamanism",
+      "grace",
+      "heal",
+      "spirituality"
     ]
   },
   {
     "course_id": 186,
     "keywords": [
-      "si",
-      "good",
+      "training",
       "match",
-      "atlantis",
-      "info",
-      "crystal"
+      "si",
+      "work",
+      "healer",
+      "helpful",
+      "interest"
     ]
   },
   {
     "course_id": 187,
     "keywords": [
       "communication",
-      "animal",
-      "easy",
-      "learn",
       "process",
-      "new",
-      "clear",
-      "first"
+      "add",
+      "introduce",
+      "hi",
+      "professor",
+      "animal",
+      "learnt",
+      "detail",
+      "matter",
+      "reminder"
     ]
   },
   {
     "course_id": 188,
     "keywords": [
       "sal",
-      "course",
-      "thank",
       "power",
       "therapy"
     ]
@@ -1555,179 +1966,9100 @@
   {
     "course_id": 189,
     "keywords": [
-      "believe",
-      "totalmente",
-      "professional",
-      "practitioner"
+      "work",
+      "love",
+      "mediation",
+      "feel",
+      "healing",
+      "practitioner",
+      "realm",
+      "tania",
+      "teaching"
     ]
   },
   {
     "course_id": 190,
     "keywords": [
-      "course",
-      "great",
+      "tutor",
+      "hypnotherapy",
+      "diploma",
       "heal",
       "present",
-      "past"
+      "doubt",
+      "excellent",
+      "teacher"
     ]
   },
   {
     "course_id": 191,
     "keywords": [
+      "understand",
+      "fact",
+      "week",
+      "oracle",
       "part",
+      "experience",
+      "joy",
+      "personality",
+      "bless",
+      "god",
       "academy",
       "foundation",
-      "follow",
-      "understand",
-      "experience",
-      "grass",
-      "reading",
-      "card",
-      "easy"
+      "card"
     ]
   },
   {
     "course_id": 192,
     "keywords": [
-      "style",
       "card",
-      "good",
+      "reading",
+      "style",
+      "teaching",
       "certification",
       "master",
-      "learn",
       "life",
-      "money"
+      "money",
+      "tarot"
     ]
   },
   {
     "course_id": 193,
     "keywords": [
+      "catchy",
+      "everything",
+      "relate",
       "publish",
       "world",
-      "freelance",
-      "learn",
-      "catchy",
-      "clear",
-      "valuable",
-      "everything",
-      "heard",
-      "relate"
+      "sell",
+      "writing"
     ]
   },
   {
     "course_id": 194,
     "keywords": [
       "travel",
-      "journal",
-      "early",
       "helpful",
-      "path"
+      "enhance",
+      "journal",
+      "time"
     ]
   },
   {
     "course_id": 195,
     "keywords": [
-      "shorter",
+      "host",
       "information",
-      "useful"
+      "shorter",
+      "continue",
+      "end"
     ]
   },
   {
     "course_id": 196,
     "keywords": [
-      "great",
-      "inspiring",
+      "world",
+      "way",
+      "apply",
+      "anyone",
+      "bring",
+      "learning",
       "interesting",
       "super",
-      "able",
-      "get",
-      "world",
-      "personal",
-      "learning",
       "lot",
-      "bring",
-      "cool"
+      "want",
+      "life",
+      "value",
+      "travel",
+      "day",
+      "gold",
+      "pure",
+      "information",
+      "price",
+      "combine",
+      "money"
     ]
   },
   {
     "course_id": 197,
     "keywords": [
+      "rendition",
+      "joke",
       "time",
       "waste",
-      "honest",
-      "rendition",
-      "luxury",
       "lot",
+      "yeah",
+      "travel",
+      "mastery",
       "wisdom",
-      "yeah"
+      "luxury",
+      "nomad",
+      "information",
+      "medium",
+      "world"
     ]
   },
   {
     "course_id": 198,
     "keywords": [
-      "good",
-      "knowledgable",
-      "basic",
-      "course",
-      "huge",
+      "passionate",
+      "offer",
       "sign",
       "card",
-      "reward",
-      "credit"
+      "reward"
     ]
   },
   {
     "course_id": 199,
     "keywords": [
-      "much",
+      "jimmy",
       "lot",
       "travel",
-      "course",
       "information"
     ]
   },
   {
     "course_id": 200,
     "keywords": [
-      "course"
+      "guide",
+      "el",
+      "hasta",
+      "video",
+      "digital",
+      "half",
+      "introduction"
     ]
   },
   {
     "course_id": 201,
     "keywords": [
-      "easy",
       "income",
-      "residual"
+      "da",
+      "amazing",
+      "duo"
     ]
   },
   {
     "course_id": 202,
     "keywords": [
       "helpful",
-      "info",
+      "bit",
+      "informative",
+      "good",
       "canada",
-      "immigrate"
+      "immigrate",
+      "residency",
+      "system"
     ]
   },
   {
     "course_id": 203,
     "keywords": [
-      "imovie",
+      "perfect",
       "match",
-      "perfect"
+      "video",
+      "beginner",
+      "master"
     ]
   },
   {
     "course_id": 204,
     "keywords": [
       "way",
-      "great",
-      "good",
-      "basic",
+      "compass",
+      "guess",
       "navigation",
-      "decent",
       "detail",
-      "guess"
+      "set",
+      "instructor",
+      "knowledge",
+      "quality",
+      "refresher",
+      "training"
+    ]
+  },
+  {
+    "course_id": 205,
+    "keywords": [
+      "printing"
+    ]
+  },
+  {
+    "course_id": 206,
+    "keywords": [
+      "felt",
+      "mind",
+      "opener",
+      "future",
+      "lot",
+      "introduction",
+      "understand"
+    ]
+  },
+  {
+    "course_id": 207,
+    "keywords": [
+      "connect",
+      "spa"
+    ]
+  },
+  {
+    "course_id": 208,
+    "keywords": [
+      "learning",
+      "apprenticeship",
+      "technology",
+      "workplace"
+    ]
+  },
+  {
+    "course_id": 209,
+    "keywords": [
+      "create",
+      "making",
+      "pedagogy"
+    ]
+  },
+  {
+    "course_id": 210,
+    "keywords": [
+      "approach",
+      "practical",
+      "resistance",
+      "help",
+      "improvement",
+      "point",
+      "prevalence",
+      "use"
+    ]
+  },
+  {
+    "course_id": 211,
+    "keywords": [
+      "explore",
+      "wish",
+      "classroom",
+      "send",
+      "excellent",
+      "laid",
+      "computer",
+      "look",
+      "science"
+    ]
+  },
+  {
+    "course_id": 212,
+    "keywords": [
+      "legislation",
+      "safety"
+    ]
+  },
+  {
+    "course_id": 213,
+    "keywords": [
+      "intelligence",
+      "information",
+      "content",
+      "experience",
+      "expectation"
+    ]
+  },
+  {
+    "course_id": 214,
+    "keywords": [
+      "marketing",
+      "use"
+    ]
+  },
+  {
+    "course_id": 215,
+    "keywords": [
+      "think",
+      "wonderful",
+      "content",
+      "excellent",
+      "life",
+      "lot",
+      "growth",
+      "thereafter",
+      "work",
+      "develop",
+      "professional",
+      "world"
+    ]
+  },
+  {
+    "course_id": 216,
+    "keywords": [
+      "mobile",
+      "design",
+      "development",
+      "technology"
+    ]
+  },
+  {
+    "course_id": 217,
+    "keywords": [
+      "level",
+      "found",
+      "understand",
+      "format",
+      "impact",
+      "industry",
+      "technology"
+    ]
+  },
+  {
+    "course_id": 218,
+    "keywords": [
+      "easy",
+      "nice",
+      "refresher",
+      "update",
+      "beginner",
+      "help",
+      "mind",
+      "take"
+    ]
+  },
+  {
+    "course_id": 219,
+    "keywords": [
+      "user",
+      "design",
+      "research",
+      "experience"
+    ]
+  },
+  {
+    "course_id": 220,
+    "keywords": [
+      "web",
+      "point",
+      "content",
+      "superb",
+      "understand",
+      "business",
+      "role"
+    ]
+  },
+  {
+    "course_id": 221,
+    "keywords": [
+      "founder",
+      "think"
+    ]
+  },
+  {
+    "course_id": 222,
+    "keywords": [
+      "business",
+      "excellent",
+      "taught",
+      "lot",
+      "action",
+      "idea"
+    ]
+  },
+  {
+    "course_id": 223,
+    "keywords": [
+      "excellent",
+      "professional",
+      "helpful",
+      "management",
+      "project",
+      "life",
+      "work"
+    ]
+  },
+  {
+    "course_id": 224,
+    "keywords": [
+      "knowledge",
+      "content",
+      "brilliant",
+      "food",
+      "century"
+    ]
+  },
+  {
+    "course_id": 225,
+    "keywords": [
+      "wish",
+      "reading",
+      "thorough",
+      "ai",
+      "intelligence",
+      "bit",
+      "depth",
+      "overview",
+      "content",
+      "work",
+      "master",
+      "study",
+      "python",
+      "science"
+    ]
+  },
+  {
+    "course_id": 226,
+    "keywords": [
+      "environment",
+      "excellent",
+      "coverage",
+      "content",
+      "topic",
+      "principle",
+      "error",
+      "study",
+      "introduction"
+    ]
+  },
+  {
+    "course_id": 227,
+    "keywords": [
+      "technology",
+      "felt",
+      "introduction",
+      "cryptography",
+      "knowledge",
+      "taught"
+    ]
+  },
+  {
+    "course_id": 228,
+    "keywords": [
+      "introduction",
+      "culture",
+      "language"
+    ]
+  },
+  {
+    "course_id": 229,
+    "keywords": [
+      "span",
+      "content",
+      "good",
+      "management",
+      "accent",
+      "world",
+      "board",
+      "manage",
+      "circumstance",
+      "level",
+      "right"
+    ]
+  },
+  {
+    "course_id": 230,
+    "keywords": [
+      "business",
+      "innovation",
+      "develop",
+      "innovative",
+      "pitch"
+    ]
+  },
+  {
+    "course_id": 231,
+    "keywords": [
+      "level",
+      "content",
+      "week",
+      "learnt",
+      "communication",
+      "create",
+      "discover",
+      "information",
+      "project",
+      "socket",
+      "python",
+      "lot"
+    ]
+  },
+  {
+    "course_id": 232,
+    "keywords": [
+      "introduction",
+      "insight",
+      "key",
+      "prenatal"
+    ]
+  },
+  {
+    "course_id": 233,
+    "keywords": [
+      "therapy",
+      "left",
+      "excellent",
+      "start",
+      "content",
+      "good",
+      "work",
+      "infection",
+      "outpatient",
+      "service"
+    ]
+  },
+  {
+    "course_id": 234,
+    "keywords": [
+      "computer",
+      "scientist",
+      "think"
+    ]
+  },
+  {
+    "course_id": 235,
+    "keywords": [
+      "informative",
+      "level",
+      "right",
+      "super",
+      "benefit",
+      "classroom",
+      "inspiring",
+      "teaching",
+      "content",
+      "downside",
+      "balance",
+      "knowledge",
+      "review",
+      "implement",
+      "time",
+      "week"
+    ]
+  },
+  {
+    "course_id": 236,
+    "keywords": [
+      "text",
+      "life",
+      "sound"
+    ]
+  },
+  {
+    "course_id": 237,
+    "keywords": [
+      "found",
+      "teach",
+      "broken",
+      "week",
+      "python",
+      "raspberry",
+      "project",
+      "pi"
+    ]
+  },
+  {
+    "course_id": 238,
+    "keywords": [
+      "informative",
+      "student",
+      "level",
+      "role",
+      "stewardship",
+      "audience",
+      "content"
+    ]
+  },
+  {
+    "course_id": 239,
+    "keywords": [
+      "training",
+      "deliver"
+    ]
+  },
+  {
+    "course_id": 240,
+    "keywords": [
+      "pertinent",
+      "governance",
+      "energy",
+      "issue",
+      "information"
+    ]
+  },
+  {
+    "course_id": 241,
+    "keywords": [
+      "nature",
+      "price",
+      "ecosystem",
+      "world"
+    ]
+  },
+  {
+    "course_id": 242,
+    "keywords": [
+      "health"
+    ]
+  },
+  {
+    "course_id": 243,
+    "keywords": [
+      "act",
+      "comparison",
+      "tool"
+    ]
+  },
+  {
+    "course_id": 244,
+    "keywords": [
+      "supervision"
+    ]
+  },
+  {
+    "course_id": 245,
+    "keywords": [
+      "practical",
+      "future",
+      "perfect",
+      "helpful",
+      "remote",
+      "content",
+      "level",
+      "team",
+      "home",
+      "work",
+      "world"
+    ]
+  },
+  {
+    "course_id": 246,
+    "keywords": []
+  },
+  {
+    "course_id": 247,
+    "keywords": [
+      "content",
+      "work",
+      "communication",
+      "interesting",
+      "lot",
+      "time",
+      "style",
+      "practice",
+      "psychology",
+      "put",
+      "collaboration",
+      "workplace"
+    ]
+  },
+  {
+    "course_id": 248,
+    "keywords": [
+      "everyone",
+      "computer",
+      "code",
+      "institute",
+      "university"
+    ]
+  },
+  {
+    "course_id": 249,
+    "keywords": [
+      "presence",
+      "see",
+      "information",
+      "quality",
+      "level",
+      "perfect",
+      "advice",
+      "professional"
+    ]
+  },
+  {
+    "course_id": 250,
+    "keywords": [
+      "helpful",
+      "content",
+      "create",
+      "marketing",
+      "institute",
+      "university",
+      "box",
+      "outcome",
+      "stuff",
+      "mistake",
+      "review",
+      "student",
+      "campaign"
+    ]
+  },
+  {
+    "course_id": 251,
+    "keywords": [
+      "content",
+      "mobile",
+      "experience",
+      "idea",
+      "paper",
+      "enjoy",
+      "lot",
+      "thing",
+      "bring",
+      "life",
+      "product",
+      "career"
+    ]
+  },
+  {
+    "course_id": 252,
+    "keywords": [
+      "city",
+      "heritage",
+      "diversity"
+    ]
+  },
+  {
+    "course_id": 253,
+    "keywords": [
+      "age",
+      "culture"
+    ]
+  },
+  {
+    "course_id": 254,
+    "keywords": [
+      "decision",
+      "solve",
+      "life",
+      "plan"
+    ]
+  },
+  {
+    "course_id": 255,
+    "keywords": [
+      "spatial",
+      "life",
+      "start",
+      "python",
+      "existence",
+      "helpful",
+      "design",
+      "downside",
+      "teacher",
+      "video",
+      "code",
+      "designer",
+      "university",
+      "student"
+    ]
+  },
+  {
+    "course_id": 256,
+    "keywords": [
+      "management",
+      "product"
+    ]
+  },
+  {
+    "course_id": 257,
+    "keywords": [
+      "career",
+      "development",
+      "content",
+      "wonderful",
+      "everything",
+      "measure",
+      "enrich",
+      "knowledge"
+    ]
+  },
+  {
+    "course_id": 258,
+    "keywords": [
+      "design",
+      "michigan",
+      "university"
+    ]
+  },
+  {
+    "course_id": 259,
+    "keywords": [
+      "excellent",
+      "reminder",
+      "understand",
+      "put",
+      "lot",
+      "problem",
+      "business",
+      "power",
+      "day",
+      "collection",
+      "evidence"
+    ]
+  },
+  {
+    "course_id": 260,
+    "keywords": [
+      "university",
+      "level",
+      "attend",
+      "concise",
+      "right",
+      "eager",
+      "informative",
+      "mood",
+      "date",
+      "plenty"
+    ]
+  },
+  {
+    "course_id": 261,
+    "keywords": [
+      "investigate",
+      "content",
+      "anthropology",
+      "archaeology",
+      "level",
+      "sensitivity",
+      "enter",
+      "pathology",
+      "world"
+    ]
+  },
+  {
+    "course_id": 262,
+    "keywords": [
+      "generation",
+      "practice"
+    ]
+  },
+  {
+    "course_id": 263,
+    "keywords": [
+      "self",
+      "excellent",
+      "learning",
+      "lot",
+      "case",
+      "discussion",
+      "none",
+      "design",
+      "get",
+      "problem"
+    ]
+  },
+  {
+    "course_id": 264,
+    "keywords": [
+      "evidence",
+      "conduct",
+      "disability",
+      "research"
+    ]
+  },
+  {
+    "course_id": 265,
+    "keywords": [
+      "hero",
+      "account",
+      "help",
+      "profitability"
+    ]
+  },
+  {
+    "course_id": 266,
+    "keywords": [
+      "leadership",
+      "crisis"
+    ]
+  },
+  {
+    "course_id": 267,
+    "keywords": [
+      "learning",
+      "level",
+      "content",
+      "create",
+      "clarity",
+      "focus",
+      "creation",
+      "interactive"
+    ]
+  },
+  {
+    "course_id": 268,
+    "keywords": []
+  },
+  {
+    "course_id": 269,
+    "keywords": [
+      "content",
+      "want",
+      "excellent",
+      "interaction",
+      "jane",
+      "celebrity",
+      "myth",
+      "reality"
+    ]
+  },
+  {
+    "course_id": 270,
+    "keywords": [
+      "communication",
+      "level",
+      "taster"
+    ]
+  },
+  {
+    "course_id": 271,
+    "keywords": [
+      "communication",
+      "level",
+      "taster"
+    ]
+  },
+  {
+    "course_id": 272,
+    "keywords": [
+      "workplace"
+    ]
+  },
+  {
+    "course_id": 273,
+    "keywords": [
+      "get",
+      "code",
+      "web"
+    ]
+  },
+  {
+    "course_id": 274,
+    "keywords": [
+      "culture"
+    ]
+  },
+  {
+    "course_id": 275,
+    "keywords": [
+      "migration",
+      "think",
+      "level",
+      "wonderful",
+      "picture",
+      "material",
+      "face",
+      "urban",
+      "world"
+    ]
+  },
+  {
+    "course_id": 276,
+    "keywords": [
+      "migration",
+      "citizenship"
+    ]
+  },
+  {
+    "course_id": 277,
+    "keywords": [
+      "society",
+      "research"
+    ]
+  },
+  {
+    "course_id": 278,
+    "keywords": [
+      "study",
+      "graduate"
+    ]
+  },
+  {
+    "course_id": 279,
+    "keywords": [
+      "journey",
+      "helpful",
+      "impact",
+      "right",
+      "excellent",
+      "foundation",
+      "lot",
+      "work",
+      "level",
+      "information",
+      "presentation",
+      "everything"
+    ]
+  },
+  {
+    "course_id": 280,
+    "keywords": [
+      "health",
+      "prison",
+      "importance",
+      "outbreak"
+    ]
+  },
+  {
+    "course_id": 281,
+    "keywords": [
+      "human"
+    ]
+  },
+  {
+    "course_id": 282,
+    "keywords": [
+      "science",
+      "revolution",
+      "century",
+      "role",
+      "world"
+    ]
+  },
+  {
+    "course_id": 283,
+    "keywords": [
+      "change",
+      "improving",
+      "stewardship"
+    ]
+  },
+  {
+    "course_id": 284,
+    "keywords": [
+      "work",
+      "resilience"
+    ]
+  },
+  {
+    "course_id": 285,
+    "keywords": [
+      "quantity",
+      "music",
+      "coach",
+      "teacher",
+      "information",
+      "teach",
+      "presentation",
+      "anyone",
+      "instrument",
+      "refresher",
+      "business"
+    ]
+  },
+  {
+    "course_id": 286,
+    "keywords": [
+      "building",
+      "web"
+    ]
+  },
+  {
+    "course_id": 287,
+    "keywords": [
+      "science",
+      "industry"
+    ]
+  },
+  {
+    "course_id": 288,
+    "keywords": [
+      "thought",
+      "format",
+      "imperialism",
+      "future",
+      "lot",
+      "empire"
+    ]
+  },
+  {
+    "course_id": 289,
+    "keywords": [
+      "pour",
+      "covid",
+      "formation"
+    ]
+  },
+  {
+    "course_id": 290,
+    "keywords": [
+      "thought",
+      "environment",
+      "impact",
+      "food"
+    ]
+  },
+  {
+    "course_id": 291,
+    "keywords": [
+      "level",
+      "easy",
+      "combat",
+      "misuse",
+      "society",
+      "spectrum"
+    ]
+  },
+  {
+    "course_id": 292,
+    "keywords": [
+      "introduction",
+      "history",
+      "today"
+    ]
+  },
+  {
+    "course_id": 293,
+    "keywords": [
+      "anatomy",
+      "discover",
+      "test",
+      "concise",
+      "tutor",
+      "improve",
+      "knowledge",
+      "future",
+      "interesting"
+    ]
+  },
+  {
+    "course_id": 294,
+    "keywords": [
+      "chemistry",
+      "earth",
+      "life"
+    ]
+  },
+  {
+    "course_id": 295,
+    "keywords": [
+      "battery",
+      "engineering"
+    ]
+  },
+  {
+    "course_id": 296,
+    "keywords": [
+      "digital",
+      "learning"
+    ]
+  },
+  {
+    "course_id": 297,
+    "keywords": [
+      "business",
+      "facing",
+      "today",
+      "avoidance",
+      "tax"
+    ]
+  },
+  {
+    "course_id": 298,
+    "keywords": [
+      "model",
+      "partnership",
+      "care",
+      "question"
+    ]
+  },
+  {
+    "course_id": 299,
+    "keywords": [
+      "found",
+      "start",
+      "level",
+      "disease",
+      "code",
+      "worth",
+      "cancer",
+      "knowledge",
+      "opportunity",
+      "profound"
+    ]
+  },
+  {
+    "course_id": 300,
+    "keywords": [
+      "environment",
+      "disease",
+      "nutrition"
+    ]
+  },
+  {
+    "course_id": 301,
+    "keywords": [
+      "video",
+      "disease",
+      "infection",
+      "cause",
+      "respond",
+      "detail",
+      "level",
+      "interesting",
+      "navigate",
+      "lot"
+    ]
+  },
+  {
+    "course_id": 302,
+    "keywords": [
+      "disease"
+    ]
+  },
+  {
+    "course_id": 303,
+    "keywords": [
+      "disease",
+      "development",
+      "influence"
+    ]
+  },
+  {
+    "course_id": 304,
+    "keywords": [
+      "introduction",
+      "university",
+      "thinking"
+    ]
+  },
+  {
+    "course_id": 305,
+    "keywords": [
+      "chemistry",
+      "science",
+      "earth",
+      "system"
+    ]
+  },
+  {
+    "course_id": 306,
+    "keywords": [
+      "chemical",
+      "science",
+      "amount",
+      "chemistry"
+    ]
+  },
+  {
+    "course_id": 307,
+    "keywords": [
+      "science"
+    ]
+  },
+  {
+    "course_id": 308,
+    "keywords": [
+      "science",
+      "chemistry",
+      "ability",
+      "role",
+      "treat"
+    ]
+  },
+  {
+    "course_id": 309,
+    "keywords": [
+      "science",
+      "choose",
+      "write"
+    ]
+  },
+  {
+    "course_id": 310,
+    "keywords": [
+      "dysphagia"
+    ]
+  },
+  {
+    "course_id": 311,
+    "keywords": [
+      "knowledge",
+      "interest",
+      "introduction",
+      "conservation",
+      "ecology",
+      "wildlife",
+      "boo",
+      "conserve",
+      "discover",
+      "world"
+    ]
+  },
+  {
+    "course_id": 312,
+    "keywords": [
+      "care",
+      "end",
+      "enhance",
+      "support"
+    ]
+  },
+  {
+    "course_id": 313,
+    "keywords": [
+      "scarcity",
+      "environment"
+    ]
+  },
+  {
+    "course_id": 314,
+    "keywords": [
+      "cancer",
+      "science",
+      "use",
+      "writer"
+    ]
+  },
+  {
+    "course_id": 315,
+    "keywords": [
+      "experience",
+      "everyone",
+      "level",
+      "opportunity",
+      "think",
+      "food",
+      "content",
+      "space",
+      "time",
+      "information",
+      "need",
+      "try",
+      "science"
+    ]
+  },
+  {
+    "course_id": 316,
+    "keywords": [
+      "assessment",
+      "food",
+      "medicine"
+    ]
+  },
+  {
+    "course_id": 317,
+    "keywords": [
+      "living",
+      "goal"
+    ]
+  },
+  {
+    "course_id": 318,
+    "keywords": [
+      "health",
+      "demand"
+    ]
+  },
+  {
+    "course_id": 319,
+    "keywords": [
+      "love",
+      "effectiveness",
+      "easy",
+      "process",
+      "design",
+      "selection",
+      "advice",
+      "key",
+      "list",
+      "multiple",
+      "recruitment"
+    ]
+  },
+  {
+    "course_id": 320,
+    "keywords": [
+      "experience",
+      "work",
+      "entry",
+      "school",
+      "statement"
+    ]
+  },
+  {
+    "course_id": 321,
+    "keywords": [
+      "incarceration",
+      "punishment"
+    ]
+  },
+  {
+    "course_id": 322,
+    "keywords": [
+      "industry",
+      "innovation"
+    ]
+  },
+  {
+    "course_id": 323,
+    "keywords": [
+      "innovation",
+      "introduction",
+      "world",
+      "history",
+      "inspiration",
+      "understood",
+      "read"
+    ]
+  },
+  {
+    "course_id": 324,
+    "keywords": []
+  },
+  {
+    "course_id": 325,
+    "keywords": [
+      "crossing",
+      "introduction",
+      "cross",
+      "look",
+      "understand"
+    ]
+  },
+  {
+    "course_id": 326,
+    "keywords": [
+      "wonderful",
+      "content",
+      "thought",
+      "introduction",
+      "concept",
+      "communication",
+      "learning",
+      "culture"
+    ]
+  },
+  {
+    "course_id": 327,
+    "keywords": [
+      "think",
+      "excellent",
+      "introduction",
+      "interaction",
+      "deal",
+      "lot",
+      "contact",
+      "anyone",
+      "way"
+    ]
+  },
+  {
+    "course_id": 328,
+    "keywords": [
+      "culture",
+      "introduction",
+      "communication",
+      "identity",
+      "relationship"
+    ]
+  },
+  {
+    "course_id": 329,
+    "keywords": [
+      "well",
+      "content",
+      "introduction",
+      "move",
+      "place",
+      "day",
+      "life"
+    ]
+  },
+  {
+    "course_id": 330,
+    "keywords": [
+      "introduction",
+      "conduct",
+      "university",
+      "research"
+    ]
+  },
+  {
+    "course_id": 331,
+    "keywords": [
+      "fit",
+      "structure",
+      "language",
+      "culture",
+      "introduction",
+      "basic",
+      "grounding",
+      "role",
+      "talk",
+      "whilst"
+    ]
+  },
+  {
+    "course_id": 332,
+    "keywords": [
+      "introduction",
+      "cover",
+      "knowledge",
+      "culture",
+      "language"
+    ]
+  },
+  {
+    "course_id": 333,
+    "keywords": [
+      "intermediate",
+      "culture",
+      "language",
+      "deal",
+      "effort",
+      "future",
+      "city",
+      "university",
+      "move",
+      "quality",
+      "sound"
+    ]
+  },
+  {
+    "course_id": 334,
+    "keywords": [
+      "accurate",
+      "plan"
+    ]
+  },
+  {
+    "course_id": 335,
+    "keywords": [
+      "communicating",
+      "help",
+      "learner",
+      "communication",
+      "aspect",
+      "introduction",
+      "reality"
+    ]
+  },
+  {
+    "course_id": 336,
+    "keywords": [
+      "identity",
+      "reflect"
+    ]
+  },
+  {
+    "course_id": 337,
+    "keywords": [
+      "wonderful",
+      "helpful",
+      "whilst",
+      "strengthen",
+      "learning",
+      "project",
+      "attain",
+      "experience",
+      "ability",
+      "information",
+      "topic",
+      "video",
+      "research",
+      "apply",
+      "assignment",
+      "system",
+      "understand"
+    ]
+  },
+  {
+    "course_id": 338,
+    "keywords": [
+      "learning"
+    ]
+  },
+  {
+    "course_id": 339,
+    "keywords": [
+      "presentation",
+      "content",
+      "lot",
+      "learnt"
+    ]
+  },
+  {
+    "course_id": 340,
+    "keywords": [
+      "health",
+      "technology"
+    ]
+  },
+  {
+    "course_id": 341,
+    "keywords": [
+      "genome",
+      "field",
+      "week",
+      "interesting",
+      "tool",
+      "human",
+      "world"
+    ]
+  },
+  {
+    "course_id": 342,
+    "keywords": [
+      "medicine"
+    ]
+  },
+  {
+    "course_id": 343,
+    "keywords": [
+      "design",
+      "product"
+    ]
+  },
+  {
+    "course_id": 344,
+    "keywords": [
+      "help",
+      "leadership",
+      "step",
+      "care"
+    ]
+  },
+  {
+    "course_id": 345,
+    "keywords": [
+      "exploring",
+      "form",
+      "perform",
+      "slap"
+    ]
+  },
+  {
+    "course_id": 346,
+    "keywords": [
+      "university",
+      "study"
+    ]
+  },
+  {
+    "course_id": 347,
+    "keywords": [
+      "easy",
+      "look",
+      "resilience",
+      "work",
+      "interaction",
+      "tutor",
+      "practice"
+    ]
+  },
+  {
+    "course_id": 348,
+    "keywords": [
+      "opportunity",
+      "help",
+      "business",
+      "vision"
+    ]
+  },
+  {
+    "course_id": 349,
+    "keywords": [
+      "business",
+      "budding",
+      "introduction",
+      "week",
+      "help",
+      "level",
+      "pace",
+      "size",
+      "work"
+    ]
+  },
+  {
+    "course_id": 350,
+    "keywords": [
+      "business"
+    ]
+  },
+  {
+    "course_id": 351,
+    "keywords": [
+      "business",
+      "content",
+      "direction",
+      "plan",
+      "anyone",
+      "foundation",
+      "work"
+    ]
+  },
+  {
+    "course_id": 352,
+    "keywords": [
+      "business",
+      "love",
+      "glad",
+      "school",
+      "lead",
+      "indication",
+      "forecast",
+      "future",
+      "revenue"
+    ]
+  },
+  {
+    "course_id": 353,
+    "keywords": [
+      "business",
+      "introduction",
+      "think",
+      "something",
+      "level",
+      "everything",
+      "helpful",
+      "source",
+      "satisfaction"
+    ]
+  },
+  {
+    "course_id": 354,
+    "keywords": [
+      "education",
+      "century",
+      "future"
+    ]
+  },
+  {
+    "course_id": 355,
+    "keywords": [
+      "level",
+      "good",
+      "resistance",
+      "role",
+      "content",
+      "control",
+      "disease",
+      "work",
+      "understand",
+      "vaccination",
+      "world"
+    ]
+  },
+  {
+    "course_id": 356,
+    "keywords": [
+      "future",
+      "super",
+      "content",
+      "class",
+      "good",
+      "week",
+      "instructive",
+      "change",
+      "climate",
+      "society",
+      "act",
+      "plenty",
+      "reading"
+    ]
+  },
+  {
+    "course_id": 357,
+    "keywords": [
+      "right",
+      "future",
+      "today",
+      "good",
+      "order",
+      "task",
+      "read",
+      "transportation",
+      "content",
+      "planner",
+      "point",
+      "transport",
+      "date"
+    ]
+  },
+  {
+    "course_id": 358,
+    "keywords": [
+      "diversity",
+      "inclusion",
+      "create",
+      "knowledge"
+    ]
+  },
+  {
+    "course_id": 359,
+    "keywords": [
+      "matter",
+      "gender",
+      "level",
+      "right",
+      "inequality",
+      "content",
+      "interest",
+      "workplace"
+    ]
+  },
+  {
+    "course_id": 360,
+    "keywords": [
+      "informative",
+      "test",
+      "helpful",
+      "group",
+      "detail",
+      "lot",
+      "level",
+      "listening",
+      "practice"
+    ]
+  },
+  {
+    "course_id": 361,
+    "keywords": [
+      "right",
+      "grateful",
+      "test"
+    ]
+  },
+  {
+    "course_id": 362,
+    "keywords": [
+      "la"
+    ]
+  },
+  {
+    "course_id": 363,
+    "keywords": [
+      "quality",
+      "right",
+      "lot",
+      "ribbon",
+      "research",
+      "information",
+      "insight",
+      "art",
+      "heroism",
+      "film",
+      "time"
+    ]
+  },
+  {
+    "course_id": 364,
+    "keywords": [
+      "decision",
+      "making",
+      "management"
+    ]
+  },
+  {
+    "course_id": 365,
+    "keywords": [
+      "environment",
+      "way",
+      "world",
+      "superb",
+      "thing",
+      "excellent"
+    ]
+  },
+  {
+    "course_id": 366,
+    "keywords": [
+      "marketing",
+      "segmentation",
+      "discover",
+      "strategy"
+    ]
+  },
+  {
+    "course_id": 367,
+    "keywords": [
+      "anatomy",
+      "respiratory",
+      "function",
+      "michigan",
+      "university"
+    ]
+  },
+  {
+    "course_id": 368,
+    "keywords": [
+      "endocrine"
+    ]
+  },
+  {
+    "course_id": 369,
+    "keywords": [
+      "neuroanatomy"
+    ]
+  },
+  {
+    "course_id": 370,
+    "keywords": [
+      "anatomy"
+    ]
+  },
+  {
+    "course_id": 371,
+    "keywords": [
+      "practice",
+      "stewardship",
+      "find",
+      "prevent",
+      "resistance"
+    ]
+  },
+  {
+    "course_id": 372,
+    "keywords": [
+      "career",
+      "work",
+      "world",
+      "job",
+      "need",
+      "sector"
+    ]
+  },
+  {
+    "course_id": 373,
+    "keywords": [
+      "engaging",
+      "fun",
+      "wonderful",
+      "contract",
+      "management",
+      "building",
+      "business"
+    ]
+  },
+  {
+    "course_id": 374,
+    "keywords": [
+      "design",
+      "school",
+      "range",
+      "scheme"
+    ]
+  },
+  {
+    "course_id": 375,
+    "keywords": [
+      "defensive"
+    ]
+  },
+  {
+    "course_id": 376,
+    "keywords": [
+      "intelligence"
+    ]
+  },
+  {
+    "course_id": 377,
+    "keywords": [
+      "call"
+    ]
+  },
+  {
+    "course_id": 378,
+    "keywords": [
+      "informative",
+      "learning",
+      "right",
+      "concept",
+      "waste",
+      "club",
+      "level",
+      "clarity",
+      "passion",
+      "way",
+      "everyone"
+    ]
+  },
+  {
+    "course_id": 379,
+    "keywords": [
+      "content",
+      "depth",
+      "set",
+      "brain",
+      "future",
+      "work"
+    ]
+  },
+  {
+    "course_id": 380,
+    "keywords": [
+      "agency",
+      "marketing",
+      "need"
+    ]
+  },
+  {
+    "course_id": 381,
+    "keywords": [
+      "study"
+    ]
+  },
+  {
+    "course_id": 382,
+    "keywords": [
+      "introduction"
+    ]
+  },
+  {
+    "course_id": 383,
+    "keywords": [
+      "wonderful",
+      "refresher",
+      "excellent",
+      "aspect",
+      "introduction",
+      "content",
+      "dutch",
+      "grammar",
+      "learning",
+      "class",
+      "understand",
+      "level"
+    ]
+  },
+  {
+    "course_id": 384,
+    "keywords": [
+      "introduction",
+      "culture",
+      "explore"
+    ]
+  },
+  {
+    "course_id": 385,
+    "keywords": [
+      "appropriate",
+      "stuff",
+      "teacher",
+      "delivery",
+      "learnt",
+      "lot",
+      "language",
+      "educator",
+      "time",
+      "classroom",
+      "assessment"
+    ]
+  },
+  {
+    "course_id": 386,
+    "keywords": [
+      "work",
+      "advance",
+      "education"
+    ]
+  },
+  {
+    "course_id": 387,
+    "keywords": [
+      "learnt",
+      "excellent",
+      "information",
+      "mind",
+      "touch",
+      "certification",
+      "lot",
+      "care",
+      "primary",
+      "covid"
+    ]
+  },
+  {
+    "course_id": 388,
+    "keywords": [
+      "environment",
+      "response",
+      "understand",
+      "change"
+    ]
+  },
+  {
+    "course_id": 389,
+    "keywords": [
+      "secret",
+      "time",
+      "fun",
+      "challenge",
+      "easy",
+      "understand",
+      "work",
+      "ancient",
+      "lot",
+      "content",
+      "view"
+    ]
+  },
+  {
+    "course_id": 390,
+    "keywords": [
+      "era",
+      "power",
+      "zoom"
+    ]
+  },
+  {
+    "course_id": 391,
+    "keywords": [
+      "teaching",
+      "week",
+      "comprehensive",
+      "fine",
+      "religion",
+      "resilience",
+      "level",
+      "build",
+      "violence",
+      "help",
+      "knowledge",
+      "matter",
+      "culture",
+      "place",
+      "promote"
+    ]
+  },
+  {
+    "course_id": 392,
+    "keywords": [
+      "change",
+      "message",
+      "story"
+    ]
+  },
+  {
+    "course_id": 393,
+    "keywords": [
+      "teaching",
+      "cool",
+      "idea",
+      "study",
+      "prepare",
+      "culture",
+      "education",
+      "university"
+    ]
+  },
+  {
+    "course_id": 394,
+    "keywords": [
+      "excellent",
+      "starter",
+      "delivery",
+      "discussion",
+      "opportunity",
+      "review"
+    ]
+  },
+  {
+    "course_id": 395,
+    "keywords": [
+      "certificate",
+      "train",
+      "trainer"
+    ]
+  },
+  {
+    "course_id": 396,
+    "keywords": [
+      "depression",
+      "mood",
+      "help"
+    ]
+  },
+  {
+    "course_id": 397,
+    "keywords": [
+      "work",
+      "vaccine",
+      "covid"
+    ]
+  },
+  {
+    "course_id": 398,
+    "keywords": [
+      "work",
+      "level",
+      "medicine",
+      "perspective",
+      "experience",
+      "profession",
+      "career",
+      "vet",
+      "feel",
+      "place",
+      "school",
+      "helpful",
+      "information",
+      "path"
+    ]
+  },
+  {
+    "course_id": 399,
+    "keywords": [
+      "introduction",
+      "answer",
+      "get"
+    ]
+  },
+  {
+    "course_id": 400,
+    "keywords": [
+      "level",
+      "recommend",
+      "content",
+      "found",
+      "hope",
+      "productivity",
+      "workplace",
+      "work"
+    ]
+  },
+  {
+    "course_id": 401,
+    "keywords": [
+      "introduction",
+      "process",
+      "introductory",
+      "informative",
+      "found",
+      "inspiration",
+      "review"
+    ]
+  },
+  {
+    "course_id": 402,
+    "keywords": [
+      "management",
+      "stewardship"
+    ]
+  },
+  {
+    "course_id": 403,
+    "keywords": [
+      "resistance",
+      "stewardship"
+    ]
+  },
+  {
+    "course_id": 404,
+    "keywords": [
+      "smart",
+      "change",
+      "professional",
+      "career",
+      "sell"
+    ]
+  },
+  {
+    "course_id": 405,
+    "keywords": [
+      "health",
+      "alliance",
+      "building",
+      "sector"
+    ]
+  },
+  {
+    "course_id": 406,
+    "keywords": [
+      "gram",
+      "presentable",
+      "resistance"
+    ]
+  },
+  {
+    "course_id": 407,
+    "keywords": [
+      "consumer",
+      "food",
+      "safety",
+      "discover",
+      "environment",
+      "importance"
+    ]
+  },
+  {
+    "course_id": 408,
+    "keywords": [
+      "create",
+      "market",
+      "strategy"
+    ]
+  },
+  {
+    "course_id": 409,
+    "keywords": [
+      "problem",
+      "approach",
+      "innovation"
+    ]
+  },
+  {
+    "course_id": 410,
+    "keywords": [
+      "practice",
+      "dementia",
+      "challenge",
+      "science",
+      "shape"
+    ]
+  },
+  {
+    "course_id": 411,
+    "keywords": [
+      "thing",
+      "discover",
+      "inclusive",
+      "reading",
+      "subject",
+      "disability",
+      "diversity",
+      "inclusion",
+      "look",
+      "material"
+    ]
+  },
+  {
+    "course_id": 412,
+    "keywords": [
+      "educator",
+      "mathematical",
+      "lot",
+      "ecosystem",
+      "environment",
+      "impact",
+      "emphasis",
+      "notch",
+      "nature",
+      "complexity",
+      "dynamism",
+      "lead"
+    ]
+  },
+  {
+    "course_id": 413,
+    "keywords": [
+      "anyone",
+      "level",
+      "knowledge",
+      "produce",
+      "food",
+      "expand",
+      "approach",
+      "thought",
+      "excellent",
+      "grammatical",
+      "language"
+    ]
+  },
+  {
+    "course_id": 414,
+    "keywords": [
+      "present"
+    ]
+  },
+  {
+    "course_id": 415,
+    "keywords": [
+      "share",
+      "understand",
+      "assessment",
+      "review",
+      "give",
+      "pupil",
+      "student",
+      "feedback"
+    ]
+  },
+  {
+    "course_id": 416,
+    "keywords": [
+      "food",
+      "medicine"
+    ]
+  },
+  {
+    "course_id": 417,
+    "keywords": [
+      "knowledge",
+      "everything",
+      "learner"
+    ]
+  },
+  {
+    "course_id": 418,
+    "keywords": [
+      "competence",
+      "diverse",
+      "knowledge"
+    ]
+  },
+  {
+    "course_id": 419,
+    "keywords": [
+      "content",
+      "case",
+      "foundation",
+      "development",
+      "introduction"
+    ]
+  },
+  {
+    "course_id": 420,
+    "keywords": [
+      "introduction",
+      "research"
+    ]
+  },
+  {
+    "course_id": 421,
+    "keywords": [
+      "innovation",
+      "life"
+    ]
+  },
+  {
+    "course_id": 422,
+    "keywords": []
+  },
+  {
+    "course_id": 423,
+    "keywords": [
+      "house",
+      "country",
+      "journey",
+      "literature",
+      "time"
+    ]
+  },
+  {
+    "course_id": 424,
+    "keywords": [
+      "thinking",
+      "found",
+      "fluid",
+      "use",
+      "interesting",
+      "lot",
+      "identify"
+    ]
+  },
+  {
+    "course_id": 425,
+    "keywords": [
+      "century",
+      "level",
+      "learnt",
+      "content",
+      "wonderful",
+      "follow",
+      "lot",
+      "discover",
+      "fertility",
+      "pose"
+    ]
+  },
+  {
+    "course_id": 426,
+    "keywords": [
+      "medicine",
+      "field",
+      "intersection"
+    ]
+  },
+  {
+    "course_id": 427,
+    "keywords": [
+      "need",
+      "success",
+      "performance",
+      "test"
+    ]
+  },
+  {
+    "course_id": 428,
+    "keywords": [
+      "holocaust",
+      "poetry"
+    ]
+  },
+  {
+    "course_id": 429,
+    "keywords": [
+      "informative",
+      "teach",
+      "level",
+      "part",
+      "nice",
+      "star",
+      "gratitude",
+      "content"
+    ]
+  },
+  {
+    "course_id": 430,
+    "keywords": [
+      "level",
+      "education",
+      "health",
+      "training"
+    ]
+  },
+  {
+    "course_id": 431,
+    "keywords": [
+      "engaging",
+      "childhood",
+      "refresher",
+      "development",
+      "content",
+      "child"
+    ]
+  },
+  {
+    "course_id": 432,
+    "keywords": [
+      "resistance"
+    ]
+  },
+  {
+    "course_id": 433,
+    "keywords": [
+      "thought",
+      "content",
+      "need",
+      "information",
+      "approach",
+      "resistance",
+      "research",
+      "health",
+      "program",
+      "questionnaire",
+      "use",
+      "felt",
+      "introduction",
+      "worth",
+      "science"
+    ]
+  },
+  {
+    "course_id": 434,
+    "keywords": [
+      "biology",
+      "science"
+    ]
+  },
+  {
+    "course_id": 435,
+    "keywords": [
+      "science",
+      "practical",
+      "interactive",
+      "interesting",
+      "enhance",
+      "work",
+      "year"
+    ]
+  },
+  {
+    "course_id": 436,
+    "keywords": [
+      "chemistry",
+      "science"
+    ]
+  },
+  {
+    "course_id": 437,
+    "keywords": [
+      "technology",
+      "start",
+      "venture"
+    ]
+  },
+  {
+    "course_id": 438,
+    "keywords": [
+      "page",
+      "pace",
+      "excellent",
+      "found",
+      "rank",
+      "training"
+    ]
+  },
+  {
+    "course_id": 439,
+    "keywords": [
+      "design",
+      "laid",
+      "section",
+      "field",
+      "learning",
+      "practice"
+    ]
+  },
+  {
+    "course_id": 440,
+    "keywords": [
+      "health"
+    ]
+  },
+  {
+    "course_id": 441,
+    "keywords": []
+  },
+  {
+    "course_id": 442,
+    "keywords": [
+      "application",
+      "web",
+      "browser",
+      "development",
+      "server"
+    ]
+  },
+  {
+    "course_id": 443,
+    "keywords": [
+      "mind",
+      "understanding",
+      "interest",
+      "think",
+      "grown",
+      "step",
+      "time"
+    ]
+  },
+  {
+    "course_id": 444,
+    "keywords": [
+      "content",
+      "lot",
+      "create",
+      "class",
+      "practice",
+      "teaching"
+    ]
+  },
+  {
+    "course_id": 445,
+    "keywords": [
+      "found",
+      "relevant",
+      "information",
+      "health",
+      "anxiety",
+      "ideal",
+      "introduction",
+      "psychology"
+    ]
+  },
+  {
+    "course_id": 446,
+    "keywords": [
+      "process",
+      "therapy",
+      "understand"
+    ]
+  },
+  {
+    "course_id": 447,
+    "keywords": [
+      "easy",
+      "therapy",
+      "confidence",
+      "supervision",
+      "content",
+      "relevant",
+      "educational",
+      "postgraduate",
+      "supervise"
+    ]
+  },
+  {
+    "course_id": 448,
+    "keywords": [
+      "ocean"
+    ]
+  },
+  {
+    "course_id": 449,
+    "keywords": [
+      "introduction",
+      "teach",
+      "year",
+      "computer"
+    ]
+  },
+  {
+    "course_id": 450,
+    "keywords": [
+      "introduction",
+      "simple",
+      "excellent",
+      "complexity",
+      "felt",
+      "content",
+      "lot"
+    ]
+  },
+  {
+    "course_id": 451,
+    "keywords": [
+      "eye",
+      "found",
+      "beginning",
+      "anyone",
+      "development",
+      "code",
+      "rocking",
+      "web",
+      "introduction",
+      "build",
+      "interactive"
+    ]
+  },
+  {
+    "course_id": 452,
+    "keywords": [
+      "adventure",
+      "create",
+      "object",
+      "text"
+    ]
+  },
+  {
+    "course_id": 453,
+    "keywords": [
+      "learnt",
+      "excellent",
+      "step",
+      "time",
+      "knowledge",
+      "task",
+      "import",
+      "python",
+      "structure",
+      "extract",
+      "handling",
+      "persistence",
+      "grasp",
+      "pace",
+      "support"
+    ]
+  },
+  {
+    "course_id": 454,
+    "keywords": [
+      "balance",
+      "pace",
+      "work",
+      "build",
+      "engaging",
+      "fun",
+      "robot"
+    ]
+  },
+  {
+    "course_id": 455,
+    "keywords": [
+      "found",
+      "everyone",
+      "know",
+      "teaching",
+      "teach",
+      "lot",
+      "cohort",
+      "deal",
+      "fun",
+      "language",
+      "content",
+      "introduce",
+      "learning",
+      "love"
+    ]
+  },
+  {
+    "course_id": 456,
+    "keywords": [
+      "deprivation",
+      "teach"
+    ]
+  },
+  {
+    "course_id": 457,
+    "keywords": [
+      "degree",
+      "era",
+      "future",
+      "learnt",
+      "lot",
+      "ethical",
+      "illustrate"
+    ]
+  },
+  {
+    "course_id": 458,
+    "keywords": [
+      "introduction",
+      "picture"
+    ]
+  },
+  {
+    "course_id": 459,
+    "keywords": [
+      "class",
+      "travel",
+      "culture",
+      "history",
+      "clanship",
+      "introduction",
+      "decline",
+      "transformation",
+      "highland"
+    ]
+  },
+  {
+    "course_id": 460,
+    "keywords": [
+      "concept",
+      "design",
+      "prototype",
+      "process",
+      "product"
+    ]
+  },
+  {
+    "course_id": 461,
+    "keywords": [
+      "development",
+      "matter",
+      "inequality",
+      "world"
+    ]
+  },
+  {
+    "course_id": 462,
+    "keywords": [
+      "business",
+      "company",
+      "discover",
+      "ecosystem"
+    ]
+  },
+  {
+    "course_id": 463,
+    "keywords": [
+      "mining",
+      "use",
+      "weka"
+    ]
+  },
+  {
+    "course_id": 464,
+    "keywords": [
+      "introduction",
+      "computer"
+    ]
+  },
+  {
+    "course_id": 465,
+    "keywords": [
+      "level",
+      "stewardship",
+      "gulf",
+      "information",
+      "part",
+      "picture",
+      "knowledge",
+      "resistance",
+      "spread"
+    ]
+  },
+  {
+    "course_id": 466,
+    "keywords": [
+      "genome",
+      "computational",
+      "disease",
+      "track"
+    ]
+  },
+  {
+    "course_id": 467,
+    "keywords": [
+      "intermediate",
+      "perfect",
+      "content",
+      "way",
+      "listening",
+      "use",
+      "gather",
+      "grammar",
+      "repeat",
+      "confidence"
+    ]
+  },
+  {
+    "course_id": 468,
+    "keywords": [
+      "practice",
+      "learning"
+    ]
+  },
+  {
+    "course_id": 469,
+    "keywords": [
+      "business",
+      "growth",
+      "scale",
+      "approach",
+      "chasm",
+      "model"
+    ]
+  },
+  {
+    "course_id": 470,
+    "keywords": [
+      "migrant",
+      "refugee"
+    ]
+  },
+  {
+    "course_id": 471,
+    "keywords": [
+      "source",
+      "information",
+      "learning",
+      "learnt",
+      "lot",
+      "time",
+      "health",
+      "childhood"
+    ]
+  },
+  {
+    "course_id": 472,
+    "keywords": [
+      "business",
+      "food",
+      "transform"
+    ]
+  },
+  {
+    "course_id": 473,
+    "keywords": [
+      "excellent",
+      "perfect",
+      "content",
+      "training",
+      "treat"
+    ]
+  },
+  {
+    "course_id": 474,
+    "keywords": [
+      "computer",
+      "prototype",
+      "design"
+    ]
+  },
+  {
+    "course_id": 475,
+    "keywords": [
+      "reflect",
+      "trainee",
+      "differentiation",
+      "learning",
+      "class",
+      "room",
+      "assessment",
+      "feedback",
+      "change",
+      "meet",
+      "practice"
+    ]
+  },
+  {
+    "course_id": 476,
+    "keywords": [
+      "technology"
+    ]
+  },
+  {
+    "course_id": 477,
+    "keywords": [
+      "time",
+      "informative",
+      "everything",
+      "deaf",
+      "balance",
+      "interest",
+      "content",
+      "week",
+      "history",
+      "review"
+    ]
+  },
+  {
+    "course_id": 478,
+    "keywords": [
+      "pronunciation",
+      "world",
+      "today"
+    ]
+  },
+  {
+    "course_id": 479,
+    "keywords": [
+      "superb",
+      "life",
+      "care",
+      "treatment",
+      "technology",
+      "medicine",
+      "knowledge"
+    ]
+  },
+  {
+    "course_id": 480,
+    "keywords": []
+  },
+  {
+    "course_id": 481,
+    "keywords": [
+      "introduction",
+      "taught",
+      "grounding",
+      "song",
+      "write"
+    ]
+  },
+  {
+    "course_id": 482,
+    "keywords": [
+      "knowledge",
+      "excellent",
+      "content",
+      "computer",
+      "science",
+      "year",
+      "classroom",
+      "impact",
+      "lead",
+      "technology"
+    ]
+  },
+  {
+    "course_id": 483,
+    "keywords": [
+      "improvement",
+      "found",
+      "afraid",
+      "follow",
+      "innovation",
+      "recommend",
+      "environment",
+      "working"
+    ]
+  },
+  {
+    "course_id": 484,
+    "keywords": [
+      "comfort",
+      "action",
+      "research",
+      "level",
+      "spot",
+      "practice",
+      "pedagogy",
+      "review"
+    ]
+  },
+  {
+    "course_id": 485,
+    "keywords": [
+      "health",
+      "worth",
+      "time",
+      "action",
+      "evidence",
+      "face",
+      "problem",
+      "understand"
+    ]
+  },
+  {
+    "course_id": 486,
+    "keywords": [
+      "introduction",
+      "language"
+    ]
+  },
+  {
+    "course_id": 487,
+    "keywords": [
+      "introduction",
+      "start",
+      "perfect",
+      "metal",
+      "information",
+      "technology",
+      "dive",
+      "comprehension",
+      "title",
+      "level"
+    ]
+  },
+  {
+    "course_id": 488,
+    "keywords": [
+      "nursing",
+      "wonderful",
+      "lot",
+      "excellent",
+      "introduction"
+    ]
+  },
+  {
+    "course_id": 489,
+    "keywords": [
+      "pace",
+      "culture",
+      "support",
+      "introduction",
+      "etymology",
+      "site",
+      "introductory",
+      "life",
+      "talk",
+      "beginner",
+      "pedagogy",
+      "teach"
+    ]
+  },
+  {
+    "course_id": 490,
+    "keywords": [
+      "stem",
+      "curriculum"
+    ]
+  },
+  {
+    "course_id": 491,
+    "keywords": [
+      "law",
+      "model",
+      "strategy",
+      "business",
+      "leadership",
+      "week"
+    ]
+  },
+  {
+    "course_id": 492,
+    "keywords": [
+      "knowledge",
+      "understanding"
+    ]
+  },
+  {
+    "course_id": 493,
+    "keywords": [
+      "education",
+      "engage",
+      "school",
+      "read",
+      "level",
+      "pace"
+    ]
+  },
+  {
+    "course_id": 494,
+    "keywords": [
+      "lab",
+      "century",
+      "generation"
+    ]
+  },
+  {
+    "course_id": 495,
+    "keywords": [
+      "introduction",
+      "python"
+    ]
+  },
+  {
+    "course_id": 496,
+    "keywords": [
+      "pedagogy",
+      "teaching",
+      "investigate",
+      "range",
+      "school"
+    ]
+  },
+  {
+    "course_id": 497,
+    "keywords": [
+      "interface",
+      "user"
+    ]
+  },
+  {
+    "course_id": 498,
+    "keywords": [
+      "chain",
+      "food",
+      "technology"
+    ]
+  },
+  {
+    "course_id": 499,
+    "keywords": [
+      "block",
+      "support",
+      "use"
+    ]
+  },
+  {
+    "course_id": 500,
+    "keywords": [
+      "school"
+    ]
+  },
+  {
+    "course_id": 501,
+    "keywords": [
+      "school",
+      "informative",
+      "level",
+      "confidence",
+      "appreciation",
+      "future"
+    ]
+  },
+  {
+    "course_id": 502,
+    "keywords": [
+      "content",
+      "start",
+      "transfer",
+      "enhance",
+      "guidance",
+      "connect",
+      "opportunity",
+      "world"
+    ]
+  },
+  {
+    "course_id": 503,
+    "keywords": [
+      "helpful",
+      "right",
+      "content",
+      "science",
+      "chemistry",
+      "level",
+      "activity",
+      "balance",
+      "note",
+      "progression",
+      "waste",
+      "discover",
+      "year",
+      "work"
+    ]
+  },
+  {
+    "course_id": 504,
+    "keywords": [
+      "science",
+      "enhance",
+      "knowledge"
+    ]
+  },
+  {
+    "course_id": 505,
+    "keywords": [
+      "response",
+      "role",
+      "prevention",
+      "treatment",
+      "understand"
+    ]
+  },
+  {
+    "course_id": 506,
+    "keywords": [
+      "training",
+      "evaluation",
+      "certificate",
+      "train",
+      "trainer"
+    ]
+  },
+  {
+    "course_id": 507,
+    "keywords": [
+      "introduction",
+      "transport",
+      "framework",
+      "shift"
+    ]
+  },
+  {
+    "course_id": 508,
+    "keywords": [
+      "knowledge",
+      "way",
+      "lot",
+      "practice",
+      "perfect",
+      "research",
+      "content",
+      "information",
+      "journey",
+      "start"
+    ]
+  },
+  {
+    "course_id": 509,
+    "keywords": [
+      "computer",
+      "interact",
+      "system"
+    ]
+  },
+  {
+    "course_id": 510,
+    "keywords": [
+      "computer",
+      "science"
+    ]
+  },
+  {
+    "course_id": 511,
+    "keywords": []
+  },
+  {
+    "course_id": 512,
+    "keywords": [
+      "suicide",
+      "prevention",
+      "context"
+    ]
+  },
+  {
+    "course_id": 513,
+    "keywords": [
+      "create",
+      "learning"
+    ]
+  },
+  {
+    "course_id": 514,
+    "keywords": [
+      "genome",
+      "year",
+      "level",
+      "simple",
+      "language",
+      "life",
+      "opportunity"
+    ]
+  },
+  {
+    "course_id": 515,
+    "keywords": [
+      "insight",
+      "level",
+      "diversity",
+      "faith",
+      "review",
+      "part",
+      "support",
+      "discover",
+      "understanding",
+      "culture",
+      "literacy",
+      "religion"
+    ]
+  },
+  {
+    "course_id": 516,
+    "keywords": [
+      "lot",
+      "explanation",
+      "professional",
+      "play",
+      "role",
+      "help",
+      "work",
+      "depression",
+      "provide",
+      "support",
+      "community",
+      "nurse",
+      "time"
+    ]
+  },
+  {
+    "course_id": 517,
+    "keywords": [
+      "order",
+      "use",
+      "web"
+    ]
+  },
+  {
+    "course_id": 518,
+    "keywords": [
+      "game",
+      "football",
+      "role",
+      "today",
+      "world"
+    ]
+  },
+  {
+    "course_id": 519,
+    "keywords": [
+      "dialogue",
+      "extremism"
+    ]
+  },
+  {
+    "course_id": 520,
+    "keywords": [
+      "introduction",
+      "start",
+      "today",
+      "week"
+    ]
+  },
+  {
+    "course_id": 521,
+    "keywords": [
+      "guide",
+      "living",
+      "university"
+    ]
+  },
+  {
+    "course_id": 522,
+    "keywords": []
+  },
+  {
+    "course_id": 523,
+    "keywords": [
+      "train",
+      "trainer",
+      "evidence",
+      "expert",
+      "progress"
+    ]
+  },
+  {
+    "course_id": 524,
+    "keywords": [
+      "transport",
+      "mobility",
+      "sustainable"
+    ]
+  },
+  {
+    "course_id": 525,
+    "keywords": [
+      "workplace",
+      "discover",
+      "week",
+      "health",
+      "safety"
+    ]
+  },
+  {
+    "course_id": 526,
+    "keywords": [
+      "experience",
+      "way",
+      "use",
+      "power",
+      "world"
+    ]
+  },
+  {
+    "course_id": 527,
+    "keywords": [
+      "impact",
+      "brain"
+    ]
+  },
+  {
+    "course_id": 528,
+    "keywords": [
+      "gain",
+      "manage",
+      "business",
+      "management",
+      "project"
+    ]
+  },
+  {
+    "course_id": 529,
+    "keywords": [
+      "career",
+      "supercharge",
+      "academy",
+      "development",
+      "support"
+    ]
+  },
+  {
+    "course_id": 530,
+    "keywords": [
+      "access",
+      "feel",
+      "understanding",
+      "relevant"
+    ]
+  },
+  {
+    "course_id": 531,
+    "keywords": [
+      "change",
+      "climate",
+      "development",
+      "relate"
+    ]
+  },
+  {
+    "course_id": 532,
+    "keywords": [
+      "professional",
+      "supervision",
+      "address",
+      "plan",
+      "supervisor"
+    ]
+  },
+  {
+    "course_id": 533,
+    "keywords": [
+      "guide",
+      "quality"
+    ]
+  },
+  {
+    "course_id": 534,
+    "keywords": [
+      "copyright",
+      "el"
+    ]
+  },
+  {
+    "course_id": 535,
+    "keywords": [
+      "entrepreneur",
+      "challenge",
+      "perspective",
+      "problem"
+    ]
+  },
+  {
+    "course_id": 536,
+    "keywords": [
+      "communication",
+      "landscape",
+      "marketing"
+    ]
+  },
+  {
+    "course_id": 537,
+    "keywords": [
+      "hierarchy",
+      "property"
+    ]
+  },
+  {
+    "course_id": 538,
+    "keywords": [
+      "brilliant",
+      "concise",
+      "need",
+      "content",
+      "business",
+      "experience",
+      "listing",
+      "training"
+    ]
+  },
+  {
+    "course_id": 539,
+    "keywords": []
+  },
+  {
+    "course_id": 540,
+    "keywords": [
+      "love",
+      "nutrition",
+      "baby",
+      "informative",
+      "grandmother",
+      "something",
+      "everything",
+      "clarify",
+      "forget",
+      "apply",
+      "career",
+      "home"
+    ]
+  },
+  {
+    "course_id": 541,
+    "keywords": [
+      "learning",
+      "adult"
+    ]
+  },
+  {
+    "course_id": 542,
+    "keywords": [
+      "switch",
+      "therapy",
+      "administration",
+      "explore"
+    ]
+  },
+  {
+    "course_id": 543,
+    "keywords": [
+      "excellent",
+      "content",
+      "informative",
+      "exploration",
+      "life",
+      "foundation",
+      "world",
+      "humanism",
+      "view"
+    ]
+  },
+  {
+    "course_id": 544,
+    "keywords": [
+      "insurance",
+      "explain",
+      "importance",
+      "market"
+    ]
+  },
+  {
+    "course_id": 545,
+    "keywords": [
+      "introduction",
+      "language",
+      "culture"
+    ]
+  },
+  {
+    "course_id": 546,
+    "keywords": [
+      "culture",
+      "language"
+    ]
+  },
+  {
+    "course_id": 547,
+    "keywords": [
+      "communication",
+      "introduction"
+    ]
+  },
+  {
+    "course_id": 548,
+    "keywords": [
+      "health",
+      "program",
+      "overview",
+      "helpful",
+      "well",
+      "systematic",
+      "everyone",
+      "explanation",
+      "presentation",
+      "approach",
+      "easy",
+      "injury",
+      "safety",
+      "workplace"
+    ]
+  },
+  {
+    "course_id": 549,
+    "keywords": [
+      "leadership",
+      "step",
+      "benefit",
+      "population"
+    ]
+  },
+  {
+    "course_id": 550,
+    "keywords": [
+      "introduction",
+      "club",
+      "prepare",
+      "information",
+      "start",
+      "class",
+      "material",
+      "code",
+      "advice",
+      "confidence",
+      "inspiring",
+      "teaching",
+      "think"
+    ]
+  },
+  {
+    "course_id": 551,
+    "keywords": [
+      "management",
+      "wealth"
+    ]
+  },
+  {
+    "course_id": 552,
+    "keywords": [
+      "job",
+      "time",
+      "content",
+      "one",
+      "child",
+      "protection",
+      "information",
+      "let",
+      "move"
+    ]
+  },
+  {
+    "course_id": 553,
+    "keywords": [
+      "impact",
+      "brand",
+      "build",
+      "business"
+    ]
+  },
+  {
+    "course_id": 554,
+    "keywords": [
+      "practice"
+    ]
+  },
+  {
+    "course_id": 555,
+    "keywords": [
+      "introduction",
+      "theory"
+    ]
+  },
+  {
+    "course_id": 556,
+    "keywords": [
+      "migration",
+      "storytelling"
+    ]
+  },
+  {
+    "course_id": 557,
+    "keywords": [
+      "biology",
+      "body"
+    ]
+  },
+  {
+    "course_id": 558,
+    "keywords": [
+      "classification",
+      "biology"
+    ]
+  },
+  {
+    "course_id": 559,
+    "keywords": [
+      "inheritance",
+      "biology",
+      "evolution"
+    ]
+  },
+  {
+    "course_id": 560,
+    "keywords": [
+      "user",
+      "project",
+      "research"
+    ]
+  },
+  {
+    "course_id": 561,
+    "keywords": [
+      "user"
+    ]
+  },
+  {
+    "course_id": 562,
+    "keywords": [
+      "game"
+    ]
+  },
+  {
+    "course_id": 563,
+    "keywords": [
+      "labor",
+      "learnt",
+      "lot",
+      "influence",
+      "share",
+      "anyone",
+      "everyone",
+      "work",
+      "change"
+    ]
+  },
+  {
+    "course_id": 564,
+    "keywords": [
+      "methodology",
+      "research",
+      "master"
+    ]
+  },
+  {
+    "course_id": 565,
+    "keywords": [
+      "description",
+      "feel",
+      "brilliant",
+      "introduction",
+      "learnt",
+      "life",
+      "cryptography",
+      "everything",
+      "material",
+      "opportunity"
+    ]
+  },
+  {
+    "course_id": 566,
+    "keywords": [
+      "science",
+      "workplace"
+    ]
+  },
+  {
+    "course_id": 567,
+    "keywords": [
+      "right",
+      "excellent",
+      "information",
+      "found",
+      "reality",
+      "intelligence",
+      "fact",
+      "fiction",
+      "achieve",
+      "goal",
+      "level"
+    ]
+  },
+  {
+    "course_id": 568,
+    "keywords": [
+      "network",
+      "security"
+    ]
+  },
+  {
+    "course_id": 569,
+    "keywords": [
+      "recommend",
+      "found",
+      "way",
+      "thinking",
+      "everyone",
+      "type",
+      "focus",
+      "future",
+      "study",
+      "university",
+      "model",
+      "idea",
+      "business"
+    ]
+  },
+  {
+    "course_id": 570,
+    "keywords": [
+      "change",
+      "climate",
+      "science",
+      "activity",
+      "world"
+    ]
+  },
+  {
+    "course_id": 571,
+    "keywords": [
+      "disaster"
+    ]
+  },
+  {
+    "course_id": 572,
+    "keywords": [
+      "consumer",
+      "behaviour",
+      "psychology"
+    ]
+  },
+  {
+    "course_id": 573,
+    "keywords": [
+      "introduction",
+      "procurement",
+      "contract",
+      "management"
+    ]
+  },
+  {
+    "course_id": 574,
+    "keywords": [
+      "making",
+      "introduction",
+      "decision",
+      "risk"
+    ]
+  },
+  {
+    "course_id": 575,
+    "keywords": [
+      "level",
+      "development",
+      "sierra",
+      "grow",
+      "help",
+      "insight",
+      "experience"
+    ]
+  },
+  {
+    "course_id": 576,
+    "keywords": [
+      "create",
+      "explore"
+    ]
+  },
+  {
+    "course_id": 577,
+    "keywords": [
+      "frequent",
+      "awesome",
+      "introduction",
+      "disaster",
+      "help",
+      "preparedness",
+      "role"
+    ]
+  },
+  {
+    "course_id": 578,
+    "keywords": [
+      "project",
+      "management"
+    ]
+  },
+  {
+    "course_id": 579,
+    "keywords": [
+      "excellent",
+      "fraud",
+      "space",
+      "time",
+      "content",
+      "unique",
+      "kind",
+      "difference",
+      "investigation",
+      "making"
+    ]
+  },
+  {
+    "course_id": 580,
+    "keywords": [
+      "marketing",
+      "today",
+      "university",
+      "world"
+    ]
+  },
+  {
+    "course_id": 581,
+    "keywords": [
+      "marketing",
+      "definition",
+      "lot",
+      "career",
+      "knowledge",
+      "mind",
+      "experience",
+      "platform",
+      "professor"
+    ]
+  },
+  {
+    "course_id": 582,
+    "keywords": [
+      "business"
+    ]
+  },
+  {
+    "course_id": 583,
+    "keywords": [
+      "research"
+    ]
+  },
+  {
+    "course_id": 584,
+    "keywords": [
+      "support",
+      "abuse",
+      "pregnancy",
+      "violence"
+    ]
+  },
+  {
+    "course_id": 585,
+    "keywords": [
+      "career",
+      "development"
+    ]
+  },
+  {
+    "course_id": 586,
+    "keywords": [
+      "brilliant",
+      "way",
+      "moment",
+      "introduction",
+      "management",
+      "everyone",
+      "experience"
+    ]
+  },
+  {
+    "course_id": 587,
+    "keywords": [
+      "introduction",
+      "set",
+      "someone",
+      "future",
+      "increase",
+      "management",
+      "feel",
+      "knowledge"
+    ]
+  },
+  {
+    "course_id": 588,
+    "keywords": [
+      "introduction",
+      "come",
+      "profession",
+      "classroom",
+      "explain",
+      "understand",
+      "language",
+      "law",
+      "teaching"
+    ]
+  },
+  {
+    "course_id": 589,
+    "keywords": [
+      "introduction",
+      "commerce",
+      "transformation"
+    ]
+  },
+  {
+    "course_id": 590,
+    "keywords": [
+      "aspect",
+      "perfect",
+      "health",
+      "home",
+      "outbreak",
+      "profile",
+      "think",
+      "stress",
+      "intervention"
+    ]
+  },
+  {
+    "course_id": 591,
+    "keywords": [
+      "superb",
+      "content",
+      "light",
+      "lot",
+      "network",
+      "level",
+      "grounding",
+      "study",
+      "overview",
+      "material",
+      "defence",
+      "management"
+    ]
+  },
+  {
+    "course_id": 592,
+    "keywords": [
+      "crisis",
+      "nursing"
+    ]
+  },
+  {
+    "course_id": 593,
+    "keywords": [
+      "introduction",
+      "construction",
+      "behaviour",
+      "industry",
+      "study"
+    ]
+  },
+  {
+    "course_id": 594,
+    "keywords": [
+      "tourism"
+    ]
+  },
+  {
+    "course_id": 595,
+    "keywords": [
+      "entrepreneurship"
+    ]
+  },
+  {
+    "course_id": 596,
+    "keywords": [
+      "poem",
+      "appreciation",
+      "boring",
+      "interesting",
+      "emotion",
+      "key",
+      "verse",
+      "pentameter",
+      "reading",
+      "experience"
+    ]
+  },
+  {
+    "course_id": 597,
+    "keywords": [
+      "analysis",
+      "formulation"
+    ]
+  },
+  {
+    "course_id": 598,
+    "keywords": [
+      "stewardship",
+      "discover"
+    ]
+  },
+  {
+    "course_id": 599,
+    "keywords": [
+      "procurement",
+      "construction",
+      "industry",
+      "process"
+    ]
+  },
+  {
+    "course_id": 600,
+    "keywords": [
+      "expression",
+      "content",
+      "level",
+      "university",
+      "workplace",
+      "report"
+    ]
+  },
+  {
+    "course_id": 601,
+    "keywords": [
+      "security",
+      "composition",
+      "role",
+      "soc"
+    ]
+  },
+  {
+    "course_id": 602,
+    "keywords": [
+      "marketing"
+    ]
+  },
+  {
+    "course_id": 603,
+    "keywords": [
+      "decision",
+      "making"
+    ]
+  },
+  {
+    "course_id": 604,
+    "keywords": [
+      "helpful",
+      "informative",
+      "introduction",
+      "understand",
+      "understanding",
+      "literature",
+      "lot",
+      "review",
+      "importance"
+    ]
+  },
+  {
+    "course_id": 605,
+    "keywords": [
+      "growth",
+      "challenge",
+      "clean"
+    ]
+  },
+  {
+    "course_id": 606,
+    "keywords": [
+      "security",
+      "landscape",
+      "today"
+    ]
+  },
+  {
+    "course_id": 607,
+    "keywords": [
+      "leadership",
+      "evolution",
+      "management",
+      "theory"
+    ]
+  },
+  {
+    "course_id": 608,
+    "keywords": [
+      "business",
+      "environment",
+      "evolution"
+    ]
+  },
+  {
+    "course_id": 609,
+    "keywords": [
+      "tourism",
+      "opportunity"
+    ]
+  },
+  {
+    "course_id": 610,
+    "keywords": [
+      "training",
+      "development",
+      "introduction",
+      "work"
+    ]
+  },
+  {
+    "course_id": 611,
+    "keywords": [
+      "potential",
+      "approach",
+      "entrepreneur",
+      "value"
+    ]
+  },
+  {
+    "course_id": 612,
+    "keywords": [
+      "research",
+      "time",
+      "right",
+      "become",
+      "hear",
+      "creation",
+      "field",
+      "management"
+    ]
+  },
+  {
+    "course_id": 613,
+    "keywords": [
+      "thinking",
+      "approach",
+      "building",
+      "understand"
+    ]
+  },
+  {
+    "course_id": 614,
+    "keywords": [
+      "knowledge",
+      "concise",
+      "content",
+      "ai"
+    ]
+  },
+  {
+    "course_id": 615,
+    "keywords": [
+      "presentation"
+    ]
+  },
+  {
+    "course_id": 616,
+    "keywords": [
+      "head",
+      "everyone",
+      "outbreak",
+      "look",
+      "work",
+      "life",
+      "balance",
+      "impact"
+    ]
+  },
+  {
+    "course_id": 617,
+    "keywords": [
+      "engaging",
+      "helpful",
+      "recommend",
+      "want",
+      "chance",
+      "lot",
+      "shock",
+      "immune",
+      "system",
+      "pick",
+      "allergy",
+      "reveal",
+      "career",
+      "immunology",
+      "pathology"
+    ]
+  },
+  {
+    "course_id": 618,
+    "keywords": [
+      "excellency",
+      "found",
+      "content",
+      "everyone",
+      "resistance",
+      "science",
+      "information",
+      "topic",
+      "venture",
+      "farming",
+      "use",
+      "chain",
+      "food"
+    ]
+  },
+  {
+    "course_id": 619,
+    "keywords": [
+      "stewardship",
+      "knowledge",
+      "resistance",
+      "spread"
+    ]
+  },
+  {
+    "course_id": 620,
+    "keywords": [
+      "speaking",
+      "way",
+      "level",
+      "presentation",
+      "content",
+      "easiness",
+      "confidence",
+      "gain",
+      "presenter",
+      "amongst",
+      "fun",
+      "variety",
+      "review"
+    ]
+  },
+  {
+    "course_id": 621,
+    "keywords": [
+      "process",
+      "venture"
+    ]
+  },
+  {
+    "course_id": 622,
+    "keywords": [
+      "learning",
+      "play",
+      "disruption",
+      "support"
+    ]
+  },
+  {
+    "course_id": 623,
+    "keywords": [
+      "research",
+      "appraisal",
+      "literature"
+    ]
+  },
+  {
+    "course_id": 624,
+    "keywords": [
+      "expert",
+      "excellent",
+      "found",
+      "introduction",
+      "level",
+      "education",
+      "educator",
+      "food",
+      "reflection",
+      "teaching",
+      "philosophy",
+      "discussion"
+    ]
+  },
+  {
+    "course_id": 625,
+    "keywords": [
+      "globe",
+      "award",
+      "quality",
+      "architecture",
+      "life"
+    ]
+  },
+  {
+    "course_id": 626,
+    "keywords": [
+      "dementia",
+      "support",
+      "informative",
+      "thought",
+      "quite",
+      "everybody",
+      "help",
+      "job",
+      "stick",
+      "week",
+      "start"
+    ]
+  },
+  {
+    "course_id": 627,
+    "keywords": [
+      "tree",
+      "research",
+      "share",
+      "family",
+      "genealogy"
+    ]
+  },
+  {
+    "course_id": 628,
+    "keywords": [
+      "education"
+    ]
+  },
+  {
+    "course_id": 629,
+    "keywords": [
+      "analysis",
+      "image"
+    ]
+  },
+  {
+    "course_id": 630,
+    "keywords": [
+      "innovation",
+      "farming",
+      "digital",
+      "help",
+      "intensification"
+    ]
+  },
+  {
+    "course_id": 631,
+    "keywords": [
+      "introduction",
+      "diplomacy",
+      "broaden",
+      "knowledge",
+      "week"
+    ]
+  },
+  {
+    "course_id": 632,
+    "keywords": [
+      "view",
+      "role",
+      "story",
+      "curve",
+      "everything",
+      "review",
+      "building",
+      "use",
+      "west"
+    ]
+  },
+  {
+    "course_id": 633,
+    "keywords": [
+      "guide",
+      "researcher"
+    ]
+  },
+  {
+    "course_id": 634,
+    "keywords": [
+      "knowledge",
+      "step",
+      "grade",
+      "curriculum",
+      "part",
+      "jump",
+      "pardon",
+      "pun",
+      "opportunity",
+      "plenty",
+      "practice",
+      "taught",
+      "th",
+      "teach"
+    ]
+  },
+  {
+    "course_id": 635,
+    "keywords": [
+      "donation",
+      "key",
+      "understand",
+      "world"
+    ]
+  },
+  {
+    "course_id": 636,
+    "keywords": [
+      "management",
+      "anyone",
+      "encourage",
+      "relevant",
+      "content",
+      "life",
+      "passionate",
+      "style",
+      "board",
+      "line",
+      "manager",
+      "role"
+    ]
+  },
+  {
+    "course_id": 637,
+    "keywords": [
+      "health",
+      "safety",
+      "collaboration",
+      "college",
+      "prepare"
+    ]
+  },
+  {
+    "course_id": 638,
+    "keywords": [
+      "school",
+      "protect",
+      "spread"
+    ]
+  },
+  {
+    "course_id": 639,
+    "keywords": [
+      "management",
+      "service"
+    ]
+  },
+  {
+    "course_id": 640,
+    "keywords": [
+      "everybody"
+    ]
+  },
+  {
+    "course_id": 641,
+    "keywords": [
+      "chose",
+      "thought",
+      "analysis",
+      "impact",
+      "ideology",
+      "chance",
+      "see",
+      "propaganda",
+      "life",
+      "brain",
+      "need",
+      "working"
+    ]
+  },
+  {
+    "course_id": 642,
+    "keywords": [
+      "study",
+      "work"
+    ]
+  },
+  {
+    "course_id": 643,
+    "keywords": [
+      "emotional",
+      "support",
+      "variety",
+      "share",
+      "way",
+      "knowledge",
+      "style",
+      "help",
+      "information"
+    ]
+  },
+  {
+    "course_id": 644,
+    "keywords": [
+      "care",
+      "target",
+      "resistance",
+      "use"
+    ]
+  },
+  {
+    "course_id": 645,
+    "keywords": []
+  },
+  {
+    "course_id": 646,
+    "keywords": [
+      "educator",
+      "relevant",
+      "design",
+      "understand",
+      "coverage",
+      "information",
+      "learning",
+      "food",
+      "thought",
+      "view",
+      "identity",
+      "research"
+    ]
+  },
+  {
+    "course_id": 647,
+    "keywords": [
+      "situation",
+      "cable",
+      "university",
+      "introduction",
+      "lot",
+      "prosperity",
+      "theory",
+      "wealth"
+    ]
+  },
+  {
+    "course_id": 648,
+    "keywords": [
+      "reading",
+      "comprehensive",
+      "level",
+      "step",
+      "test",
+      "approach",
+      "task",
+      "exam",
+      "overcome"
+    ]
+  },
+  {
+    "course_id": 649,
+    "keywords": [
+      "speaking",
+      "wonderful",
+      "educative",
+      "helpful",
+      "super",
+      "test",
+      "step",
+      "review"
+    ]
+  },
+  {
+    "course_id": 650,
+    "keywords": [
+      "evolution",
+      "material",
+      "date",
+      "classroom",
+      "right",
+      "content",
+      "review",
+      "zoology",
+      "grounding",
+      "selection",
+      "level"
+    ]
+  },
+  {
+    "course_id": 651,
+    "keywords": [
+      "found",
+      "content",
+      "expectation",
+      "compliant",
+      "regulation",
+      "knowledge",
+      "information",
+      "protection"
+    ]
+  },
+  {
+    "course_id": 652,
+    "keywords": [
+      "content",
+      "something",
+      "health",
+      "literacy",
+      "line",
+      "name",
+      "quiz",
+      "test"
+    ]
+  },
+  {
+    "course_id": 653,
+    "keywords": [
+      "community",
+      "research"
+    ]
+  },
+  {
+    "course_id": 654,
+    "keywords": [
+      "governance"
+    ]
+  },
+  {
+    "course_id": 655,
+    "keywords": [
+      "focus",
+      "introduction",
+      "mindfulness"
+    ]
+  },
+  {
+    "course_id": 656,
+    "keywords": [
+      "content",
+      "title",
+      "music",
+      "move",
+      "bit",
+      "mind",
+      "something",
+      "college",
+      "lot",
+      "project"
+    ]
+  },
+  {
+    "course_id": 657,
+    "keywords": [
+      "legacy",
+      "life",
+      "university"
+    ]
+  },
+  {
+    "course_id": 658,
+    "keywords": [
+      "level",
+      "everything",
+      "content",
+      "perspective",
+      "fear",
+      "poem",
+      "study",
+      "pace",
+      "taught",
+      "analyse",
+      "writing",
+      "helpful",
+      "part",
+      "process"
+    ]
+  },
+  {
+    "course_id": 659,
+    "keywords": [
+      "analysis",
+      "plagiarism",
+      "guide",
+      "study",
+      "university"
+    ]
+  },
+  {
+    "course_id": 660,
+    "keywords": [
+      "fun",
+      "found",
+      "interest",
+      "area",
+      "brain",
+      "get",
+      "deductive",
+      "thinking",
+      "introduction",
+      "math",
+      "answer",
+      "perseverance",
+      "see"
+    ]
+  },
+  {
+    "course_id": 661,
+    "keywords": [
+      "dig",
+      "lab",
+      "introduction",
+      "vale"
+    ]
+  },
+  {
+    "course_id": 662,
+    "keywords": [
+      "function",
+      "protein"
+    ]
+  },
+  {
+    "course_id": 663,
+    "keywords": [
+      "life",
+      "biochemistry",
+      "demand",
+      "health",
+      "society"
+    ]
+  },
+  {
+    "course_id": 664,
+    "keywords": [
+      "building",
+      "connection",
+      "world"
+    ]
+  },
+  {
+    "course_id": 665,
+    "keywords": [
+      "level",
+      "career",
+      "excellent",
+      "lot",
+      "content",
+      "right",
+      "management"
+    ]
+  },
+  {
+    "course_id": 666,
+    "keywords": [
+      "competition",
+      "make",
+      "burke",
+      "strategy"
+    ]
+  },
+  {
+    "course_id": 667,
+    "keywords": [
+      "income",
+      "health",
+      "prepare",
+      "disease"
+    ]
+  },
+  {
+    "course_id": 668,
+    "keywords": [
+      "ecosystem"
+    ]
+  },
+  {
+    "course_id": 669,
+    "keywords": [
+      "justice"
+    ]
+  },
+  {
+    "course_id": 670,
+    "keywords": [
+      "excellent",
+      "user",
+      "guide",
+      "find",
+      "kino",
+      "vision"
+    ]
+  },
+  {
+    "course_id": 671,
+    "keywords": [
+      "science"
+    ]
+  },
+  {
+    "course_id": 672,
+    "keywords": [
+      "biology",
+      "realistic",
+      "excellent",
+      "interesting",
+      "attend",
+      "brain",
+      "treat",
+      "hope",
+      "future",
+      "sort",
+      "cure",
+      "disease",
+      "case",
+      "content",
+      "understanding"
+    ]
+  },
+  {
+    "course_id": 673,
+    "keywords": [
+      "tell",
+      "slavery",
+      "interest",
+      "part",
+      "history",
+      "legacy",
+      "oppression",
+      "slave",
+      "knowledge"
+    ]
+  },
+  {
+    "course_id": 674,
+    "keywords": [
+      "research"
+    ]
+  },
+  {
+    "course_id": 675,
+    "keywords": [
+      "stem",
+      "information",
+      "communication",
+      "ambassador",
+      "appropriate",
+      "level"
+    ]
+  },
+  {
+    "course_id": 676,
+    "keywords": [
+      "stem",
+      "feedback",
+      "help",
+      "use"
+    ]
+  },
+  {
+    "course_id": 677,
+    "keywords": [
+      "found",
+      "ambassador",
+      "stem",
+      "experience",
+      "link",
+      "part"
+    ]
+  },
+  {
+    "course_id": 678,
+    "keywords": [
+      "diversity",
+      "excellent",
+      "work",
+      "start",
+      "today",
+      "stem",
+      "inspire",
+      "interest",
+      "level"
+    ]
+  },
+  {
+    "course_id": 679,
+    "keywords": [
+      "communication",
+      "interaction"
+    ]
+  },
+  {
+    "course_id": 680,
+    "keywords": [
+      "career",
+      "insight",
+      "concept",
+      "overview",
+      "access",
+      "use",
+      "variety"
+    ]
+  },
+  {
+    "course_id": 681,
+    "keywords": [
+      "construction",
+      "health"
+    ]
+  },
+  {
+    "course_id": 682,
+    "keywords": [
+      "azure",
+      "cloud",
+      "knowledge",
+      "level"
+    ]
+  },
+  {
+    "course_id": 683,
+    "keywords": [
+      "felt",
+      "follow",
+      "succinct",
+      "mouth",
+      "care",
+      "health",
+      "setting",
+      "someone"
+    ]
+  },
+  {
+    "course_id": 684,
+    "keywords": [
+      "tackling",
+      "cognition",
+      "education",
+      "today"
+    ]
+  },
+  {
+    "course_id": 685,
+    "keywords": [
+      "lot",
+      "information",
+      "content",
+      "relevant",
+      "disease",
+      "nutrition",
+      "background",
+      "layman",
+      "someone",
+      "prevention"
+    ]
+  },
+  {
+    "course_id": 686,
+    "keywords": [
+      "estate",
+      "career",
+      "property"
+    ]
+  },
+  {
+    "course_id": 687,
+    "keywords": [
+      "syllabus",
+      "level",
+      "learnt",
+      "lot",
+      "period",
+      "university",
+      "influence",
+      "power",
+      "work"
+    ]
+  },
+  {
+    "course_id": 688,
+    "keywords": [
+      "speaking",
+      "excellent",
+      "thing"
+    ]
+  },
+  {
+    "course_id": 689,
+    "keywords": [
+      "ancient",
+      "tour",
+      "history",
+      "model"
+    ]
+  },
+  {
+    "course_id": 690,
+    "keywords": [
+      "science",
+      "service"
+    ]
+  },
+  {
+    "course_id": 691,
+    "keywords": [
+      "education",
+      "study"
+    ]
+  },
+  {
+    "course_id": 692,
+    "keywords": [
+      "power",
+      "informative",
+      "hidden",
+      "contribute",
+      "appreciate",
+      "mean",
+      "today",
+      "passing",
+      "teach"
+    ]
+  },
+  {
+    "course_id": 693,
+    "keywords": [
+      "educator",
+      "health",
+      "training"
+    ]
+  },
+  {
+    "course_id": 694,
+    "keywords": [
+      "health",
+      "psychology"
+    ]
+  },
+  {
+    "course_id": 695,
+    "keywords": [
+      "assist",
+      "help",
+      "fertility",
+      "food",
+      "medicine"
+    ]
+  },
+  {
+    "course_id": 696,
+    "keywords": [
+      "history",
+      "explore",
+      "partnership",
+      "fashion",
+      "royal"
+    ]
+  },
+  {
+    "course_id": 697,
+    "keywords": [
+      "elementary",
+      "listening",
+      "level",
+      "think",
+      "thought",
+      "love",
+      "field"
+    ]
+  },
+  {
+    "course_id": 698,
+    "keywords": [
+      "ballot",
+      "suffrage",
+      "today"
+    ]
+  },
+  {
+    "course_id": 699,
+    "keywords": [
+      "delivery",
+      "experience",
+      "content",
+      "treating",
+      "application",
+      "care",
+      "covid",
+      "management"
+    ]
+  },
+  {
+    "course_id": 700,
+    "keywords": [
+      "difference",
+      "science"
+    ]
+  },
+  {
+    "course_id": 701,
+    "keywords": [
+      "create",
+      "business",
+      "plan"
+    ]
+  },
+  {
+    "course_id": 702,
+    "keywords": [
+      "mining",
+      "weka",
+      "mine",
+      "workbench"
+    ]
+  },
+  {
+    "course_id": 703,
+    "keywords": [
+      "management",
+      "research"
+    ]
+  },
+  {
+    "course_id": 704,
+    "keywords": [
+      "mindfulness",
+      "discover",
+      "perspective",
+      "science"
+    ]
+  },
+  {
+    "course_id": 705,
+    "keywords": [
+      "superb",
+      "level",
+      "glad",
+      "concise",
+      "information",
+      "content",
+      "interesting",
+      "detail",
+      "understand",
+      "patient",
+      "discover"
+    ]
+  },
+  {
+    "course_id": 706,
+    "keywords": [
+      "research",
+      "community"
+    ]
+  },
+  {
+    "course_id": 707,
+    "keywords": [
+      "title",
+      "glad",
+      "instruction",
+      "medium",
+      "knowledge",
+      "language",
+      "pursue",
+      "recommend"
+    ]
+  },
+  {
+    "course_id": 708,
+    "keywords": [
+      "level",
+      "world",
+      "congratulate",
+      "team",
+      "career",
+      "communication",
+      "language"
+    ]
+  },
+  {
+    "course_id": 709,
+    "keywords": [
+      "right",
+      "progress",
+      "play",
+      "level",
+      "development",
+      "learning",
+      "help",
+      "everything",
+      "experience",
+      "content",
+      "teaching",
+      "week"
+    ]
+  },
+  {
+    "course_id": 710,
+    "keywords": [
+      "modeling",
+      "energy",
+      "develop",
+      "look",
+      "use"
+    ]
+  },
+  {
+    "course_id": 711,
+    "keywords": [
+      "excellent",
+      "level",
+      "interesting",
+      "avid",
+      "class",
+      "future",
+      "learner",
+      "investigation",
+      "witness",
+      "expectation",
+      "experience",
+      "someone"
+    ]
+  },
+  {
+    "course_id": 712,
+    "keywords": [
+      "deliver",
+      "health",
+      "approach",
+      "community",
+      "medicine"
+    ]
+  },
+  {
+    "course_id": 713,
+    "keywords": [
+      "introduction",
+      "interaction",
+      "teacher",
+      "address",
+      "philosophy",
+      "information",
+      "lot",
+      "feedback"
+    ]
+  },
+  {
+    "course_id": 714,
+    "keywords": [
+      "computation",
+      "work",
+      "architecture",
+      "computer",
+      "logic"
+    ]
+  },
+  {
+    "course_id": 715,
+    "keywords": [
+      "content",
+      "account",
+      "standard",
+      "bay",
+      "country",
+      "list",
+      "board",
+      "level"
+    ]
+  },
+  {
+    "course_id": 716,
+    "keywords": [
+      "food",
+      "fraud",
+      "introduction",
+      "science"
+    ]
+  },
+  {
+    "course_id": 717,
+    "keywords": [
+      "content",
+      "team",
+      "relevant",
+      "progression",
+      "management",
+      "innovation",
+      "age",
+      "disruption",
+      "design",
+      "work"
+    ]
+  },
+  {
+    "course_id": 718,
+    "keywords": [
+      "education",
+      "innovation"
+    ]
+  },
+  {
+    "course_id": 719,
+    "keywords": [
+      "cancer"
+    ]
+  },
+  {
+    "course_id": 720,
+    "keywords": [
+      "developmental",
+      "everything",
+      "excellent",
+      "experience",
+      "health",
+      "content",
+      "perfect"
+    ]
+  },
+  {
+    "course_id": 721,
+    "keywords": [
+      "love",
+      "recommend",
+      "concise",
+      "engaging",
+      "information",
+      "introduction",
+      "future",
+      "idea",
+      "manager",
+      "business",
+      "management"
+    ]
+  },
+  {
+    "course_id": 722,
+    "keywords": [
+      "security",
+      "introduction",
+      "beginner",
+      "core",
+      "learnt",
+      "way",
+      "knowledge",
+      "protect",
+      "brain",
+      "lot",
+      "power"
+    ]
+  },
+  {
+    "course_id": 723,
+    "keywords": [
+      "climate",
+      "stance",
+      "introduction",
+      "food",
+      "science",
+      "feel",
+      "world"
+    ]
+  },
+  {
+    "course_id": 724,
+    "keywords": [
+      "excellent",
+      "syllabus",
+      "practical",
+      "application",
+      "beginner",
+      "law",
+      "economy",
+      "handle",
+      "content",
+      "lot",
+      "essence",
+      "everyone",
+      "express"
+    ]
+  },
+  {
+    "course_id": 725,
+    "keywords": [
+      "perfect",
+      "glad",
+      "level",
+      "lot",
+      "introduction",
+      "foundation",
+      "order",
+      "cost",
+      "join",
+      "service",
+      "knowledge"
+    ]
+  },
+  {
+    "course_id": 726,
+    "keywords": [
+      "change",
+      "injustice",
+      "tackle",
+      "work"
+    ]
+  },
+  {
+    "course_id": 727,
+    "keywords": [
+      "marketing",
+      "awesome",
+      "thing",
+      "excellent",
+      "provide",
+      "topic",
+      "future",
+      "level",
+      "use"
+    ]
+  },
+  {
+    "course_id": 728,
+    "keywords": [
+      "knowledge",
+      "level",
+      "way",
+      "specialist",
+      "teacher",
+      "blow",
+      "understanding",
+      "bite",
+      "content",
+      "classroom",
+      "confidence",
+      "learning",
+      "school"
+    ]
+  },
+  {
+    "course_id": 729,
+    "keywords": [
+      "informative",
+      "enjoyable",
+      "helpful",
+      "subject",
+      "stem",
+      "world",
+      "life",
+      "opportunity",
+      "calculation",
+      "demonstration",
+      "knowledge",
+      "proportion",
+      "ratio",
+      "scaling"
+    ]
+  },
+  {
+    "course_id": 730,
+    "keywords": [
+      "gain",
+      "follow",
+      "administration",
+      "medicine",
+      "investment",
+      "security",
+      "management",
+      "balance",
+      "material",
+      "video",
+      "lot",
+      "step",
+      "time"
+    ]
+  },
+  {
+    "course_id": 731,
+    "keywords": [
+      "marine"
+    ]
+  },
+  {
+    "course_id": 732,
+    "keywords": [
+      "system",
+      "science"
+    ]
+  },
+  {
+    "course_id": 733,
+    "keywords": [
+      "family",
+      "place"
+    ]
+  },
+  {
+    "course_id": 734,
+    "keywords": [
+      "content",
+      "comprehensive",
+      "excellent",
+      "reading",
+      "time",
+      "lot",
+      "century",
+      "radicalism",
+      "reform",
+      "history",
+      "parliament",
+      "protest",
+      "board",
+      "brilliant",
+      "week"
+    ]
+  },
+  {
+    "course_id": 735,
+    "keywords": [
+      "health",
+      "accountability",
+      "equity",
+      "quality"
+    ]
+  },
+  {
+    "course_id": 736,
+    "keywords": [
+      "assessment",
+      "thorough",
+      "tell",
+      "practice"
+    ]
+  },
+  {
+    "course_id": 737,
+    "keywords": [
+      "brilliant",
+      "content",
+      "pop",
+      "good",
+      "lot",
+      "art",
+      "level",
+      "taster",
+      "week",
+      "history",
+      "side",
+      "world"
+    ]
+  },
+  {
+    "course_id": 738,
+    "keywords": [
+      "performance",
+      "help",
+      "python",
+      "work"
+    ]
+  },
+  {
+    "course_id": 739,
+    "keywords": [
+      "conflict",
+      "day",
+      "role",
+      "religion"
+    ]
+  },
+  {
+    "course_id": 740,
+    "keywords": [
+      "dialogue",
+      "level",
+      "phase",
+      "methodology"
+    ]
+  },
+  {
+    "course_id": 741,
+    "keywords": []
+  },
+  {
+    "course_id": 742,
+    "keywords": [
+      "context",
+      "explore",
+      "review",
+      "stagecraft",
+      "merchant",
+      "approach",
+      "follow",
+      "video"
+    ]
+  },
+  {
+    "course_id": 743,
+    "keywords": [
+      "start",
+      "skill",
+      "fiction"
+    ]
+  },
+  {
+    "course_id": 744,
+    "keywords": [
+      "step",
+      "follow",
+      "taught",
+      "career",
+      "mind",
+      "platform",
+      "care",
+      "content",
+      "everyone"
+    ]
+  },
+  {
+    "course_id": 745,
+    "keywords": [
+      "human",
+      "science"
+    ]
+  },
+  {
+    "course_id": 746,
+    "keywords": [
+      "content",
+      "level",
+      "cement",
+      "code",
+      "introduction",
+      "scratch",
+      "primary",
+      "introductory",
+      "key",
+      "understand"
+    ]
+  },
+  {
+    "course_id": 747,
+    "keywords": [
+      "crisis",
+      "recovery",
+      "future",
+      "history"
+    ]
+  },
+  {
+    "course_id": 748,
+    "keywords": [
+      "health",
+      "promotion",
+      "science"
+    ]
+  },
+  {
+    "course_id": 749,
+    "keywords": [
+      "delightful",
+      "level",
+      "taught",
+      "happiness",
+      "way",
+      "path",
+      "food",
+      "matter",
+      "number"
+    ]
+  },
+  {
+    "course_id": 750,
+    "keywords": [
+      "business",
+      "culture",
+      "fashion"
+    ]
+  },
+  {
+    "course_id": 751,
+    "keywords": [
+      "law",
+      "policy",
+      "application",
+      "development",
+      "intelligence"
+    ]
+  },
+  {
+    "course_id": 752,
+    "keywords": [
+      "disability",
+      "introduction",
+      "clearer",
+      "gain"
+    ]
+  },
+  {
+    "course_id": 753,
+    "keywords": [
+      "learning",
+      "found",
+      "practice",
+      "engaging",
+      "discover",
+      "environment",
+      "access"
+    ]
+  },
+  {
+    "course_id": 754,
+    "keywords": [
+      "science"
+    ]
+  },
+  {
+    "course_id": 755,
+    "keywords": [
+      "age",
+      "diplomacy"
+    ]
+  },
+  {
+    "course_id": 756,
+    "keywords": [
+      "culture",
+      "leadership"
+    ]
+  },
+  {
+    "course_id": 757,
+    "keywords": [
+      "topic",
+      "excellent",
+      "series",
+      "fair",
+      "view",
+      "module",
+      "resource",
+      "justice",
+      "management",
+      "property",
+      "team",
+      "university"
+    ]
+  },
+  {
+    "course_id": 758,
+    "keywords": [
+      "importance",
+      "level",
+      "refresh",
+      "content",
+      "presentation",
+      "grateful",
+      "quality",
+      "anatomy",
+      "educator",
+      "nutrition",
+      "work"
+    ]
+  },
+  {
+    "course_id": 759,
+    "keywords": [
+      "everyone",
+      "interesting",
+      "content",
+      "food"
+    ]
+  },
+  {
+    "course_id": 760,
+    "keywords": [
+      "thinking",
+      "design"
+    ]
+  },
+  {
+    "course_id": 761,
+    "keywords": [
+      "excellent",
+      "journey",
+      "expectant",
+      "confidence",
+      "birth"
+    ]
+  },
+  {
+    "course_id": 762,
+    "keywords": [
+      "fascinating",
+      "excellent",
+      "future",
+      "interactive",
+      "man",
+      "riveting",
+      "awake",
+      "language"
+    ]
+  },
+  {
+    "course_id": 763,
+    "keywords": [
+      "basic",
+      "mixture",
+      "environment",
+      "knowledge",
+      "combination",
+      "experience",
+      "health",
+      "become",
+      "concept",
+      "promising"
+    ]
+  },
+  {
+    "course_id": 764,
+    "keywords": [
+      "development",
+      "teacher",
+      "career"
+    ]
+  },
+  {
+    "course_id": 765,
+    "keywords": [
+      "level",
+      "helpful",
+      "lot",
+      "information",
+      "use",
+      "difference",
+      "impact",
+      "research",
+      "fellow",
+      "practice",
+      "straightforward"
+    ]
+  },
+  {
+    "course_id": 766,
+    "keywords": [
+      "future",
+      "innovation"
+    ]
+  },
+  {
+    "course_id": 767,
+    "keywords": [
+      "right",
+      "wonderful",
+      "realization",
+      "inequality",
+      "anybody",
+      "bam",
+      "education",
+      "content",
+      "end",
+      "helpful",
+      "experience",
+      "learner",
+      "vision",
+      "help",
+      "technology"
+    ]
+  },
+  {
+    "course_id": 768,
+    "keywords": [
+      "risk",
+      "cancer",
+      "detection"
+    ]
+  },
+  {
+    "course_id": 769,
+    "keywords": [
+      "ideal",
+      "inspiring",
+      "plant",
+      "biology",
+      "science"
+    ]
+  },
+  {
+    "course_id": 770,
+    "keywords": [
+      "home",
+      "learning",
+      "pandemic",
+      "transition"
+    ]
+  },
+  {
+    "course_id": 771,
+    "keywords": [
+      "judiciary",
+      "love",
+      "insight",
+      "system",
+      "right",
+      "knowledge",
+      "level",
+      "balance",
+      "competent",
+      "discussion"
+    ]
+  },
+  {
+    "course_id": 772,
+    "keywords": [
+      "science",
+      "success"
+    ]
+  },
+  {
+    "course_id": 773,
+    "keywords": [
+      "business",
+      "cycling",
+      "information",
+      "development",
+      "start",
+      "begin",
+      "guidance",
+      "starting",
+      "moment",
+      "project"
+    ]
+  },
+  {
+    "course_id": 774,
+    "keywords": [
+      "class",
+      "world",
+      "apply",
+      "practice",
+      "success"
+    ]
+  },
+  {
+    "course_id": 775,
+    "keywords": [
+      "food",
+      "nutrition",
+      "understand",
+      "medicine"
+    ]
+  },
+  {
+    "course_id": 776,
+    "keywords": [
+      "genome",
+      "medicine",
+      "power"
+    ]
+  },
+  {
+    "course_id": 777,
+    "keywords": []
+  },
+  {
+    "course_id": 778,
+    "keywords": [
+      "research",
+      "scale",
+      "gain",
+      "michigan",
+      "university"
+    ]
+  },
+  {
+    "course_id": 779,
+    "keywords": [
+      "pertinent",
+      "ranging",
+      "introduction",
+      "citizenship",
+      "potential",
+      "mark",
+      "part",
+      "citizen",
+      "community",
+      "encouragement",
+      "get"
+    ]
+  },
+  {
+    "course_id": 780,
+    "keywords": [
+      "enterprise",
+      "innovation"
+    ]
+  },
+  {
+    "course_id": 781,
+    "keywords": [
+      "potential",
+      "sustainable",
+      "contribution",
+      "society",
+      "world"
+    ]
+  },
+  {
+    "course_id": 782,
+    "keywords": [
+      "environment",
+      "range",
+      "relevant",
+      "helpful",
+      "thought",
+      "university",
+      "edge",
+      "learner",
+      "communication",
+      "lot"
+    ]
+  },
+  {
+    "course_id": 783,
+    "keywords": [
+      "workplace",
+      "career",
+      "tomorrow"
+    ]
+  },
+  {
+    "course_id": 784,
+    "keywords": [
+      "outbreak",
+      "attendance",
+      "manage",
+      "care",
+      "covid"
+    ]
+  },
+  {
+    "course_id": 785,
+    "keywords": [
+      "helpful",
+      "material",
+      "versatile",
+      "excellent",
+      "explanation",
+      "interpretation",
+      "introduction",
+      "methodology",
+      "language",
+      "corpus",
+      "analysis",
+      "chance",
+      "work"
+    ]
+  },
+  {
+    "course_id": 786,
+    "keywords": [
+      "duration",
+      "perfect",
+      "refresher",
+      "introduction",
+      "assessment",
+      "felt",
+      "material",
+      "read",
+      "content"
+    ]
+  },
+  {
+    "course_id": 787,
+    "keywords": [
+      "reconstruction",
+      "case",
+      "crime",
+      "technique"
+    ]
+  },
+  {
+    "course_id": 788,
+    "keywords": [
+      "supercharge",
+      "content",
+      "introduction",
+      "functional",
+      "language",
+      "university"
+    ]
+  },
+  {
+    "course_id": 789,
+    "keywords": [
+      "chose",
+      "lot",
+      "heart",
+      "background",
+      "risk",
+      "home",
+      "beginner",
+      "health"
+    ]
+  },
+  {
+    "course_id": 790,
+    "keywords": [
+      "job",
+      "perfect",
+      "opportunity",
+      "helpful",
+      "student",
+      "graduate",
+      "deal",
+      "process"
+    ]
+  },
+  {
+    "course_id": 791,
+    "keywords": [
+      "project",
+      "help"
+    ]
+  },
+  {
+    "course_id": 792,
+    "keywords": [
+      "education",
+      "health",
+      "need",
+      "teaching"
+    ]
+  },
+  {
+    "course_id": 793,
+    "keywords": [
+      "psychology",
+      "introduction",
+      "science",
+      "mind"
+    ]
+  },
+  {
+    "course_id": 794,
+    "keywords": [
+      "please",
+      "newcomer",
+      "introduction",
+      "bit",
+      "harder",
+      "language",
+      "beginner",
+      "learning",
+      "travel",
+      "country",
+      "culture",
+      "start",
+      "today",
+      "level",
+      "someone"
+    ]
+  },
+  {
+    "course_id": 795,
+    "keywords": [
+      "introduction",
+      "psychology",
+      "sociology"
+    ]
+  },
+  {
+    "course_id": 796,
+    "keywords": [
+      "content",
+      "whilst",
+      "introduction",
+      "calligraphy",
+      "art",
+      "develop",
+      "understand"
+    ]
+  },
+  {
+    "course_id": 797,
+    "keywords": [
+      "language",
+      "truth",
+      "evaluate",
+      "form",
+      "use"
+    ]
+  },
+  {
+    "course_id": 798,
+    "keywords": [
+      "view",
+      "use",
+      "work",
+      "school",
+      "create",
+      "discover",
+      "context",
+      "gather",
+      "resilience",
+      "experience",
+      "classroom",
+      "science"
+    ]
+  },
+  {
+    "course_id": 799,
+    "keywords": [
+      "refresher",
+      "tell",
+      "management",
+      "project",
+      "eye",
+      "opening",
+      "find",
+      "knowledge",
+      "manage",
+      "area",
+      "information",
+      "detail",
+      "lot",
+      "manager"
+    ]
+  },
+  {
+    "course_id": 800,
+    "keywords": [
+      "level",
+      "fact",
+      "fiction",
+      "review",
+      "knowledge",
+      "disease",
+      "recommendation",
+      "student",
+      "community",
+      "mind",
+      "title",
+      "prevent",
+      "reverse"
+    ]
+  },
+  {
+    "course_id": 801,
+    "keywords": [
+      "deal",
+      "make",
+      "today"
+    ]
+  },
+  {
+    "course_id": 802,
+    "keywords": [
+      "space",
+      "content",
+      "science",
+      "information",
+      "range",
+      "enthusiasm",
+      "excitement",
+      "happening"
+    ]
+  },
+  {
+    "course_id": 803,
+    "keywords": [
+      "report",
+      "engineering"
+    ]
+  },
+  {
+    "course_id": 804,
+    "keywords": [
+      "borne",
+      "vector"
+    ]
+  },
+  {
+    "course_id": 805,
+    "keywords": [
+      "action",
+      "turn"
+    ]
+  },
+  {
+    "course_id": 806,
+    "keywords": [
+      "care"
+    ]
+  },
+  {
+    "course_id": 807,
+    "keywords": [
+      "thought",
+      "interesting",
+      "newcomer",
+      "peak",
+      "mindfulness",
+      "lot",
+      "topic",
+      "practice",
+      "video",
+      "performance",
+      "study",
+      "work"
+    ]
+  },
+  {
+    "course_id": 808,
+    "keywords": [
+      "want",
+      "found",
+      "education",
+      "investigate",
+      "knowledge",
+      "change",
+      "societal",
+      "research",
+      "way"
+    ]
+  },
+  {
+    "course_id": 809,
+    "keywords": [
+      "school",
+      "change"
+    ]
+  },
+  {
+    "course_id": 810,
+    "keywords": [
+      "framework",
+      "understand",
+      "use"
+    ]
+  },
+  {
+    "course_id": 811,
+    "keywords": [
+      "today",
+      "way",
+      "history",
+      "post",
+      "war"
+    ]
+  },
+  {
+    "course_id": 812,
+    "keywords": [
+      "learning",
+      "informative",
+      "level",
+      "right",
+      "review"
+    ]
+  },
+  {
+    "course_id": 813,
+    "keywords": [
+      "love",
+      "glad",
+      "level",
+      "vocabulary",
+      "right",
+      "language",
+      "label",
+      "quiz",
+      "culture"
+    ]
+  },
+  {
+    "course_id": 814,
+    "keywords": [
+      "classroom",
+      "animation"
+    ]
+  },
+  {
+    "course_id": 815,
+    "keywords": [
+      "individual",
+      "project"
+    ]
+  },
+  {
+    "course_id": 816,
+    "keywords": [
+      "awesome",
+      "think",
+      "manager",
+      "life",
+      "leadership",
+      "curiosity"
+    ]
+  },
+  {
+    "course_id": 817,
+    "keywords": [
+      "help"
+    ]
+  },
+  {
+    "course_id": 818,
+    "keywords": [
+      "assessment",
+      "learning"
+    ]
+  },
+  {
+    "course_id": 819,
+    "keywords": [
+      "experience",
+      "introduction",
+      "user"
+    ]
+  },
+  {
+    "course_id": 820,
+    "keywords": [
+      "informative",
+      "use",
+      "lot",
+      "behaviour",
+      "learning",
+      "deepen",
+      "knowledge",
+      "review",
+      "classroom"
+    ]
+  },
+  {
+    "course_id": 821,
+    "keywords": [
+      "metabolism",
+      "excellent",
+      "century",
+      "introduction",
+      "study",
+      "hope",
+      "level",
+      "taught"
+    ]
+  },
+  {
+    "course_id": 822,
+    "keywords": [
+      "continuity",
+      "transition",
+      "business",
+      "recruitment"
+    ]
+  },
+  {
+    "course_id": 823,
+    "keywords": [
+      "excellent",
+      "remember",
+      "upgrade",
+      "ground",
+      "spin",
+      "bit",
+      "stretch",
+      "theory",
+      "calculus",
+      "gain",
+      "introduction"
+    ]
+  },
+  {
+    "course_id": 824,
+    "keywords": [
+      "science",
+      "worth",
+      "excellent",
+      "practical",
+      "primary",
+      "year",
+      "content",
+      "group",
+      "way"
+    ]
+  },
+  {
+    "course_id": 825,
+    "keywords": [
+      "information",
+      "helpful",
+      "learning",
+      "engaging",
+      "home",
+      "communication",
+      "feedback",
+      "tip"
+    ]
+  },
+  {
+    "course_id": 826,
+    "keywords": [
+      "bit",
+      "found",
+      "part",
+      "work",
+      "disability",
+      "role",
+      "support",
+      "insight",
+      "number",
+      "view",
+      "area"
+    ]
+  },
+  {
+    "course_id": 827,
+    "keywords": [
+      "understand",
+      "read",
+      "work",
+      "force",
+      "support"
+    ]
+  },
+  {
+    "course_id": 828,
+    "keywords": [
+      "development",
+      "case",
+      "study"
+    ]
+  },
+  {
+    "course_id": 829,
+    "keywords": [
+      "freedom",
+      "core",
+      "education",
+      "societal"
+    ]
+  },
+  {
+    "course_id": 830,
+    "keywords": [
+      "introduction",
+      "level",
+      "process",
+      "day",
+      "content",
+      "methodology",
+      "learning",
+      "fun",
+      "speak",
+      "week"
+    ]
+  },
+  {
+    "course_id": 831,
+    "keywords": [
+      "science",
+      "patient",
+      "treatment",
+      "work"
+    ]
+  },
+  {
+    "course_id": 832,
+    "keywords": [
+      "entry",
+      "parent",
+      "supporter"
+    ]
+  },
+  {
+    "course_id": 833,
+    "keywords": [
+      "geometry",
+      "trigonometry",
+      "gain",
+      "knowledge"
+    ]
+  },
+  {
+    "course_id": 834,
+    "keywords": [
+      "job",
+      "level",
+      "building",
+      "future",
+      "science",
+      "field",
+      "snap"
+    ]
+  },
+  {
+    "course_id": 835,
+    "keywords": [
+      "drama",
+      "injustice",
+      "development",
+      "play"
+    ]
+  },
+  {
+    "course_id": 836,
+    "keywords": [
+      "discover",
+      "dentistry"
+    ]
+  },
+  {
+    "course_id": 837,
+    "keywords": [
+      "culture",
+      "industry",
+      "importance",
+      "renaissance"
+    ]
+  },
+  {
+    "course_id": 838,
+    "keywords": [
+      "found",
+      "play",
+      "content",
+      "nature",
+      "value",
+      "life",
+      "importance"
+    ]
+  },
+  {
+    "course_id": 839,
+    "keywords": [
+      "fashion",
+      "super",
+      "inspiring",
+      "knew",
+      "lot",
+      "introduction",
+      "world",
+      "review",
+      "luxury"
+    ]
+  },
+  {
+    "course_id": 840,
+    "keywords": [
+      "health",
+      "facing",
+      "governance"
+    ]
+  },
+  {
+    "course_id": 841,
+    "keywords": [
+      "review",
+      "health",
+      "bias",
+      "day",
+      "part",
+      "material",
+      "mix",
+      "assessment",
+      "get"
+    ]
+  },
+  {
+    "course_id": 842,
+    "keywords": [
+      "introduction",
+      "technology",
+      "business",
+      "enhance",
+      "solve"
+    ]
+  },
+  {
+    "course_id": 843,
+    "keywords": [
+      "introduction",
+      "conversation"
+    ]
+  },
+  {
+    "course_id": 844,
+    "keywords": [
+      "introduction",
+      "grammar"
+    ]
+  },
+  {
+    "course_id": 845,
+    "keywords": [
+      "way",
+      "excellent",
+      "beginner",
+      "follow",
+      "introduction",
+      "content",
+      "format",
+      "tone"
+    ]
+  },
+  {
+    "course_id": 846,
+    "keywords": [
+      "introduction",
+      "leadership",
+      "business"
+    ]
+  },
+  {
+    "course_id": 847,
+    "keywords": [
+      "introduction",
+      "vocabulary",
+      "wonderful",
+      "community",
+      "experience",
+      "university"
+    ]
+  },
+  {
+    "course_id": 848,
+    "keywords": [
+      "heart",
+      "disease",
+      "someone"
+    ]
+  },
+  {
+    "course_id": 849,
+    "keywords": [
+      "sense",
+      "news",
+      "spot",
+      "understand"
+    ]
+  },
+  {
+    "course_id": 850,
+    "keywords": [
+      "help",
+      "university",
+      "career",
+      "leadership",
+      "management",
+      "growing",
+      "act",
+      "situation",
+      "level",
+      "reach",
+      "manager"
+    ]
+  },
+  {
+    "course_id": 851,
+    "keywords": [
+      "content",
+      "heart",
+      "right",
+      "management",
+      "insightful",
+      "role",
+      "team",
+      "business",
+      "plan",
+      "university",
+      "leadership"
+    ]
+  },
+  {
+    "course_id": 852,
+    "keywords": [
+      "content",
+      "lot",
+      "depth",
+      "look",
+      "leadership",
+      "development",
+      "management"
+    ]
+  },
+  {
+    "course_id": 853,
+    "keywords": [
+      "perfect",
+      "opportunity",
+      "everything",
+      "excellent",
+      "encourage",
+      "content",
+      "level",
+      "fill",
+      "information",
+      "leadership",
+      "management",
+      "work",
+      "development",
+      "support",
+      "university"
+    ]
+  },
+  {
+    "course_id": 854,
+    "keywords": [
+      "health"
+    ]
+  },
+  {
+    "course_id": 855,
+    "keywords": [
+      "nutrition"
+    ]
+  },
+  {
+    "course_id": 856,
+    "keywords": [
+      "population",
+      "university",
+      "work",
+      "world"
+    ]
+  },
+  {
+    "course_id": 857,
+    "keywords": [
+      "workplace",
+      "negotiation"
+    ]
+  },
+  {
+    "course_id": 858,
+    "keywords": [
+      "business",
+      "world",
+      "enterprise"
+    ]
+  },
+  {
+    "course_id": 859,
+    "keywords": [
+      "business",
+      "grow",
+      "enterprise"
+    ]
+  },
+  {
+    "course_id": 860,
+    "keywords": [
+      "action",
+      "enterprise"
+    ]
+  },
+  {
+    "course_id": 861,
+    "keywords": [
+      "innovation",
+      "south",
+      "field"
+    ]
+  },
+  {
+    "course_id": 862,
+    "keywords": [
+      "violence"
+    ]
+  },
+  {
+    "course_id": 863,
+    "keywords": [
+      "resource",
+      "management"
+    ]
+  },
+  {
+    "course_id": 864,
+    "keywords": [
+      "age",
+      "science",
+      "system"
+    ]
+  },
+  {
+    "course_id": 865,
+    "keywords": [
+      "practice",
+      "see",
+      "technology"
+    ]
+  },
+  {
+    "course_id": 866,
+    "keywords": [
+      "practitioner",
+      "outline",
+      "anxiety",
+      "helpful",
+      "insightful",
+      "depression",
+      "evidence",
+      "treatment",
+      "person",
+      "understand"
+    ]
+  },
+  {
+    "course_id": 867,
+    "keywords": [
+      "food"
+    ]
+  },
+  {
+    "course_id": 868,
+    "keywords": [
+      "health",
+      "research"
+    ]
+  },
+  {
+    "course_id": 869,
+    "keywords": [
+      "poetry"
+    ]
+  },
+  {
+    "course_id": 870,
+    "keywords": [
+      "lot",
+      "beginner",
+      "guide",
+      "college",
+      "grammar",
+      "use"
+    ]
+  },
+  {
+    "course_id": 871,
+    "keywords": [
+      "level",
+      "lot",
+      "informative",
+      "resistance",
+      "track",
+      "offering",
+      "disease"
+    ]
+  },
+  {
+    "course_id": 872,
+    "keywords": [
+      "business",
+      "background",
+      "get",
+      "green",
+      "create",
+      "help",
+      "introduction",
+      "justice",
+      "longing",
+      "time"
+    ]
+  },
+  {
+    "course_id": 873,
+    "keywords": [
+      "business",
+      "supply",
+      "chain",
+      "channel",
+      "world"
+    ]
+  },
+  {
+    "course_id": 874,
+    "keywords": [
+      "plant"
+    ]
+  },
+  {
+    "course_id": 875,
+    "keywords": [
+      "dental",
+      "image",
+      "practice",
+      "photography"
+    ]
+  },
+  {
+    "course_id": 876,
+    "keywords": [
+      "helpful",
+      "time",
+      "right",
+      "expectation",
+      "grate",
+      "level",
+      "meet",
+      "sector",
+      "share"
+    ]
+  },
+  {
+    "course_id": 877,
+    "keywords": [
+      "rare",
+      "amount",
+      "interesting",
+      "informative",
+      "excellent",
+      "history",
+      "opportunity",
+      "topic",
+      "china",
+      "relationship",
+      "role",
+      "level",
+      "thought"
+    ]
+  },
+  {
+    "course_id": 878,
+    "keywords": [
+      "mediterranean",
+      "health",
+      "science"
+    ]
+  },
+  {
+    "course_id": 879,
+    "keywords": [
+      "comparative",
+      "religion",
+      "relationship",
+      "world"
+    ]
+  },
+  {
+    "course_id": 880,
+    "keywords": [
+      "role",
+      "business",
+      "copyright",
+      "creative"
+    ]
+  },
+  {
+    "course_id": 881,
+    "keywords": [
+      "learning",
+      "excellent",
+      "work",
+      "introduction",
+      "practice",
+      "gain",
+      "human",
+      "company",
+      "importance",
+      "knowledge"
+    ]
+  },
+  {
+    "course_id": 882,
+    "keywords": [
+      "found",
+      "excellent",
+      "consumption",
+      "understanding",
+      "deal",
+      "feel",
+      "body",
+      "effect",
+      "society",
+      "information"
+    ]
+  },
+  {
+    "course_id": 883,
+    "keywords": [
+      "future"
+    ]
+  },
+  {
+    "course_id": 884,
+    "keywords": [
+      "education",
+      "support",
+      "university",
+      "experience",
+      "manage",
+      "assistant",
+      "student",
+      "teaching",
+      "help",
+      "learnt",
+      "please",
+      "lot"
+    ]
+  },
+  {
+    "course_id": 885,
+    "keywords": [
+      "intelligence",
+      "investment",
+      "technology",
+      "michigan",
+      "university"
+    ]
+  },
+  {
+    "course_id": 886,
+    "keywords": [
+      "lot",
+      "excellent",
+      "fact",
+      "superb",
+      "communication",
+      "engagement",
+      "science"
+    ]
+  },
+  {
+    "course_id": 887,
+    "keywords": [
+      "man",
+      "monument",
+      "walter"
+    ]
+  },
+  {
+    "course_id": 888,
+    "keywords": [
+      "present",
+      "join",
+      "work",
+      "word",
+      "thought",
+      "hate",
+      "everyone",
+      "illuminating",
+      "world",
+      "education",
+      "review",
+      "educator",
+      "field",
+      "lot"
+    ]
+  },
+  {
+    "course_id": 889,
+    "keywords": [
+      "pharmacy",
+      "practice",
+      "support"
+    ]
+  },
+  {
+    "course_id": 890,
+    "keywords": [
+      "lawyer",
+      "discover",
+      "understand",
+      "right",
+      "sector",
+      "profession",
+      "level",
+      "content",
+      "lot",
+      "law"
+    ]
+  },
+  {
+    "course_id": 891,
+    "keywords": [
+      "introduction",
+      "technology",
+      "way",
+      "work"
+    ]
+  },
+  {
+    "course_id": 892,
+    "keywords": [
+      "introduce",
+      "content",
+      "offering",
+      "delivery",
+      "excellent",
+      "ai",
+      "data",
+      "intelligence"
+    ]
+  },
+  {
+    "course_id": 893,
+    "keywords": [
+      "way",
+      "everything",
+      "food",
+      "know",
+      "language",
+      "system",
+      "discussion",
+      "content",
+      "interesting",
+      "level",
+      "eat"
+    ]
+  },
+  {
+    "course_id": 894,
+    "keywords": [
+      "disability",
+      "health",
+      "development"
+    ]
+  },
+  {
+    "course_id": 895,
+    "keywords": [
+      "excellent",
+      "teacher",
+      "stone",
+      "eye",
+      "opener",
+      "introduce",
+      "life",
+      "decision",
+      "go"
+    ]
+  },
+  {
+    "course_id": 896,
+    "keywords": [
+      "construction",
+      "development",
+      "gain",
+      "insight"
+    ]
+  },
+  {
+    "course_id": 897,
+    "keywords": [
+      "learning",
+      "science",
+      "classroom",
+      "discover",
+      "research"
+    ]
+  },
+  {
+    "course_id": 898,
+    "keywords": [
+      "subject",
+      "well",
+      "discover",
+      "mean",
+      "content",
+      "level",
+      "relevant",
+      "way"
+    ]
+  },
+  {
+    "course_id": 899,
+    "keywords": [
+      "world",
+      "development",
+      "introduction",
+      "key"
+    ]
+  },
+  {
+    "course_id": 900,
+    "keywords": [
+      "create",
+      "level",
+      "make",
+      "creative",
+      "program",
+      "concise",
+      "content",
+      "area",
+      "overview"
+    ]
+  },
+  {
+    "course_id": 901,
+    "keywords": [
+      "discover",
+      "listening"
+    ]
+  },
+  {
+    "course_id": 902,
+    "keywords": [
+      "food",
+      "health",
+      "brain",
+      "gut"
+    ]
+  },
+  {
+    "course_id": 903,
+    "keywords": [
+      "music",
+      "group",
+      "introduction",
+      "participate"
+    ]
+  },
+  {
+    "course_id": 904,
+    "keywords": [
+      "language",
+      "teaching",
+      "dyslexia",
+      "gain",
+      "help"
+    ]
+  },
+  {
+    "course_id": 905,
+    "keywords": [
+      "pi",
+      "raspberry",
+      "code",
+      "control"
+    ]
+  },
+  {
+    "course_id": 906,
+    "keywords": [
+      "jazz"
+    ]
+  },
+  {
+    "course_id": 907,
+    "keywords": [
+      "jazz",
+      "funk",
+      "piano",
+      "style"
+    ]
+  },
+  {
+    "course_id": 908,
+    "keywords": [
+      "coin",
+      "credit",
+      "tech",
+      "business",
+      "technology",
+      "university"
+    ]
+  },
+  {
+    "course_id": 909,
+    "keywords": [
+      "development",
+      "sport"
+    ]
+  },
+  {
+    "course_id": 910,
+    "keywords": [
+      "introduction",
+      "identity",
+      "expression",
+      "language",
+      "relationship"
+    ]
+  },
+  {
+    "course_id": 911,
+    "keywords": [
+      "world",
+      "archaeology",
+      "battle"
+    ]
+  },
+  {
+    "course_id": 912,
+    "keywords": [
+      "understand",
+      "helpful",
+      "create",
+      "learnt"
+    ]
+  },
+  {
+    "course_id": 913,
+    "keywords": [
+      "excellent",
+      "interesting",
+      "material",
+      "future",
+      "lot",
+      "content",
+      "work",
+      "introduction",
+      "punishment"
+    ]
+  },
+  {
+    "course_id": 914,
+    "keywords": [
+      "la",
+      "ce",
+      "ligne",
+      "sur"
+    ]
+  },
+  {
+    "course_id": 915,
+    "keywords": [
+      "read",
+      "research",
+      "well",
+      "importance",
+      "follow",
+      "lay",
+      "nutrition"
+    ]
+  },
+  {
+    "course_id": 916,
+    "keywords": [
+      "pharmacotherapy",
+      "understanding",
+      "create",
+      "knowledge",
+      "pharmacy"
+    ]
+  },
+  {
+    "course_id": 917,
+    "keywords": [
+      "success",
+      "right",
+      "fruitful",
+      "classroom",
+      "world",
+      "century",
+      "development",
+      "language"
+    ]
+  },
+  {
+    "course_id": 918,
+    "keywords": [
+      "biology",
+      "level"
+    ]
+  },
+  {
+    "course_id": 919,
+    "keywords": [
+      "history",
+      "war",
+      "controversy",
+      "memory",
+      "world"
+    ]
+  },
+  {
+    "course_id": 920,
+    "keywords": [
+      "compliance",
+      "industry",
+      "construction"
+    ]
+  },
+  {
+    "course_id": 921,
+    "keywords": [
+      "fun",
+      "time",
+      "content",
+      "math",
+      "paper",
+      "point",
+      "view",
+      "explore",
+      "interesting",
+      "play",
+      "look",
+      "research",
+      "well"
+    ]
+  },
+  {
+    "course_id": 922,
+    "keywords": [
+      "company",
+      "property",
+      "food",
+      "management",
+      "sector"
+    ]
+  },
+  {
+    "course_id": 923,
+    "keywords": [
+      "pour",
+      "tout"
+    ]
+  },
+  {
+    "course_id": 924,
+    "keywords": [
+      "construction",
+      "quality"
+    ]
+  },
+  {
+    "course_id": 925,
+    "keywords": [
+      "process",
+      "understand"
+    ]
+  },
+  {
+    "course_id": 926,
+    "keywords": [
+      "beneath",
+      "world"
+    ]
+  },
+  {
+    "course_id": 927,
+    "keywords": [
+      "found",
+      "everything"
+    ]
+  },
+  {
+    "course_id": 928,
+    "keywords": [
+      "diplomacy",
+      "today",
+      "world"
+    ]
+  },
+  {
+    "course_id": 929,
+    "keywords": [
+      "heritage",
+      "city"
+    ]
+  },
+  {
+    "course_id": 930,
+    "keywords": [
+      "migration"
+    ]
+  },
+  {
+    "course_id": 931,
+    "keywords": [
+      "content",
+      "right",
+      "level",
+      "think",
+      "date",
+      "improvement",
+      "sector",
+      "world",
+      "health"
+    ]
+  },
+  {
+    "course_id": 932,
+    "keywords": [
+      "learning",
+      "side",
+      "machine"
+    ]
+  },
+  {
+    "course_id": 933,
+    "keywords": [
+      "mix",
+      "create",
+      "expressive",
+      "look",
+      "quality",
+      "design",
+      "play"
+    ]
+  },
+  {
+    "course_id": 934,
+    "keywords": [
+      "cancer"
+    ]
+  },
+  {
+    "course_id": 935,
+    "keywords": [
+      "importance",
+      "presence"
+    ]
+  },
+  {
+    "course_id": 936,
+    "keywords": [
+      "football",
+      "history"
+    ]
+  },
+  {
+    "course_id": 937,
+    "keywords": [
+      "explore",
+      "motion",
+      "pixilation",
+      "animation"
+    ]
+  },
+  {
+    "course_id": 938,
+    "keywords": [
+      "chemistry"
+    ]
+  },
+  {
+    "course_id": 939,
+    "keywords": [
+      "impact"
+    ]
+  },
+  {
+    "course_id": 940,
+    "keywords": [
+      "disability",
+      "health"
+    ]
+  },
+  {
+    "course_id": 941,
+    "keywords": [
+      "introduction",
+      "sent",
+      "awesome",
+      "importance",
+      "lot",
+      "career",
+      "sector",
+      "video",
+      "review"
+    ]
+  },
+  {
+    "course_id": 942,
+    "keywords": [
+      "depth",
+      "education",
+      "philosophy",
+      "introduction",
+      "way",
+      "culture",
+      "south",
+      "university"
+    ]
+  },
+  {
+    "course_id": 943,
+    "keywords": [
+      "introduction",
+      "reality"
+    ]
+  },
+  {
+    "course_id": 944,
+    "keywords": [
+      "el",
+      "parto"
+    ]
+  },
+  {
+    "course_id": 945,
+    "keywords": [
+      "accounting",
+      "program",
+      "tax"
+    ]
+  },
+  {
+    "course_id": 946,
+    "keywords": [
+      "art",
+      "history",
+      "introduction",
+      "analysis",
+      "university",
+      "york"
+    ]
+  },
+  {
+    "course_id": 947,
+    "keywords": [
+      "masterpiece",
+      "book"
+    ]
+  },
+  {
+    "course_id": 948,
+    "keywords": [
+      "food"
+    ]
+  },
+  {
+    "course_id": 949,
+    "keywords": [
+      "crisis",
+      "time"
+    ]
+  },
+  {
+    "course_id": 950,
+    "keywords": [
+      "anthropology",
+      "post",
+      "life",
+      "world"
+    ]
+  },
+  {
+    "course_id": 951,
+    "keywords": [
+      "motherhood",
+      "health"
+    ]
+  },
+  {
+    "course_id": 952,
+    "keywords": [
+      "technology",
+      "time",
+      "presenter",
+      "ground",
+      "invest"
+    ]
+  },
+  {
+    "course_id": 953,
+    "keywords": [
+      "engineering"
+    ]
+  },
+  {
+    "course_id": 954,
+    "keywords": [
+      "interest",
+      "world",
+      "excellent",
+      "week",
+      "role",
+      "conflict",
+      "health",
+      "violence"
+    ]
+  },
+  {
+    "course_id": 955,
+    "keywords": [
+      "level",
+      "matter",
+      "informative",
+      "understood",
+      "size"
+    ]
+  },
+  {
+    "course_id": 956,
+    "keywords": [
+      "everybody"
+    ]
+  },
+  {
+    "course_id": 957,
+    "keywords": [
+      "relationship",
+      "education",
+      "health",
+      "sex"
+    ]
+  },
+  {
+    "course_id": 958,
+    "keywords": [
+      "life",
+      "follow",
+      "covid",
+      "work",
+      "impact",
+      "aid"
+    ]
+  },
+  {
+    "course_id": 959,
+    "keywords": [
+      "communication",
+      "education",
+      "leader",
+      "manager"
+    ]
+  },
+  {
+    "course_id": 960,
+    "keywords": [
+      "flow"
+    ]
+  },
+  {
+    "course_id": 961,
+    "keywords": [
+      "classroom",
+      "transformation",
+      "digital",
+      "learning",
+      "world"
+    ]
+  },
+  {
+    "course_id": 962,
+    "keywords": [
+      "proposal",
+      "research"
+    ]
+  },
+  {
+    "course_id": 963,
+    "keywords": [
+      "knowledge",
+      "instructive",
+      "think",
+      "pleasure",
+      "food",
+      "biology",
+      "anyone",
+      "environment",
+      "everyone"
+    ]
+  },
+  {
+    "course_id": 964,
+    "keywords": [
+      "worth",
+      "background",
+      "leadership",
+      "school",
+      "implementation",
+      "education",
+      "technology"
+    ]
+  },
+  {
+    "course_id": 965,
+    "keywords": [
+      "age",
+      "network"
+    ]
+  },
+  {
+    "course_id": 966,
+    "keywords": [
+      "education",
+      "mature",
+      "student"
+    ]
+  },
+  {
+    "course_id": 967,
+    "keywords": []
+  },
+  {
+    "course_id": 968,
+    "keywords": [
+      "learning",
+      "success"
+    ]
+  },
+  {
+    "course_id": 969,
+    "keywords": [
+      "introduction",
+      "ability",
+      "found",
+      "carrier",
+      "room",
+      "foundation",
+      "research",
+      "class",
+      "classroom"
+    ]
+  },
+  {
+    "course_id": 970,
+    "keywords": [
+      "teacher",
+      "become"
+    ]
+  },
+  {
+    "course_id": 971,
+    "keywords": [
+      "understand",
+      "rain",
+      "shine",
+      "weather"
+    ]
+  },
+  {
+    "course_id": 972,
+    "keywords": [
+      "helpful",
+      "level",
+      "step",
+      "format",
+      "project",
+      "research",
+      "professional",
+      "work"
+    ]
+  },
+  {
+    "course_id": 973,
+    "keywords": [
+      "health",
+      "cancer",
+      "management"
+    ]
+  },
+  {
+    "course_id": 974,
+    "keywords": [
+      "influence",
+      "improvement",
+      "innovation",
+      "leadership"
+    ]
+  },
+  {
+    "course_id": 975,
+    "keywords": [
+      "humanity",
+      "development",
+      "engage",
+      "technology"
+    ]
+  },
+  {
+    "course_id": 976,
+    "keywords": [
+      "cash",
+      "flow",
+      "modeling"
+    ]
+  },
+  {
+    "course_id": 977,
+    "keywords": [
+      "participation",
+      "teaching",
+      "competence",
+      "support",
+      "use"
+    ]
+  },
+  {
+    "course_id": 978,
+    "keywords": [
+      "content",
+      "professor",
+      "psychology",
+      "section",
+      "brain",
+      "professional",
+      "world",
+      "mind"
+    ]
+  },
+  {
+    "course_id": 979,
+    "keywords": [
+      "anxiety"
+    ]
+  },
+  {
+    "course_id": 980,
+    "keywords": [
+      "research",
+      "project",
+      "get",
+      "overview",
+      "excellent",
+      "world",
+      "love",
+      "analysis",
+      "practice"
+    ]
+  },
+  {
+    "course_id": 981,
+    "keywords": [
+      "workplace",
+      "love",
+      "step",
+      "way",
+      "everything",
+      "perfect",
+      "job",
+      "language"
+    ]
+  },
+  {
+    "course_id": 982,
+    "keywords": [
+      "well",
+      "liver",
+      "damage",
+      "world",
+      "delivery",
+      "excellent",
+      "fun",
+      "life",
+      "study"
+    ]
+  },
+  {
+    "course_id": 983,
+    "keywords": [
+      "transplant",
+      "liver"
+    ]
+  },
+  {
+    "course_id": 984,
+    "keywords": [
+      "continue",
+      "culture",
+      "language"
+    ]
+  },
+  {
+    "course_id": 985,
+    "keywords": [
+      "stave",
+      "excellent",
+      "reveal",
+      "habit",
+      "glimpse",
+      "discover",
+      "heritage",
+      "part",
+      "interesting",
+      "restoration",
+      "view"
+    ]
+  },
+  {
+    "course_id": 986,
+    "keywords": [
+      "content",
+      "love",
+      "worth",
+      "effort",
+      "individual",
+      "management",
+      "risk",
+      "economy",
+      "substantive",
+      "well",
+      "role"
+    ]
+  },
+  {
+    "course_id": 987,
+    "keywords": [
+      "energy",
+      "spent",
+      "explanation",
+      "enjoyment",
+      "holy",
+      "perfect",
+      "detail",
+      "please",
+      "introduction",
+      "living"
+    ]
+  },
+  {
+    "course_id": 988,
+    "keywords": [
+      "technology",
+      "conversational",
+      "introduction"
+    ]
+  },
+  {
+    "course_id": 989,
+    "keywords": [
+      "introduction",
+      "physical",
+      "future",
+      "innovation",
+      "tech"
+    ]
+  },
+  {
+    "course_id": 990,
+    "keywords": [
+      "action",
+      "comment",
+      "en"
+    ]
+  },
+  {
+    "course_id": 991,
+    "keywords": [
+      "action",
+      "life",
+      "development"
+    ]
+  },
+  {
+    "course_id": 992,
+    "keywords": [
+      "relevant",
+      "excellent",
+      "technology",
+      "payment",
+      "content",
+      "value",
+      "space",
+      "addition",
+      "knowledge",
+      "area",
+      "explanation"
+    ]
+  },
+  {
+    "course_id": 993,
+    "keywords": [
+      "problem",
+      "creative",
+      "creativity",
+      "solve"
+    ]
+  },
+  {
+    "course_id": 994,
+    "keywords": [
+      "care",
+      "patient"
+    ]
+  },
+  {
+    "course_id": 995,
+    "keywords": [
+      "crisis",
+      "nursing"
+    ]
+  },
+  {
+    "course_id": 996,
+    "keywords": [
+      "impact",
+      "group",
+      "level",
+      "health"
+    ]
+  },
+  {
+    "course_id": 997,
+    "keywords": [
+      "brilliant",
+      "wonderful",
+      "excellent",
+      "methodology",
+      "language",
+      "process",
+      "mandarin",
+      "fall",
+      "love",
+      "culture"
+    ]
+  },
+  {
+    "course_id": 998,
+    "keywords": [
+      "food",
+      "find",
+      "plate"
+    ]
+  },
+  {
+    "course_id": 999,
+    "keywords": [
+      "deal"
+    ]
+  },
+  {
+    "course_id": 1000,
+    "keywords": [
+      "university"
+    ]
+  },
+  {
+    "course_id": 1001,
+    "keywords": [
+      "development",
+      "certificate",
+      "success",
+      "teaching",
+      "language",
+      "collaboration",
+      "lesson",
+      "knowledge",
+      "profession",
+      "plan"
+    ]
+  },
+  {
+    "course_id": 1002,
+    "keywords": [
+      "basic",
+      "management",
+      "relevant",
+      "globe",
+      "lot",
+      "money",
+      "content",
+      "simple",
+      "spent"
+    ]
+  },
+  {
+    "course_id": 1003,
+    "keywords": [
+      "feed"
+    ]
+  },
+  {
+    "course_id": 1004,
+    "keywords": [
+      "ai",
+      "technology",
+      "fishing",
+      "key",
+      "learning"
+    ]
+  },
+  {
+    "course_id": 1005,
+    "keywords": [
+      "digital",
+      "excellent",
+      "lot",
+      "management",
+      "time",
+      "topic",
+      "level",
+      "perfect",
+      "need",
+      "life"
+    ]
+  },
+  {
+    "course_id": 1006,
+    "keywords": [
+      "education",
+      "research"
+    ]
+  },
+  {
+    "course_id": 1007,
+    "keywords": [
+      "level",
+      "research",
+      "comment",
+      "informative",
+      "look",
+      "accurate",
+      "title"
+    ]
+  },
+  {
+    "course_id": 1008,
+    "keywords": [
+      "explore",
+      "script",
+      "person",
+      "story",
+      "study",
+      "screen",
+      "process",
+      "watch",
+      "anyone",
+      "film"
+    ]
+  },
+  {
+    "course_id": 1009,
+    "keywords": [
+      "criminal",
+      "platform",
+      "content",
+      "information",
+      "career",
+      "law",
+      "introduction",
+      "connection",
+      "reflect"
+    ]
+  },
+  {
+    "course_id": 1010,
+    "keywords": [
+      "introduction"
+    ]
+  },
+  {
+    "course_id": 1011,
+    "keywords": [
+      "begin",
+      "jazz",
+      "piano"
+    ]
+  },
+  {
+    "course_id": 1012,
+    "keywords": [
+      "piano",
+      "play"
+    ]
+  },
+  {
+    "course_id": 1013,
+    "keywords": [
+      "level",
+      "advice",
+      "content",
+      "right",
+      "learnt",
+      "lot",
+      "covid",
+      "depression",
+      "maintain",
+      "pandemic",
+      "found",
+      "information",
+      "mood"
+    ]
+  },
+  {
+    "course_id": 1014,
+    "keywords": [
+      "introduction"
+    ]
+  },
+  {
+    "course_id": 1015,
+    "keywords": [
+      "health",
+      "prescription",
+      "format",
+      "comprehensive",
+      "coverage",
+      "sufficient",
+      "cancer",
+      "help",
+      "prevention",
+      "treatment"
+    ]
+  },
+  {
+    "course_id": 1016,
+    "keywords": [
+      "someone",
+      "lot",
+      "money",
+      "information",
+      "knowledge",
+      "certificate",
+      "pay",
+      "future",
+      "impact",
+      "development",
+      "fashion"
+    ]
+  },
+  {
+    "course_id": 1017,
+    "keywords": [
+      "right",
+      "introduction",
+      "science",
+      "platform",
+      "work",
+      "level",
+      "analysis",
+      "basic",
+      "knowledge"
+    ]
+  },
+  {
+    "course_id": 1018,
+    "keywords": [
+      "program",
+      "project",
+      "management",
+      "opportunity",
+      "school",
+      "theory",
+      "information",
+      "key",
+      "knowledge",
+      "subject"
+    ]
+  },
+  {
+    "course_id": 1019,
+    "keywords": [
+      "performance",
+      "print",
+      "today",
+      "world"
+    ]
+  },
+  {
+    "course_id": 1020,
+    "keywords": [
+      "covid",
+      "policy",
+      "model"
+    ]
+  },
+  {
+    "course_id": 1021,
+    "keywords": [
+      "thought",
+      "amazing",
+      "excellent",
+      "eye",
+      "opener",
+      "retirement",
+      "income",
+      "inequality",
+      "wealth",
+      "read"
+    ]
+  },
+  {
+    "course_id": 1022,
+    "keywords": [
+      "diverse",
+      "workplace",
+      "communication",
+      "culture",
+      "fuzzy",
+      "take",
+      "time",
+      "misunderstand",
+      "unique",
+      "information"
+    ]
+  },
+  {
+    "course_id": 1023,
+    "keywords": [
+      "felt",
+      "laid",
+      "feminist",
+      "design",
+      "bias",
+      "prototype",
+      "reinforce"
+    ]
+  },
+  {
+    "course_id": 1024,
+    "keywords": [
+      "future",
+      "engineering"
+    ]
+  },
+  {
+    "course_id": 1025,
+    "keywords": [
+      "range",
+      "anything",
+      "age",
+      "world",
+      "archaeology",
+      "stone",
+      "life"
+    ]
+  },
+  {
+    "course_id": 1026,
+    "keywords": [
+      "ancient",
+      "world",
+      "evidence",
+      "use"
+    ]
+  },
+  {
+    "course_id": 1027,
+    "keywords": [
+      "career",
+      "development"
+    ]
+  },
+  {
+    "course_id": 1028,
+    "keywords": [
+      "continuity",
+      "teach",
+      "covid",
+      "pandemic",
+      "response"
+    ]
+  },
+  {
+    "course_id": 1029,
+    "keywords": [
+      "ai",
+      "educational",
+      "content",
+      "introduction",
+      "practice",
+      "future",
+      "hope",
+      "use"
+    ]
+  },
+  {
+    "course_id": 1030,
+    "keywords": [
+      "introduction",
+      "design"
+    ]
+  },
+  {
+    "course_id": 1031,
+    "keywords": [
+      "theory",
+      "accounting",
+      "depth"
+    ]
+  },
+  {
+    "course_id": 1032,
+    "keywords": [
+      "introduction",
+      "youth",
+      "drama",
+      "film",
+      "television"
+    ]
+  },
+  {
+    "course_id": 1033,
+    "keywords": [
+      "discover",
+      "diagnosis",
+      "health"
+    ]
+  },
+  {
+    "course_id": 1034,
+    "keywords": [
+      "culture",
+      "language"
+    ]
+  },
+  {
+    "course_id": 1035,
+    "keywords": [
+      "access",
+      "excellent",
+      "section",
+      "book",
+      "history",
+      "period",
+      "future",
+      "intend",
+      "level",
+      "content",
+      "support",
+      "variety",
+      "amount",
+      "beautiful"
+    ]
+  },
+  {
+    "course_id": 1036,
+    "keywords": [
+      "discover",
+      "care",
+      "health",
+      "power"
+    ]
+  },
+  {
+    "course_id": 1037,
+    "keywords": [
+      "business",
+      "discover",
+      "knowledge",
+      "technology"
+    ]
+  },
+  {
+    "course_id": 1038,
+    "keywords": [
+      "informative",
+      "relaxed",
+      "matter",
+      "science",
+      "excellent",
+      "genome",
+      "coverage",
+      "subject",
+      "biology",
+      "use",
+      "world"
+    ]
+  },
+  {
+    "course_id": 1039,
+    "keywords": [
+      "feed",
+      "production",
+      "animal"
+    ]
+  },
+  {
+    "course_id": 1040,
+    "keywords": [
+      "intelligence",
+      "ai"
+    ]
+  },
+  {
+    "course_id": 1041,
+    "keywords": [
+      "preceptor",
+      "pharmacy"
+    ]
+  },
+  {
+    "course_id": 1042,
+    "keywords": [
+      "quantum",
+      "computer",
+      "introductory",
+      "science"
+    ]
+  },
+  {
+    "course_id": 1043,
+    "keywords": [
+      "excellent",
+      "deeply",
+      "approach",
+      "life",
+      "popularity",
+      "hamlet",
+      "love",
+      "interest",
+      "think",
+      "work"
+    ]
+  },
+  {
+    "course_id": 1044,
+    "keywords": [
+      "art",
+      "dance",
+      "century"
+    ]
+  },
+  {
+    "course_id": 1045,
+    "keywords": [
+      "gender",
+      "representation",
+      "culture",
+      "society"
+    ]
+  },
+  {
+    "course_id": 1046,
+    "keywords": [
+      "introduction"
+    ]
+  },
+  {
+    "course_id": 1047,
+    "keywords": [
+      "negotiation"
+    ]
+  },
+  {
+    "course_id": 1048,
+    "keywords": [
+      "introduction",
+      "century",
+      "system",
+      "alphabet"
+    ]
+  },
+  {
+    "course_id": 1049,
+    "keywords": [
+      "psychosocial",
+      "concise",
+      "apa",
+      "epilepsy",
+      "neuropsychology",
+      "condition",
+      "discussion",
+      "nobody"
+    ]
+  },
+  {
+    "course_id": 1050,
+    "keywords": []
+  },
+  {
+    "course_id": 1051,
+    "keywords": [
+      "innovation",
+      "discover"
+    ]
+  },
+  {
+    "course_id": 1052,
+    "keywords": [
+      "nursing",
+      "care",
+      "home"
+    ]
+  },
+  {
+    "course_id": 1053,
+    "keywords": [
+      "everyone",
+      "learning",
+      "fine",
+      "content",
+      "education",
+      "perfect",
+      "speaker",
+      "world",
+      "level",
+      "way",
+      "opportunity"
+    ]
+  },
+  {
+    "course_id": 1054,
+    "keywords": [
+      "environment",
+      "language",
+      "learning"
+    ]
+  },
+  {
+    "course_id": 1055,
+    "keywords": [
+      "facilitate",
+      "today",
+      "museum",
+      "site",
+      "source"
+    ]
+  },
+  {
+    "course_id": 1056,
+    "keywords": [
+      "right",
+      "teacher",
+      "find",
+      "level",
+      "school",
+      "teaching",
+      "technology",
+      "evidence",
+      "learning",
+      "experience"
+    ]
+  },
+  {
+    "course_id": 1057,
+    "keywords": [
+      "follow",
+      "perfect",
+      "lot",
+      "review",
+      "grammar",
+      "vocabulary",
+      "confidence",
+      "gain",
+      "master",
+      "language"
+    ]
+  },
+  {
+    "course_id": 1058,
+    "keywords": [
+      "awesome",
+      "everything",
+      "interesting",
+      "notation",
+      "learnt",
+      "study",
+      "wait",
+      "performance",
+      "music",
+      "change",
+      "score"
+    ]
+  },
+  {
+    "course_id": 1059,
+    "keywords": [
+      "introduction",
+      "discover",
+      "knowledge",
+      "accounting"
+    ]
+  },
+  {
+    "course_id": 1060,
+    "keywords": [
+      "industry"
+    ]
+  },
+  {
+    "course_id": 1061,
+    "keywords": [
+      "century",
+      "revolution",
+      "detection",
+      "discover",
+      "treatment"
+    ]
+  },
+  {
+    "course_id": 1062,
+    "keywords": [
+      "financier"
+    ]
+  },
+  {
+    "course_id": 1063,
+    "keywords": [
+      "communication",
+      "information"
+    ]
+  },
+  {
+    "course_id": 1064,
+    "keywords": [
+      "paper",
+      "rare",
+      "design",
+      "history",
+      "production"
+    ]
+  },
+  {
+    "course_id": 1065,
+    "keywords": [
+      "japan",
+      "life",
+      "population"
+    ]
+  },
+  {
+    "course_id": 1066,
+    "keywords": [
+      "disease",
+      "drug",
+      "pharmacy"
+    ]
+  },
+  {
+    "course_id": 1067,
+    "keywords": [
+      "pharmacy",
+      "literature",
+      "medicine",
+      "evidence",
+      "practice"
+    ]
+  },
+  {
+    "course_id": 1068,
+    "keywords": [
+      "culture",
+      "rare",
+      "history",
+      "japan"
     ]
   }
 ]

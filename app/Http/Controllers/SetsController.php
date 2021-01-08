@@ -114,36 +114,35 @@ class SetsController extends Controller
         return redirect(route('ms-sets-recommend', ['status' => $status]));
     }
 
-    public function sendRatings()
+    public function collectTexts()
     {
-        $ratings = DB::table('ratings')->select('course_id')->distinct()->get()->toArray();
-        // $ratings = DB::table('ratings')->get()->toArray();
+        $courses = Course::all();
         $results = [];
-        foreach($ratings as $rating) {
-            $collection = DB::table('ratings')->select('review')->where('course_id', $rating->course_id)->get()->toArray();
-            $reviewTexts = [];
-            $course = DB::table('courses')->where('id', $rating->course_id)->get()->toArray();
-            array_push($reviewTexts, $course[0]->title);
-            array_push($reviewTexts, $course[0]->description);
-            foreach($collection as $collect) {
-                array_push($reviewTexts, $collect->review);
+        foreach ($courses as $course) {
+            $texts = [];
+            array_push($texts, $course->title);
+            array_push($texts, $course->description);
+            $ratings = DB::table('ratings')->where('course_id', $course->id)->get()->toArray();
+            if(sizeof($ratings) > 0) {
+                foreach ($ratings as $rating) {
+                    array_push($texts, $rating->title);
+                    array_push($texts, $rating->review);
+                }
             }
-            $obj = array('course_id' => $rating->course_id, 'reviewTexts' => $reviewTexts);
-            // $obj = array('title' =>  $rating->title, 'review' => $rating->review);
+            $obj = array('course_id' => $course->id, 'reviewTexts' => $texts);
             array_push($results, $obj);
         }
         usort($results, function ($a, $b) {
             return $a['course_id'] - $b['course_id'];
         });
         $json = json_encode(array('results' => $results), JSON_PRETTY_PRINT);
-        // Storage::disk('s3')->put('ratings/texts.json', $json);
         Storage::put('texts.json', $json);
-        // dd($ratings);
     }
 
-    public function createDescTags() {
+    public function createTags() {
         $file = Storage::get('keywords_weights.json');
         $decoded = json_decode($file);
+        DB::table('tags')->truncate();
         foreach ($decoded as $obj) {
             if($obj->keywords !== []) {
                 $tags = new Tag();

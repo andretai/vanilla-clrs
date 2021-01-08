@@ -76,6 +76,7 @@ Route::get('/ms/missions/delete', [MissionsController::class, 'delete'])->name('
 
 Route::get('/ms/courses/seed', [MsController::class, 'seed'])->name('courses.seed');
 Route::get('/ms/courses/test', [CoursesController::class, 'getRec']);
+Route::get('/ms/test', [SetsController::class, 'createTags']);
 
 //user
 Route::get('/', [HomeController::class, 'index'])->name('home');
