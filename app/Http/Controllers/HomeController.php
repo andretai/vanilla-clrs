@@ -40,23 +40,4 @@ class HomeController extends Controller
         return view('home')->with(['rec' => $rec]);
     }
 
-    public function generateRec()
-    {
-        $names = ['Most Favourite', 'People are viewing', 'People added in their lists', 'Top Category'];
-        $keys = ['mFav', 'recReview', 'recFav', 'recCategory'];
-        $type = ['non-personalized', 'collaborative filtering', 'collaborative filtering', 'non-personalized'];
-        $orders = [1, 2, 3, 4];
-
-        foreach ($names as $index => $name) {
-            $rec = Recommendation::create(
-                [
-                    'name' => $name,
-                    'key' => $keys[$index],
-                    'order' => $orders[$index],
-                    'type' => $type[$index]
-
-                ]
-            );
-        }
-    }
 }
