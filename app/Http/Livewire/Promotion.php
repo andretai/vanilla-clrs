@@ -18,7 +18,9 @@ class Promotion extends Component
     public function render()
     {
         $missions = Mission::all();
-        $promotions = ModelsPromotion::where("user_id",Auth::User()->id)->get();
+        $promotions = ModelsPromotion::where("user_id",Auth::User()->id)
+        ->where('end_date','>=',Carbon::today()->toDate())
+        ->get();
         
         return view('livewire.promotion')
             ->with('missions', $missions)
