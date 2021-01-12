@@ -10,7 +10,7 @@
             <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                 <div class="">
                     <div class="mb-4">
-                        <img class="h-auto w-auto object-cover" src="http://vanillaclrs.test/images/guidelineHome.jpg" alt="guidelines for home page">
+                        <img class="h-auto w-auto object-cover" src="/images/guidelineHome.jpg" alt="guidelines for home page">
                     </div>
                     <div class="mb-4 text-2xl font-bold">
                         In Home page, we will recommend courses for you based on your interest.
