@@ -119,7 +119,7 @@ class UcourseController extends Controller
     {
         $course = Rating::where('id', $request->id)->first();
         $data = $request->validate([
-            'title' => ['required','max:10','min:5'],
+            'title' => ['required','max:20','min:5'],
             'rating' => ['required'],
             'review' => ['required','max:255','min:15']
         ]);
