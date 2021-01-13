@@ -102,7 +102,7 @@ class MsController extends Controller
             $decoded = json_decode($file);
             $this->seedem($decoded);
         } catch(Exception $e) {
-            $status = false;
+            error_log($e);
         }
         $platforms = Platform::all();
         $datasets = [];
