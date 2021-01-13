@@ -10,7 +10,7 @@
             <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                 <div class="">
                     <div class="mb-4">
-                        <img class=" h-auto w-full object-cover" src="http://vanillaclrs.test/images/ReviewExample.jpg" alt="Review Example">
+                        <img class=" h-auto w-full object-cover" src="/images/ReviewExample.jpg" alt="Review Example">
                     </div>
                     
                 </div>
