@@ -1,3 +1,4 @@
+@if(count($recReview)==5)
 <div class="px-12 py-6">
     
     <div>
@@ -40,3 +41,5 @@
         </div>
     </div>
 </div>
+@else
+@endif

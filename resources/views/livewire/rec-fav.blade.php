@@ -1,9 +1,9 @@
+@if(count($recFav)==5)
 <div class="px-12 py-6">
-
     <div>
         <div class="flex p-2 pt-6">
             <div class="block tracking-wide text-3xl font-bold pr-4">
-            People added in lists
+                People added in lists
             </div>
             @livewire('rec-feedbacks',['rec'=>$order[0]->id])
         </div>
@@ -24,7 +24,8 @@
 
                         <div class="flex mt-1">
                             <div class="text-gray-600 capitalize w-24 font-semibold truncate">
-                                {{$course->instructor}}</div>
+                                {{$course->instructor}}
+                            </div>
                             <div class="text-orange-600 ml-3">{{$course->avgRating()}} <i class="fas fa-star fa-sm pl-1"></i></div>
                         </div>
                         <div class="flex items-baseline">
@@ -41,3 +42,5 @@
     </div>
 
 </div>
+@else
+@endif

@@ -13,7 +13,6 @@ class RecReview extends Component
     {
         $user = Auth::User();
         $recReview = app('App\Http\Controllers\Recommend\CollabFil')->getRecommendations($user->id, 5, 'ratings');
-        
         return view('livewire.rec-review',compact('recReview'));
     }
     public function mount()
